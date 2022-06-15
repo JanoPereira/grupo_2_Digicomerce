@@ -1,5 +1,5 @@
-# grupo_2_Digicomerce
-=====================
+grupo_2_Digicomerce
+===================
 
 
 **Integrantes**: 
