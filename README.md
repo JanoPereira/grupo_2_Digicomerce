@@ -1,10 +1,10 @@
 # grupo_2_Digicomerce
 
 
-Integrantes: 
+**_Integrantes_**: 
 
-Barrios, Maria Emilia
-Barrzizza, Diego
-Bravin, Santiago
-Castro Maggio, Carlos
-Pereira Kent, Jano
+*Barrios, Maria Emilia 
+*Barrzizza, Diego
+*Bravin, Santiago
+*Castro Maggio, Carlos
+*Pereira Kent, Jano
