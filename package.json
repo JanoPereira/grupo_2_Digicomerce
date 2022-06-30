@@ -1,0 +1,27 @@
+{
+  "name": "proyecto_integrador",
+  "version": "1.0.0",
+  "description": "grupo_2_Digicomerce\r ===================",
+  "main": "app.js",
+  "scripts": {
+    "dev":"nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JanoPereira/grupo_2_Digicomerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JanoPereira/grupo_2_Digicomerce/issues"
+  },
+  "homepage": "https://github.com/JanoPereira/grupo_2_Digicomerce#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}
