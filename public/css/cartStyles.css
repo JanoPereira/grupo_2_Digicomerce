@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100vw;
+    background-color: #ccc;
+    border-bottom: 2px solid #222;
+}
+nav{
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contenedor--logo{
+    flex-grow: .5;
+    max-width: 10vw;
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+.contenedor--logo img{
+    object-fit: contain;
+    width: 25%;
+    
+}
+nav ul{
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 40vw;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #222;
+
+}
+.contenedor--buscador{
+    flex-grow: 1;
+    text-align: center;
+    max-width: fit-content;
+    background-color: #fff;
+    border-radius: 10px;    
+    padding: 0 10px;
+}
+.contenedor--buscador input{
+    border: none;
+    padding: 5px 5px;
+    border-radius: 10px;
+    max-width: 150px;
+    outline: none;
+    
+}
+.contenedor--buscador i{
+    
+    color: #444;
+    cursor: pointer;
+}
+.iniciar-sesion{
+    flex-grow: 1;
+    text-align: center;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+}
+.iniciar-sesion p{
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0 20px;
+    max-width: fit-content;
+}
+.carro-compras{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
