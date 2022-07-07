@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/30a937ae38.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/cartStyles.css">
+    <link rel="stylesheet" href="/css/header_footer.css">
     <title>DigiCommerce</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
             <ul>
                 <li><a href="/" class="link">Inicio</a></li>
                 <li><a href="#" class="link">Productos</a></li>
-                <li><a href="about" class="link">Nosotros</a></li>
+                <li><a href="/about" class="link">Nosotros</a></li>
                 <li><a href="#" class="link">Contacto</a></li>
             </ul>
             <div class="contenedor--buscador">
@@ -31,8 +31,12 @@
             </div>
             <div class="carro-compras">
                 <a href="/carro-compras" class="link-carro">
-                    <p class="precio--total"><i class="fa-solid fa-cart-shopping"></i>$10.00</p>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p class="precio--total">$10.00</p>
                 </a>
+            </div>
+            <div class="menu--hamburguesa">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </nav>
     </header>
@@ -71,6 +75,7 @@
         <div class="contenedor--institucional">
             <ul class="institucional">
                 <span><strong>Institucional</strong></span>
+                <i class="fa-solid fa-angle-up " id="flecha-arriba"></i>
                 <li><a href="about" class="link">Quienes somos</a></li>
                 <li><a href="#" class="link">Productos</a></li>
                 <li><a href="#" class="link">Legales</a></li>
@@ -80,6 +85,7 @@
         <div class="contenedor--cliente">
             <ul class="cliente">
                 <span><strong>Cliente</strong></span>
+                <i class="fa-solid fa-angle-up " id="flecha-arriba"></i>
                 <li><a href="miCuenta" class="link">Mi cuenta</a></li>
                 <li><a href="faq" class="link">Preguntas frecuentes</a></li>
                 <li><a href="#" class="link">Atención al cliente</a></li>
@@ -89,34 +95,37 @@
         <div class="contenedor--contacto">
             <ul class="contacto">
                 <span><strong>Contacto</strong></span>
-                <p><i class="fa-brands fa-whatsapp">12345678</i></p>
-               <p><i class="fa-solid fa-envelope">sarasa@sarasa.com.ar</i></p>               
+                <i class="fa-solid fa-angle-up " id="flecha-arriba"></i>
+                <p><i class="fa-brands fa-whatsapp"></i>12345678</p>
+            <p><i class="fa-solid fa-envelope"></i>sarasa@sarasa.com.ar</p>               
             </ul>
         </div>
 
         <div class="contenedor--newsletter">
             <ul class="newsletter">
                 <span><strong>Newsletter</strong></span>
+                <i class="fa-solid fa-angle-up " id="flecha-arriba"></i>
                 <p><input type="email" class="input--email" placeholder="Ingrese su dirección de email..."></p>
                 <input type="submit">
-                       
+                    
             </ul>
         </div>
 
         <div class="contenedor--seguinos">
             <ul class="seguinos">
                 <span><strong>Seguinos</strong></span>
-                <p></p>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-instagram-square"></i>
-                <i class="fab fa-twitter"></i>
+                <div class="contenedor-redes">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram-square"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
 
             </ul>
         </div>
 
 
         
-    </footer>
+    </footer>   
 
 
 </body>

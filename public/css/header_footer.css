@@ -1,0 +1,357 @@
+.grilla-contenedora{
+    display: grid;
+    grid-template-rows: .1fr 1fr .1fr;
+    height: 100vh;
+}
+html{
+    overflow-x: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+a{
+    color: #222;
+    text-decoration: none;
+}
+.menu--hamburguesa{
+    display: none;
+}
+header{
+    width: 100vw;
+    background-color: #ccc;
+    border-bottom: 2px solid #222;
+    height: fit-content;
+    padding: 15px 5px;
+   
+}
+nav{
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contenedor--logo{
+    flex-grow: .5;
+    max-width: 10vw;
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+.contenedor--logo img{
+    object-fit: contain;
+    width: 25%;
+    
+}
+nav ul{
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 40vw;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #222;
+
+}
+.contenedor--buscador{
+    flex-grow: 1;
+    text-align: center;
+    max-width: fit-content;
+    background-color: #fff;
+    border-radius: 10px;    
+    padding: 0 10px;
+}
+.contenedor--buscador input{
+    border: none;
+    padding: 5px 5px;
+    border-radius: 10px;
+    max-width: 150px;
+    outline: none;
+    
+}
+.contenedor--buscador i{
+    
+    color: #444;
+    cursor: pointer;
+    border-left: 1px solid rgba(4,4,4,.3);
+    padding-left: 5px;
+}
+.iniciar-sesion{
+    flex-grow: 1;
+    text-align: center;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+}
+.iniciar-sesion p{
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0 20px;
+    max-width: fit-content;
+}
+.carro-compras{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+.carro-compras a{
+    display: flex;
+}
+/* /HEADER */
+
+
+/* FOOTER    */
+.carrusel{
+    display: flex;
+    height: 18vh;
+    width: 100vw;
+    background-color:lightgoldenrodyellow;
+}
+
+
+
+
+.contenedor-productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height:80vh;
+    width: 100vw;
+    background-color: lightgray;
+}
+
+.main-arcticle {
+    display:flex;
+    height: 9vh;
+    width: 5vh;
+    border-style: solid;
+    border-width: 1px;
+    background-color: lightblue;   
+}
+
+
+
+
+footer {
+    display: flex;
+    width: 100vw;
+    padding: 5px;
+    background-color: darkgray;
+    border-bottom: 2px solid #222;
+    width: 100vw;
+    justify-content: space-evenly;
+    
+}
+#flecha-arriba{
+    display: none;
+}
+
+.contenedor--institucional{
+    text-align: center;
+    align-content: center;
+}
+
+.contenedor--institucional li{
+    list-style-type: none;
+    list-style: none;
+}
+
+.contenedor--cliente{
+    text-align: center;
+    align-content: center;
+}
+
+.contenedor--cliente li{
+    list-style-type: none;
+    list-style: none;
+}
+
+.contenedor--contacto{
+    text-align: center;
+    align-content: center;
+   
+}
+
+.contenedor--newsletter{
+    text-align: center;
+    align-content: center;
+}
+
+.contenedor--newsletter input{
+    border: 1px;
+    padding: 5px 5px;
+    border-radius: 10px;
+    max-width: 200px;
+    outline: none;
+    margin: 5px 0;
+}
+.contenedor--seguinos ul{
+    display: flex;
+    flex-direction: column;
+}
+.contenedor--seguinos span{
+    margin-bottom: 10px;
+}
+footer>div span{
+    font-size: 18px;
+}
+/* /FOOTER */
+
+/* MEDIAS */
+@media (max-width:768px){
+    /* MEDIA-HEADER (resolucion tablet) */
+    .header{
+        width: 100vw;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(2,2,2,.4);
+    }
+    .nav--bar{
+        padding: 0 15px;
+        justify-content: space-between;
+    }
+    .header ul{
+        display: none;
+    }
+    .contenedor--logo{
+        height: 100%;
+        padding: 0;
+        height: 100%;
+        padding: 0;
+        margin-right: 15px;
+    }
+    .contenedor--logo .logo{
+        width: 100%;
+    }
+    .contenedor--logo a{
+        color: #222;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    }
+    .contenedor--buscador{
+        max-width: 210px;
+    }
+    .contenedor--buscador input{
+        background-color: none;
+        max-width: 150px;
+    }
+    
+    .iniciar-sesion{
+        display: none;
+    }
+    .carro-compras{
+        max-width: 70px;
+    }
+    .carro-compras a{
+        display: flex;
+        width: 100%;
+    }
+    .menu--hamburguesa{
+        display: block;
+        margin-right: 10px;
+        font-size: 24px;
+    }
+    /* /MEDIA-HEADER */
+    /* MEDIA-FOOTER (resolucion tablet) */
+    footer{
+        padding: 5px 15px ;
+    }
+    footer>div{
+        width: 25%;
+    }
+    footer>div span{
+        font-size: 14px;
+    }
+    footer>div li{
+        display: none;
+    }
+    #flecha-arriba{
+        display: inline-block;
+        font-size: 10px;
+        
+    }
+    .contenedor--contacto{
+        min-width: 96px;
+    }
+    .contenedor--contacto span, .contenedor--contacto .contacto>i{
+        display: none;
+    }
+    .contenedor--contacto .contacto p{
+        font-size: 11px;
+        
+    }
+    .contenedor--contacto p i{
+        margin-right: 2px;
+    }
+    .contenedor--newsletter{
+        display: none;
+    }
+    .contenedor--seguinos{
+        text-align: center;
+    }
+    .contenedor--seguinos span{
+        display: none;
+    }
+    /* /MEDIA-FOOTER */
+}
+@media (max-width:480px) {
+    /* MEDIA HEADER (resolucion cel) */
+     body{
+         max-width: 480px;
+     }
+     .nav--bar{
+         padding-left: 5px;
+     }
+     
+     .contenedor--buscador{
+         max-width: 180px;
+         width: 30%;
+     }
+     .contenedor--buscador input{
+         max-width: 130px;
+         width: 60%;
+     }
+     .carro-compras{
+         max-width: 50px;
+     }
+     .carro-compras .precio--total{
+         display: none;
+     }
+     .carro-compras i{
+         display: block;
+         margin: auto;
+     }
+     
+ /* /MEDIA HEADER (resolucion cel) */
+
+ /* MEDIA FOOTER (resolucion cel) */
+
+footer>div span{
+    font-size: 10px;
+}
+
+.contenedor--contacto .contacto p{
+    font-size: 9.5px;
+    
+}
+
+
+.contenedor--seguinos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* /MEDIA FOOTER (resolucion cel) */
+}
+
+/* /MEDIAS */
+
