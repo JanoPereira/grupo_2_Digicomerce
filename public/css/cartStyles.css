@@ -11,6 +11,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+a{
+    color: #222;
+    text-decoration: none;
+}
 header{
     width: 100vw;
     background-color: #ccc;
