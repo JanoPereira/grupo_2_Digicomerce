@@ -1,3 +1,11 @@
+/* PAGINA CARRO DE COMPRAS (TERMINA EN LINEA 195) */
+
+.grilla-contenedora{
+    display: grid;
+    grid-template-rows: repeat(3,1br);
+    height: 100vh;
+}
+/* HEADER */
 *{
     margin: 0;
     padding: 0;
@@ -7,11 +15,12 @@ header{
     width: 100vw;
     background-color: #ccc;
     border-bottom: 2px solid #222;
+   
 }
 nav{
     display: flex;
     width: 100vw;
-    height: 10vh;
+    height: 100%;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -78,4 +87,188 @@ nav ul li a{
     display: flex;
     justify-content: center;
 }
+/* /HEADER */
+/* MAIN */
+.main{
+    margin: 15px 20px;
+}
+.flex-item{
+    margin-right: 40px;
+}
+.contenedor-titulo{
+    margin: 15px 0 30px 0;
+    border-bottom: 1px solid rgba(8,8,8,0.2);   
+}
+.contenedor-titulo h3{
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 20px;
+    
+}
+.contenedor-articles{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    
+}
+.producto{
+    display: flex;
+    border-bottom: 1px solid rgba(8,8,8,0.2);
+    margin-bottom: 20px
 
+}
+.contenedor-imagen-producto{
+    /* max-width: 400px; */
+    margin-left: 10px;
+    display: flex;
+    width: 15%;
+}
+.foto-producto{
+    text-align: center;
+    object-fit: contain;
+    width: 100px;
+    
+}
+.informacion-producto{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+    padding: 5px;
+    justify-content: center;
+    
+}
+.contenedor-descripcion-producto{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 300px;
+    align-items: center;
+}
+.nombre-producto{
+    
+    
+}
+.descripcion-producto{
+    font-weight: 200;
+    opacity: .6;
+}
+.contenedor-precio-producto{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.cantidad-producto{
+    display: inline-block;
+    
+    max-width: 50px;
+    padding: 10px 0 10px 10px;
+    border-radius: 15px;
+}
+.contenedor-subtotal{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: center;
+    
+}
+.contenedor-basura{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 5%;
+    margin-right: 20px;
+}
+.contenedor-basura i{
+    font-size: 25px;
+    color: #f00;
+    cursor: pointer;
+}
+
+
+/* /MAIN */
+
+
+
+/* -------------------------------------------------------------------------------------------------------------- */
+.carrusel{
+    display: flex;
+    height: 18vh;
+    width: 100vw;
+    background-color:lightgoldenrodyellow;
+}
+
+
+
+
+.contenedor-productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height:80vh;
+    width: 100vw;
+    background-color: lightgray;
+}
+
+.main-arcticle {
+    display:flex;
+    height: 9vh;
+    width: 5vh;
+    border-style: solid;
+    border-width: 1px;
+    background-color: lightblue;   
+}
+
+
+
+
+footer {
+    display: flex;
+    width: 100vw;
+    padding: 5px;
+    background-color: darkgray;
+    border-bottom: 2px solid #222;
+    width: 100vw;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contenedor--institucional{
+    text-align: center;
+    align-content: center;
+}
+
+.contenedor--institucional li{
+    list-style-type: none;
+    list-style: none;
+}
+
+.contenedor--cliente{
+    text-align: center;
+    align-content: center;
+}
+
+.contenedor--cliente li{
+    list-style-type: none;
+    list-style: none;
+}
+
+.contenedor--contacto{
+    text-align: center;
+    align-content: center;
+   
+}
+
+.contenedor--newsletter{
+    text-align: center;
+    align-content: center;
+}
+
+.contenedor--newsletter input{
+    border: 1px;
+    padding: 5px 5px;
+    border-radius: 10px;
+    max-width: 200px;
+    outline: none;
+}
