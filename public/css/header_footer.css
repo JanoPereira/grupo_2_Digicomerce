@@ -57,6 +57,12 @@ nav ul{
 nav ul li a{
     text-decoration: none;
     color: #222;
+}
+
+    nav ul li a:hover{
+        text-decoration:underline;
+        /*color: #222;*/
+        /*font-weight: bold;*/
 
 }
 .contenedor--buscador{
@@ -64,13 +70,13 @@ nav ul li a{
     text-align: center;
     max-width: fit-content;
     background-color: #fff;
-    border-radius: 10px;    
+    border-radius: 6px;    
     padding: 0 10px;
 }
 .contenedor--buscador input{
     border: none;
     padding: 5px 5px;
-    border-radius: 10px;
+    border-radius: 6px;
     max-width: 150px;
     outline: none;
     
@@ -91,10 +97,15 @@ nav ul li a{
 }
 .iniciar-sesion p{
     border: 1px solid #444;
-    border-radius: 10px;
+    border-radius: 6px;
     padding: 5px;
     margin: 0 20px;
     max-width: fit-content;
+}
+
+.iniciar-sesion p:hover{
+    transform: scale(1.02); 
+    background-color:red;
 }
 .carro-compras{
     flex-grow: 1;
@@ -108,12 +119,12 @@ nav ul li a{
 
 
 /* FOOTER    */
-.carrusel{
+/*.carrusel{
     display: flex;
-    height: 18vh;
-    width: 100vw;
+    height: 30vh;
+    width: 100%;
     background-color:lightgoldenrodyellow;
-}
+}*/
 
 
 
@@ -124,16 +135,16 @@ nav ul li a{
     justify-content: space-between;
     height:80vh;
     width: 100vw;
-    background-color: lightgray;
+    background-color: whitesmoke;
 }
 
 .main-arcticle {
     display:flex;
-    height: 9vh;
-    width: 5vh;
+    height:250px;
+    width: 180px;
     border-style: solid;
     border-width: 1px;
-    background-color: lightblue;   
+    background-color: white; 
 }
 
 
@@ -143,10 +154,13 @@ footer {
     display: flex;
     width: 100vw;
     padding: 5px;
+    color: black;
     background-color: darkgray;
     border-bottom: 2px solid #222;
     width: 100vw;
     justify-content: space-evenly;
+    
+    
     
 }
 #flecha-arriba{
@@ -187,7 +201,7 @@ footer {
 .contenedor--newsletter input{
     border: 1px;
     padding: 5px 5px;
-    border-radius: 10px;
+    border-radius: 6px;
     max-width: 200px;
     outline: none;
     margin: 5px 0;
