@@ -24,6 +24,9 @@ app.get('/formulario-registro', (req, res) => {
     res.sendFile(path.join(__dirname, './views/registrationForm.html'));
 });
 
+app.get ('/loginForm',(req, res)=>{
+    res.sendFile(path.join(__dirname,'./views/LoginForm.html'));
+});
 
 app.listen(5000,()=>{
     console.log("Se ha inicializado un servidor en http://localhost:5000");
