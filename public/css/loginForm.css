@@ -1,0 +1,60 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 0px;
+    /* border: 1px solid green; */
+    width: 100%;
+    align-content: flex-start;
+}
+
+form{
+    /* border: 3px solid green; */
+    width: 100%;
+    margin-top: 30px;
+}
+
+.box-datos {
+    /* border: 3px solid blue; */
+    padding: 0 5%;
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-datos label{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.box-datos input{
+    width: 200px;
+    height: 2rem;
+    border-radius: 5px;
+    border: solid 1px gray;
+}
+
+div.botones{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0 10px 0;
+    /* border: 2px solid red; */
+}
+
+div.botones button{
+    width: 6rem;
+    padding: 3px;
+    height: 2rem;
+    margin: 10px 0;
+    border: none;
+    color: white;
+    background-color: #087da3;
+    border-radius: 5px;
+}
+
+div.botones:hover button{
+    background-color: #0022AA;
+}
