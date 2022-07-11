@@ -1,0 +1,7 @@
+.contenedor-imagenes{
+    width: 200px;
+    height: 200px;
+}
+.contenedor-imagenes img{
+    object-fit: contain;
+}
