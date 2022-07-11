@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .contenedor-imagenes{
     width: 200px;
     height: 200px;
@@ -5,3 +6,47 @@
 .contenedor-imagenes img{
     object-fit: contain;
 }
+=======
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fondo {
+    
+
+       
+}
+
+.encabezado {
+    width: 100%;
+    background-color: #459c4a;
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+    border-radius: 6px;
+        
+}
+
+.quienesSomos {
+    margin-left: 300px;
+}
+
+hr {
+    width: 60%;
+}
+
+
+
+.parrafo {
+    width: 800px;
+    padding: 10px;
+    margin-left: 300px;
+    margin-top:10px;
+    text-align: justify;
+    font-size:20px; 
+    }
+>>>>>>> 333e3cb354c6f693fc0729a26e446277381ea1be
