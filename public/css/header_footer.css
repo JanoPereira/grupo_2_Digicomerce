@@ -27,6 +27,7 @@ header{
     border-bottom: 2px solid rgba(2,2,2,.1);
     height: fit-content;
     padding: 15px 5px;
+    height: 100%;
    
 }
 nav{
@@ -61,18 +62,8 @@ nav ul li a{
 }
 nav ul li a:hover{
     color: #222;
-<<<<<<< HEAD
     font-weight: 600;
-=======
-}
-
-    nav ul li a:hover{
-        text-decoration:underline;
-        /*color: #222;*/
-        /*font-weight: bold;*/
-
->>>>>>> 333e3cb354c6f693fc0729a26e446277381ea1be
-}
+ }
 .contenedor--buscador{
     flex-grow: 1;
     text-align: center;
