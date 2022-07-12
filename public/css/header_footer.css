@@ -97,6 +97,13 @@ nav ul li a:hover{
     justify-content: center;
     cursor: pointer;
 }
+.iniciar-sesion a{
+    color: #555;
+}
+.iniciar-sesion a:hover {
+    color: #222;
+    font-weight: 600;
+}
 .iniciar-sesion p:hover{
     background-color: #bbb;
 }
