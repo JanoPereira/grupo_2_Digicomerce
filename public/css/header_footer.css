@@ -1,7 +1,7 @@
 cd grup.grilla-contenedora{
     display: grid;
-    grid-template-rows: .1fr 1fr .1fr;
-    height: 100vh;
+    grid-template-rows: .1fr 2fr .1fr;
+    min-height: 100vh;
 }
 html{
     overflow-x: hidden;
@@ -96,6 +96,13 @@ nav ul li a:hover{
     display: flex;
     justify-content: center;
     cursor: pointer;
+}
+.iniciar-sesion a{
+    color: #555;
+}
+.iniciar-sesion a:hover {
+    color: #222;
+    font-weight: 600;
 }
 .iniciar-sesion p:hover{
     background-color: #bbb;

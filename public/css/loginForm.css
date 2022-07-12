@@ -7,6 +7,7 @@ main{
     /* border: 1px solid green; */
     width: 100%;
     align-content: flex-start;
+    background-image: url("/img/fondo.jpg");
 }
 
 form{
@@ -44,6 +45,17 @@ div.botones{
     /* border: 2px solid red; */
 }
 
+div.option-cb{
+    margin: 15px;
+    font-size: 0.8rem;
+}
+
+main form a{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
 div.botones button{
     width: 6rem;
     padding: 3px;
