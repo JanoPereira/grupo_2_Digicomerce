@@ -22,7 +22,7 @@ app.get ('/about',(req, res)=>{
     res.sendFile(path.join(__dirname,'./views/about.html'));
 });
 
-app.get('/formulario-registro', (req, res) => {
+app.get('/registrationForm', (req, res) => {
     res.sendFile(path.join(__dirname, './views/registrationForm.html'));
 });
 
