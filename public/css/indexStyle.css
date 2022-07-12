@@ -79,6 +79,7 @@
     margin-top: 20px;
     border: 1px solid white;
     border-radius: 6px;
+    color: white;
     background-color: rgb(98, 179, 255);
     align-content: center;
     text-align: center;
@@ -88,6 +89,6 @@
 }
 
 .botonBuy:hover{
-    transform: scale(1.02); 
+    /*transform: scale(1.02); */
     background-color: rgb(45, 164, 249);
 }
