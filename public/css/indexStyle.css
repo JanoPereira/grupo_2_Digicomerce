@@ -7,24 +7,35 @@
 .header{
    /* border:2px solid green;*/
 }
-
+.main-section{
+    min-height: 100%;
+    background-color: whitesmoke;
+    height: fit-content;
+}
 .carrusel {
     /*border: 2px solid red;*/
     display: flex;
    /* height: 30vh;*/
     width: 100%;
+    height: 15vh;
    /* background-color:lightgoldenrodyellow;*/
     /*opacity: 100%;*/
     
 }
+.carrusel img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
 
 .contenedor-productos{
    /* border:2px solid blue;*/
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content:space-between;
-    /*height:80vh;*/
+    justify-content:space-evenly;
+    height:100%;
     width: 100vw;
     padding-left: 10vw;
     padding-right: 10vw;

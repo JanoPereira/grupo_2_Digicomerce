@@ -1,7 +1,7 @@
 .grilla-contenedora{
     display: grid;
-    grid-template-rows: .1fr 1fr .1fr;
-    height: 100vh;
+    grid-template-rows: .1fr 2fr .1fr;
+    min-height: 100vh;
 }
 html{
     overflow-x: hidden;
