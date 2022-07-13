@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/30a937ae38.js" crossorigin="anonymous"></script>
     <title>Detalle de Producto</title>
     <link rel="stylesheet" href="/css/header_footer.css">
     <link rel="stylesheet" href="/css/productDetail.css">
@@ -42,7 +43,81 @@
         </nav>
     </header>
     <main>
+        <div class="image-container">
+            <section class="image">
+                <img src="/img/pava.jpg" alt="producto">
+            </section>
+            <section class="other-images">
+                <article>
+                    <img src="/img/pava.jpg" alt="producto">
+                </article>
+                <article>
+                    <img src="/img/pava.jpg" alt="producto">
+                </article>
+                <article>
+                    <img src="/img/pava.jpg" alt="producto">
+                </article>
+                <article>
+                    <img src="/img/pava.jpg" alt="producto">
+                </article>
+            </section>
+        </div>
+        <div class="description-container">
+            <section class="main-section">
+                <h2>Nombre del Producto</h2>
+                <h4>$$$$$$</h4>
+                <h3>XX cuotas de $$$$</h3>
+                <a href="/metodosDePago">Ver más metodos de pago</a>
+            </section>   
+            <section class="buttons">
+                <article class="form1">
+                    <div class="type-quantity">
+                        <label for="product-type">Tipo</label>
+                        <select class="options" name="type" id="product-type">
+                            <option value="a">Opción A</option>
+                            <option value="b">Opción B</option>
+                            <option value="c">Opción C</option>
+                        </select>                  
+                    </div>
+                    <div class="type-quantity">                    
+                        <label for="product-quantity">Cantidad</label>
+                        <select class="options" name="type" id="product-type">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                </article>
+                <article class="form2">
+                    <button type="submit">Agregar al carrito</button>
+                    <button type="submit">Comprar ahora</button>
+                </article>
+            </section> 
+            <section class="product-description">
+                <h3>Descripción</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, repellendus fugiat sunt praesentium eius sapiente voluptatem, soluta quo tempore rerum vitae veritatis nemo, molestias non voluptatibus facilis! Sapiente, reiciendis? Corrupti.</p>
+            </section> 
+        </div>
+        <div class="related-products">
+            <h3>Productos relacionados</h3>
+            <section class="other-product">
+                <img src="/img/pava.jpg">
+                <p class="product-name">Nombre del Producto</p>
+                <p class="price">$$$$$$</p>
+            </section>
+            <section class="other-product">
+                <img src="/img/pava.jpg">
+                <p class="product-name">Nombre del Producto</p>
+                <p class="price">$$$$$$</p>
+            </section>
+            <section class="other-product">
+                <img src="/img/pava.jpg">
+                <p class="product-name">Nombre del Producto</p>
+                <p class="price">$$$$$$</p>
+            </section>
 
+        </div>
+            
     </main>
 
     <footer class="footer">
