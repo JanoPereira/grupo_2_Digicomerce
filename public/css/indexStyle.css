@@ -72,7 +72,7 @@
 .main-article{
     display: flex;
     flex-direction: column;
-   /* border:1px solid lightgray;*/
+    border:1px solid lightgray;
     background-color: white;
     border-radius: 6%;
     margin:20px;
