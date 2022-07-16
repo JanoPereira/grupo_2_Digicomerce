@@ -97,7 +97,7 @@ body{
     box-shadow: 2px 2px 5px 0 #444;
 }
 .producto:hover{
-    box-shadow: -5px 11px 10px 0px rgba(4,4,4,.2);
+    background-color: rgba(4, 4, 4, .1);
 }
 .flex-item{
     margin-right: 40px;
@@ -217,12 +217,85 @@ body{
     transition: all 1s;
     margin-right: 5px;
 }
+.producto:hover>.contenedor-imagen-producto>.foto-producto{
+    /* max-width: none;
+    width: 290%;
+    margin-left: 10px;
+    margin-bottom: 5px; */
 
+}
+/* .producto:hover>.informacion-producto{
+    align-content: flex-end;
+    width: 60%;
+}
+
+.producto:hover>.informacion-producto>.contenedor-descripcion-producto{
+    max-width: 170px;
+    padding-left: 12px;
+}
+.producto:hover>.contenedor-imagen-producto{
+    width: 7%;
+}
+.producto:hover>.informacion-producto>.contenedor-precio-producto>.precio-parcial-producto{
+    margin-bottom: 5px;
+}
+.producto:hover>.informacion-producto>.contenedor-input{
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+.producto:hover>.contenedor-subtotal{
+    width: 13%;
+    justify-content: start;
+}
+.producto:hover>.informacion-producto>.contenedor-precio-producto{
+    height: 20%;
+    align-items: end;
+} */
 
 /* /MAIN */
 
 
 /* MEDIAS QUERIES */
+@media (max-width:1023px) {
+    .producto:hover{
+        box-shadow: none;
+    }
+    .producto:hover>.contenedor-imagen-producto>.foto-producto{
+        max-width: 100px;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 0;
+    
+    }
+    .producto:hover>.informacion-producto{
+        align-content: space-between;
+        width: 80%;
+    }
+    
+    .producto:hover>.informacion-producto>.contenedor-descripcion-producto{
+        max-width: 175px;
+        padding-left: 0;
+    }
+    .producto:hover>.contenedor-imagen-producto{
+        width: 10%;
+    }
+    .producto:hover>.informacion-producto>.contenedor-precio-producto>.precio-parcial-producto{
+        margin-bottom: 0px;
+    }
+    .producto:hover>.informacion-producto>.contenedor-input{
+        display: block;
+        margin: auto;
+    }
+    .producto:hover>.contenedor-subtotal{
+        width: 21%;
+        justify-content: center;
+    }
+    .producto:hover>.informacion-producto>.contenedor-precio-producto{
+        height: 100%;
+        align-items: center;
+    }
+}
 @media (max-width:768px){
     
     /* MEDIA-MAIN (resolucion tablet) */
@@ -298,7 +371,6 @@ body{
         width: 10%;
         max-width: 50px;
         justify-content: flex-start;
-        padding-left: 6px;
     }
     .contenedor-basura{
         font-size: 18px;
@@ -306,6 +378,7 @@ body{
     .contenedor-resumen-compra{
         display: none;
     }
+    
     /* /MEDIA MAIN (resolucion tablet) */
 }
 
@@ -357,38 +430,3 @@ body{
     }
 }
 
-.producto:hover>.contenedor-imagen-producto>.foto-producto{
-    max-width: none;
-    width: 290%;
-    margin-left: 10px;
-    margin-bottom: 5px;
-
-}
-.producto:hover>.informacion-producto{
-    align-content: flex-end;
-    width: 60%;
-}
-
-.producto:hover>.informacion-producto>.contenedor-descripcion-producto{
-    max-width: 170px;
-    padding-left: 12px;
-}
-.producto:hover>.contenedor-imagen-producto{
-    width: 7%;
-}
-.producto:hover>.informacion-producto>.contenedor-precio-producto>.precio-parcial-producto{
-    margin-bottom: 5px;
-}
-.producto:hover>.informacion-producto>.contenedor-input{
-    display: block;
-    margin: 0 auto;
-    margin-top: 5px;
-}
-.producto:hover>.contenedor-subtotal{
-    width: 13%;
-    justify-content: start;
-}
-.producto:hover>.informacion-producto>.contenedor-precio-producto{
-    height: 20%;
-    align-items: end;
-}
