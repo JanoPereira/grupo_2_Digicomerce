@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/30a937ae38.js" crossorigin="anonymous"></script>
     <title>Detalle de Producto</title>
     <link rel="stylesheet" href="/css/header_footer.css">
     <link rel="stylesheet" href="/css/productDetail.css">
 </head>
+
 <body>
     <header class="header">
         <nav class="nav--bar">
@@ -30,6 +33,9 @@
                 <a href="/loginForm">Iniciar sesión</a>
                 <!-- <p class="texto-inicio-sesion">Iniciar sesion</p> -->
             </div>
+            <div class="registro">
+                <a href="/registrationForm">Crear cuenta</a>
+            </div>
             <div class="carro-compras">
                 <a href="/carro-compras" class="link-carro">
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -42,6 +48,87 @@
         </nav>
     </header>
     <main>
+        <!-- <div class="product-container"> -->
+            <div class="image-container">
+                <section class="image">
+                    <img src="/img/pava.jpg" alt="producto">
+                </section>
+                <section class="other-images">
+                    <article>
+                        <img src="/img/pava.jpg" alt="producto">
+                    </article>
+                    <article>
+                        <img src="/img/pava.jpg" alt="producto">
+                    </article>
+                    <article>
+                        <img src="/img/pava.jpg" alt="producto">
+                    </article>
+                    <article>
+                        <img src="/img/pava.jpg" alt="producto">
+                    </article>
+                </section>
+            </div>
+            <div class="description-container">
+                <section class="main-section">
+                    <h2>Nombre del Producto</h2>
+                    <h4>$$$$$$</h4>
+                    <h3>XX cuotas de $$$$</h3>
+                    <a href="/metodosDePago">Ver más metodos de pago</a>
+                </section>
+                <section class="buttons">
+                    <article class="form1">
+                        <div class="type-quantity">
+                            <label for="product-type">Tipo</label>
+                            <br>
+                            <select class="options" name="type" id="product-type">
+                                <option value="a">Opción A</option>
+                                <option value="b">Opción B</option>
+                                <option value="c">Opción C</option>
+                            </select>
+                        </div>
+                        <div class="type-quantity">
+                            <label for="product-quantity">Cantidad</label>
+                            <br>
+                            <select class="options" name="type" id="product-type">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </article>
+                    <article class="form2">
+                        <button class="add" type="submit">Agregar al carrito</button>
+                        <button class="buy" type="submit">Comprar ahora</button>
+                    </article>
+                </section>
+                <section class="product-description">
+                    <h3>Descripción</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, repellendus fugiat sunt praesentium
+                        eius sapiente voluptatem, soluta quo tempore rerum vitae veritatis nemo, molestias non voluptatibus
+                        facilis! Sapiente, reiciendis? Corrupti.</p>
+                </section>
+            </div>
+        <!-- </div> -->
+        
+        <div class="related-products">
+            <h3>Productos relacionados</h3>
+            <section class="other-product">
+                <img src="/img/pava.jpg">
+                <p class="product-name">Nombre del Producto</p>
+                <p class="price">$$$$$$</p>
+            </section>
+            <section class="other-product">
+                <img src="/img/pava.jpg">
+                <p class="product-name">Nombre del Producto</p>
+                <p class="price">$$$$$$</p>
+            </section>
+            <section class="other-product">
+                <img src="/img/pava.jpg">
+                <p class="product-name">Nombre del Producto</p>
+                <p class="price">$$$$$$</p>
+            </section>
+
+        </div>
 
     </main>
 
@@ -71,7 +158,7 @@
                 <span><strong>Contacto</strong></span>
                 <i class="fa-solid fa-angle-up " id="flecha-arriba"></i>
                 <p><i class="fa-brands fa-whatsapp"></i>12345678</p>
-            <p><i class="fa-solid fa-envelope"></i>sarasa@sarasa.com.ar</p>               
+                <p><i class="fa-solid fa-envelope"></i>sarasa@sarasa.com.ar</p>
             </ul>
         </div>
 
@@ -81,7 +168,7 @@
                 <i class="fa-solid fa-angle-up " id="flecha-arriba"></i>
                 <p><input type="email" class="input--email" placeholder="Ingrese su dirección de email..."></p>
                 <input type="submit">
-                    
+
             </ul>
         </div>
 
@@ -96,8 +183,9 @@
 
             </ul>
         </div>
-    </footer>   
+    </footer>
 
-    
+
 </body>
+
 </html>

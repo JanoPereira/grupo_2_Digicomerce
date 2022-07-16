@@ -22,7 +22,7 @@ app.get ('/about',(req, res)=>{
     res.sendFile(path.join(__dirname,'./views/about.html'));
 });
 
-app.get('/formulario-registro', (req, res) => {
+app.get('/registrationForm', (req, res) => {
     res.sendFile(path.join(__dirname, './views/registrationForm.html'));
 });
 
@@ -32,7 +32,7 @@ app.get ('/loginForm',(req, res)=>{
     res.sendFile(path.join(__dirname,'./views/LoginForm.html'));
 });
 app.get ('/productDetail',(req, res)=>{
-    res.sendFile(path.join(__dirname,'./views/productDeatil.html'));
+    res.sendFile(path.join(__dirname,'./views/productDetail.html'));
 });
 
 app.listen(5000,()=>{

@@ -1,4 +1,4 @@
-.grilla-contenedora{
+cd grup.grilla-contenedora{
     display: grid;
     grid-template-rows: .1fr 2fr .1fr;
     min-height: 100vh;
@@ -92,7 +92,7 @@ nav ul li a:hover{
 .iniciar-sesion{
     flex-grow: 1;
     text-align: center;
-    width: 15vw;
+    width: 2vw;
     display: flex;
     justify-content: center;
     cursor: pointer;
@@ -115,10 +115,21 @@ nav ul li a:hover{
     max-width: fit-content;
 }
 
-.iniciar-sesion p:hover{
+/*.iniciar-sesion p:hover{
     transform: scale(1.02); 
     background-color:red;
+}*/
+
+.registro{
+    flex-grow: 1;
+    text-align: center;
+    width: 2vw;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
 }
+
+
 .carro-compras{
     flex-grow: 1;
     display: flex;
