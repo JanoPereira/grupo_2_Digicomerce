@@ -215,7 +215,7 @@ body{
     color: #f00;
     cursor: pointer;
     transition: all 1s;
-    margin-right: 5px;
+    
 }
 .producto:hover>.contenedor-imagen-producto>.foto-producto{
     /* max-width: none;

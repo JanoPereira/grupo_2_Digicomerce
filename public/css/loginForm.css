@@ -8,12 +8,21 @@ main{
     width: 100%;
     align-content: flex-start;
     background-image: url("/img/fondo.jpg");
+    min-height: 74vh;
 }
 
 form{
     /* border: 3px solid green; */
     width: 100%;
     margin-top: 30px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.checkbox{
+    text-align: center;
+    font-family: cursive;
 }
 
 .box-datos {
@@ -49,7 +58,9 @@ div.option-cb{
     margin: 15px;
     font-size: 0.8rem;
 }
-
+.option-cb input{
+    margin-right: 5px;
+}
 main form a{
     display: flex;
     justify-content: center;
