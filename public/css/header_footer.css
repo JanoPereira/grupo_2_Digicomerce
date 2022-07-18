@@ -188,6 +188,7 @@ footer {
     border-bottom: 2px solid #222;
     width: 100vw;
     justify-content: space-evenly;
+    border-top: 2px solid rgba(2,2,2,.1);
     
     
     
