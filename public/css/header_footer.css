@@ -125,11 +125,12 @@ nav {
     flex-grow: 1;
     text-align: left;
     width: 1vw;
-    /*max-width: fit-content;*/
-    background-color: #fff;
+    max-width: 240px;
+    /* background-color: #fff; */
     border-radius: 6px;
     padding: 0 10px;
     width: 20%;
+    position: relative;
 }
 
 .contenedor--buscador input {
@@ -147,6 +148,12 @@ nav {
     cursor: pointer;
     border-left: 1px solid rgba(4, 4, 4, .3);
     padding-left: 5px;
+    top: 5px;
+    position: absolute;
+    right: 27%;
+}
+.contenedor--buscador i:hover {
+    color: #999;
 }
 
 .navbar2{
@@ -237,7 +244,7 @@ nav {
 
 .carro-compras {
    /* border: 2px gold solid;*/
-    flex-grow: 1;
+    /* flex-grow: 1; */
     display: flex;
     margin-left: 10px;
 }
@@ -270,13 +277,6 @@ footer {
     border-bottom: 2px solid #222;
     width: 100vw;
     justify-content: space-evenly;
-<<<<<<< HEAD
-=======
-    border-top: 2px solid rgba(2,2,2,.1);
-    
-    
-    
->>>>>>> 48e08244338e5c6bed242fad6eac2641a2888533
 }
 
 #flecha-arriba {
@@ -370,7 +370,7 @@ footer>div span {
 /* /FOOTER */
 
 /* MEDIAS */
-@media (max-width:768px) {
+@media (max-width:1024px) {
 
     /* MEDIA-HEADER (resolucion tablet) */
     .header {
@@ -382,7 +382,17 @@ footer>div span {
     .nav--bar {
         padding: 0 15px;
 
-        gap: 7%;
+    
+    }
+    .navbar{
+        display: none;
+    }
+    .navbar2>div{
+        flex-direction: column;
+        gap: 5px;
+    }
+    .iniciar-sesion{
+        margin-left: 0;
     }
 
     .header ul {
@@ -394,7 +404,6 @@ footer>div span {
         padding: 0;
         height: 100%;
         padding: 0;
-        margin-right: 15px;
     }
 
     .contenedor--logo .logo {
@@ -416,15 +425,16 @@ footer>div span {
 
     .contenedor--buscador input {
         background-color: none;
-        max-width: 150px;
+        /* max-width: 150px; */
+        width: 100%;
     }
-
-    .iniciar-sesion {
-        display: none;
+    .contenedor--buscador i{
+        right: 8%;
     }
 
     .carro-compras {
         max-width: 70px;
+        margin-left: 0;
     }
 
     .carro-compras a {
@@ -434,7 +444,7 @@ footer>div span {
 
     .menu--hamburguesa {
         display: block;
-        margin-right: 10px;
+
         font-size: 24px;
     }
 
@@ -502,16 +512,26 @@ footer>div span {
 
     /* /MEDIA-FOOTER */
 }
-
-@media (max-width:480px) {
+@media (max-width:768px){
+    .navbar2{
+        display: flex;
+    }
+    .navbar2>div{
+        width: 50%;
+    }
+    .navbar2>div a{
+        text-align: center;
+    }
+}
+@media (max-width:600px) {
 
     /* MEDIA HEADER (resolucion cel) */
-    body {
-        max-width: 480px;
-    }
 
     .nav--bar {
-        padding-left: 5px;
+        justify-content: space-between;
+    }
+    .navbar2{
+        display: none;
     }
 
     .contenedor--buscador {
@@ -520,8 +540,8 @@ footer>div span {
     }
 
     .contenedor--buscador input {
-        max-width: 130px;
-        width: 60%;
+        /* max-width: 130px; */
+        width: 100%;
     }
 
     .carro-compras {
@@ -570,5 +590,6 @@ footer>div span {
 
     /* /MEDIA FOOTER (resolucion cel) */
 }
+
 
 /* /MEDIAS */
