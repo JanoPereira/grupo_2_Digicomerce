@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="/css/indexStyle.css">
     <title>DigiCommerce</title>
 </head>
+
 <body>
     <header class="header">
         <nav class="nav--bar">
@@ -17,23 +19,56 @@
                     <img src="/img/logo.jpg" alt="Logo" class="logo">
                 </a>
             </div>
-            <ul>
+            <div class="navbar">
+                <a href="/">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Productos
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/productDetail">Té</a>
+                        <a href="/productDetail">Yerbas</a>
+                        <a href="/productDetail">Accesorios</a>
+
+                    </div>
+                </div>
+                <a href="/about">Nosotros</a>
+                <a href="#contact">Contacto</a>
+
+            </div>
+            <!-- <ul>
                 <li><a href="/" class="link">Inicio</a></li>
                 <li><a href="/productDetail" class="link">Productos</a></li>
                 <li><a href="/about" class="link">Nosotros</a></li>
                 <li><a href="#" class="link">Contacto</a></li>
-            </ul>
+            </ul>-->
+
             <div class="contenedor--buscador">
                 <input type="text" class="input--buscador" placeholder="Buscar...">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <div class="iniciar-sesion">
+
+            <div class="navbar2">
+                <div class="iniciar-sesion">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <a href="/loginForm">Iniciar sesión</a>
+                </div>
+                <div class="registro">
+                    <i class="fas fa-user"></i>
+                    <a href="/registrationForm">Registrate</a>
+                </div>
+
+            </div>
+
+
+            <!--<div class="iniciar-sesion">
+                <i class="fas fa-sign-in-alt"></i>           
                 <a href="/loginForm">Iniciar sesión</a>
-                <!-- <p class="texto-inicio-sesion">Iniciar sesion</p> -->
+                 <p class="texto-inicio-sesion">Iniciar sesion</p>
             </div>
             <div class="registro">
+                <i class="fas fa-user"></i>
                 <a href="/registrationForm">Crear cuenta</a>
-            </div>
+            </div>-->
             <div class="carro-compras">
                 <a href="/carro-compras" class="link-carro">
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -46,105 +81,106 @@
         </nav>
     </header>
     <main>
-       <div class="carrusel"><img src="/img/teaBanner.jpg" alt="banner" class="banner"></div>
-      <!--  <div class="carrusel"><img src="" id="image"></div>
-        <script type="text/javascipt">
-            let image = document.getElementById('image');
-            let images = ['teaBanner.jpg','banner2.jpg','banner3.jpg','banner4.jpg'];
-            setInterval(function(){
-                let random = Math.floor(Math.random() *4);
-                image.src = images[random];
-            },800);
+        <div class="carrusel">
+            <img src="/img/banner1.jpg" alt="banner" id="banner1">
+            <img src="/img/banner2.jpg" alt="banner" id="banner2">
+            <img src="/img/banner3.jpg" alt="banner" id="banner3">
+            <img src="/img/banner4.jpg" alt="banner" id="banner4">
 
-        </script>-->
+        </div>
+
 
         <section class="contenedor-productos">
 
+            <h2 class="pDestacados">Productos destacados</h2>
+
             <section class="contenedor-p1">
 
-            <a href="/productDetail">    
-            <div class="main-article">
-                <img src="img/te.jpg" alt="te" class="te">
-                <p class="product">Producto</p>
-                <P class="price">Precio: $$$</P>
-                <button class="botonBuy">Agregar al carrito</button>
-            </div>
-            </a>
+                <a href="/productDetail">
+                    <div class="main-article">
+                        <img src="img/te.jpg" alt="te" class="te">
+                        <p class="product">Producto</p>
+                        <P class="price">Precio: $$$</P>
+                        <button class="botonBuy">Agregar al carrito</button>
+                    </div>
+                </a>
 
-            <a href="/productDetail">    
-            <div class="main-article">
-                <img src="img/te.jpg" alt="te" class="te">
-                <p class="product">Producto</p>
-                <P class="price">Precio: $$$</P>
-                <button class="botonBuy">Agregar al carrito</button>
-            </div>
-            </a>
+                <a href="/productDetail">
+                    <div class="main-article">
+                        <img src="img/te.jpg" alt="te" class="te">
+                        <p class="product">Producto</p>
+                        <P class="price">Precio: $$$</P>
+                        <button class="botonBuy">Agregar al carrito</button>
+                    </div>
+                </a>
 
-            <a href="/productDetail">    
-            <div class="main-article">
-                <img src="img/te.jpg" alt="te" class="te">
-                <p class="product">Producto</p>
-                <P class="price">Precio: $$$</P>
-                <button class="botonBuy">Agregar al carrito</button>
-            </div>
-            </a>
+                <a href="/productDetail">
+                    <div class="main-article">
+                        <img src="img/te.jpg" alt="te" class="te">
+                        <p class="product">Producto</p>
+                        <P class="price">Precio: $$$</P>
+                        <button class="botonBuy">Agregar al carrito</button>
+                    </div>
+                </a>
 
-            <a href="/productDetail">    
-            <div class="main-article">
-                <img src="img/te.jpg" alt="te" class="te">
-                <p class="product">Producto</p>
-                <P class="price">Precio: $$$</P>
-                <button class="botonBuy">Agregar al carrito</button>
-            </div>
-            </a>
+                <a href="/productDetail">
+                    <div class="main-article">
+                        <img src="img/te.jpg" alt="te" class="te">
+                        <p class="product">Producto</p>
+                        <P class="price">Precio: $$$</P>
+                        <button class="botonBuy">Agregar al carrito</button>
+                    </div>
+                </a>
 
-        </section>
-
-        <section class="contenedor-p2">
-            
-            <a href="/productDetail">    
-            <div class="main-article">
-                <img src="img/te.jpg" alt="te" class="te">
-                <p class="product">Producto</p>
-                <P class="price">Precio: $$$</P>
-                <button class="botonBuy">Agregar al carrito</button>
-            </div>
-            </a>
-
-            <a href="/productDetail">    
-            <div class="main-article">
-                <img src="img/te.jpg" alt="te" class="te">
-                <p class="product">Producto</p>
-                <P class="price">Precio: $$$</P>
-                <button class="botonBuy">Agregar al carrito</button>
-            </div>
-            </a>
-
-            <a href="/productDetail">    
-            <div class="main-article">
-                <img src="img/te.jpg" alt="te" class="te">
-                <p class="product">Producto</p>
-                <P class="price">Precio: $$$</P>
-                <button class="botonBuy">Agregar al carrito</button>
-            </div>
-            </a>
-
-            <a href="/productDetail">    
-            <div class="main-article">
-                <img src="img/te.jpg" alt="te" class="te">
-                <p class="product">Producto</p>
-                <P class="price">Precio: $$$</P>
-                <button class="botonBuy">Agregar al carrito</button>
-            </div>
-            </a>
-
-        </section>
             </section>
 
+            <h2 class="pOfertas">Ofertas</h2>
+
+            <section class="contenedor-p2">
+
+                <a href="/productDetail">
+                    <div class="main-article">
+                        <img src="img/te.jpg" alt="te" class="te">
+                        <p class="product">Producto</p>
+                        <P class="price">Precio: $$$</P>
+                        <button class="botonBuy">Agregar al carrito</button>
+                    </div>
+                </a>
+
+                <a href="/productDetail">
+                    <div class="main-article">
+                        <img src="img/te.jpg" alt="te" class="te">
+                        <p class="product">Producto</p>
+                        <P class="price">Precio: $$$</P>
+                        <button class="botonBuy">Agregar al carrito</button>
+                    </div>
+                </a>
+
+                <a href="/productDetail">
+                    <div class="main-article">
+                        <img src="img/te.jpg" alt="te" class="te">
+                        <p class="product">Producto</p>
+                        <P class="price">Precio: $$$</P>
+                        <button class="botonBuy">Agregar al carrito</button>
+                    </div>
+                </a>
+
+                <a href="/productDetail">
+                    <div class="main-article">
+                        <img src="img/te.jpg" alt="te" class="te">
+                        <p class="product">Producto</p>
+                        <P class="price">Precio: $$$</P>
+                        <button class="botonBuy">Agregar al carrito</button>
+                    </div>
+                </a>
+
+            </section>
+        </section>
+
         </div>
-    
+
     </main>
-    
+
 
     <footer class="footer">
         <div class="contenedor--institucional">
@@ -172,7 +208,7 @@
                 <span><strong>Contacto</strong></span>
                 <i class="fa-solid fa-angle-up " id="flecha-arriba"></i>
                 <p><i class="fa-brands fa-whatsapp"></i>12345678</p>
-            <p><i class="fa-solid fa-envelope"></i>sarasa@sarasa.com.ar</p>               
+                <p><i class="fa-solid fa-envelope"></i>sarasa@sarasa.com.ar</p>
             </ul>
         </div>
 
@@ -182,7 +218,7 @@
                 <i class="fa-solid fa-angle-up " id="flecha-arriba"></i>
                 <p><input type="email" class="input--email" placeholder="Ingrese su dirección de email..."></p>
                 <input type="submit">
-                    
+
             </ul>
         </div>
 
@@ -194,8 +230,9 @@
                     <i class="fa-brands fa-instagram-square"></i>
                     <i class="fab fa-twitter"></i>
 
-        </footer>
-    </div>   
+    </footer>
+    </div>
 
 </body>
+
 </html>
