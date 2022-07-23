@@ -296,9 +296,10 @@ body{
         align-items: center;
     }
 }
-@media (max-width:768px){
+@media (max-width:767px){
     
     /* MEDIA-MAIN (resolucion tablet) */
+    
     .main{
         width: 100vw;
         grid-template-columns: 100vw;

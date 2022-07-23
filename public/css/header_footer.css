@@ -270,6 +270,13 @@ footer {
     border-bottom: 2px solid #222;
     width: 100vw;
     justify-content: space-evenly;
+<<<<<<< HEAD
+=======
+    border-top: 2px solid rgba(2,2,2,.1);
+    
+    
+    
+>>>>>>> 48e08244338e5c6bed242fad6eac2641a2888533
 }
 
 #flecha-arriba {
