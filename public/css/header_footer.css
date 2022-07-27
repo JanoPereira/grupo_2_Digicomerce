@@ -153,13 +153,13 @@ nav {
     display: flex;
 }
 
-.navbar2 .iniciar-sesion:hover i{
+/*.navbar2 .iniciar-sesion:hover i{
     color: #444;
-}
+}*/
 
-.navbar2 .registro:hover i{
+/*.navbar2 .registro:hover i{
     color: #444;
-}
+}*/
 
 .iniciar-sesion {
     /*flex-grow: 0.5;*/
@@ -188,7 +188,8 @@ nav {
 .iniciar-sesion:hover {
     /*color: #222;
     font-weight: 600;*/
-    background-color: green;
+    /*background-color: green;*/
+    background-color:#0077ff;
     height: 48px;
     justify-content: center;
     align-items: center;
@@ -228,7 +229,8 @@ nav {
 }
 
 .registro:hover {
-    background-color: green;
+    background-color: red;
+    /*background-color: green;*/
     height: 48px;
     justify-content: center;
     align-items: center;
