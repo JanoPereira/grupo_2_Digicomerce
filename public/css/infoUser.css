@@ -1,0 +1,185 @@
+.links{
+    color: #222;
+}
+#codigo-postal::-webkit-outer-spin-button,
+#codigo-postal::-webkit-inner-spin-button{
+    -webkit-appearance: none;                /*   SACAR FLECHAS */
+    margin: 0;                               /* DEL INPUT NUMBER */
+
+}
+
+/* ESTILOS PARA DETALLE PRECIOS */
+.contenedor-resumen-compra{
+    height: 100%;
+    width: 86%;
+    background: #ddd;
+    padding: 0 10px;
+    min-width: 240px;
+
+}
+.contenedor-resumen-fixed{
+    /* margin-top: 30px; */
+    /* border: 1px solid red; */
+    position: sticky;
+    top: 40px;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+}
+.contenedor-resumen-fixed .titulo{
+    width: fit-content;
+}
+.contenedor-resumen-fixed .confirmacion-compra{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: start;
+    margin: 15px 1px;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid rgba(9,9,9,.2);
+}
+.contenedor-datos-finales{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contenedor-total-pedido{
+    display: flex;
+    width: 100%;
+    padding-top: 10px;
+    border-top: 0.5px solid rgba(9,9,9,.2);
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#total-pedido{
+    width: 40%;
+    color: #933;
+    font-weight: 600;
+    font-size: 21px;
+
+}
+#total-pedido a{
+    color: #fff;
+}
+#precio-total{
+    width: 50%;
+}
+.contenedor-datos-finales p{
+    width: 35%;
+    min-width: 107px;
+    margin: 10px 3px;
+}
+.contenedor-datos-finales .precio{
+    text-align: end;
+    min-width: 0;
+    width: 35%;
+    padding-bottom: 10px;
+}
+.contenedor-datos-finales .precio-envio{
+    border-bottom: 0.5px solid rgba(9,9,9,.2);
+}
+.contenedor-botones-pago{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.contenedor-botones-pago .continuar-compra,.contenedor-botones-pago .boton-pago{
+    border: 1px solid;
+    border-radius: 30px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.continuar-compra{
+    background: #b44;
+}
+.boton-pago{
+    background: #4b4;
+}
+.boton-pago:hover,.continuar-compra:hover{
+    box-shadow: 2px 2px 5px 0 #444;
+}
+
+/* ESTILOS PARA FORM-DATOS */
+.titulo{
+    font-size: 22px;
+    height: fit-content;
+    text-align: start;
+    width: 100%;
+    margin: 30px 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(9,9,9,.2);
+}
+/* Estilos Main */
+.main{
+    min-height: 75.5vh;
+    display: flex;
+    position: relative;
+    margin-bottom: 30px;
+}
+.seccion-formulario{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+}
+.seccion-info-carro{
+    width: 40%;
+    max-width: 290px;
+    height: fit-content;
+    border: 1px solid rgba(2,2,2,.1);
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    right: 15%;
+    top: 11%;
+}
+.contenedor-pregunta{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+.label{
+    width: 100%;
+    text-align: start;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.contenedor-checkbox{
+    display: block;
+    text-align: start;
+    margin-bottom: 10px;
+}
+.label-checkbox{
+    text-align: start;
+    font-weight: 400;
+}
+.boton-volver{
+    padding: 2px 13px;
+    border: 1px solid rgba(2,2,2,.1);
+    border-radius: 10px;
+    background-color: #f0f0f0;
+}
+.contenedor-botones-envio{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.boton-envio-formulario{
+    padding: 4px 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(2,2,2,.1);
+}
+.contenedor-boton i{
+    margin-left: 8px;
+}
+.link-volver-carro{
+    color: #339;
+    width: 100%;
+}

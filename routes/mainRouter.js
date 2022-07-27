@@ -20,4 +20,8 @@ router.get('/loginForm',mainController.login)
 
 router.get('/productDetail',mainController.detail)
 
+router.get('/info-usuario',mainController.userInfo);
+
+router.get('/pago',mainController.pago);
+
 module.exports = router;

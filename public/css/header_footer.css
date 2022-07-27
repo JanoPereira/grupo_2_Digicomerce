@@ -195,7 +195,7 @@ nav {
 .iniciar-sesion:hover {
     /*color: #222;
     font-weight: 600;*/
-    background-color: green;
+    background-color:#0077ff;
     height: 48px;
     justify-content: center;
     align-items: center;
@@ -235,7 +235,7 @@ nav {
 }
 
 .registro:hover {
-    background-color: green;
+    background-color: #f00;
     height: 48px;
     justify-content: center;
     align-items: center;
@@ -274,7 +274,7 @@ footer {
     padding: 5px;
     color: black;
     background-color: darkgray;
-    border-bottom: 2px solid #222;
+    border-top: 2px solid rgba(2, 2, 2, .1);
     width: 100vw;
     justify-content: space-evenly;
 }

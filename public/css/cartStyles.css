@@ -9,6 +9,7 @@ main{
     grid-template-columns: 60vw 35vw;
     gap: 5vw;
     background: #eee;
+    min-height: 78.5vh;
 }
 .contenedor-resumen-compra{
     height: 100%;

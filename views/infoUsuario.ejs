@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/30a937ae38.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/header_footer.css">
+    <link rel="stylesheet" href="./css/infoUser.css">
+    <title>Informacion del Usuario</title>
+    
+</head>
+<body>
+    <%-include('./partials/header')%>
+    <main class="main">
+        
+        <section class="seccion-formulario">
+            <h1 class="titulo">Armando tu pedido</h1>
+            <form class="form-datos-usuario">
+                <div class="contenedor-pregunta">
+                    <label class="label" for="nombre">Nombre(s)</label>
+                <input type="text" id="nombre"  name="nombre">
+                </div>
+
+                <div class="contenedor-pregunta">
+                    <label for="apellido" class="label">Apellido</label>
+                    <input type="text" id="apellido"  name="apellido">
+                </div>
+
+                <div class="contenedor-pregunta">
+                    <label for="direccion" class="label">Direccion</label>
+                    <input type="text" id="direccion"  name="direccion">
+                </div>
+
+                <div class="contenedor-pregunta contenedor-checkbox">
+                    <input type="radio" name="recordar-direccion" class="input-radio">
+                    <label for="recordar-direccion" class="label label-checkbox">Recordar direccion</label>
+                </div>
+
+                <div class="contenedor-pregunta">
+                    <label for="ciudad" class="label">Ciudad</label>
+                    <input type="text" id="ciudad" name="ciudad" >
+                </div>
+
+                <div class="contenedor-pregunta">
+                    <label for="codigo-postal" class="label" >Codigo Postal</label>
+                    <input type="number" id="codigo-postal" name="codigo-postal">
+                </div>
+
+                <div class="contenedor-pregunta">
+                    <label for="email" class="label">Email</label>
+                    <input type="text" id="email"  name="email">
+                </div>
+                <div class="contenedor-pregunta contenedor-checkbox">
+                    <input type="radio" name="recibir-mail" class="input-radio checkbox">
+                    <label for="recibir-mail" class="label label-checkbox">Recibir informacion de la orden</label>
+                
+                </div>    
+
+                <div class="contenedor-pregunta">
+                    <label for="apellido" class="label">Numero de telefono</label>
+                    <input type="phone" id="apellido"  name="apellido">
+                </div>
+                <div class="contenedor-botones-envio">
+                    <div class="contenedor-pregunta contenedor-boton">
+                        <a href="/carro-compras" class="boton-volver links">Volver </a>
+                    </div>
+                    <div class="contenedor-pregunta contenedor-boton">
+                        <a href="/pago"><button class="boton-envio-formulario links">Métodos de pago<i class="fa-solid fa-credit-card"></i></button></a>
+                    </div>
+                </div>
+
+            </form>
+        </section>
+        <section class="seccion-info-carro">
+            <div class="contenedor-resumen-fixed">
+                <h1 class="titulo">Resumen de tu compra</h1> 
+                <div class="contenedor-datos-finales">
+                    <p class="subtotal">Subtotal:</p>
+                    <p class="precio ">$25.400</p>
+                    <p class="impuestos">IVA (21%):</p>
+                    <p class="precio">$5.334</p>
+                    <div class="contenedor-total-pedido">
+                        <p id="total-pedido">Total:</p>
+                        <p class="precio" id="precio-total">$30.734</p>
+                        <a href="/carro-compras" class="link-volver-carro">Volver al carro</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <%-include('./partials/footer')%>
+</body>
+</html>

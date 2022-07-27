@@ -22,6 +22,12 @@ const controller = {
     },
     detail: (req,res) =>{
         res.render('productDetail')
+    },
+    userInfo: (req,res)=>{
+        res.render('infoUsuario')
+    },
+    pago: (req,res)=>{
+        res.render('pago')
     }
     
 }
