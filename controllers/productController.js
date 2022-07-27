@@ -10,12 +10,10 @@ const productController = {
         res.render('productDetail')
     },
     create: (req,res) => {
-        // TODO: falta crear pagina creacion producto //
-        res.send('createProduct')
+        res.render('createProduct')
     },
     edit: (req,res) => {
-        // TODO: falta crear edicion de producto //
-        res.send('editProduct')
+        res.render('editProduct')
     }
 };
 module.exports = productController;
