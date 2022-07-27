@@ -8,9 +8,6 @@ const controller = {
     about: (req,res) =>{
         res.render('about')
     },
-    about: (req,res) =>{
-        res.render('about')
-    },
     registro: (req,res) =>{
         res.render('registrationForm')
     },
