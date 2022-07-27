@@ -149,6 +149,11 @@ main{
     }
  
 }
+@media(max-width:768px){
+    main,.fondo,.contenedor-imagenes{
+        min-height: 85vh;
+    }
+}
 @media (max-width:550px){
     .seccion-texto{
         width: 100%;

@@ -1,5 +1,5 @@
 /* PAGINA CARRO DE COMPRAS (TERMINA EN LINEA DE ----------) */
-body{
+main{
     font-family: 'Roboto Condensed', sans-serif;;
 }
 /* MAIN */
@@ -9,6 +9,7 @@ body{
     grid-template-columns: 60vw 35vw;
     gap: 5vw;
     background: #eee;
+    min-height: 78.5vh;
 }
 .contenedor-resumen-compra{
     height: 100%;

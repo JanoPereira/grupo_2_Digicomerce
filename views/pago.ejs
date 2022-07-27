@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/30a937ae38.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/header_footer.css">
+    <link rel="stylesheet" href="./css/pagoStyles.css">
+    <title>Informacion del Usuario</title>
+    
+</head>
+<body>
+    <%-include('./partials/header')%>
+    <main class="main">
+        <section class="opcion-pago">
+            <div class="contenedor-metodo metodo-tarjeta">
+                <img src="/img/visa-master.png" alt="visa-master" class="foto-metodo foto-tarjeta">
+                <div class="contenedor-checkbox checkbox-tarjeta">
+                    <input type="radio" name="metodo-pago" id="pagar-tarjeta" checked="">
+                    <label for="pagar-tarjeta" class="label">Pagar $30.734 con tarjeta de credito</label>
+                </div>
+            </div>
+            <div class="contenedor-metodo metodo-tarjeta">
+                <img src="/img/paypal.png" alt="paypal" class="foto-metodo foto-paypal">
+                <div class="contenedor-checkbox checkbox-paypal">
+                    <input type="radio" name="metodo-pago" id="pagar-paypal">
+                    <label for="pagar-paypal" class="label">Pagar $30.734 con Paypal</label>
+                </div>
+            </div>
+            
+        </section>
+        
+        <section class="informacion-metodo contenedor-informacion-tarjeta">
+            <form action="/" class="formulario formulario-informacion-tarjeta formulario-informacion-tarjeta-active">
+                <div class="flex-item contenedor-input input-nombre">
+                    <label class="label" for="nombre">Nombre del Titular <p class="parentesis">(como figura en la tarjeta)</p></label>
+                    <input type="text" name="nombre" id="nombre" class="input">
+                    <i class="fa-solid fa-user i-usuario"></i>
+                </div>
+                
+                <div class="flex-item contenedor-input input-tarjeta">
+                    <label class="label" for="numero-tarjeta">Numero de la Tarjeta</label>
+                    <input type="number" name="numero-tarjeta" id="numero-tarjeta" class="input">
+                    <i class="fa-solid fa-credit-card i-numero-tarjeta"></i>
+                </div>
+
+                <div class="flex-item contenedor-input input-fecha">
+                    <label class="label" for="fecha-tarjeta">Valida Hasta</label>
+                    <input type="date" name="fecha-tarjeta" id="fecha-tarjeta" class="input">
+                    <!-- <i class="fa-solid fa-calendar-days i-valida-hasta"></i> -->
+                </div>
+
+                <div class="flex-item contenedor-input input-codigo">
+                    <label class="label label-hover" for="codigo-tarjeta">CVV/CVC <p id="cvv">*</p></label>
+                    <input type="number" name="codigo-tarjeta" id="codigo-tarjeta" class="input">
+                    <i class="fa-solid fa-lock i-candado"></i>
+                    <div class="flex-item contenedor-imagen-cvv">
+                        <img src="/img/codigo-de-seguridad.jpg" alt="indicador-cvv" class="foto-cvv">
+                    </div>
+                </div>
+            </form>
+            <form action="" class="formulario formulario-informacion-paypal">
+                <h2 class="titulo-paypal">Paga con Paypal</h2>
+                <div class="flex-item contenedor-input contenedor-input-mail">
+                    <label class="label" for="mail">Email</label>
+                    <input type="mail" name="mail" id="mail" class="input input-mail">
+                </div>
+                
+                <div class="flex-item contenedor-input contenedor-input-contraseña">
+                    <label class="label" for="contraseña">Contraseña</label>
+                    <input type="password" name="contraseña" id="contraseña" class="input input-contraseña">
+                </div>
+            </form>
+
+        </section>
+    </main>
+
+
+    <%-include('./partials/footer')%>
+    <script src="./scripts/codigoPago.js"></script>
+</body>
+</html>
