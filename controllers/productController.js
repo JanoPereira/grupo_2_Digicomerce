@@ -1,7 +1,7 @@
 const productController = {
     productsList: (req,res) => {
         // TODO: falta crear lista de productos //
-        res.send('listaDeProductos')
+        res.send('productList')
     },
     cart:(req,res) =>{
         res.render('productCart')
@@ -11,11 +11,11 @@ const productController = {
     },
     create: (req,res) => {
         // TODO: falta crear pagina creacion producto //
-        res.send('creacionProducto')
+        res.send('createProduct')
     },
     edit: (req,res) => {
         // TODO: falta crear edicion de producto //
-        res.send('edicionDeProductos')
+        res.send('editProduct')
     }
-}
+};
 module.exports = productController;
