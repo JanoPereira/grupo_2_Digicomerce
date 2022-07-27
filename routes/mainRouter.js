@@ -14,6 +14,6 @@ router.get('/faq',mainController.faq)
 
 // router.get('/info-usuario',mainController.userInfo);//
 
-router.get('/pago',mainController.pago);
+router.get('/payment',mainController.pago);
 
 module.exports = router;

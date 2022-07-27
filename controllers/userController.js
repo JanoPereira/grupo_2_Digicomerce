@@ -1,7 +1,7 @@
 const userController = {
     userInfo: (req,res) =>{
         // TODO : crear pagina de usuario //
-        res.send('userInfo')
+        res.send('myAccount')
     },
     register: (req,res) =>{
         res.render('registrationForm')
