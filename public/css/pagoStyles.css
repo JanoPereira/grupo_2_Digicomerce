@@ -7,9 +7,7 @@ input[type="number"]::-webkit-inner-spin-button{
 
 }
 /* ESTILOS METODO DE PAGO */
-.main{
-    min-height: 78.5vh;
-}
+
 .opcion-pago{
     display: flex;
     justify-content: space-evenly;
@@ -37,13 +35,6 @@ input[type="number"]::-webkit-inner-spin-button{
 }
 
 .formulario{
-    width: 80vw;
-    margin: auto;
-    display: flex;
-}
-/* FORMULARIO - TARJETA */
-.formulario-informacion-tarjeta{
-    display: none;
     position: relative;
     height: 30vh;
     column-gap: 5vw;

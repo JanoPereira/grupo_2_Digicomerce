@@ -4,19 +4,21 @@ main{
 }
 /* MAIN */
 .main{
-    padding: 0px 25px;
-    display: grid;
-    grid-template-columns: 60vw 35vw;
-    gap: 5vw;
+    display: flex;
     background: #eee;
     min-height: 78.5vh;
 }
+.contenedor-carro-compras{
+    padding-bottom: 5vh;
+    width: 70%;
+    padding-right: 2%;
+}
 .contenedor-resumen-compra{
-    height: 100%;
-    width: 86%;
+    width: 30%;
     background: #ddd;
     padding: 0 10px;
     min-width: 240px;
+    margin-right: 2%;
 
 }
 .contenedor-resumen-fixed{
@@ -97,15 +99,22 @@ main{
 .boton-pago:hover,.continuar-compra:hover{
     box-shadow: 2px 2px 5px 0 #444;
 }
+.producto{
+    display: flex;
+    border-bottom: 1px solid rgba(8,8,8,0.2);
+    margin-bottom: 20px;
+    justify-content: space-between;
+    padding: 10px 5px;
+    margin-right: 2%;
+
+}
 .producto:hover{
     background-color: rgba(4, 4, 4, .1);
 }
-.flex-item{
-    margin-right: 40px;
-}
 .contenedor-titulo{
     margin: 40px 0 ;
-    border-bottom: 1px solid rgba(8,8,8,0.2);   
+    border-bottom: 1px solid rgba(8,8,8,0.2);
+    padding-left: 25px;   
 }
 .contenedor-titulo h3{
     font-size: 24px;
@@ -116,24 +125,20 @@ main{
 .contenedor-articles{
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
-    width: 60vw;
+    margin-bottom: 30px;
+    width: 100%;
     
     
 }
-.producto{
-    display: flex;
-    border-bottom: 1px solid rgba(8,8,8,0.2);
-    margin-bottom: 20px;
-    justify-content: space-between;
-    padding-right: 10px;
 
-}
 .contenedor-imagen-producto{
     /* max-width: 400px; */
     /* margin-left: 10px; */
     display: flex;
-    width: 10%;
+    width: 15%;
+    max-width: 170px;
+
+    justify-content: center;
 }
 .foto-producto{
     text-align: center;
@@ -145,14 +150,11 @@ main{
 }
 .informacion-producto{
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     width: 80%;
-    padding: 5px;
     justify-content: center;
     align-content: space-between;
-    max-width: 526px;
     margin: 0;
+    padding-left: 20px;
     
 }
 .contenedor-descripcion-producto{
@@ -179,13 +181,15 @@ main{
     align-items: center;
     justify-content: center;
     margin: 0;
-    width: 33%;
+    width: 20%;
 }
 .contenedor-precio-producto p{
     color: #666;
 }
 .contenedor-input{
-    width: 10%;
+    width: 14%;
+    margin: auto;
+    text-align: center;
 }
 .cantidad-producto{
     display: inline-block;
@@ -218,47 +222,31 @@ main{
     transition: all 1s;
     
 }
-.producto:hover>.contenedor-imagen-producto>.foto-producto{
-    /* max-width: none;
-    width: 290%;
-    margin-left: 10px;
-    margin-bottom: 5px; */
 
+.contenedor-botones-movile{
+    
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    display: none;
 }
-/* .producto:hover>.informacion-producto{
-    align-content: flex-end;
-    width: 60%;
+.contenedor-botones-movile a{
+    color: #000;
+}
+.boton-metodos-movile{
+    padding: 5px 15px;
+    border-radius: 8px;
+    background-color: #4b4;
+    font-weight: 500;
+    color: #222;
 }
 
-.producto:hover>.informacion-producto>.contenedor-descripcion-producto{
-    max-width: 170px;
-    padding-left: 12px;
-}
-.producto:hover>.contenedor-imagen-producto{
-    width: 7%;
-}
-.producto:hover>.informacion-producto>.contenedor-precio-producto>.precio-parcial-producto{
-    margin-bottom: 5px;
-}
-.producto:hover>.informacion-producto>.contenedor-input{
-    display: block;
-    margin: 0 auto;
-    margin-top: 5px;
-}
-.producto:hover>.contenedor-subtotal{
-    width: 13%;
-    justify-content: start;
-}
-.producto:hover>.informacion-producto>.contenedor-precio-producto{
-    height: 20%;
-    align-items: end;
-} */
-
-/* /MAIN */
 
 
 /* MEDIAS QUERIES */
-@media (max-width:1023px) {
+@media (max-width:768px) {
+    
+    /* SACAR HOVERS */
     .producto:hover{
         box-shadow: none;
     }
@@ -295,16 +283,8 @@ main{
     .producto:hover>.informacion-producto>.contenedor-precio-producto{
         height: 100%;
         align-items: center;
-    }
-}
-@media (max-width:767px){
-    
-    /* MEDIA-MAIN (resolucion tablet) */
-    
-    .main{
-        width: 100vw;
-        grid-template-columns: 100vw;
-    }
+    }    
+    /* MEDIA-MAIN  */
     .producto{
         justify-content: space-evenly;
         width: 100vw;
@@ -316,17 +296,18 @@ main{
         margin: 0;
         margin-bottom: 20px;
         margin-top: 20px;
+        width: 100vw;
     }
     .contenedor-titulo .titulo-carro{
-        font-size: 18px;
+        font-size: 20px;
     }
+
     .contenedor-articles{
         width: 100vw;
     }
     .contenedor-imagen-producto{
-        width: 17%;
-        margin-right: 10px;
-        max-width: 60px;
+        width: 15%;
+        max-width: 80px;
     }
     .contenedor-imagen-producto .foto-producto{
         width: 100%;
@@ -335,9 +316,8 @@ main{
         margin: 0;
         flex-grow: 1;
         width: 34%;
-        display: grid;
-        grid-template-columns: .5fr .4fr .2fr;
         padding-right: 0;
+        padding-left: 5px;
     }
     .informacion-producto .contenedor-descripcion-producto{
         margin: 0;
@@ -352,27 +332,18 @@ main{
     }
     .contenedor-precio-producto{
         height: 100%;
-        margin-right: 15px;
-        grid-column: 2/3;
-        width: 90%;
     }
     .contenedor-precio-producto p{
         color: #000;
     }
-    .contenedor-subtotal{
-        display: none;
-    }
     .contenedor-input{
-        grid-column: 3/4;
-        width: 100%;
-        margin: auto;
+        margin: auto 0;
     }
     .contenedor-basura{
         font-size: 18px;
         margin: 0;
         width: 10%;
-        max-width: 50px;
-        justify-content: flex-start;
+        max-width: 30px;
     }
     .contenedor-basura{
         font-size: 18px;
@@ -380,6 +351,11 @@ main{
     .contenedor-resumen-compra{
         display: none;
     }
+    .contenedor-botones-movile{
+        display: flex;
+    }
+
+    
     
     /* /MEDIA MAIN (resolucion tablet) */
 }
@@ -389,12 +365,11 @@ main{
 /* MEDIA MAIN (resolucion cel) */
 
 .informacion-producto{
-    width: 50%;
+    width: 75%;
     margin: 0;
-    max-width: 220px;
     flex-grow: 1;
+    padding: 0 5px;
 }
-
 
 .contenedor-precio-producto{
     
@@ -404,13 +379,18 @@ main{
 .precio-parcial-producto{
     font-size: 12px;
 }
+.contenedor-input{
+    width: 30%;
+}
 .contenedor-input input{
-    max-width: 32px;
+    max-width: 50px;
     padding: 5px 0 5px 10px;
     border-radius: 5px;
 }
 
-    /* /MEDIA MAIN (resolucion cel) */
+.contenedor-subtotal{
+    display: none;
+}
 
     
 }

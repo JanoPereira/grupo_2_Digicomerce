@@ -14,6 +14,12 @@ const productController = {
     },
     edit: (req,res) => {
         res.render('editProduct')
+    },
+    paymentDetail: (req,res)=>{
+        res.render('paymentDetail')
+    },
+    paymentMethod: (req,res)=>{
+        res.render('paymentMethod')
     }
 };
 module.exports = productController;
