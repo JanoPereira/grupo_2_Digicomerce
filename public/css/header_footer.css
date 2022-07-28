@@ -160,13 +160,13 @@ nav {
     display: flex;
 }
 
-.navbar2 .iniciar-sesion:hover i{
+/*.navbar2 .iniciar-sesion:hover i{
     color: #444;
-}
+}*/
 
-.navbar2 .registro:hover i{
+/*.navbar2 .registro:hover i{
     color: #444;
-}
+}*/
 
 .iniciar-sesion {
     /*flex-grow: 0.5;*/
