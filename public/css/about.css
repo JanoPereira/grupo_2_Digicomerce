@@ -91,6 +91,14 @@ main{
 .boton-movile{
     display: none;
 }
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 /* MEDIAS */
 @media (max-width:1024px){
     .boton-movile{
