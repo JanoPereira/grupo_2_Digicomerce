@@ -7,14 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/30a937ae38.js" crossorigin="anonymous"></script>
     <title>Detalle de Producto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;1,100;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/css/header_footer.css">
     <link rel="stylesheet" href="/css/productDetail.css">
 </head>
 
 <body>
     <%-include('./partials/header')%>
-    <main>
-        <!-- <div class="product-container"> -->
+        <main>
+            <!-- <div class="product-container"> -->
             <div class="image-container">
                 <section class="image">
                     <img src="/img/pava.jpg" alt="producto">
@@ -69,38 +74,38 @@
                 </section>
                 <section class="product-description">
                     <h3>Descripción</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, repellendus fugiat sunt praesentium
-                        eius sapiente voluptatem, soluta quo tempore rerum vitae veritatis nemo, molestias non voluptatibus
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, repellendus fugiat sunt
+                        praesentium
+                        eius sapiente voluptatem, soluta quo tempore rerum vitae veritatis nemo, molestias non
+                        voluptatibus
                         facilis! Sapiente, reiciendis? Corrupti.</p>
                 </section>
             </div>
-        <!-- </div> -->
-        
-        <div class="related-products">
-            <h3>Productos relacionados</h3>
-            <section class="other-product">
-                <img src="/img/pava.jpg">
-                <p class="product-name">Nombre del Producto</p>
-                <p class="price">$$$$$$</p>
-            </section>
-            <section class="other-product">
-                <img src="/img/pava.jpg">
-                <p class="product-name">Nombre del Producto</p>
-                <p class="price">$$$$$$</p>
-            </section>
-            <section class="other-product">
-                <img src="/img/pava.jpg">
-                <p class="product-name">Nombre del Producto</p>
-                <p class="price">$$$$$$</p>
-            </section>
+            <!-- </div> -->
 
-        </div>
+            <div class="related-products">
+                <h3>Productos relacionados</h3>
+                <section class="other-product">
+                    <img src="/img/pava.jpg">
+                    <p class="product-name">Nombre del Producto</p>
+                    <p class="price">$$$$$$</p>
+                </section>
+                <section class="other-product">
+                    <img src="/img/pava.jpg">
+                    <p class="product-name">Nombre del Producto</p>
+                    <p class="price">$$$$$$</p>
+                </section>
+                <section class="other-product">
+                    <img src="/img/pava.jpg">
+                    <p class="product-name">Nombre del Producto</p>
+                    <p class="price">$$$$$$</p>
+                </section>
 
-    </main>
+            </div>
 
-    <%-include('./partials/footer')%>
+        </main>
 
-
+        <%-include('./partials/footer')%>
 </body>
 
 </html>

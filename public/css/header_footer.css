@@ -12,13 +12,14 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* HEADER */
 
 a {
     /*color: #222;*/
-    color: white;
+    color: #DADFAD;
     text-decoration: none;
 }
 
@@ -29,7 +30,7 @@ a {
 header {
     width: 100vw;
     /*background-color: #ccc;*/
-    background-color: rgb(73, 155, 73);
+    background-color:#325714;
     border-bottom: 2px solid rgba(2, 2, 2, .1);
     height: fit-content;
     /* padding: 15px 5px;*/
@@ -54,20 +55,19 @@ nav {
 
 .contenedor--logo img {
     object-fit: contain;
-    width: 25%;
+    width: 100%;
 }
 
 
 .navbar {
     /*border: 2px blue solid;*/
     overflow: hidden;
-    background-color: rgb(73, 155, 73);
+    background-color:#325714;
 }
-
 .navbar a {
     float: left;
     font-size: 16px;
-    color: white;
+    color: #DADFAD;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -82,7 +82,7 @@ nav {
     font-size: 16px;
     border: none;
     outline: none;
-    color: white;
+    color: #DADFAD;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -91,7 +91,8 @@ nav {
 
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-    background-color: green;
+    /* background-color: #73932C; */
+    color: #73932C
 }
 
 .dropdown-content {
@@ -134,7 +135,8 @@ nav {
 }
 
 .contenedor--buscador input {
-    border: none;
+    border: #C28E40 1px solid;
+    background: #325714;
     padding: 5px 5px;
     border-radius: 6px;
     max-width: 238px;
@@ -144,9 +146,9 @@ nav {
 }
 
 .contenedor--buscador i {
-    color: #444;
+    color: #C28E40;
     cursor: pointer;
-    border-left: 1px solid rgba(4, 4, 4, .3);
+    border-left: 1px solid #C28E40;
     padding-left: 5px;
     top: 5px;
     position: absolute;
@@ -183,12 +185,12 @@ nav {
 }
 
 .iniciar-sesion i {
-    color: whitesmoke;
+    color: #C28E40;
     margin-right: 8px;
 }
 
 .iniciar-sesion a {
-    color: white;
+    color: #DADFAD;
     font-size: 16px;
 }
 
@@ -230,7 +232,7 @@ nav {
 }
 
 .registro i{
-    color: whitesmoke;
+    color: #C28E40;
     margin-right: 8px;
 }
 
@@ -251,7 +253,7 @@ nav {
 
 .carro-compras a {
     display: flex;
-    color: yellow;
+    color: #C28E40;
 }
 
 .carro-compras a:hover {
