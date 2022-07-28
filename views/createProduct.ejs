@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/30a937ae38.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/header_footer.css">
+    <link rel="stylesheet" href="/css/create-modify.css">
+    <title>Crea tu producto</title>
+</head>
+
+
+
+<body>
+    <%-include('./partials/header')%>
+
+    <main class="main">
+        
+        
+        
+            <div class="contenedor-titulo-h4">
+                <h4 class="titulo-h4">Creá tu Producto</h4>
+            </div>
+            <section class="seccion-carga-producto">
+                <div class="contenedor-imagen-producto">
+                    <section class="image">
+                        <img src="/img/pava.jpg" alt="producto" class="imagen-producto">
+                    </section>
+                    <section class="other-images">
+                        <article>
+                            <img src="/img/pava.jpg" alt="producto">
+                        </article>
+                        <article>
+                            <img src="/img/pava.jpg" alt="producto">
+                        </article>
+                        <article>
+                            <img src="/img/pava.jpg" alt="producto">
+                        </article>
+                        <article>
+                            <img src="/img/pava.jpg" alt="producto">
+                        </article>
+                    </section>
+                </div>
+
+                <form action="producto/crear" method="POST" class="formulario">
+            
+                    <div class="contenedor-input">
+                        <label class="label" for="nombre">Nombre del Producto</label>
+                        <input class="campos" type="text" placeholder="..." id="nombre"></input>
+                    
+                    
+                    </div>
+                    <div class="contenedor-input">
+                        <label class="label" for="descripcion">Descripción del producto</label>
+                        <textarea name="descripcion" class="campos textarea" id="" cols="30" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="contenedor-input">
+                        <label class="label" for="imagenDelProducto">Foto(s) del Producto</label>
+                        <input class="campos campo-select" type="file" accept=".jpg, .png" placeholder="..." id="telefono" multiple></input>
+                                      
+                    </div>
+                    
+                    <div class="contenedor-input">
+                        <label class="label" for="contraseña">Categoria del Producto</label>
+                        <select class="campos campo-select" name="categoria">
+                            <option value="" disabled>Seleccione la Categoria</option>
+                            <option value="yerba">Yerba</option>
+                            <option value="te">Té</option>
+                            <option value="accesorios">Accesorios</option>
+                        </select>
+                                       
+                    </div>
+                    
+                    <div class="contenedor-input">
+                        <label class="label" for="precio">Precio del Producto</label>
+                        <input class="campos" type="number" placeholder="..." id="precio" value=""></input>
+                                        
+                    </div>
+                    
+                    <div class="contenedor-input">
+                        <div class="button-container">
+                            <button type="submit" value="" class="button">Crear producto</button>
+                        </div>
+                    </div>
+                        
+                </form>
+            </section>
+            
+
+    </main>
+
+    <%-include('./partials/footer')%>
+    
+
+</body>
+
+</html>
