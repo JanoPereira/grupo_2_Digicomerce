@@ -551,7 +551,7 @@ footer>div span {
     }
 
     .carro-compras .precio--total {
-        display: none;
+        /* display: none; */
     }
 
     .carro-compras i {
