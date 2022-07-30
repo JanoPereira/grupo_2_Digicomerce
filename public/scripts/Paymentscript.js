@@ -16,4 +16,6 @@ opcionPaypal.addEventListener("click", () => {
     formPaypal.classList.add("formulario-informacion-paypal-active");
 });
 
+
+
 // 
