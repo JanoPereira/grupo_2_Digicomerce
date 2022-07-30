@@ -1,0 +1,162 @@
+[
+    {
+     "id": 1,
+     "name": "Té Negro",
+     "price": 100,
+     "discount": 10,
+     "weight" : [100, 250, 500, 1000],
+     "category": "té",
+     "description": "Un clásico. El Té Negro nos aporta antioxidantes y la teína para mantenernos activos durante todo el día.",
+     "image": "img-te-negro.jpg"
+    },
+    {
+     "id": 2,
+     "name": "Té Verde Sencha",
+     "price": 500,
+     "discount": 5,
+     "weight" : [100, 250, 500, 1000],
+     "category": "té",
+     "description": "Té Sencha de origen Japonés, elaborado con el tradicional proceso de vaporizado. Se caracteriza por contar con mucho cuerpo, sabor refrescante y su suave toque herbal.",
+     "image": "img-te-verde.jpg"
+    },
+    {
+     "id": 3,
+     "name": "Té Rojo Pu Erh Royal",
+     "price": 1000,
+     "discount": 5,
+     "weight" : [100, 250, 500, 1000],
+     "category": "té",
+     "description": "Pu Erh Chino de la provincia de Yunnan, de hojas de grado superior y fermentación especial. De sabor liso sin astringencia. El Pu Erh es un té de comprobado efecto depurativo y digestivo, considerado como el Té de la salud para la maedicina traidicional China",
+     "image": "img-te-verde.jpg"
+    },
+    {
+     "id": 4,
+     "name": "Té Azul Oolong",
+     "price": 1500,
+     "discount": 5,
+     "weight" : [100, 250, 500, 1000],
+     "category": "té",
+     "description": "Té Oolong semioxidado que ayuda a la digestión y a mantener la vitalidad  durante el día. La flor de azahar acompaña muy bien a este Té Oolong por sus notas aromáticas dulces y florales.",
+     "image": "img-te-oolong.jpg"
+    },
+    {
+    "id": 5,
+    "name": "Té Sakura Beauty Blend",
+    "price": 1500,
+    "discount": 5,
+    "weight" : [100, 250, 500, 1000],
+    "category": "té",
+    "description": "Perfumada mezcla de Té Blanco y Verde con la sabrosa cereza morello y una pincelada de almendra y rosa. Una mezcla diferente y original, que fideliza a los paladares más amantes de los sabores singulares. Una alquimia de sabores para purificarse.",
+    "image": "img-te-sakura.jpg"
+    },
+    {
+     "id": 6,
+     "name": "Té Negro Earl Grey Santos Special",
+     "price": 1500,
+     "discount": 5,
+     "weight" : [100, 250, 500, 1000],
+     "category": "té",
+     "description": "Una de las mezclas más famosas y consumidas en el mundo. Un té fragante, con mucha personalidad. El Earl Grey más cítrico con Té Negro, cáscara de limón, bergamota y aromas cítricos.",
+     "image": "img-te-earl.jpg"
+    },
+    {
+     "id": 7,
+     "name": "Té Ceylon Decaf",
+     "price": 1000,
+     "discount": 5,
+     "weight" : [100, 250, 500, 1000],
+     "category": "té",
+     "description": "Los tés de Sri Lanka son reconocidos por su esencia intensa y aroma amaderado y tabacoso. Perfecto para ser consumido en cualquier momento del día. El Té Negro se descafeína de forma natural con vapor a presión extrayendo el 99% de la teína.",
+     "image": "img-te-ceylon.jpg"
+    },
+    {
+     "id": 8,
+     "name": "Té Negro Darjeeling",
+     "price": 1000,
+     "discount": 15,
+     "weight" : [100, 250, 500, 1000],
+     "category": "té",
+     "description": "Procedente del jardín Teesta Valley and Gielle situado en la región india de Darjeeling. Alta calidad. Ligero y sedoso con pequeño toque herbal. Perfecto para tomar en los desayunos o después de las comidas.",
+     "image": "img-te-ceylon.jpg"
+    },
+    {
+     "id": 9,
+     "name": "Té Blanco Pai Mu Tan",
+     "price": 1500,
+     "discount": 0,
+     "weight" : [100, 250, 500, 1000],
+     "category": "té",
+     "description": "Té Blanco conocido como Pai Mu Tan, procedente de de la zona de Fujian, China. Este exclusivo té de producción muy limitada se recolecta de forma manual y sólo se utilizan los brotes y las primeras dos hojas tiernas. Famoso por su fino aroma floral.",
+     "image": "img-te-blanco.jpg"
+    },
+    {
+     "id": 10,
+     "name": "Té Negro Berry Fields",
+     "price": 2000,
+     "discount": 10,
+     "weight" : [100, 250, 500, 1000],
+     "category": "té",
+     "description": "Mezcla de Té Negro con frutos silvestre, ideal para los desayunos y las meriendas. Su dulce y envolvente aroma ofrece versatilidad en su consumo en caliente o en frío.",
+     "image": "img-te-berry.jpg"
+    },
+    {
+     "id": 11,
+     "name": "Té Rooibos African Sunset",
+     "price": 2000,
+     "discount": 10,
+     "weight" : [100, 250, 500, 1000],
+     "category": "té",
+     "description": "Exclusivo de la zona sudafricana de Cederberg, de limitada producción. El Rooibos es una planta sudafricana, libre de teína y sin calorías que ayuda a hidratar el cuerpo. Destaca también su poder antioxidante. De sabor dulce, aromático y sin notas de astringencia",
+     "image": "img-te-african.jpg"
+    },
+    {
+     "id": 12,
+     "name": "Té English Breakfast",
+     "price": 1000,
+     "discount": 10,
+     "weight" : [100, 250, 500, 1000],
+     "category": "té",
+     "description": "Tradicional mezcla de Tés Negros de Sri Lanka para empezar el día con vitalidad. Una taza de Té Negro por la mañana activa el cuerpo y la mente, nos deleita con una ola de energía. Unas gotas de leche matizarán la astringencia y aportarán cremosidad.",
+     "image": "img-te-english.jpg"
+    },
+    {
+     "id": 13,
+     "name": "Té Tilo y Melisa",
+     "price": 500,
+     "discount": 20,
+     "weight" : [100, 250, 500, 1000],
+     "category": "té",
+     "description": "Infusión con tilo y melisa, de relajante aroma y sabor dulce con propiedades relajantes, diuréticas y digestivas de sabor herbal y meloso.",
+     "image": "img-te-tilo.jpg"
+    },
+    {
+     "id": 14,
+     "name": "Té Camomilla Golden",
+     "price": 500,
+     "discount": 20,
+     "weight" : [100, 250, 500, 1000],
+     "category": "té",
+     "description": "Una mezcla muy aromática con el aporte de las propiedades de la camomila y el delicioso sabor de la manzana. Destacan sus propiedades relajantes y digestivas.",
+     "image": "img-te-camomilla.jpg"
+    },
+    {
+     "id": 15,
+     "name": "Té Blanco Strawberry Fresh",
+     "price": 1500,
+     "discount": 20,
+     "weight" : [100, 250, 500, 1000],
+     "category": "té",
+     "description": "Una mezcla ideal para los que buscan un buen sabor pero con poca teína. Su carácter joven y fresco, ideal para consumo en caliente o al estilo Ice Tea.",
+     "image": "img-te-strawberry.jpg"
+    },
+    {
+     "id": 16,
+     "name": "Té Fruit explosion",
+     "price": 1500,
+     "discount": 5,
+     "weight" : [100, 250, 500, 1000],
+     "category": "té",
+     "description": "Colorida explosión de sabores y nutrientes con 15 virtuosas frutas: la unión perfecta para sentirse vital y en forma. Un concentrado vital de micronutrientes esenciales que reforzará nuestro sistema inmunitario.",
+     "image": "img-te-fruit.jpg"
+    }
+   ]
