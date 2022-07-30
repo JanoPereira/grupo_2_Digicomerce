@@ -6,7 +6,9 @@ const app = express();
 
 const productController = require('../controllers/productController');
 
-router.get('/', productController.productsList)
+router.get('/', productController.productsList);
+
+router.get('/teaProduct', productController.productTea);
 
 router.get('/productCart',productController.cart);
 

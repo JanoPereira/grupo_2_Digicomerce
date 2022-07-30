@@ -3,6 +3,10 @@ const productController = {
         // TODO: falta crear lista de productos //
         res.send('productList')
     },
+
+    productTea: (req,res) =>{
+        res.render('teaProduct')
+    },
     cart:(req,res) =>{
         res.render('productCart')
     },
