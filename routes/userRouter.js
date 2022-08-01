@@ -6,6 +6,8 @@ const app = express();
 
 const userController = require('../controllers/userController');
 
+// /users/...
+
 router.get('/', userController.userInfo)
 
 router.get('/registrationForm',userController.register);

@@ -5,7 +5,7 @@
      "price": 100,
      "discount": 10,
      "weight" : [100, 250, 500, 1000],
-     "category": "té",
+     "category": "te",
      "description": "Un clásico. El Té Negro nos aporta antioxidantes y la teína para mantenernos activos durante todo el día.",
      "image": "img-te-negro.jpg"
     },
@@ -15,7 +15,7 @@
      "price": 500,
      "discount": 5,
      "weight" : [100, 250, 500, 1000],
-     "category": "té",
+     "category": "te",
      "description": "Té Sencha de origen Japonés, elaborado con el tradicional proceso de vaporizado. Se caracteriza por contar con mucho cuerpo, sabor refrescante y su suave toque herbal.",
      "image": "img-te-verde.jpg"
     },
@@ -25,7 +25,7 @@
      "price": 1000,
      "discount": 5,
      "weight" : [100, 250, 500, 1000],
-     "category": "té",
+     "category": "te",
      "description": "Pu Erh Chino de la provincia de Yunnan, de hojas de grado superior y fermentación especial. De sabor liso sin astringencia. El Pu Erh es un té de comprobado efecto depurativo y digestivo, considerado como el Té de la salud para la maedicina traidicional China",
      "image": "img-te-verde.jpg"
     },
@@ -35,7 +35,7 @@
      "price": 1500,
      "discount": 5,
      "weight" : [100, 250, 500, 1000],
-     "category": "té",
+     "category": "te",
      "description": "Té Oolong semioxidado que ayuda a la digestión y a mantener la vitalidad  durante el día. La flor de azahar acompaña muy bien a este Té Oolong por sus notas aromáticas dulces y florales.",
      "image": "img-te-oolong.jpg"
     },
@@ -45,7 +45,7 @@
     "price": 1500,
     "discount": 5,
     "weight" : [100, 250, 500, 1000],
-    "category": "té",
+    "category": "te",
     "description": "Perfumada mezcla de Té Blanco y Verde con la sabrosa cereza morello y una pincelada de almendra y rosa. Una mezcla diferente y original, que fideliza a los paladares más amantes de los sabores singulares. Una alquimia de sabores para purificarse.",
     "image": "img-te-sakura.jpg"
     },
@@ -55,7 +55,7 @@
      "price": 1500,
      "discount": 5,
      "weight" : [100, 250, 500, 1000],
-     "category": "té",
+     "category": "te",
      "description": "Una de las mezclas más famosas y consumidas en el mundo. Un té fragante, con mucha personalidad. El Earl Grey más cítrico con Té Negro, cáscara de limón, bergamota y aromas cítricos.",
      "image": "img-te-earl.jpg"
     },
@@ -65,7 +65,7 @@
      "price": 1000,
      "discount": 5,
      "weight" : [100, 250, 500, 1000],
-     "category": "té",
+     "category": "te",
      "description": "Los tés de Sri Lanka son reconocidos por su esencia intensa y aroma amaderado y tabacoso. Perfecto para ser consumido en cualquier momento del día. El Té Negro se descafeína de forma natural con vapor a presión extrayendo el 99% de la teína.",
      "image": "img-te-ceylon.jpg"
     },
@@ -75,7 +75,7 @@
      "price": 1000,
      "discount": 15,
      "weight" : [100, 250, 500, 1000],
-     "category": "té",
+     "category": "te",
      "description": "Procedente del jardín Teesta Valley and Gielle situado en la región india de Darjeeling. Alta calidad. Ligero y sedoso con pequeño toque herbal. Perfecto para tomar en los desayunos o después de las comidas.",
      "image": "img-te-ceylon.jpg"
     },
@@ -85,7 +85,7 @@
      "price": 1500,
      "discount": 0,
      "weight" : [100, 250, 500, 1000],
-     "category": "té",
+     "category": "te",
      "description": "Té Blanco conocido como Pai Mu Tan, procedente de de la zona de Fujian, China. Este exclusivo té de producción muy limitada se recolecta de forma manual y sólo se utilizan los brotes y las primeras dos hojas tiernas. Famoso por su fino aroma floral.",
      "image": "img-te-blanco.jpg"
     },
@@ -95,7 +95,7 @@
      "price": 2000,
      "discount": 10,
      "weight" : [100, 250, 500, 1000],
-     "category": "té",
+     "category": "te",
      "description": "Mezcla de Té Negro con frutos silvestre, ideal para los desayunos y las meriendas. Su dulce y envolvente aroma ofrece versatilidad en su consumo en caliente o en frío.",
      "image": "img-te-berry.jpg"
     },
@@ -105,7 +105,7 @@
      "price": 2000,
      "discount": 10,
      "weight" : [100, 250, 500, 1000],
-     "category": "té",
+     "category": "te",
      "description": "Exclusivo de la zona sudafricana de Cederberg, de limitada producción. El Rooibos es una planta sudafricana, libre de teína y sin calorías que ayuda a hidratar el cuerpo. Destaca también su poder antioxidante. De sabor dulce, aromático y sin notas de astringencia",
      "image": "img-te-african.jpg"
     },
@@ -115,7 +115,7 @@
      "price": 1000,
      "discount": 10,
      "weight" : [100, 250, 500, 1000],
-     "category": "té",
+     "category": "te",
      "description": "Tradicional mezcla de Tés Negros de Sri Lanka para empezar el día con vitalidad. Una taza de Té Negro por la mañana activa el cuerpo y la mente, nos deleita con una ola de energía. Unas gotas de leche matizarán la astringencia y aportarán cremosidad.",
      "image": "img-te-english.jpg"
     },
@@ -125,7 +125,7 @@
      "price": 500,
      "discount": 20,
      "weight" : [100, 250, 500, 1000],
-     "category": "té",
+     "category": "te",
      "description": "Infusión con tilo y melisa, de relajante aroma y sabor dulce con propiedades relajantes, diuréticas y digestivas de sabor herbal y meloso.",
      "image": "img-te-tilo.jpg"
     },
@@ -135,7 +135,7 @@
      "price": 500,
      "discount": 20,
      "weight" : [100, 250, 500, 1000],
-     "category": "té",
+     "category": "te",
      "description": "Una mezcla muy aromática con el aporte de las propiedades de la camomila y el delicioso sabor de la manzana. Destacan sus propiedades relajantes y digestivas.",
      "image": "img-te-camomilla.jpg"
     },
@@ -145,7 +145,7 @@
      "price": 1500,
      "discount": 20,
      "weight" : [100, 250, 500, 1000],
-     "category": "té",
+     "category": "te",
      "description": "Una mezcla ideal para los que buscan un buen sabor pero con poca teína. Su carácter joven y fresco, ideal para consumo en caliente o al estilo Ice Tea.",
      "image": "img-te-strawberry.jpg"
     },
@@ -155,7 +155,7 @@
      "price": 1500,
      "discount": 5,
      "weight" : [100, 250, 500, 1000],
-     "category": "té",
+     "category": "te",
      "description": "Colorida explosión de sabores y nutrientes con 15 virtuosas frutas: la unión perfecta para sentirse vital y en forma. Un concentrado vital de micronutrientes esenciales que reforzará nuestro sistema inmunitario.",
      "image": "img-te-fruit.jpg"
     },
@@ -297,7 +297,7 @@
         "price": 564,
         "discount": 5,
         "weight": 500,
-        "category": "yerba orgánica",
+        "category": "yerba organica",
         "description": "La Yerba Mate llega fresca desde nuestras chacras y sectores productivos, y es pre-seleccionada para ingresar al secado. Se realiza el proceso en un sistema rotatorio contínuo con calor controlado. Luego se clasifica con una zaranda que separa las hojas de los palos. El proceso culmina con un tratamiento selectivo de molienda para luego pasar al último paso: Estacionamiento natural por un mínimo de 12 meses.",
         "image": "ym-la-oberena.jpg"
     },
@@ -307,7 +307,7 @@
         "price": 1079,
         "discount": 5,
         "weight": 500,
-        "category": "yerba orgánica",
+        "category": "yerba organica",
         "description": "Moringa Fidel presenta un producto renovado de producción limitada libre de agrotóxicos que combina la Moringa con la Yerba Mate Orgánica y sus distintas formas de consumirla. La Moringa Oleifera es un Árbol reconocido por sus cualidades. Sus hojas fueron incorporadas en este exquisito blend. Este producto está compuesto por un 96% de Yerba Mate Orgánica estacionada naturalmente por 12 meses, y un 4% de Hojas Secas de Moringa Oleifera.",
         "image": "ym-fidel-organica-con-moringa-oleifera-500gr.jpg"
     },
@@ -317,7 +317,7 @@
         "price": 1079,
         "discount": 5,
         "weight": 500,
-        "category": "yerba orgánica",
+        "category": "yerba organica",
         "description": "Moringa Fidel presenta un producto renovado de producción limitada libre de agrotóxicos que combina la Moringa con la Yerba Mate Orgánica y sus distintas formas de consumirla. La Moringa Oleifera es un Árbol reconocido por sus cualidades. Sus hojas fueron incorporadas en este exquisito blend. Este producto está compuesto por un 96% de Yerba Mate Orgánica estacionada naturalmente por 12 meses, y un 4% de Hojas Secas de Moringa Oleifera.",
         "image": "ym-fidel-organica-con-moringa-oleifera-500gr.jpg"
     },
@@ -327,7 +327,7 @@
         "price": 820,
         "discount": 5,
         "weight": 500,
-        "category": "yerba orgánica",
+        "category": "yerba organica",
         "description": " La yerba mate es el principal producto de la Cooperativa Agropecuaria La Abundancia. Tiene un estacionamiento natural de 24 meses, lo que hace que tenga un sabor suave y añejado. No provoca acidez y su sabor recuerda a como se hacia la yerba antes. Su molienda gruesa la hace ideal para preparar un Mate suave, o un buen Tereré. Es un producto de la Agricultura ORGÁNICA libre de agroquímicos, la cual promueve la integración entre el ser humano, el reino animal, el vegetal y el suelo, con el objetivo de conformar una individualidad agrícola que logre su auto sustentabilidad, tanto en el aspecto productivo como en el económico, fortaleciendo las aptitudes del productor agropecuario y las relaciones con su entorno.",
         "image": "ym-arapegua-molida-organica-500gr.jpg"
     },
@@ -337,7 +337,7 @@
         "price": 1062,
         "discount": 5,
         "weight": 250,
-        "category": "yerba orgánica",
+        "category": "yerba organica",
         "description": "Un blend delicioso que combina el dulzor de la cascarilla de cacao con el picante del jengibre y el sabor inconfundible de nuestra Yerba Mate Orgánica Especial. Las propiedades estimulantes y antioxidantes de sus ingredientes son la esencia de este blend.",
         "image": "ym-mate-co-bolsita-repuesto-220gr-spicy-choco.jpg"
     },
@@ -347,7 +347,7 @@
         "price": 1454,
         "discount": 5,
         "weight": 220,
-        "category": "yerba orgánica",
+        "category": "yerba organica",
         "description": " El más fresco de los blends, para disfrutar en todo momento y aprovechar las propiedades de sus ingredientes naturales. Con base de Yerba Mate Orgánica Despalada, se mezclan tres tipos de mentas; hierba buena, de sabor suave y dulce, peppermint, y menta egipcia, la más fresca de las mentas. Un blend para revitalizar tus sentidos.",
         "image": "ym-mate-co-lata-220gr-tres-mentas.jpg"
     },
@@ -357,7 +357,7 @@
         "price": 1251,
         "discount": 5,
         "weight": 1000,
-        "category": "yerba orgánica",
+        "category": "yerba organica",
         "description": "La Yerba Mate llega fresca desde nuestras chacras y sectores productivos, en bolsas de arpillera de 40Kg. y son pre-seleccionadas para ingresar al secado. Previa selección y análisis.Se realiza el secado en un sistema rotatorio continuo con calor controlado.Luego se clasifica con una zaranda que separa hojas de los palos.",
         "image": "ym-la-oberena-organica-bolsa-arpillera.jpg"
     },
