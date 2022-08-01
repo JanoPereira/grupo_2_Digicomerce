@@ -6,7 +6,6 @@ const path = require('path');
 
 const app = express();
 
-const multer = require('multer'); /* Requerir multer. En el form como atributo va --> (enctype = "multipart/form-data") */
 
 app.use(express.static('./public'));
 //app.use(express.static(path.join(__dirname, './public')));//
