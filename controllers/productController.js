@@ -1,10 +1,23 @@
+<<<<<<< HEAD
 let fs = require('fs');
 let path = require('path');
+=======
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/productsData.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+>>>>>>> 3a673292401259d02164358554d8174a713cea50
 
 const productController = {
     productsList: (req,res) => {
         // TODO: falta crear lista de productos //
         res.send('productList')
+    },
+
+    productTea: (req, res) => {
+		const te = products.filter (product => product.category === 'te');
+		res.render('teaProduct', { te });
     },
     cart:(req,res) =>{
         res.render('productCart')

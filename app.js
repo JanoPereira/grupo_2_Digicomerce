@@ -9,10 +9,10 @@ const app = express();
 const multer = require('multer'); /* Requerir multer. En el form como atributo va --> (enctype = "multipart/form-data") */
 
 app.use(express.static('./public'));
+//app.use(express.static(path.join(__dirname, './public')));//
+app.use(express.json());
 
 app.set('view engine','ejs');
-
-
 
 //<-- Capturar todo lo que venga del form-->//
 

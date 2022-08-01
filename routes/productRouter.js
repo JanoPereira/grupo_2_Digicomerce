@@ -8,7 +8,9 @@ const productController = require('../controllers/productController');
 
 // /products/....
 
-router.get('/', productController.productsList)
+router.get('/', productController.productsList);
+
+router.get('/teaProduct', productController.productTea);
 
 router.get('/productCart',productController.cart);
 
