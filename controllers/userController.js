@@ -9,6 +9,10 @@ const userController = {
     login: (req,res) =>{
         res.render('loginForm')
     },
+    uploadUser: (req,res) =>{
+        let userInfo = req.body;
+        res.render('loginForm')
+    }
    
 }
 module.exports = userController;

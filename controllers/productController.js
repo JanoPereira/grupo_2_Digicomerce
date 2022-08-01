@@ -20,6 +20,8 @@ const productController = {
         res.render('productCart')
     },
     detail: (req,res) =>{
+        // prodId=req.params.id;
+        // products.find()
         res.render('productDetail')
     },
     create: (req,res) => {
@@ -27,6 +29,9 @@ const productController = {
     },
     edit: (req,res) => {
         res.render('editProduct')
+    },
+    update: (req,res) => {
+        // res.render('editProduct') TODO: ACTUALIZAR DATOS DEL PRODUCTO
     },
     paymentDetail: (req,res)=>{
         res.render('paymentDetail')

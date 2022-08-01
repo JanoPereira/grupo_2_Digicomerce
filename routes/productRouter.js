@@ -16,13 +16,15 @@ router.get('/teaProduct', productController.productTea);
 
 router.get('/productCart',productController.cart);
 
-router.get('/productDetail',productController.detail);
+router.get('/productDetail/:id',productController.detail);
 
 router.get('/createProduct',productController.create);
 
-router.get('/editProduct' ,productController.edit); /* TODO: AGREGAR en la url el id del producto a editar  */
+router.post('/productCart/paymentDetail',productController.savePaymentDetail);
 
-// TODO: ruta PUT para envio de info // 
+router.get('/editProduct/:id' ,productController.edit); 
+
+// router.put('/editProduct/:id'.productController.update);
 
 router.get('/productCart/paymentDetail',productController.paymentDetail);
 

@@ -7,7 +7,8 @@
      "weight" : [100, 250, 500, 1000],
      "category": "te",
      "description": "Un clásico. El Té Negro nos aporta antioxidantes y la teína para mantenernos activos durante todo el día.",
-     "image": "img-te-negro.jpg"
+     "image": "img-te-negro.jpg",
+     "active":true
     },
     {
      "id": 2,
@@ -17,7 +18,8 @@
      "weight" : [100, 250, 500, 1000],
      "category": "te",
      "description": "Té Sencha de origen Japonés, elaborado con el tradicional proceso de vaporizado. Se caracteriza por contar con mucho cuerpo, sabor refrescante y su suave toque herbal.",
-     "image": "img-te-verde.jpg"
+     "image": "img-te-verde.jpg",
+     "featured":false
     },
     {
      "id": 3,
@@ -27,7 +29,8 @@
      "weight" : [100, 250, 500, 1000],
      "category": "te",
      "description": "Pu Erh Chino de la provincia de Yunnan, de hojas de grado superior y fermentación especial. De sabor liso sin astringencia. El Pu Erh es un té de comprobado efecto depurativo y digestivo, considerado como el Té de la salud para la maedicina traidicional China",
-     "image": "img-te-verde.jpg"
+     "image": "img-te-verde.jpg",
+     "featured":true
     },
     {
      "id": 4,
