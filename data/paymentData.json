@@ -1,0 +1,64 @@
+[
+
+{
+
+
+"name": "Jano",
+
+
+"last-name": "Pereira",
+
+
+"adress": "Libertador 1655",
+
+
+"city": "CABA",
+
+
+"zip-code": 1429,
+
+
+"email": "carlos@gmail.com",
+
+
+"number": 11233455677,
+
+
+"delivered": false,
+
+
+"id": 1
+
+},
+
+{
+
+
+"name": "Janoasda",
+
+
+"last-name": "asdasdsa",
+
+
+"adress": "asdadsa",
+
+
+"city": "Nuñez",
+
+
+"zip-code": "1429",
+
+
+"email": "janoo.pereira@gmail.com",
+
+
+"number": "123122132123",
+
+
+"id": 725,
+
+
+"delivered": false
+
+}
+]

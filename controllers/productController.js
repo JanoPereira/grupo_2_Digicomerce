@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-let fs = require('fs');
-let path = require('path');
-=======
 const fs = require('fs');
 const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/productsData.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
->>>>>>> 3a673292401259d02164358554d8174a713cea50
+const paymentFilePath = path.join(__dirname, '../data/paymentData.json');
+const paymentData = JSON.parse(fs.readFileSync(paymentFilePath, 'utf-8'),{encoding:"utf-8"});
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'),{encoding:"utf-8"});
 
 const productController = {
     productsList: (req,res) => {
@@ -40,23 +37,27 @@ const productController = {
     savePaymentDetail: (req,res)=>{
         // res.send(req.body);
         const rndInt = Math.floor(Math.random() * 1000) + 1; /* Numero Random entre 1-1000 */
-    
-        let paymentDataFile = fs.readFileSync(path.join(__dirname,'../public/data/paymentData.json'),{encoding:"utf-8"});
 
-        let data = JSON.parse(paymentDataFile);
+        let newData = req.body; /* Informacion del form */
 
-        let newData = req.body;
+//      <-- Agrego id y estado del pedido 
 
-        newData.id = rndInt;
+        newData.id = rndInt;            
         newData.delivered = false;
 
-        data.push(newData);
+//      <-- Pusheo los datos del form en el json --> 
 
-        dataJSON = JSON.stringify(data,null,'')
+        paymentData.push(newData);
 
-        fs.writeFileSync(path.join(__dirname,'../public/data/paymentData.json'),dataJSON);
+//      <-- Vuelvo a convertir el objeto en json y lo re-escribo en el archivo, redirijo la pagina -->
+
+        dataJSON = JSON.stringify(paymentData,null,'\n')
+
+        fs.writeFileSync(paymentFilePath,dataJSON);
 
         res.redirect('paymentMethod')
     }
 };
+
+
 module.exports = productController;
