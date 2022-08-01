@@ -28,10 +28,11 @@
             <h2 class="pDestacados">Productos destacados</h2>
 
             <section class="contenedor-p1">
+                <% te.forEach(element => { %>
 
                 <a href="/product/productDetail" class="articulo">
                     <div class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
+                        <img src="img/products/<%= element.image %>" alt="te" class="te">
                         <p class="product">Producto</p>
                         <P class="price">Precio: $$$</P>
                         <button class="botonBuy">Agregar al carrito</button>
@@ -40,8 +41,8 @@
 
                 <a href="/product/productDetail" class="articulo">
                     <div class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto</p>
+                        <img src="img/products/<%= element.image %>" alt="te" class="te">
+                        <p class="product"><%= element.name %></p>
                         <P class="price">Precio: $$$</P>
                         <button class="botonBuy">Agregar al carrito</button>
                     </div>
@@ -49,8 +50,8 @@
 
                 <a href="/product/productDetail" class="articulo">
                     <div class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto</p>
+                        <img src="img/products/<%= element.image %>" alt="te" class="te">
+                        <p class="product"><%= element.name %></p>
                         <P class="price">Precio: $$$</P>
                         <button class="botonBuy">Agregar al carrito</button>
                     </div>
@@ -58,12 +59,13 @@
 
                 <a href="/product/productDetail" class="articulo">
                     <div class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto</p>
+                        <img src="img/products/<%= element.image %>" alt="te" class="te">
+                        <p class="product"><%= element.name %></p>
                         <P class="price">Precio: $$$</P>
                         <button class="botonBuy">Agregar al carrito</button>
                     </div>
                 </a>
+                <% }) %>
 
             </section>
 
@@ -71,41 +73,44 @@
 
             <section class="contenedor-p2">
 
-                <a href="/product/productDetail" class="articulo">
-                    <div class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto</p>
-                        <P class="price">Precio: $$$</P>
-                        <button class="botonBuy">Agregar al carrito</button>
-                    </div>
-                </a>
+                <% te.forEach(element => { %>
 
-                <a href="/product/productDetail" class="articulo">
-                    <div class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto</p>
-                        <P class="price">Precio: $$$</P>
-                        <button class="botonBuy">Agregar al carrito</button>
-                    </div>
-                </a>
-
-                <a href="/product/productDetail" class="articulo">
-                    <div class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto</p>
-                        <P class="price">Precio: $$$</P>
-                        <button class="botonBuy">Agregar al carrito</button>
-                    </div>
-                </a>
-
-                <a href="/product/productDetail" class="articulo">
-                    <div class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto</p>
-                        <P class="price">Precio: $$$</P>
-                        <button class="botonBuy">Agregar al carrito</button>
-                    </div>
-                </a>
+                    <a href="/product/productDetail" class="articulo">
+                        <div class="main-article">
+                            <img src="img/products/<%= element.image %>" alt="te" class="te">
+                            <p class="product">Producto</p>
+                            <P class="price">Precio: $$$</P>
+                            <button class="botonBuy">Agregar al carrito</button>
+                        </div>
+                    </a>
+    
+                    <a href="/product/productDetail" class="articulo">
+                        <div class="main-article">
+                            <img src="img/products/<%= element.image %>" alt="te" class="te">
+                            <p class="product"><%= element.name %></p>
+                            <P class="price">Precio: $$$</P>
+                            <button class="botonBuy">Agregar al carrito</button>
+                        </div>
+                    </a>
+    
+                    <a href="/product/productDetail" class="articulo">
+                        <div class="main-article">
+                            <img src="img/products/<%= element.image %>" alt="te" class="te">
+                            <p class="product"><%= element.name %></p>
+                            <P class="price">Precio: $$$</P>
+                            <button class="botonBuy">Agregar al carrito</button>
+                        </div>
+                    </a>
+    
+                    <a href="/product/productDetail" class="articulo">
+                        <div class="main-article">
+                            <img src="img/products/<%= element.image %>" alt="te" class="te">
+                            <p class="product"><%= element.name %></p>
+                            <P class="price">Precio: $$$</P>
+                            <button class="botonBuy">Agregar al carrito</button>
+                        </div>
+                    </a>
+                    <% }) %>
 
             </section>
 
@@ -113,41 +118,44 @@
 
             <section class="contenedor-p3">
 
-                <a href="/product/productDetail" class="articulo">
-                    <div class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto</p>
-                        <P class="price">Precio: $$$</P>
-                        <button class="botonBuy">Agregar al carrito</button>
-                    </div>
-                </a>
+                <% te.forEach(element => { %>
 
-                <a href="/product/productDetail" class="articulo">
-                    <div class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto</p>
-                        <P class="price">Precio: $$$</P>
-                        <button class="botonBuy">Agregar al carrito</button>
-                    </div>
-                </a>
-
-                <a href="/product/productDetail" class="articulo">
-                    <div class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto</p>
-                        <P class="price">Precio: $$$</P>
-                        <button class="botonBuy">Agregar al carrito</button>
-                    </div>
-                </a>
-
-                <a href="/product/productDetail" class="articulo">
-                    <div class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto</p>
-                        <P class="price">Precio: $$$</P>
-                        <button class="botonBuy">Agregar al carrito</button>
-                    </div>
-                </a>
+                    <a href="/product/productDetail" class="articulo">
+                        <div class="main-article">
+                            <img src="img/products/<%= element.image %>" alt="te" class="te">
+                            <p class="product">Producto</p>
+                            <P class="price">Precio: $$$</P>
+                            <button class="botonBuy">Agregar al carrito</button>
+                        </div>
+                    </a>
+    
+                    <a href="/product/productDetail" class="articulo">
+                        <div class="main-article">
+                            <img src="img/products/<%= element.image %>" alt="te" class="te">
+                            <p class="product"><%= element.name %></p>
+                            <P class="price">Precio: $$$</P>
+                            <button class="botonBuy">Agregar al carrito</button>
+                        </div>
+                    </a>
+    
+                    <a href="/product/productDetail" class="articulo">
+                        <div class="main-article">
+                            <img src="img/products/<%= element.image %>" alt="te" class="te">
+                            <p class="product"><%= element.name %></p>
+                            <P class="price">Precio: $$$</P>
+                            <button class="botonBuy">Agregar al carrito</button>
+                        </div>
+                    </a>
+    
+                    <a href="/product/productDetail" class="articulo">
+                        <div class="main-article">
+                            <img src="img/products/<%= element.image %>" alt="te" class="te">
+                            <p class="product"><%= element.name %></p>
+                            <P class="price">Precio: $$$</P>
+                            <button class="botonBuy">Agregar al carrito</button>
+                        </div>
+                    </a>
+                    <% }) %>
 
             </section>
 
