@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/30a937ae38.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/header_footer.css"> 
     <link rel="stylesheet" href="/css/indexStyle.css">
-    <script src="/scripts/indexScripts.js"></script>
+    <script src="scripts/indexScripts.js"></script>
     <title>DigiCommerce</title>
 </head>
 
@@ -23,102 +23,46 @@
             <h2 class="pDestacados">Productos destacados</h2>
 
             <section class="contenedor-p1">
-
-                <div class="articulo">
-                    <a href="/product/productDetail" class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto1</p>
-                        <P class="price">Precio: $350</P>
-                     </a>
-                        <div class="button-container">
-                            <button class="botonBuy" onclick= "add('producto-1',350)">Agregar al carrito</button>
+                <%products.forEach(elem=>{%>
+                    <%if (elem.featured && elem.discount == 0 ){%>
+                        <div class="articulo">
+                            <a href="/product/productDetail/<%=elem.id%>" class="main-article">
+                                <img src="img/products/<%=elem.image%>" alt="<%=elem.name%>" class="te">
+                                <p class="product"><%=elem.name%></p>
+                                <p class="price">
+                                    <b>$<%=elem.price%></b>
+                                </p>
+                             </a>
+                                <div class="button-container">
+                                    <button class="botonBuy">Agregar al carrito</button>
+                                </div>
                         </div>
-                </div>
-
-                <div class="articulo">
-                    <a href="/product/productDetail" class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto2</p>
-                        <P class="price">Precio: $200</P>
-                     </a>
-                        <div class="button-container">
-                            <button class="botonBuy" onclick= "add('producto-2',200)">Agregar al carrito</button>
-                        </div>
-                </div>
-
-                <div class="articulo">
-                    <a href="/product/productDetail" class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto3</p>
-                        <P class="price">Precio: $35</P>
-                     </a>
-                        <div class="button-container">
-                            <button class="botonBuy" onclick= "add('producto-3',35)">Agregar al carrito</button>
-                        </div>
-                </div>
-
-                <div class="articulo">
-                    <a href="/product/productDetail" class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto4</p>
-                        <P class="price">Precio: $50</P>
-                     </a>
-                        <div class="button-container">
-                            <button class="botonBuy" onclick= "add('producto-4',50)">Agregar al carrito</button>
-                        </div>
-                </div>
-
+                    <%}%>
+                <%})%>
+               
             </section>
 
             <h2 class="pOfertas">Ofertas</h2>
 
             <section class="contenedor-p2">
-
-                <div class="articulo">
-                    <a href="/product/productDetail" class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto5</p>
-                        <P class="price">Precio: $150</P>
-                     </a>
-                        <div class="button-container">
-                            <button class="botonBuy" onclick= "add('producto-5',150)">Agregar al carrito</button>
+                <%discountedProducts.forEach(disProd=>{%>
+                    <div class="articulo">
+                        <div class="discount-container">
+                            <p class="discount">%<%=disProd.discount%></p>
+                            <p>OFF</p>
                         </div>
-                </div>
-                
-                <div class="articulo">
-                    <a href="/product/productDetail" class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto6</p>
-                        <P class="price">Precio: $75</P>
-                     </a>
-                        <div class="button-container">
-                            <button class="botonBuy" onclick= "add('producto-6',75)">Agregar al carrito</button>
-                        </div>
-                </div>
-
-                <div class="articulo">
-                    <a href="/product/productDetail" class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto7</p>
-                        <P class="price">Precio: $35</P>
-                     </a>
-                        <div class="button-container">
-                            <button class="botonBuy" onclick= "add('producto-7',35)">Agregar al carrito</button>
-                        </div>
-                </div>
-                
-
-                <div class="articulo">
-                    <a href="/product/productDetail" class="main-article">
-                        <img src="img/te.jpg" alt="te" class="te">
-                        <p class="product">Producto8</p>
-                        <P class="price">Precio: $80</P>
-                     </a>
-                        <div class="button-container">
-                            <button class="botonBuy" onclick= "add('producto-8',80)">Agregar al carrito</button>
-                        </div>
-                </div>
-
+                        <a href="/product/productDetail/<%=disProd.id%>" class="main-article">
+                            <img src="img/products/<%=disProd.image%>" alt="<%=disProd.name%>" class="te">
+                            <p class="product"><%=disProd.name%></p>
+                            <p class="price">
+                                <span>$<%=disProd.price%></span> / <b>$<%=disProd.price-disProd.price*(disProd.discount*0.01)%></b>
+                            </p>
+                         </a>
+                            <div class="button-container">
+                                <button class="botonBuy">Agregar al carrito</button>
+                            </div>
+                    </div>
+                <%})%>
             </section>
         </section>
 
@@ -131,5 +75,6 @@
     
 
 </body>
+
 
 </html>

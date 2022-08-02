@@ -24,7 +24,7 @@ router.post('/productCart/paymentDetail',productController.savePaymentDetail);
 
 router.get('/editProduct/:id' ,productController.edit); 
 
-// router.put('/editProduct/:id'.productController.update);
+router.put('/editProduct/:id',productController.update);
 
 router.get('/productCart/paymentDetail',productController.paymentDetail);
 
@@ -32,4 +32,4 @@ router.post('/productCart/paymentDetail',productController.savePaymentDetail);
 
 router.get('/productCart/paymentMethod',productController.paymentMethod);
 
-module.exports = router
+module.exports = router;

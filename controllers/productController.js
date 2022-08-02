@@ -6,39 +6,57 @@ const paymentFilePath = path.join(__dirname, '../data/paymentData.json');
 const paymentData = JSON.parse(fs.readFileSync(paymentFilePath, 'utf-8'),{encoding:"utf-8"});
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'),{encoding:"utf-8"});
 
+
 const productController = {
     productsList: (req,res) => {
         // TODO: falta crear lista de productos //
-        res.send('productList')
+        res.send(products)
     },
 
     productTea: (req, res) => {
 		const te = products.filter (product => product.category === 'te');
 		res.render('teaProduct', { te });
     },
+
     cart:(req,res) =>{
         res.render('productCart')
     },
+
     detail: (req,res) =>{
         // prodId=req.params.id;
         // products.find()
         res.render('productDetail')
     },
+
     create: (req,res) => {
         res.render('createProduct')
     },
+
     edit: (req,res) => {
-        res.render('editProduct')
+        let product = products.find(elem => elem.id == req.params.id)
+        res.render('editProduct',{product})
     },
+
     update: (req,res) => {
-        // res.render('editProduct') TODO: ACTUALIZAR DATOS DEL PRODUCTO
+        let editedProduct = products.find(elem => elem.id == req.params.id);
+        let newData = req.body;
+        editedProduct.name = newData.name;
+        editedProduct.price = newData.price;
+        editedProduct.category = newData.category;
+        editedProduct.discount = newData.discount;
+        
+        res.redirect('/product/productDetail/'+req.params.id)
+
     },
+
     paymentDetail: (req,res)=>{
         res.render('paymentDetail')
     },
+
     paymentMethod: (req,res)=>{
         res.render('paymentMethod')
     },
+    
     savePaymentDetail: (req,res)=>{
         // res.send(req.body);
         const rndInt = Math.floor(Math.random() * 1000) + 1; /* Numero Random entre 1-1000 */

@@ -108,8 +108,14 @@
     margin-bottom: 10px;
 }
 
+.contenedor-precios{
+    display: flex;
+    justify-content: center;
+}
+
 #precio{
-    width: 10%;
+    width: 40%;
+    text-align: center;
 }
 
 .button-container .button{
