@@ -22,11 +22,11 @@
             <h2 class="pDestacados">Productos destacados</h2>
 
             <section class="contenedor-p1">
-                <% te.forEach(element => { %>
+                <% te.forEach(te => { %>
 
                 <a href="/product/productDetail" class="articulo">
                     <div class="main-article">
-                        <img src="/img/products/<%= element.image %>" alt="te" class="te">
+                        <img src="/img/products/<%= te.image %>" alt="te" class="te">
                         <p class="product">Producto</p>
                         <P class="price">Precio: $$$</P>
                         <button class="botonBuy">Agregar al carrito</button>
@@ -35,8 +35,8 @@
 
                 <!-- <a href="/product/productDetail" class="articulo">
                     <div class="main-article">
-                        <img src="img/products/<%= element.image %>" alt="te" class="te">
-                        <p class="product"><%= element.name %></p>
+                        <img src="img/products/<%= te.image %>" alt="te" class="te">
+                        <p class="product"><%= te.name %></p>
                         <P class="price">Precio: $$$</P>
                         <button class="botonBuy">Agregar al carrito</button>
                     </div>
@@ -44,8 +44,8 @@
 
                 <a href="/product/productDetail" class="articulo">
                     <div class="main-article">
-                        <img src="img/products/<%= element.image %>" alt="te" class="te">
-                        <p class="product"><%= element.name %></p>
+                        <img src="img/products/<%= te.image %>" alt="te" class="te">
+                        <p class="product"><%= te.name %></p>
                         <P class="price">Precio: $$$</P>
                         <button class="botonBuy">Agregar al carrito</button>
                     </div>
@@ -53,8 +53,8 @@
 
                 <a href="/product/productDetail" class="articulo">
                     <div class="main-article">
-                        <img src="img/products/<%= element.image %>" alt="te" class="te">
-                        <p class="product"><%= element.name %></p>
+                        <img src="img/products/<%= te.image %>" alt="te" class="te">
+                        <p class="product"><%= te.name %></p>
                         <P class="price">Precio: $$$</P>
                         <button class="botonBuy">Agregar al carrito</button>
                     </div>
@@ -63,48 +63,22 @@
 
             </section>
 
-            h2 class="pOfertas">Ofertas</h2>
+            <h2 class="pOfertas">Ofertas</h2>
 
             <section class="contenedor-p2">
 
-                <% te.forEach(element => { %>
+                <% te.forEach(te => { %>
 
-                    <a href="/product/productDetail" class="articulo">
+                    <a href="/product/productDetail/<%=te.id%>" class="articulo">
                         <div class="main-article">
-                            <img src="img/products/<%= element.image %>" alt="te" class="te">
-                            <p class="product">Producto</p>
-                            <P class="price">Precio: $$$</P>
+                            <img src="/img/products/<%= te.image %>" alt="te" class="te">
+                            <p class="product"><%= te.name %></p>
+                            <P class="price">$<%= te.price %></P>
                             <button class="botonBuy">Agregar al carrito</button>
                         </div>
                     </a>
-    
-                    <a href="/product/productDetail" class="articulo">
-                        <div class="main-article">
-                            <img src="img/products/<%= element.image %>" alt="te" class="te">
-                            <p class="product"><%= element.name %></p>
-                            <P class="price">Precio: $$$</P>
-                            <button class="botonBuy">Agregar al carrito</button>
-                        </div>
-                    </a>
-    
-                    <a href="/product/productDetail" class="articulo">
-                        <div class="main-article">
-                            <img src="img/products/<%= element.image %>" alt="te" class="te">
-                            <p class="product"><%= element.name %></p>
-                            <P class="price">Precio: $$$</P>
-                            <button class="botonBuy">Agregar al carrito</button>
-                        </div>
-                    </a>
-    
-                    <a href="/product/productDetail" class="articulo">
-                        <div class="main-article">
-                            <img src="img/products/<%= element.image %>" alt="te" class="te">
-                            <p class="product"><%= element.name %></p>
-                            <P class="price">Precio: $$$</P>
-                            <button class="botonBuy">Agregar al carrito</button>
-                        </div>
-                    </a>
-                    <% }) %>
+                <%})%>
+                    
 
             </section>
 
@@ -112,11 +86,11 @@
 
             <section class="contenedor-p3">
 
-                <% te.forEach(element => { %>
+                <% te.forEach(te => { %>
 
                     <a href="/product/productDetail" class="articulo">
                         <div class="main-article">
-                            <img src="img/products/<%= element.image %>" alt="te" class="te">
+                            <img src="img/products/<%= te.image %>" alt="te" class="te">
                             <p class="product">Producto</p>
                             <P class="price">Precio: $$$</P>
                             <button class="botonBuy">Agregar al carrito</button>
@@ -125,8 +99,8 @@
     
                     <a href="/product/productDetail" class="articulo">
                         <div class="main-article">
-                            <img src="img/products/<%= element.image %>" alt="te" class="te">
-                            <p class="product"><%= element.name %></p>
+                            <img src="img/products/<%= te.image %>" alt="te" class="te">
+                            <p class="product"><%= te.name %></p>
                             <P class="price">Precio: $$$</P>
                             <button class="botonBuy">Agregar al carrito</button>
                         </div>
@@ -134,8 +108,8 @@
     
                     <a href="/product/productDetail" class="articulo">
                         <div class="main-article">
-                            <img src="img/products/<%= element.image %>" alt="te" class="te">
-                            <p class="product"><%= element.name %></p>
+                            <img src="img/products/<%= te.image %>" alt="te" class="te">
+                            <p class="product"><%= te.name %></p>
                             <P class="price">Precio: $$$</P>
                             <button class="botonBuy">Agregar al carrito</button>
                         </div>
@@ -143,8 +117,8 @@
     
                     <a href="/product/productDetail" class="articulo">
                         <div class="main-article">
-                            <img src="img/products/<%= element.image %>" alt="te" class="te">
-                            <p class="product"><%= element.name %></p>
+                            <img src="img/products/<%= te.image %>" alt="te" class="te">
+                            <p class="product"><%= te.name %></p>
                             <P class="price">Precio: $$$</P>
                             <button class="botonBuy">Agregar al carrito</button>
                         </div>

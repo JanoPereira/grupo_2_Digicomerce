@@ -14,7 +14,7 @@ const productController = {
     },
 
     productTea: (req, res) => {
-		const te = products.filter (product => product.category === 'te');
+		const te = products.filter (product => product.category == 'te');
 		res.render('teaProduct', { te });
     },
 
@@ -56,17 +56,27 @@ const productController = {
     paymentMethod: (req,res)=>{
         res.render('paymentMethod')
     },
-    
+
     savePaymentDetail: (req,res)=>{
         // res.send(req.body);
         const rndInt = Math.floor(Math.random() * 1000) + 1; /* Numero Random entre 1-1000 */
+        /* Informacion del form */
 
-        let newData = req.body; /* Informacion del form */
+        let newData = {
+            name: req.body.name,
+            lastName:req.body['last-name'],
+            adress: req.body.adress,
+            city: req.body.city,
+            zipCode: req.body['zip-code'],
+            email: req.body.email,
+            city: req.body.city,
+            number: req.body.number,
+            delivered: req.body.false
+        }; 
 
 //      <-- Agrego id y estado del pedido 
 
         newData.id = rndInt;            
-        newData.delivered = false;
 
 //      <-- Pusheo los datos del form en el json --> 
 
@@ -74,7 +84,7 @@ const productController = {
 
 //      <-- Vuelvo a convertir el objeto en json y lo re-escribo en el archivo, redirijo la pagina -->
 
-        dataJSON = JSON.stringify(paymentData,null,'\n')
+        dataJSON = JSON.stringify(paymentData,null,' ')
 
         fs.writeFileSync(paymentFilePath,dataJSON);
 
