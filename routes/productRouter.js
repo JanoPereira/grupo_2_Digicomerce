@@ -14,6 +14,8 @@ router.get('/', productController.productsList);
 
 router.get('/teaProduct', productController.productTea);
 
+router.get('/yerbas', productController.yerba);
+
 router.get('/productCart',productController.cart);
 
 router.get('/productDetail/:id',productController.detail);

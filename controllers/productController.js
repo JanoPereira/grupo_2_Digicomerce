@@ -18,6 +18,13 @@ const productController = {
 		res.render('teaProduct', { te });
     },
 
+    yerba: (req, res) => {
+		const yerbas = products.filter (product => product.category == 'yerba');
+		const discountYerbas = yerbas.filter(elem => elem.discount);
+        const featuredYerbas = yerbas.filter(elem => elem.featured);
+        res.render('yerbas', { yerbas,discountYerbas,featuredYerbas });
+    },
+
     cart:(req,res) =>{
         res.render('productCart')
     },
