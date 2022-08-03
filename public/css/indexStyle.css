@@ -73,11 +73,8 @@
 }
 
 .contenedor-productos {
-    /* border:2px solid blue;*/
     display: flex;
     flex-wrap: wrap;
-    /*flex-direction: row;*/
-    /* justify-content:space-between;*/
     flex-direction: row;
     justify-content: space-evenly;
     height: 100%;
@@ -115,17 +112,7 @@
     font-size: 20px;
 }
 
-.contenedor-p1 {
-    /* border:2px solid red;*/
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100vw;
-}
-
-.contenedor-p2 {
-    /*border:2px solid blue;*/
+.contenedor{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -140,14 +127,12 @@
     margin-top: 15px;
     font-size: 25px;
     color: rgb(82, 82, 82);
-    /*border: 2px solid black;*/
 }
 
 .main-article {
     display: flex;
     flex-direction: column;
     position: relative;
-    /* padding-top: 250px; */
     height: 92%;
     max-width: 290px;
     width: 100%;

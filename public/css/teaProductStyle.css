@@ -79,11 +79,8 @@
 }
 
 .contenedor-productos {
-    /* border:2px solid blue;*/
     display: flex;
     flex-wrap: wrap;
-    /*flex-direction: row;*/
-    /* justify-content:space-between;*/
     flex-direction: row;
     justify-content: space-evenly;
     height: 100%;
@@ -94,63 +91,62 @@
 }
 
 .articulo{
-    max-width: 22%;
+    width: 22%;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 12px;
+    margin: 20px 20px 20px 0;
+    padding-bottom: 20px;
+    position: relative;
 }
 
-.contenedor-p1 {
-    /* border:2px solid red;*/
+.discount-container{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 50%;
+    width: fit-content;
+    padding: 15px;
+    background-color: rgb(229, 47, 27);
+    color: #eee;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.discount{
+    font-size: 20px;
+}
+
+.contenedor {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100vw;
-}
-
-.contenedor-p2 {
-    /*border:2px solid blue;*/
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100vw;
-}
-
-.contenedor-p3 {
-    /*border:2px solid green;*/
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100vw;
-
 }
 
 .pOfertas,
 .pDestacados {
     display: flex;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 5px;
-    font-size: 20px;
+    margin-top: 30px;
+    font-size: 25px;
     color: rgb(82, 82, 82);
-    /*border: 2px solid black;*/
 }
 
 .main-article {
     display: flex;
     flex-direction: column;
-    border: 1px solid lightgray;
-    background-color: white;
-    border-radius: 1px;
-    margin: 20px;
     position: relative;
-    /* padding-top: 250px; */
-    height: 290px;
+    height: 92%;
     max-width: 290px;
     width: 100%;
-    margin-left: 0;
+    margin-bottom: 10px;
+    justify-content: space-between;
 }
 
-.main-article:hover {
+.articulo:hover {
     box-shadow: 0px 0px 10px lightgrey;
     transform: scale(1.02);
 }
@@ -161,6 +157,8 @@
     display: block;
     margin: 0 auto;
     margin-top: 10%;
+    object-fit: contain;
+    max-height: 200px;
     /*border-radius: 6%;*/
 }
 
@@ -179,7 +177,16 @@
     color: black;
     text-align: left;
 }
+.price span{
+    text-decoration: line-through;
+    text-decoration-color:rgb(229, 47, 27) ;
+    text-decoration-thickness: 2px;
+    
+}
 
+.button-container{
+    text-align: center;
+}
 .botonBuy {
     /*border: 2px solid green;*/
     position: relative;
@@ -197,6 +204,7 @@
 .botonBuy:hover {
     transform: scale(1.02);
     background-color: rgb(39, 145, 221);
+    cursor: pointer;
 }
 
 

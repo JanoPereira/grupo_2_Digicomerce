@@ -22,7 +22,7 @@
 
             <h2 class="pDestacados">Productos destacados</h2>
 
-            <section class="contenedor-p1">
+            <section class="contenedor contenedor-p1">
                 <%products.forEach(elem=>{%>
                     <%if (elem.featured && elem.discount == 0 ){%>
                         <div class="articulo">
@@ -44,7 +44,7 @@
 
             <h2 class="pOfertas">Ofertas</h2>
 
-            <section class="contenedor-p2">
+            <section class="contenedor contenedor-p2">
                 <%discountedProducts.forEach(disProd=>{%>
                     <div class="articulo">
                         <div class="discount-container">
