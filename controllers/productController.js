@@ -25,6 +25,13 @@ const productController = {
         res.render('yerbas', { yerbas,discountYerbas,featuredYerbas });
     },
 
+    accessories: (req, res) => {
+		const accessories = products.filter (product => product.category == 'accesorios');
+		const discountAccessories = accessories.filter(elem => elem.discount);
+        const featuredAccessories = accessories.filter(elem => elem.featured);
+        res.render('accessories', { accessories,discountAccessories,featuredAccessories });
+    },
+
     cart:(req,res) =>{
         res.render('productCart')
     },
