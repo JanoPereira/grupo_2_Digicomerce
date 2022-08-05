@@ -12,25 +12,47 @@ const productController = {
         // TODO: falta crear lista de productos //
         res.send(products)
     },
+    showProducts: (req,res)=>{
+        let category = req.params.category;
+        if (category=='tes'){
+            const selectedProducts = products.filter(product => product.category == 'te');
+            const discountSelectedProducts = selectedProducts.filter(elem => elem.discount);
+            const featuredSelectedProducts = selectedProducts.filter(elem => elem.featured);
+            res.render('productList', { selectedProducts, discountSelectedProducts, featuredSelectedProducts });
 
-    productTea: (req, res) => {
-        const te = products.filter(product => product.category == 'te');
-        res.render('teaProduct', { te });
+        } else if(category=='yerbas'){
+            const selectedProducts = products.filter(product => product.category == 'yerba');
+            const discountSelectedProducts = selectedProducts.filter(elem => elem.discount);
+            const featuredSelectedProducts = selectedProducts.filter(elem => elem.featured);
+            res.render('productList', { selectedProducts, discountSelectedProducts, featuredSelectedProducts });
+            
+        }else if(category == "accesorios"){
+            const selectedProducts = products.filter(product => product.category == 'accesorios');
+            const discountSelectedProducts = selectedProducts.filter(elem => elem.discount);
+            const featuredSelectedProducts = selectedProducts.filter(elem => elem.featured);
+            res.render('productList', { selectedProducts, discountSelectedProducts, featuredSelectedProducts });
+        }
+        
     },
 
-    yerba: (req, res) => {
-        const yerbas = products.filter(product => product.category == 'yerba');
-        const discountYerbas = yerbas.filter(elem => elem.discount);
-        const featuredYerbas = yerbas.filter(elem => elem.featured);
-        res.render('yerbas', { yerbas, discountYerbas, featuredYerbas });
-    },
+    // productTea: (req, res) => {
+    //     const te = products.filter(product => product.category == 'te');
+    //     res.render('teaProduct', { te });
+    // },
 
-    accessories: (req, res) => {
-        const accessories = products.filter(product => product.category == 'accesorios');
-        const discountAccessories = accessories.filter(elem => elem.discount);
-        const featuredAccessories = accessories.filter(elem => elem.featured);
-        res.render('accessories', { accessories, discountAccessories, featuredAccessories });
-    },
+    // yerba: (req, res) => {
+    //     const yerbas = products.filter(product => product.category == 'yerba');
+    //     const discountYerbas = yerbas.filter(elem => elem.discount);
+    //     const featuredYerbas = yerbas.filter(elem => elem.featured);
+    //     res.render('yerbas', { yerbas, discountYerbas, featuredYerbas });
+    // },
+
+    // accessories: (req, res) => {
+    //     const accessories = products.filter(product => product.category == 'accesorios');
+    //     const discountAccessories = accessories.filter(elem => elem.discount);
+    //     const featuredAccessories = accessories.filter(elem => elem.featured);
+    //     res.render('accessories', { accessories, discountAccessories, featuredAccessories });
+    // },
 
     cart: (req, res) => {
         res.render('productCart')

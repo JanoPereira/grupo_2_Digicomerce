@@ -29,11 +29,7 @@ const productController = require('../controllers/productController');
 
 router.get('/', productController.productsList);
 
-router.get('/teaProduct', productController.productTea);
-
-router.get('/yerbas', productController.yerba);
-
-router.get('/accessories', productController.accessories);
+router.get('/:category', productController.showProducts);
 
 router.get('/productCart',productController.cart);
 

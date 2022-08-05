@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/header_footer.css"> 
     <link rel="stylesheet" href="/css/teaProductStyle.css">
     <link rel="stylesheet" href="/css/carruselStyle.css">
-    <title>Te - DigiCommerce</title>
+    <title>Yerbas - DigiCommerce</title>
 </head>
 
 <body>
@@ -24,21 +24,23 @@
 
             <section class="contenedor contenedor-p1">
                 
-                <%te.forEach(te => { %>
-                    <% if(te.featured){%>
+                <%featuredSelectedProducts.forEach(product => { %>
                         <div class="articulo">
-                            <a href="/product/productDetail/<%=te.id%>" class="main-article">
-                                <img src="/img/products/<%=te.images[0]%>" alt="<%=te.name%>" class="te">
-                                <p class="product"><%=te.name%></p>
+                            <a href="/product/productDetail/<%=product.id%>" class="main-article">
+                                <img src="/img/products/<%=product.images[0]%>" alt="<%=product.name%>" class="product">
+                                <p class="product"><%=product.name%></p>
                                 <p class="price">
-                                    <b>$<%=te.price%></b>
+                                    <%if(!product.discount){%>
+                                        <b>$<%=product.price%></b>
+                                    <%}else{%>
+                                        <b>$<%=product.price-product.price*(product.discount*0.01)%></b>
+                                    <%}%>    
                                 </p>
                              </a>
                                 <div class="button-container">
                                     <button class="botonBuy">Agregar al carrito</button>
                                 </div>
                         </div>
-                    <%}%>
                 <% }) %>
                 
 
@@ -48,25 +50,23 @@
 
             <section class="contenedor contenedor-p2">
 
-                <% te.forEach(te => { %>
-                    <%if(te.discount){%>
+                <% discountSelectedProducts.forEach(product => { %>
                         <div class="articulo">
                             <div class="discount-container">
-                                <p class="discount">%<%=te.discount%></p>
+                                <p class="discount">%<%=product.discount%></p>
                                 <p>OFF</p>
                             </div>
-                            <a href="/product/productDetail/<%=te.id%>" class="main-article">
-                                <img src="/img/products/<%=te.images[0]%>" alt="<%=te.name%>" class="te">
-                                <p class="product"><%=te.name%></p>
+                            <a href="/product/productDetail/<%=product.id%>" class="main-article">
+                                <img src="/img/products/<%=product.images[0]%>" alt="<%=product.name%>" class="product">
+                                <p class="product"><%=product.name%></p>
                                 <p class="price">
-                                    <span>$<%=te.price%></span> / <b>$<%=te.price-te.price*(te.discount*0.01)%></b>
+                                    <span>$<%=product.price%></span> / <b>$<%=product.price-product.price*(product.discount*0.01)%></b>
                                 </p>
                              </a>
                                 <div class="button-container">
                                     <button class="botonBuy">Agregar al carrito</button>
                                 </div>
                         </div>
-                    <%}%>
                 <%})%>
                     
 
@@ -75,17 +75,17 @@
             <h2 class="pOfertas">Todos</h2>
             <section class="contenedor contenedor-todos">
 
-                <% te.forEach(te => { %>
+                <% selectedProducts.forEach(product => { %>
 
                     <div class="articulo">
-                        <a href="/product/productDetail/<%=te.id%>" class="main-article">
-                            <img src="/img/products/<%=te.images[0]%>" alt="<%=te.name%>" class="te">
-                            <p class="product"><%=te.name%></p>
+                        <a href="/product/productDetail/<%=product.id%>" class="main-article">
+                            <img src="/img/products/<%=product.images[0]%>" alt="<%=product.name%>" class="product">
+                            <p class="product"><%=product.name%></p>
                             <p class="price">
-                                <%if(!te.discount){%>
-                                    <b>$<%=te.price%></b>
+                                <%if(!product.discount){%>
+                                    <b>$<%=product.price%></b>
                                 <%}else{%>
-                                    <b>$<%=te.price-te.price*(te.discount*0.01)%></b>
+                                    <b>$<%=product.price-product.price*(product.discount*0.01)%></b>
                                 <%}%>    
                             </p>
                          </a>
