@@ -27,7 +27,7 @@
                 <%featuredYerbas.forEach(yerba => { %>
                         <div class="articulo">
                             <a href="/product/productDetail/<%=yerba.id%>" class="main-article">
-                                <img src="/img/products/<%=yerba.image%>" alt="<%=yerba.name%>" class="yerba">
+                                <img src="/img/products/<%=yerba.images[0]%>" alt="<%=yerba.name%>" class="yerba">
                                 <p class="product"><%=yerba.name%></p>
                                 <p class="price">
                                     <%if(!yerba.discount){%>
@@ -57,7 +57,7 @@
                                 <p>OFF</p>
                             </div>
                             <a href="/product/productDetail/<%=yerba.id%>" class="main-article">
-                                <img src="/img/products/<%=yerba.image%>" alt="<%=yerba.name%>" class="yerba">
+                                <img src="/img/products/<%=yerba.images[0]%>" alt="<%=yerba.name%>" class="yerba">
                                 <p class="product"><%=yerba.name%></p>
                                 <p class="price">
                                     <span>$<%=yerba.price%></span> / <b>$<%=yerba.price-yerba.price*(yerba.discount*0.01)%></b>
@@ -79,7 +79,7 @@
 
                     <div class="articulo">
                         <a href="/product/productDetail/<%=yerba.id%>" class="main-article">
-                            <img src="/img/products/<%=yerba.image%>" alt="<%=yerba.name%>" class="yerba">
+                            <img src="/img/products/<%=yerba.images[0]%>" alt="<%=yerba.name%>" class="yerba">
                             <p class="product"><%=yerba.name%></p>
                             <p class="price">
                                 <%if(!yerba.discount){%>

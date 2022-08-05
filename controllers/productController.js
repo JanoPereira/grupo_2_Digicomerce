@@ -3,95 +3,110 @@ const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/productsData.json');
 const paymentFilePath = path.join(__dirname, '../data/paymentData.json');
-const paymentData = JSON.parse(fs.readFileSync(paymentFilePath, 'utf-8'),{encoding:"utf-8"});
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'),{encoding:"utf-8"});
+const paymentData = JSON.parse(fs.readFileSync(paymentFilePath, 'utf-8'), { encoding: "utf-8" });
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'), { encoding: "utf-8" });
 
 
 const productController = {
-    productsList: (req,res) => {
+    productsList: (req, res) => {
         // TODO: falta crear lista de productos //
         res.send(products)
     },
 
     productTea: (req, res) => {
-		const te = products.filter (product => product.category == 'te');
-		res.render('teaProduct', { te });
+        const te = products.filter(product => product.category == 'te');
+        res.render('teaProduct', { te });
     },
 
     yerba: (req, res) => {
-		const yerbas = products.filter (product => product.category == 'yerba');
-		const discountYerbas = yerbas.filter(elem => elem.discount);
+        const yerbas = products.filter(product => product.category == 'yerba');
+        const discountYerbas = yerbas.filter(elem => elem.discount);
         const featuredYerbas = yerbas.filter(elem => elem.featured);
-        res.render('yerbas', { yerbas,discountYerbas,featuredYerbas });
+        res.render('yerbas', { yerbas, discountYerbas, featuredYerbas });
     },
 
     accessories: (req, res) => {
-		const accessories = products.filter (product => product.category == 'accesorios');
-		const discountAccessories = accessories.filter(elem => elem.discount);
+        const accessories = products.filter(product => product.category == 'accesorios');
+        const discountAccessories = accessories.filter(elem => elem.discount);
         const featuredAccessories = accessories.filter(elem => elem.featured);
-        res.render('accessories', { accessories,discountAccessories,featuredAccessories });
+        res.render('accessories', { accessories, discountAccessories, featuredAccessories });
     },
 
-    cart:(req,res) =>{
+    cart: (req, res) => {
         res.render('productCart')
     },
 
-    detail: (req,res) =>{
+    detail: (req, res) => {
         // prodId=req.params.id;
         // products.find()
         res.render('productDetail')
     },
 
-    create: (req,res) => {
+    create: (req, res) => {
         res.render('createProduct')
     },
 
-    upload: (req,res) => {
-        res.send(req.body)
-        // let newProduct = {
-        //     name: req.body.name,
-        //     description: req.body.description,
-        //     editedProduct.name = newData.name;
-        //     editedProduct.price = newData.price;
-        //     editedProduct.category = newData.category;
-        //     editedProduct.discount = newData.discount;
-        // }
+    upload: (req, res) => {
+        // res.send(req.files);
+        
+        let images = req.files.length>0 ? req.files.map(obj=>obj.filename) : ["default.PNG"];
+        
+        let newProduct = {
+            id: products[products.length - 1].id + 1,
+            name: req.body.name,
+            price: +req.body.price,
+            discount: req.body.discount,
+            category: req.body.category,
+            description: req.body.description,
+            images,
+            featured: req.body.featured,
+            active: true
+        };
+        products.push(newProduct);
+        let productsJSON = JSON.stringify(products, null, ' ')
+        fs.writeFileSync(productsFilePath, productsJSON);
+        res.redirect('/product/productDetail/' + newProduct.id)
 
-    }, 
-
-    edit: (req,res) => {
-        let product = products.find(elem => elem.id == req.params.id)
-        res.render('editProduct',{product})
     },
 
-    update: (req,res) => {
+    edit: (req, res) => {
+        let product = products.find(elem => elem.id == req.params.id)
+        res.render('editProduct', { product })
+    },
+
+    update: (req, res) => {
         let editedProduct = products.find(elem => elem.id == req.params.id);
         let productIndex = products.indexOf(editedProduct);
+        let images = req.files.length>0 ? req.files.map(obj=>obj.filename) : [];
+        images.forEach(elem=>products[productIndex].images.push(elem));
         products[productIndex].name = req.body.name;
         products[productIndex].price = +req.body.price;
         products[productIndex].category = req.body.category;
         products[productIndex].discount = +req.body.discount;
-        fs.writeFileSync(productsFilePath,JSON.stringify(products,null,' '));
-        res.redirect('/product/productDetail/'+req.params.id)
+        products[productIndex].description = req.body.description;
+        
+        let productsJSON = JSON.stringify(products, null, ' ')
+        fs.writeFileSync(productsFilePath, productsJSON);
+        res.redirect('/product/productDetail/' + req.params.id)
 
     },
 
-    paymentDetail: (req,res)=>{
+    paymentDetail: (req, res) => {
         res.render('paymentDetail')
     },
 
-    paymentMethod: (req,res)=>{
+    paymentMethod: (req, res) => {
         res.render('paymentMethod')
     },
 
-    savePaymentDetail: (req,res)=>{
+    savePaymentDetail: (req, res) => {
         // res.send(req.body);
         const rndInt = Math.floor(Math.random() * 1000) + 1; /* Numero Random entre 1-1000 */
         /* Informacion del form */
 
         let newData = {
             name: req.body.name,
-            lastName:req.body['last-name'],
+            lastName: req.body['last-name'],
             adress: req.body.adress,
             city: req.body.city,
             zipCode: req.body['zip-code'],
@@ -99,21 +114,21 @@ const productController = {
             city: req.body.city,
             number: req.body.number,
             delivered: req.body.false
-        }; 
+        };
 
-//      <-- Agrego id y estado del pedido 
+        //      <-- Agrego id y estado del pedido 
 
-        newData.id = rndInt;            
+        newData.id = rndInt;
 
-//      <-- Pusheo los datos del form en el json --> 
+        //      <-- Pusheo los datos del form en el json --> 
 
         paymentData.push(newData);
 
-//      <-- Vuelvo a convertir el objeto en json y lo re-escribo en el archivo, redirijo la pagina -->
+        //      <-- Vuelvo a convertir el objeto en json y lo re-escribo en el archivo, redirijo la pagina -->
 
-        dataJSON = JSON.stringify(paymentData,null,' ')
+        dataJSON = JSON.stringify(paymentData, null, ' ')
 
-        fs.writeFileSync(paymentFilePath,dataJSON);
+        fs.writeFileSync(paymentFilePath, dataJSON);
 
         res.redirect('paymentMethod')
     }

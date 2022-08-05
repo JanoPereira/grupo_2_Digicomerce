@@ -15,7 +15,7 @@ const storage = multer.diskStorage({
         cb(null,'./public/img/products')
     },
     filename: (req,file,cb)=>{
-        cb(null,file.fieldname+'-'+Date.now()+path.extname)
+        cb(null,file.fieldname+'-'+Date.now()+path.extname(file.originalname))
     }
 });
 
@@ -41,11 +41,11 @@ router.get('/productDetail/:id',productController.detail);
 
 router.get('/createProduct',productController.create);
 
-router.post('/createProduct',productController.upload);
+router.post('/createProduct',upload.array('image'),productController.upload);
 
 router.get('/editProduct/:id' ,productController.edit); 
 
-router.put('/editProduct/:id',productController.update);
+router.put('/editProduct/:id',upload.array('image'),productController.update);
 
 router.get('/productCart/paymentDetail',productController.paymentDetail);
 

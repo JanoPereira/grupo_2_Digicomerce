@@ -7,15 +7,37 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const productsWithDiscount = () =>{
     let discountedProducts = products.filter(elem=>{
         if (elem.discount >0){
-            return {id:elem.id , discount:elem.discount}
+            return {elem}
         }
     })
     let count = 0;
     let displayedProducts =[];
     while (count < 4) {
         let random = discountedProducts[Math.floor(Math.random() * discountedProducts.length)];
-        displayedProducts.push(random)
-        count++;  
+        if(!displayedProducts.includes(random)){
+            displayedProducts.push(random)
+            count++;
+        }
+          
+    }
+   
+    return displayedProducts;
+}
+const getFeaturedProducts = () =>{
+    let featuredProducts = products.filter(elem=>{
+        if (elem.featured){
+            return {elem}
+        }
+    })
+    let count = 0;
+    let displayedProducts =[];
+    while (count < 4) {
+        let random = featuredProducts[Math.floor(Math.random() * featuredProducts.length)];
+        if(!displayedProducts.includes(random)){
+            displayedProducts.push(random)
+            count++;
+        }
+          
     }
    
     return displayedProducts;
@@ -27,8 +49,9 @@ const productsWithDiscount = () =>{
 const controller = {
     index:(req,res)=>{
         let discountedProducts = productsWithDiscount();
-        // res.send(discountedProducts);
-        res.render('index',{products,discountedProducts});
+        let featuredProducts = getFeaturedProducts();
+        // res.send(featuredProducts);
+        res.render('index',{featuredProducts,discountedProducts});
     },
    
     about: (req,res) =>{
