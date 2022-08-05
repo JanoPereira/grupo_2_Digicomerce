@@ -46,6 +46,19 @@ const productController = {
         res.render('createProduct')
     },
 
+    upload: (req,res) => {
+        res.send(req.body)
+        // let newProduct = {
+        //     name: req.body.name,
+        //     description: req.body.description,
+        //     editedProduct.name = newData.name;
+        //     editedProduct.price = newData.price;
+        //     editedProduct.category = newData.category;
+        //     editedProduct.discount = newData.discount;
+        // }
+
+    }, 
+
     edit: (req,res) => {
         let product = products.find(elem => elem.id == req.params.id)
         res.render('editProduct',{product})
@@ -53,12 +66,12 @@ const productController = {
 
     update: (req,res) => {
         let editedProduct = products.find(elem => elem.id == req.params.id);
-        let newData = req.body;
-        editedProduct.name = newData.name;
-        editedProduct.price = newData.price;
-        editedProduct.category = newData.category;
-        editedProduct.discount = newData.discount;
-        
+        let productIndex = products.indexOf(editedProduct);
+        products[productIndex].name = req.body.name;
+        products[productIndex].price = +req.body.price;
+        products[productIndex].category = req.body.category;
+        products[productIndex].discount = +req.body.discount;
+        fs.writeFileSync(productsFilePath,JSON.stringify(products,null,' '));
         res.redirect('/product/productDetail/'+req.params.id)
 
     },

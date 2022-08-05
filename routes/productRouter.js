@@ -5,7 +5,10 @@ const router = express.Router();
 
 const path = require('path');
 
+// MULTER
+
 const multer = require('multer'); /* Requerir multer. En el form como atributo va --> (enctype = "multipart/form-data") */
+
 
 const storage = multer.diskStorage({
     destination: (req,file,cb) => {
@@ -16,7 +19,7 @@ const storage = multer.diskStorage({
     }
 });
 
-let upload = multer({storage}).any
+let upload = multer({storage})
 
 const app = express();
 
@@ -38,7 +41,7 @@ router.get('/productDetail/:id',productController.detail);
 
 router.get('/createProduct',productController.create);
 
-router.post('/productCart/paymentDetail',productController.savePaymentDetail);
+router.post('/createProduct',productController.upload);
 
 router.get('/editProduct/:id' ,productController.edit); 
 
