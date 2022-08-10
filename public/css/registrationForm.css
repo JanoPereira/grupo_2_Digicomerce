@@ -51,7 +51,13 @@ button {
     margin-top: 16px;
     font-size: 20px;
     cursor: pointer;
+    border-radius: 6px;
 
+}
+
+button:hover{
+    transition: 1s;
+    
 }
 
 
