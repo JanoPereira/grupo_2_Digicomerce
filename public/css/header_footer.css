@@ -276,98 +276,86 @@ footer {
     width: 100vw;
     padding: 5px;
     color: black;
-    background-color: darkgray;
-    border-top: 2px solid rgba(2, 2, 2, .1);
+    background-color: #EBF0C2;
+    border-top: 5px double #C28E40; 
     width: 100vw;
     justify-content: space-evenly;
+    height: 15vw;
 }
 
 #flecha-arriba {
     display: none;
 }
 
-.contenedor--institucional {
-    text-align: center;
-    align-content: center;
+.footerContainer {
+    margin: 2% 0;
+    text-align: left;
 }
 
-.contenedor--institucional li {
+.footerContainer ul{
+    text-align: left;
+}
+.footerContainer ul li {
     list-style-type: none;
-    list-style: none;
+    margin: 24px 0;
+    color: #C28E40;
+    font-size: 0.9rem;
 }
-
-.contenedor--institucional li a {
-    color: #555;
+.footerContainer ul li a{
+    color: #C28E40;
+    font-size: 0.9rem;
 }
-
-.contenedor--cliente li a {
-    color: #555;
-}
-
-.contenedor--cliente {
-    text-align: center;
-    align-content: center;
-}
-
-.contenedor--cliente li {
-    list-style-type: none;
-    list-style: none;
-}
-
-.contenedor--institucional li a:hover,
-.contenedor--cliente li a:hover {
-    color: #222;
-}
-
-.contenedor--contacto {
-    text-align: center;
-    align-content: center;
-
+.footerContainer ul li i{
+    color: #73932C;
+    font-weight: bold;
+    padding-right: 10px;
 }
 
 .contacto .wpp:hover {
-    color: #9f9;
-    cursor: pointer;
+    color: #325714;
+    /* cursor: pointer; */
 }
 
-.contenedor--newsletter {
-    text-align: center;
-    align-content: center;
-}
-
-.contenedor--newsletter input {
-    border: 1px;
-    padding: 5px 5px;
+.newsletter .email {
+    border: 1px solid #73932C;
+    padding: 10px;
     border-radius: 6px;
     max-width: 200px;
     outline: none;
-    margin: 5px 0;
+    margin-top: 24px
+}
+.newsletter .enviar {
+    background-color: #DADFAD;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    color: #325714;
+    border-radius: 6px;
 }
 
-.contenedor--seguinos ul {
+.footerContainer .seguinos{
     display: flex;
     flex-direction: column;
-}
-
-.contenedor--seguinos span {
-    margin-bottom: 10px;
 }
 
 .contenedor-redes {
     display: flex;
     justify-content: space-between;
+    margin: 30% 0;
 }
 
-.contenedor--seguinos i {
-    color: #555;
+.contenedor-redes i {
+    color: #73932C;
+    font-size: 1.2rem;
 }
 
-.contenedor--seguinos i:hover {
-    color: #222;
+.contenedor-redes i:hover {
+    color: #325714
 }
 
 footer>div span {
-    font-size: 18px;
+    font-size: 1.1rem;
+    color: #824214;
 }
 
 /* /FOOTER */
@@ -551,9 +539,9 @@ footer>div span {
         max-width: 50px;
     }
 
-    .carro-compras .precio--total {
+    /* .carro-compras .precio--total {
         /* display: none; */
-    }
+     */
 
     .carro-compras i {
         display: block;

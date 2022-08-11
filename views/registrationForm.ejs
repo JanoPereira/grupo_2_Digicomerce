@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/css/registrationForm.css">
+    <link rel="stylesheet" href="/css/header_footer.css">
 
     <title>Formulario de registro</title>
 
 
 </head>
+
 <body>
-    
+
     <section>
         <div class="camposObligatorios">
-        
+
             <h4>Formulario de registro</h4>
             <div>
 
-                <form action="resultado.html" method="POST">
-                
-                <label class="label" for="nombre">Nombre Completo</label>
-                <input class="campos" type="text"  name="name" placeholder="..." id="nombre" ></input>
+                <form action="registrationForm" method="POST">
 
-                <label class="label" for="email">Email</label>
-                <input class="campos" type="email"  placeholder="... " id="email" ></input>
-                 
-                <label class="label" for="telefono">Telefono</label>
-                <input class="campos" type="text"  placeholder="..." id="telefono"></input>
+                    <label class="label" for="nombre">Nombre Completo</label>
+                    <input class="campos" type="text" name="name" placeholder="..." id="nombre"></input>
 
-                <label class="label" for="contraseña">Contraseña</label>
-                <input class="campos" type="password"  placeholder="..." id="password"></input>
-                
-                <label class="label" for="confirmar contraseña">Confirmar contraseña</label>
-                <input class="campos" type="password"  placeholder="..." id="Confirmar constraseña"></input>
-                
-                <div class="button-container">
-                    <button type="submit" value="">CREAR CUENTA</button>
-                </div>
+                    <label class="label" for="email">Email</label>
+                    <input class="campos" type="email" placeholder="... " id="email"></input>
+
+                    <label class="label" for="telefono">Telefono</label>
+                    <input class="campos" type="text" placeholder="..." id="telefono"></input>
+
+                    <label class="label" for="contraseña">Contraseña</label>
+                    <input class="campos" type="password" placeholder="..." id="password" name="password"></input>
+
+                    <label class="label" for="confirmar contraseña">Confirmar contraseña</label>
+                    <input class="campos" type="password" placeholder="..." id="Confirmar constraseña"></input>
+
+                    <div class="button-container">
+                        <button type="submit" value="">CREAR CUENTA</button>
+                    </div>
                 </form>
             </div>
-                
-                
-                
+
+
+
         </div>
     </section>
 </body>
+
 </html>
