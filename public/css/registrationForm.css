@@ -51,7 +51,17 @@ button {
     margin-top: 16px;
     font-size: 20px;
     cursor: pointer;
+    border-radius: 6px;
 
+}
+
+button:hover {
+    transition: 0.8s all ease ;
+    background-color:#62b972;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    border-color: wheat;
 }
 
 

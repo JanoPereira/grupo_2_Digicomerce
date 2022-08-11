@@ -14,6 +14,7 @@ const productController = {
     },
     showProducts: (req,res)=>{
         let category = req.params.category;
+          
         if (category=='tes'){
             const selectedProducts = products.filter(product => product.category == 'te');
             const discountSelectedProducts = selectedProducts.filter(elem => elem.discount);
