@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.set('view engine','ejs');
 
-//<-- Capturar todo lo que venga del form-->//
+//<-- Capturar todo lo que venga del form (body)-->//
 
 app.use(express.urlencoded({extended:false}));
 
