@@ -299,9 +299,11 @@ footer {
     list-style-type: none;
     margin: 24px 0;
     color: #C28E40;
+    font-size: 0.9rem;
 }
 .footerContainer ul li a{
     color: #C28E40;
+    font-size: 0.9rem;
 }
 .footerContainer ul li i{
     color: #73932C;
@@ -336,10 +338,6 @@ footer {
     flex-direction: column;
 }
 
-/* .contenedor--seguinos span {
-    margin-bottom: 10px;
-} */
-
 .contenedor-redes {
     display: flex;
     justify-content: space-between;
@@ -356,7 +354,7 @@ footer {
 }
 
 footer>div span {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #824214;
 }
 
