@@ -30,7 +30,7 @@ const userController = {
         users.push(newUser);
         let usersJSON = JSON.stringify(users, null, ' ');
         fs.writeFileSync(usersFilePath, usersJSON);
-        res.redirect('loginForm');
+        res.redirect('/user/login-form');
     }
    
 }

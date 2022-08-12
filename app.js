@@ -31,11 +31,11 @@ const userRouter = require('./routes/userRouter')
 
 // <-- Envio de Diferentes Rutas -->//
 
-app.use('/',mainRouter)
+app.use('/',mainRouter);
 
-app.use('/product', productRouter)
+app.use('/product', productRouter);
 
-app.use('/user', userRouter)
+app.use('/user', userRouter);
 
 
 

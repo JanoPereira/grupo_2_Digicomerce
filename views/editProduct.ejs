@@ -41,7 +41,7 @@
                     </section>
                 </div>
 
-                <form action="/product/editProduct/<%=product.id%>?_method=PUT" method="POST" class="formulario" enctype="multipart/form-data">
+                <form action="/product/edit-product/<%=product.id%>?_method=PUT" method="POST" class="formulario" enctype="multipart/form-data">
             
                     <div class="contenedor-input">
                         <label class="label" for="nombre">Nombre del Producto</label>
@@ -86,7 +86,10 @@
                             <button type="submit" value="" class="button">Guardar</button>
                         </div>
                     </div>
-                        
+                    
+                    <div class="delete">
+                        <a href="/product/delete-product/:id">Eliminar</a>
+                    </div>   
                 </form>
             </section>
             

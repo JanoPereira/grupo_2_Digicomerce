@@ -88,7 +88,7 @@ const productController = {
         products.push(newProduct);
         let productsJSON = JSON.stringify(products, null, ' ')
         fs.writeFileSync(productsFilePath, productsJSON);
-        res.redirect('/product/productDetail/' + newProduct.id)
+        res.redirect('/product/product-detail/' + newProduct.id)
 
     },
 
@@ -110,7 +110,7 @@ const productController = {
         
         let productsJSON = JSON.stringify(products, null, ' ')
         fs.writeFileSync(productsFilePath, productsJSON);
-        res.redirect('/product/productDetail/' + req.params.id)
+        res.redirect('/product/product-detail/' + req.params.id)
 
     },
 
@@ -153,7 +153,21 @@ const productController = {
 
         fs.writeFileSync(paymentFilePath, dataJSON);
 
-        res.redirect('paymentMethod')
+        res.redirect('payment-method')
+    },
+    delete: (req, res) => {
+        prodId = req.params.id;
+        let product = products.find(product => product.id == prodId)
+        res.render('deleteProduct', {product});
+    },
+    deleteProduct: (req, res) => {
+        const prodId = req.params.id
+        let newList = products.filter(product => product.id !== prodId);
+
+       let productsJSON = JSON.stringify(newList, null, ' ')
+        fs.writeFileSync(productsFilePath, productsJSON);
+        
+        res.redirect('/product')
     }
 };
 

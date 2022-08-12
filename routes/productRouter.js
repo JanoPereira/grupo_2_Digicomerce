@@ -29,24 +29,30 @@ const productController = require('../controllers/productController');
 
 router.get('/', productController.productsList);
 
+
+router.get('/product-cart',productController.cart);
+
+router.get('/product-detail/:id',productController.detail);
+
+router.get('/create-product',productController.create);
+
+router.post('/create-Product',upload.array('image'),productController.upload);
+
+router.get('/edit-product/:id' ,productController.edit); 
+
+router.put('/edit-product/:id',upload.array('image'),productController.update);
+
+router.get('/delete-product/:id', productController.delete)
+
+router.delete('/delete-product/:id', productController.deleteProduct);
+
+router.get('/product-cart/payment-detail',productController.paymentDetail);
+
+router.post('/product-cart/payment-detail',productController.savePaymentDetail);
+
+router.get('/product-cart/payment-method',productController.paymentMethod);
+
 router.get('/:category', productController.showProducts);
 
-router.get('/productCart',productController.cart);
-
-router.get('/productDetail/:id',productController.detail);
-
-router.get('/createProduct',productController.create);
-
-router.post('/createProduct',upload.array('image'),productController.upload);
-
-router.get('/editProduct/:id' ,productController.edit); 
-
-router.put('/editProduct/:id',upload.array('image'),productController.update);
-
-router.get('/productCart/paymentDetail',productController.paymentDetail);
-
-router.post('/productCart/paymentDetail',productController.savePaymentDetail);
-
-router.get('/productCart/paymentMethod',productController.paymentMethod);
 
 module.exports = router;

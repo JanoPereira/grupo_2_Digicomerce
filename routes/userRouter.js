@@ -10,13 +10,13 @@ const userController = require('../controllers/userController');
 
 // /users/...
 
-router.get('/myAccount', userController.userInfo)
+router.get('/my-account', userController.userInfo)
 
-router.get('/registrationForm',userController.register);
+router.get('/registration-form',userController.register);
 
-router.post('/registrationForm',userController.uploadUser);
+router.post('/registration-form',userController.uploadUser);
 
-router.get('/loginForm', userController.login);
+router.get('/login-form', userController.login);
 
 
 
