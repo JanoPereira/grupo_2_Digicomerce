@@ -41,8 +41,8 @@ app.use('/user', userRouter)
 
 // <-- Iniciar Servidor --> //
 
-app.listen(5000,()=>{
-    console.log("Se ha inicializado un servidor en http://localhost:5000");
+app.listen(7000,()=>{
+    console.log("Se ha inicializado un servidor en http://localhost:7000");
 });
 
 // <-- ERROR 404 --> //
