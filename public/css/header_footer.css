@@ -195,13 +195,8 @@ nav {
     font-size: 16px;
 }
 
-.iniciar-sesion:hover {
-    /*color: #222;
-    font-weight: 600;*/
-    background-color:#0077ff;
-    height: 48px;
-    justify-content: center;
-    align-items: center;
+.iniciar-sesion a:hover {
+    color: #73932C;
 }
 
 /*.iniciar-sesion p:hover {
@@ -237,11 +232,8 @@ nav {
     margin-right: 8px;
 }
 
-.registro:hover {
-    background-color: #f00;
-    height: 48px;
-    justify-content: center;
-    align-items: center;
+.registro a:hover {
+    color: #73932C;
 }
 
 

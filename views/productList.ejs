@@ -26,7 +26,7 @@
                 
                 <%featuredSelectedProducts.forEach(product => { %>
                         <div class="articulo">
-                            <a href="/product/productDetail/<%=product.id%>" class="main-article">
+                            <a href="/product/product-detail/<%=product.id%>" class="main-article">
                                 <img src="/img/products/<%=product.images[0]%>" alt="<%=product.name%>" class="product">
                                 <p class="product"><%=product.name%></p>
                                 <p class="price">
@@ -56,7 +56,7 @@
                                 <p class="discount">%<%=product.discount%></p>
                                 <p>OFF</p>
                             </div>
-                            <a href="/product/productDetail/<%=product.id%>" class="main-article">
+                            <a href="/product/product-detail/<%=product.id%>" class="main-article">
                                 <img src="/img/products/<%=product.images[0]%>" alt="<%=product.name%>" class="product">
                                 <p class="product"><%=product.name%></p>
                                 <p class="price">
@@ -78,7 +78,7 @@
                 <% selectedProducts.forEach(product => { %>
 
                     <div class="articulo">
-                        <a href="/product/productDetail/<%=product.id%>" class="main-article">
+                        <a href="/product/product-detail/<%=product.id%>" class="main-article">
                             <img src="/img/products/<%=product.images[0]%>" alt="<%=product.name%>" class="product">
                             <p class="product"><%=product.name%></p>
                             <p class="price">
