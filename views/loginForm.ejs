@@ -16,25 +16,26 @@
     <div class="grilla-contenedora">
         <%-include('./partials/header')%>
         <main>
-            <form action="/" method="GET">
+            <form action="" method="POST">
                 <div class="box-datos">
-                    <label for="nombre-usuario">Nombre de Usuario:</label>
-                    <input type="text" name="nombre-usuario" id="nombre-usuario" style="text-transform:uppercase">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" style="text-transform:uppercase">
                 </div>
                 <div class="box-datos">
                     <label for="password">Ingrese la contraseña:</label>
                     <input type="password" name="password" id="password">
                 </div>
+                <div class="botones">
+                    <button type="submit">Ingresar</button>
+                </div>
                 <div class="checkbox">
                     <div class="option-cb">
-                        <input type="checkbox" name="recordarme" value="recordarme" id="recordarme" checked>Recordarme
+                        <input type="checkbox" name="recordarme" value='checked' id="recordarme">Recordarme
                     </div>
                 </div>
-                <a href="#">Olvidaste tus datos de acceso?</a>
+                <a class='a-forget' href="#">Olvidaste tus datos de acceso?</a>
             </form>
-            <div class="botones">
-                <a href="/"><button type="submit">Ingresar</button></a>
-            </div>
+            
         </main>
         <%-include('./partials/footer')%>
     </div>

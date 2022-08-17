@@ -9,7 +9,7 @@
  },
  {
   "name": "Diego",
-  "email": "Diego@gmail.com",
+  "email": "diego@gmail.com",
   "number": 1122334455,
   "password": "diego123",
   "id": 2,
@@ -40,63 +40,19 @@
   "active": true
  },
  {
-  "name": "",
-  "password": "",
+  "name": "Juan Perez",
+  "email": "juanperez@gmail.com",
+  "number": "1133445566",
+  "password": "$2a$10$KGOHUrYb01scPONc3zC.guC6V620/zf1AY3Qm69pBMKdhdpDnws5.",
   "id": 6,
   "active": true
  },
  {
-  "name": "",
-  "password": "",
+  "name": "Diego Ramos",
+  "email": "dieggo1@gmail.com",
+  "number": 11333565754,
+  "password": "$2a$10$KvOaRuCJklbOmRjVip9vMuly1owL65cxN3of4nPvZfrdTtOJ2dMbS",
   "id": 7,
-  "active": true
- },
- {
-  "name": "",
-  "password": "",
-  "id": 8,
-  "active": true
- },
- {
-  "name": "",
-  "password": "",
-  "id": 9,
-  "active": true
- },
- {
-  "name": "",
-  "password": "",
-  "id": 10,
-  "active": true
- },
- {
-  "name": "",
-  "password": "",
-  "id": 11,
-  "active": true
- },
- {
-  "name": "",
-  "password": "",
-  "id": 12,
-  "active": true
- },
- {
-  "name": "",
-  "password": "",
-  "id": 13,
-  "active": true
- },
- {
-  "name": "",
-  "password": "$2a$10$yMs73Hc8gVPwFkWQATLwsu9scv8AnhyAG.ol1ggYWkE/4B.I7iNQ.",
-  "id": 14,
-  "active": true
- },
- {
-  "name": "f",
-  "password": "$2a$10$WZ/N0xfIULpSuAa2MWa.b.zMJq3Mpf.vAu5Fu1AY6LePNskV5Ho6q",
-  "id": 15,
   "active": true
  }
 ]

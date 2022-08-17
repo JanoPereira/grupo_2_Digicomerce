@@ -20,14 +20,19 @@ const userController = {
     login: (req,res) =>{
         res.render('loginForm')
     },
+    processLogin:(req,res)=>{
+        let userData = req.body;
+        return res.send(userData)
+        res.redirect('/')
+    },
     uploadUser: (req,res) =>{
         let errors = validationResult(req);
         // return res.send (errors.mapped());
         let newUser = {
             
             name: req.body.name,
-            email: req.body.email,
-            number: req.body.number,
+            email: req.body.email.toLowerCase(),
+            number: +req.body.number,
             password: bcrypt.hashSync(req.body.password, 10), //encripta la password ingresada
             id: users[users.length - 1].id + 1,
             active: true
