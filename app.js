@@ -6,12 +6,13 @@ const path = require('path');
 
 const app = express();
 
+
 //app.use(express.static(path.join(__dirname, './public')));//
 app.use(express.static('./public'));
 
 app.set('view engine','ejs');
 
-//<-- Capturar todo lo que venga del form-->//
+//<-- Capturar todo lo que venga del form (body)-->//
 
 app.use(express.urlencoded({extended:false}));
 
@@ -41,8 +42,8 @@ app.use('/user', userRouter);
 
 // <-- Iniciar Servidor --> //
 
-app.listen(5000,()=>{
-    console.log("Se ha inicializado un servidor en http://localhost:5000");
+app.listen(7000,()=>{
+    console.log("Se ha inicializado un servidor en http://localhost:7000");
 });
 
 // <-- ERROR 404 --> //

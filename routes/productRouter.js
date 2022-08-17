@@ -1,5 +1,4 @@
 const express = require('express');
-const { diskStorage } = require('multer');
 
 const router = express.Router();
 
@@ -53,6 +52,7 @@ router.post('/product-cart/payment-detail',productController.savePaymentDetail);
 router.get('/product-cart/payment-method',productController.paymentMethod);
 
 router.get('/:category', productController.showProducts);
+
 
 
 module.exports = router;

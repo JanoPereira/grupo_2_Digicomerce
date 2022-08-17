@@ -162,9 +162,9 @@ const productController = {
     },
     deleteProduct: (req, res) => {
         const prodId = req.params.id
-        let newList = products.filter(product => product.id !== prodId);
+        let newList = products.filter(product => product.id != prodId);
 
-       let productsJSON = JSON.stringify(newList, null, ' ')
+        let productsJSON = JSON.stringify(newList, null, ' ')
         fs.writeFileSync(productsFilePath, productsJSON);
         
         res.redirect('/product')
