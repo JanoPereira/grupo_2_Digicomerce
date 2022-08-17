@@ -34,6 +34,7 @@ const userController = {
         };
         if(!errors.isEmpty()) {
             let errorObject = errors.mapped()
+            return res.send(errorObject);
             let oldData = {
                 name: req.body.name,
                 email: req.body.email,
