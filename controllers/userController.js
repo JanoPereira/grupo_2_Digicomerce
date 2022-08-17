@@ -34,14 +34,14 @@ const userController = {
         };
         if(!errors.isEmpty()) {
             let errorObject = errors.mapped()
-            return res.send(errorObject);
+            // return res.send(errorObject);
             let oldData = {
                 name: req.body.name,
                 email: req.body.email,
                 number: req.body.number
-            }
+            };
             return res.render ('registrationForm', {errors:errorObject, oldData});
-        }
+        };
         users.push(newUser);
         let usersJSON = JSON.stringify(users, null, ' ');
         fs.writeFileSync(usersFilePath, usersJSON);

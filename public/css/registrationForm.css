@@ -28,16 +28,27 @@ body {
     color: white
 }
 
+.field{
+    margin-bottom: 20px;
+}
 .campos {
     width: 100%;
     margin: auto;
     background-color: wheat;
     padding: 10px;
     border-radius: 6px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     border: 1px solid white;
     font-size: 16px;
     color: black;
+}
+
+.error{
+    color: rgb(153, 34, 34);
+}
+
+.invalid{
+    border: 2px solid rgb(153, 34, 34);
 }
 
 .button-container{
