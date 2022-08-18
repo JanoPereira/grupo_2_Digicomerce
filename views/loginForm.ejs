@@ -20,7 +20,7 @@
                 <div class="box-datos">
                     <label for="email">Email:</label>
                     <input type="text" name="email" id="email" style="text-transform:uppercase"
-                     value="<%=(locals.oldData && oldData.email)?oldData.email:''%>">
+                     value="<%=(locals.oldDataLogin && oldDataLogin.email)?oldData.email:''%>">
                         <% if(locals.errors && errors.email){%>
                             <p class="error">
                                 <%=errors.msg%>

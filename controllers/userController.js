@@ -41,7 +41,7 @@ const userController = {
                 }
             }
             if (usuarioALogearse == undefined) {
-                return res.render("login", { errors: [{ msg: "Credenciales inválidas" }]});
+                return res.render("login", { errors: [{ msg: "Credenciales inválidas" }] });
             }
             req.session.usuarioLogueado = usuarioALogearse;
            
