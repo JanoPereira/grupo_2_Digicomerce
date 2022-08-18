@@ -46,6 +46,14 @@ let validations = [
     })
 ];
 
+let validationsLogin = [
+    body('email')
+        .notEmpty().withMessage('Debes completar el Campo').bail(),
+        //.isEmail().withMessage("Debe ingresar un email válido").bail(),
+    body('password')
+        .notEmpty().withMessage('Debe completar este campo'),
+]
+
 router.get('/my-account', userController.userInfo);
 
 router.get('/registration-form',userController.register);
@@ -54,7 +62,7 @@ router.post('/registration-form', validations, userController.uploadUser);
 
 router.get('/login-form', userController.login);
 
-router.post('/login-form', userController.processLogin);
+router.post('/login-form', validationsLogin, userController.processLogin);
 
 
 
