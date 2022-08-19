@@ -1,454 +1,726 @@
 [
-    {
-     "id": 1,
-     "name": "Té Negro",
-     "price": 100,
-     "discount": 10,
-     "weight" : [100, 250, 500, 1000],
-     "category": "te",
-     "description": "Un clásico. El Té Negro nos aporta antioxidantes y la teína para mantenernos activos durante todo el día.",
-     "image": "img-te-negro.jpg"
-    },
-    {
-     "id": 2,
-     "name": "Té Verde Sencha",
-     "price": 500,
-     "discount": 5,
-     "weight" : [100, 250, 500, 1000],
-     "category": "te",
-     "description": "Té Sencha de origen Japonés, elaborado con el tradicional proceso de vaporizado. Se caracteriza por contar con mucho cuerpo, sabor refrescante y su suave toque herbal.",
-     "image": "img-te-verde.jpg"
-    },
-    {
-     "id": 3,
-     "name": "Té Rojo Pu Erh Royal",
-     "price": 1000,
-     "discount": 5,
-     "weight" : [100, 250, 500, 1000],
-     "category": "te",
-     "description": "Pu Erh Chino de la provincia de Yunnan, de hojas de grado superior y fermentación especial. De sabor liso sin astringencia. El Pu Erh es un té de comprobado efecto depurativo y digestivo, considerado como el Té de la salud para la maedicina traidicional China",
-     "image": "img-te-verde.jpg"
-    },
-    {
-     "id": 4,
-     "name": "Té Azul Oolong",
-     "price": 1500,
-     "discount": 5,
-     "weight" : [100, 250, 500, 1000],
-     "category": "te",
-     "description": "Té Oolong semioxidado que ayuda a la digestión y a mantener la vitalidad  durante el día. La flor de azahar acompaña muy bien a este Té Oolong por sus notas aromáticas dulces y florales.",
-     "image": "img-te-oolong.jpg"
-    },
-    {
-    "id": 5,
-    "name": "Té Sakura Beauty Blend",
-    "price": 1500,
-    "discount": 5,
-    "weight" : [100, 250, 500, 1000],
-    "category": "te",
-    "description": "Perfumada mezcla de Té Blanco y Verde con la sabrosa cereza morello y una pincelada de almendra y rosa. Una mezcla diferente y original, que fideliza a los paladares más amantes de los sabores singulares. Una alquimia de sabores para purificarse.",
-    "image": "img-te-sakura.jpg"
-    },
-    {
-     "id": 6,
-     "name": "Té Negro Earl Grey Santos Special",
-     "price": 1500,
-     "discount": 5,
-     "weight" : [100, 250, 500, 1000],
-     "category": "te",
-     "description": "Una de las mezclas más famosas y consumidas en el mundo. Un té fragante, con mucha personalidad. El Earl Grey más cítrico con Té Negro, cáscara de limón, bergamota y aromas cítricos.",
-     "image": "img-te-earl.jpg"
-    },
-    {
-     "id": 7,
-     "name": "Té Ceylon Decaf",
-     "price": 1000,
-     "discount": 5,
-     "weight" : [100, 250, 500, 1000],
-     "category": "te",
-     "description": "Los tés de Sri Lanka son reconocidos por su esencia intensa y aroma amaderado y tabacoso. Perfecto para ser consumido en cualquier momento del día. El Té Negro se descafeína de forma natural con vapor a presión extrayendo el 99% de la teína.",
-     "image": "img-te-ceylon.jpg"
-    },
-    {
-     "id": 8,
-     "name": "Té Negro Darjeeling",
-     "price": 1000,
-     "discount": 15,
-     "weight" : [100, 250, 500, 1000],
-     "category": "te",
-     "description": "Procedente del jardín Teesta Valley and Gielle situado en la región india de Darjeeling. Alta calidad. Ligero y sedoso con pequeño toque herbal. Perfecto para tomar en los desayunos o después de las comidas.",
-     "image": "img-te-ceylon.jpg"
-    },
-    {
-     "id": 9,
-     "name": "Té Blanco Pai Mu Tan",
-     "price": 1500,
-     "discount": 0,
-     "weight" : [100, 250, 500, 1000],
-     "category": "te",
-     "description": "Té Blanco conocido como Pai Mu Tan, procedente de de la zona de Fujian, China. Este exclusivo té de producción muy limitada se recolecta de forma manual y sólo se utilizan los brotes y las primeras dos hojas tiernas. Famoso por su fino aroma floral.",
-     "image": "img-te-blanco.jpg"
-    },
-    {
-     "id": 10,
-     "name": "Té Negro Berry Fields",
-     "price": 2000,
-     "discount": 10,
-     "weight" : [100, 250, 500, 1000],
-     "category": "te",
-     "description": "Mezcla de Té Negro con frutos silvestre, ideal para los desayunos y las meriendas. Su dulce y envolvente aroma ofrece versatilidad en su consumo en caliente o en frío.",
-     "image": "img-te-berry.jpg"
-    },
-    {
-     "id": 11,
-     "name": "Té Rooibos African Sunset",
-     "price": 2000,
-     "discount": 10,
-     "weight" : [100, 250, 500, 1000],
-     "category": "te",
-     "description": "Exclusivo de la zona sudafricana de Cederberg, de limitada producción. El Rooibos es una planta sudafricana, libre de teína y sin calorías que ayuda a hidratar el cuerpo. Destaca también su poder antioxidante. De sabor dulce, aromático y sin notas de astringencia",
-     "image": "img-te-african.jpg"
-    },
-    {
-     "id": 12,
-     "name": "Té English Breakfast",
-     "price": 1000,
-     "discount": 10,
-     "weight" : [100, 250, 500, 1000],
-     "category": "te",
-     "description": "Tradicional mezcla de Tés Negros de Sri Lanka para empezar el día con vitalidad. Una taza de Té Negro por la mañana activa el cuerpo y la mente, nos deleita con una ola de energía. Unas gotas de leche matizarán la astringencia y aportarán cremosidad.",
-     "image": "img-te-english.jpg"
-    },
-    {
-     "id": 13,
-     "name": "Té Tilo y Melisa",
-     "price": 500,
-     "discount": 20,
-     "weight" : [100, 250, 500, 1000],
-     "category": "te",
-     "description": "Infusión con tilo y melisa, de relajante aroma y sabor dulce con propiedades relajantes, diuréticas y digestivas de sabor herbal y meloso.",
-     "image": "img-te-tilo.jpg"
-    },
-    {
-     "id": 14,
-     "name": "Té Camomilla Golden",
-     "price": 500,
-     "discount": 20,
-     "weight" : [100, 250, 500, 1000],
-     "category": "te",
-     "description": "Una mezcla muy aromática con el aporte de las propiedades de la camomila y el delicioso sabor de la manzana. Destacan sus propiedades relajantes y digestivas.",
-     "image": "img-te-camomilla.jpg"
-    },
-    {
-     "id": 15,
-     "name": "Té Blanco Strawberry Fresh",
-     "price": 1500,
-     "discount": 20,
-     "weight" : [100, 250, 500, 1000],
-     "category": "te",
-     "description": "Una mezcla ideal para los que buscan un buen sabor pero con poca teína. Su carácter joven y fresco, ideal para consumo en caliente o al estilo Ice Tea.",
-     "image": "img-te-strawberry.jpg"
-    },
-    {
-     "id": 16,
-     "name": "Té Fruit explosion",
-     "price": 1500,
-     "discount": 5,
-     "weight" : [100, 250, 500, 1000],
-     "category": "te",
-     "description": "Colorida explosión de sabores y nutrientes con 15 virtuosas frutas: la unión perfecta para sentirse vital y en forma. Un concentrado vital de micronutrientes esenciales que reforzará nuestro sistema inmunitario.",
-     "image": "img-te-fruit.jpg"
-    },
-   
-    {
-        "id": 17,
-        "name": "Mate Y Bombilla Mathienzo de Silicona",
-        "price": 759,
-        "discount": 5,
-        "weight": null,
-        "category": "accesorios",
-        "description": "Mate Mathienzo de silicona 100% y polipropileno (PP). Sus materiales evitan la sobre oxigenación de la Yerba, haciendo que se lave mucho más lento. Es totalmente atóxico, aislante térmico e higiénico. Carga 70 gramos",
-        "image": "ac-mate-y-bombilla-.jpg"
-    },
-    {
-        "id": 18,
-        "name": "Tea Box de Madera Paraiso x60 Saquitos",
-        "price": 8473,
-        "discount": 5,
-        "weight": null,
-        "category": "accesorios",
-        "description": "Caja con 60 saquitos surtidos de Té INTI - ZEN, ideal para que puedas hacer un viaje con tus papilas gustativas descubriendo sabores y aromas exquisitos de todo el mundo.",
-        "image": "te-inti-zen-tea-box-de-madera-paraiso-x60-saquitos-011-04990408eeef199b0816470107383842-640-0.jpg"
-    },
-    {
-        "id": 19,
-        "name": "Mate Y Bombilla Mathienzo de Vidrio Forrado en Cuero",
-        "price": 1353,
-        "discount": 5,
-        "weight": null,
-        "category": "accesorios",
-        "description": "Mate Mathienzo con interior de vidrio, forrado con cuero vaqueta. Incluye bombilla de acero inoxidable, desmontable para su lavado.",
-        "image": "ac-mate-y-bombilla-mathienzo-de-vidrio-forardo-en-cuero-001-fe8c1e673287bed5cc16498753875575-640-0.jpg"
-    },
-    {
-        "id": 20,
-        "name": "Bombilla Taumer con Anillo - Linha Atlas",
-        "price": 1194,
-        "discount": 5,
-        "weight": null,
-        "category": "accesorios",
-        "description": "Bombilla de alpaca para Mate o Chimarrao en Brasil, con un delicado anillo con detalle de piedra de color y puntera.",
-        "image": "ac-bomba-taumer-con-anel-linha-atlas-001-14b5bc5ce7540d33da16563549236508-640-0.jpg"
-    },
-    {
-        "id": 21,
-        "name": "Infusor Circular Abierto para Té en Hebras - INOX",
-        "price": 530,
-        "discount": 5,
-        "weight": null,
-        "category": "accesorios",
-        "description": "Infusor abierto para preparar Té en hebras. Hecho de acero inoxidable para garantizar su limpieza y máxima duración.",
-        "image": "ac-infusor-circular-abierto-para-te-en-hebras-inox-001-26454f4635099b749416554033582686-640-0.jpg"
-    },
-    {
-        "id": 22,
-        "name": "Kit Matero Origen: Mate Metalico, Bombilla y Yerba Mate 500gr",
-        "price": 4305,
-        "discount": 5,
-        "weight": null,
-        "category": "accesorios",
-        "description": "Kit compuesto por: Mate metálico Origen, Bombilla de acero inoxidable Origen y Yerba Mate Origen Barbacuá Selección Especial 500Gr",
-        "image": "kitorigennegro21-99449998acff48605816425380695425-640-0.png"
-    },
-    {
-        "id": 23,
-        "name": "Mate As de Bastos - Calabaza sin Virola",
-        "price": 1355,
-        "discount": 5,
-        "weight": null,
-        "category": "accesorios",
-        "description": "El mate de Calabaza As De Bastos es un recipiente natural para disfrutar de nuestra amada infusión. Al ser un producto natural puede variar el tamaño y la forma de la misma.",
-        "image": "ac-mate-as-de-bastos-calabaza-sin-virola-001-8f1963bf1a1f92e99c16497761062817-640-0.jpg"
-    },
-    {},
-    {
-        "id": 24,
-        "name": "Medida de té de acero inoxidable",
-        "price": 872,
-        "discount": 5,
-        "weight": null,
-        "category": "accesorios",
-        "description": "La medida permite coger la cantidad de té necesaria para una taza en volumen y no en peso, lo que ayudará a que el té o infusión no quede con un sabor muy suave o, por el contrario, muy fuerte.",
-        "image": "61006_Cucharita_1000X1000_l-.jpg"
-    },
-    {
-        "id": 25,
-        "name": "Taza de cristal termorresistente con infusor de acero inoxidable",
-        "price": 2616,
-        "discount": 5,
-        "weight": null,
-        "category": "accesorios",
-        "description": "Elegante y funcional taza de cristal termorresistente con infusor de acero inoxidable y recubrimiento de silicona. Está fabricada en cristal termo resistente para evitar quemaduras. Incluye filtro de acero inoxidable y recubrimiento de silicona de color turquesa a juego con el diseño de la taza.Infusor y tapa incluidos para hacer las infusiones más aromáticas.Calentar el agua en un hervidor, colocar el té(2g) en el filtro y verter el agua caliente sobre las hojas.Retirar el filtro tras el tiempo de infusión.",
-        "image": "65272_AllInOneJumboBerry_1000X1000_l-.jpg"
-    },
-    {
-        "id": 26,
-        "name": "Tetera de cristal con infusor de acero inoxidable",
-        "price": 3215,
-        "discount": 5,
-        "weight": null,
-        "category": "accesorios",
-        "description": "Elegante y funcional tetera de cristal con infusor de acero inoxidable y silicona ideal para ver el color de tu té o infusión. Está fabricada en cristal termo resistente para evitar quemaduras. Incluye filtro de acero inoxidable y recubrimiento de silicona en color lila a juego con el diseño de la taza.Infusor y tapa incluidos para hacer las infusiones más aromáticas.Calentar el agua en un hervidor, colocar el té(5g) en el filtro y verter el agua caliente sobre las hojas.Retirar el filtro tras el tiempo de infusión.",
-        "image": "52154_AllInOneTeapotArabiaSky06L_21000X1000_l-.jpg"
-    },
-    {
-        "id": 27,
-        "name": "Cha Jing - El primer libro sobre el té",
-        "price": 2010,
-        "discount": 5,
-        "weight": null,
-        "category": "accesorios",
-        "description": "Dividido en tres secciones, este antiguo libro nos enseña más sobre la bebida más consumida en el mundo. En la primera sección se habla del té y de su producción, en la segunda se enumeran los utensilios usados para su producción y, en la tercera, se tratan varios temas: desde la valoración del té hasta los antiguos archivos que sobre él existían en la Antigua China.",
-        "image": "35115_Cha-Jing.-El-primer-libro-sobre-el-te_1000X1000_l.jpg"
-    },
-    {
-        "id": 28,
-        "name": "French Press 1L",
-        "price": 4696,
-        "discount": 5,
-        "weight": null,
-        "category": "accesorios",
-        "description": "Fabricada en doble cristal de borosilicato resistente a altas temperaturas y émbolo de acero inoxidable 18/8.  Perfecta para hacer tu té, infusiones o café en esta elegante French Press de 1 L de capacidad. Poner el té en el interior de la tetera y verter el agua caliente sobre las hojas. Colocar la tapa con el émbolo hacia arriba. Tras el tiempo de infusión, presionar el émbolo hacia abajo y servir el té. ",
-        "image": "52155_FrenchPress1L_1000X1000_l-.jpg"
-    },
-    {
-        "id": 29,
-        "name": "Hervidor Commodore",
-        "price": 11942,
-        "discount": 10,
-        "weight": null,
-        "category": "accesorios",
-        "description": "Este hervidor inspirado en el diseño de teteras japonés te permite calentar y mantener el calor del agua a distintas temperaturas, controlando el progreso mediante su pantalla digital y recibiendo un aviso cuando alcanza la temperatura deseada. Un hervidor se caracteriza por tener buenos diseños que harán lucir mejor la decoración de tu cocina, además, no solo son elegantes sinó que también son equipos ideales para realizar tazas de té o café de manera instantánea.Incluye termostato y autoapagado para mayor seguridad.",
-        "image": "50017_Hervidor-commodore-blanco-2-1000x1000.jpg"
-    },
-    {
-        "id": 30,
-        "name": "Yerba mate Obereña",
-        "price": 564,
-        "discount": 5,
-        "weight": 500,
-        "category": "yerba orgánica",
-        "description": "La Yerba Mate llega fresca desde nuestras chacras y sectores productivos, y es pre-seleccionada para ingresar al secado. Se realiza el proceso en un sistema rotatorio contínuo con calor controlado. Luego se clasifica con una zaranda que separa las hojas de los palos. El proceso culmina con un tratamiento selectivo de molienda para luego pasar al último paso: Estacionamiento natural por un mínimo de 12 meses.",
-        "image": "ym-la-oberena.jpg"
-    },
-    {
-        "id": 31,
-        "name": "Yerba Mate Fidel Orgánica con Moringa Oleifera",
-        "price": 1079,
-        "discount": 5,
-        "weight": 500,
-        "category": "yerba orgánica",
-        "description": "Moringa Fidel presenta un producto renovado de producción limitada libre de agrotóxicos que combina la Moringa con la Yerba Mate Orgánica y sus distintas formas de consumirla. La Moringa Oleifera es un Árbol reconocido por sus cualidades. Sus hojas fueron incorporadas en este exquisito blend. Este producto está compuesto por un 96% de Yerba Mate Orgánica estacionada naturalmente por 12 meses, y un 4% de Hojas Secas de Moringa Oleifera.",
-        "image": "ym-fidel-organica-con-moringa-oleifera-500gr.jpg"
-    },
-    {
-        "id": 32,
-        "name": "Yerba Mate Fidel Orgánica con Moringa Oleifera",
-        "price": 1079,
-        "discount": 5,
-        "weight": 500,
-        "category": "yerba orgánica",
-        "description": "Moringa Fidel presenta un producto renovado de producción limitada libre de agrotóxicos que combina la Moringa con la Yerba Mate Orgánica y sus distintas formas de consumirla. La Moringa Oleifera es un Árbol reconocido por sus cualidades. Sus hojas fueron incorporadas en este exquisito blend. Este producto está compuesto por un 96% de Yerba Mate Orgánica estacionada naturalmente por 12 meses, y un 4% de Hojas Secas de Moringa Oleifera.",
-        "image": "ym-fidel-organica-con-moringa-oleifera-500gr.jpg"
-    },
-    {
-        "id": 33,
-        "name": "Yerba Mate Arapeguá Molida Orgánica",
-        "price": 820,
-        "discount": 5,
-        "weight": 500,
-        "category": "yerba orgánica",
-        "description": " La yerba mate es el principal producto de la Cooperativa Agropecuaria La Abundancia. Tiene un estacionamiento natural de 24 meses, lo que hace que tenga un sabor suave y añejado. No provoca acidez y su sabor recuerda a como se hacia la yerba antes. Su molienda gruesa la hace ideal para preparar un Mate suave, o un buen Tereré. Es un producto de la Agricultura ORGÁNICA libre de agroquímicos, la cual promueve la integración entre el ser humano, el reino animal, el vegetal y el suelo, con el objetivo de conformar una individualidad agrícola que logre su auto sustentabilidad, tanto en el aspecto productivo como en el económico, fortaleciendo las aptitudes del productor agropecuario y las relaciones con su entorno.",
-        "image": "ym-arapegua-molida-organica-500gr.jpg"
-    },
-    {
-        "id": 34,
-        "name": "Yerba Mate Mate & Co.  Spicy Choco",
-        "price": 1062,
-        "discount": 5,
-        "weight": 250,
-        "category": "yerba orgánica",
-        "description": "Un blend delicioso que combina el dulzor de la cascarilla de cacao con el picante del jengibre y el sabor inconfundible de nuestra Yerba Mate Orgánica Especial. Las propiedades estimulantes y antioxidantes de sus ingredientes son la esencia de este blend.",
-        "image": "ym-mate-co-bolsita-repuesto-220gr-spicy-choco.jpg"
-    },
-    {
-        "id": 35,
-        "name": "Yerba Mate Mate & Co. Tres Mentas",
-        "price": 1454,
-        "discount": 5,
-        "weight": 220,
-        "category": "yerba orgánica",
-        "description": " El más fresco de los blends, para disfrutar en todo momento y aprovechar las propiedades de sus ingredientes naturales. Con base de Yerba Mate Orgánica Despalada, se mezclan tres tipos de mentas; hierba buena, de sabor suave y dulce, peppermint, y menta egipcia, la más fresca de las mentas. Un blend para revitalizar tus sentidos.",
-        "image": "ym-mate-co-lata-220gr-tres-mentas.jpg"
-    },
-    {
-        "id": 36,
-        "name": "Yerba Mate La Obereña Orgánica Bolsa Arpillera",
-        "price": 1251,
-        "discount": 5,
-        "weight": 1000,
-        "category": "yerba orgánica",
-        "description": "La Yerba Mate llega fresca desde nuestras chacras y sectores productivos, en bolsas de arpillera de 40Kg. y son pre-seleccionadas para ingresar al secado. Previa selección y análisis.Se realiza el secado en un sistema rotatorio continuo con calor controlado.Luego se clasifica con una zaranda que separa hojas de los palos.",
-        "image": "ym-la-oberena-organica-bolsa-arpillera.jpg"
-    },
-    {
-        "id": 37,
-        "name": "Yerba Mate Grapia Milenaria Tradicional",
-        "price": 742,
-        "discount": 5,
-        "weight": 1000,
-        "category": "yerba tradicional",
-        "description": "Yerba Mate libre de agro-tóxicos secada y estacionada de forma natural, lo que le otorga una maduración y características únicas. De sabor intenso y duradero que se mantendrá intacto durante mas cebadas.",
-        "image": "ym-grapia-milenaria-tradicional.jpg"
-    },
-    {
-        "id": 38,
-        "name": "Yerba Mate Verdeada Premium",
-        "price": 424,
-        "discount": 5,
-        "weight": 500,
-        "category": "yerba tradicional",
-        "description": "Verdeada Yerba Mate es de elaboración Artesanal, de cosecha limitada, estacionada durante 2 años y su equilibrio perfecto entre hoja - palo - polvo.  Desde el verde amanecer Misionero, Verdeada, se complace en compartir la sana costumbre y tradición de saborear una nueva Yerba Mate, la cual es estacionada naturalmente, permitiendo así, destacar sus virtudes y propiedades para que la infusión sea de su gusto.",
-        "image": "ym-verdeada-premium-500gr-.jpg"
-    },
-    {
-        "id":39,
-        "name": "Yerba Mate Apostoleñia",
-        "price": 712,
-        "discount": 5,
-        "weight": 1000,
-        "category": "yerba tradicional",
-        "description": "Yerba Mate tradicional elaborada con palo oriunda de una ciudad Yerbatera por excelencia. Apostoleñia nos trae una yerba de gran durabilidad y con personalidad robusta, estacionada naturalmente por 12 meses para resaltar y pulir las cualidades de la Yerba Mate. Un blend ideal para cualquier amante de un buen mate.",
-        "image": "ym-apostolenia-tradicional-.jpg"
-    },
-    {
-        "id": 40,
-        "name": "Yerba Mate Chamamé",
-        "price": 370,
-        "discount": 5,
-        "weight": 500,
-        "category": "yerba tradicional",
-        "description": "Te ofrecemos un producto elaborado por la empresa Campos del Chamamé. Una de las pocas empresas Yerbateras que Cultiva, Produce, Elabora y Envasa por su cuenta. Es una Yerba Mate con sabor Tradicional. Cantidad de palo equilibrado. Sabor intenso.",
-        "image": "ym-chamame-tradicional-.jpg"
-    },
-    {
-        "id": 41,
-        "name": "Yerba Mate Andresito",
-        "price": 438,
-        "discount": 5,
-        "weight": 500,
-        "category": "yerba tradicional",
-        "description": " La Yerba Mate cultivada por la Cooperativa Yerbatera Andresito en la provincia de Misiones, es producida, elaborada y procesada en forma natural por los productores rurales de la zona, a la que circundan áreas protegidas de la talla del célebre Parque Nacional Iguazú, lo que asegura una altísima sanidad ambiental y, lógicamente, la obtención de productos de máxima pureza.  Cada uno de los productores asociados recibe el permanente asesoramiento de la empresa, del mismo modo que acepta los estrictos controles de calidad que ésta ejerce a lo largo de toda la cadena productiva.Debido a esto y a los procedimientos artesanales y naturales empleados, Cooperativa Yerbatera Andresito puede ofrecer y asegurar a sus clientes productos idóneos en los que se conservan perfectamente las múltiples virtudes de la yerba mate.",
-        "image": "ym-andresito-.jpg"
-    },
-    {
-        "id": 42,
-        "name": "Yerba Mate Kurupí Compuesta Menta y Boldo",
-        "price": 621,
-        "discount": 5,
-        "weight": 500,
-        "category": "yerba compuesta",
-        "description": "El proceso de elaboración de la Yerba Mate, después de la cosecha de las hojas, pasa por los siguientes procesos: Preparación, Maduración, Finalización. En la etapa de finalización, se selecciona la Yerba Mate, separando las hojas de los tallos para que el producto pueda ser debidamente empaquetado y distribuido en los mercados. La Yerba Mate Kurupí, Compuesta con hierbas Menta y Boldo, posee propiedades notoriamente saludables.Un producto 100% natural.",
-        "image": "ym-kurupi-menta-y-boldo-.jpg"
-    },
-    {
-        "id": 43,
-        "name": "Yerba Mate Cachamate del Litoral",
-        "price": 194,
-        "discount": 5,
-        "weight": 500,
-        "category": "yerba compuesta",
-        "description": "Cachamate Hierbas Del Litoral es una combinación de lemon grass, una hierba autóctona de la region, Yerba Mate, Salvia y Marcela, que además de darle su particular sabor, es antioxidante y llena de vitalidad. Un sabor imperdible en un tereré fresco para compartir con amigos",
-        "image": "ym-cachamate-del-litoral-.jpg"
-    },
-    {
-        "id": 44,
-        "name": "Yerba Mate Adelgamate con Limon",
-        "price": 234,
-        "discount": 5,
-        "weight": 500,
-        "category": "yerba compuesta",
-        "description": " ADELGAMATE COMPUESTA CON LIMÓN ofrece las virtudes de las Hierbas Naturales; Té Verde, Poleo, Cedrón y Peperina, y además un suave y delicioso aroma de Limón en su justa medida. ¡Para Matear En Forma! ",
-        "image": "ym-adelgamate-compuesta-.jpg"
-    },
-    {
-        "id": 45,
-        "name": "Yerba Mate Fronteras con Manzanilla y Naranja",
-        "price": 829,
-        "discount": 5,
-        "weight": 500,
-        "category": "yerba compuesta",
-        "description": "Proba este blend ideal para arrancar un buen día, decorando el tan buscado sabor de la Yerba Mate con el toque dulzon y floral de la Manzanilla, acompañado del toque cítrico de la Naranja. COMPOSICIÓN: 88 % Yerba Mate, 9% Naranja, 3% Manzanilla.",
-        "image": "ym-fronteras.jpg"
-    }
+ {
+  "id": 1,
+  "name": "Té Negro",
+  "price": 100,
+  "discount": 10,
+  "weight": [
+   100,
+   250,
+   500,
+   1000
+  ],
+  "category": "te",
+  "description": "Un clásico. El Té Negro nos aporta antioxidantes y la teína para mantenernos activos durante todo el día.",
+  "images": [
+   "img-te-negro.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 2,
+  "name": "Té Verde Sencha",
+  "price": 500,
+  "discount": 20,
+  "weight": [
+   100,
+   250,
+   500,
+   1000
+  ],
+  "category": "te",
+  "description": "Té Sencha de origen Japonés, elaborado con el tradicional proceso de vaporizado. Se caracteriza por contar con mucho cuerpo, sabor refrescante y su suave toque herbal.",
+  "images": [
+   "img-te-verde.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 3,
+  "name": "Té Rojo Pu Erh Royal",
+  "price": 1000,
+  "discount": 0,
+  "weight": [
+   100,
+   250,
+   500,
+   1000
+  ],
+  "category": "te",
+  "description": "Pu Erh Chino de la provincia de Yunnan, de hojas de grado superior y fermentación especial. De sabor liso sin astringencia. El Pu Erh es un té de comprobado efecto depurativo y digestivo, considerado como el Té de la salud para la maedicina traidicional China",
+  "images": [
+   "img-te-verde.jpg"
+  ],
+  "featured": true,
+  "active": true
+ },
+ {
+  "id": 4,
+  "name": "Té Azul Oolong",
+  "price": 1500,
+  "discount": 5,
+  "weight": [
+   100,
+   250,
+   500,
+   1000
+  ],
+  "category": "te",
+  "description": "Té Oolong semioxidado que ayuda a la digestión y a mantener la vitalidad  durante el día. La flor de azahar acompaña muy bien a este Té Oolong por sus notas aromáticas dulces y florales.",
+  "images": [
+   "img-te-oolong.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 5,
+  "name": "Té Sakura Beauty Blend",
+  "price": 1500,
+  "discount": 10,
+  "weight": [
+   100,
+   250,
+   500,
+   1000
+  ],
+  "category": "te",
+  "description": "Perfumada mezcla de Té Blanco y Verde con la sabrosa cereza morello y una pincelada de almendra y rosa. Una mezcla diferente y original, que fideliza a los paladares más amantes de los sabores singulares. Una alquimia de sabores para purificarse.",
+  "images": [
+   "img-te-sakura.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 6,
+  "name": "Té Negro Earl Grey Santos Special",
+  "price": 1500,
+  "discount": 5,
+  "weight": [
+   100,
+   250,
+   500,
+   1000
+  ],
+  "category": "te",
+  "description": "Una de las mezclas más famosas y consumidas en el mundo. Un té fragante, con mucha personalidad. El Earl Grey más cítrico con Té Negro, cáscara de limón, bergamota y aromas cítricos.",
+  "images": [
+   "img-te-earl.jpg"
+  ],
+  "featured": true,
+  "active": true
+ },
+ {
+  "id": 7,
+  "name": "Té Ceylon Decaf",
+  "price": 1000,
+  "discount": 5,
+  "weight": [
+   100,
+   250,
+   500,
+   1000
+  ],
+  "category": "te",
+  "description": "Los tés de Sri Lanka son reconocidos por su esencia intensa y aroma amaderado y tabacoso. Perfecto para ser consumido en cualquier momento del día. El Té Negro se descafeína de forma natural con vapor a presión extrayendo el 99% de la teína.",
+  "images": [
+   "img-te-ceylon.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 8,
+  "name": "Té Negro Darjeeling",
+  "price": 1000,
+  "discount": 15,
+  "weight": [
+   100,
+   250,
+   500,
+   1000
+  ],
+  "category": "te",
+  "description": "Procedente del jardín Teesta Valley and Gielle situado en la región india de Darjeeling. Alta calidad. Ligero y sedoso con pequeño toque herbal. Perfecto para tomar en los desayunos o después de las comidas.",
+  "images": [
+   "img-te-ceylon.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 9,
+  "name": "Té Blanco Pai Mu Tan",
+  "price": 1500,
+  "discount": 0,
+  "weight": [
+   100,
+   250,
+   500,
+   1000
+  ],
+  "category": "te",
+  "description": "Té Blanco conocido como Pai Mu Tan, procedente de de la zona de Fujian, China. Este exclusivo té de producción muy limitada se recolecta de forma manual y sólo se utilizan los brotes y las primeras dos hojas tiernas. Famoso por su fino aroma floral.",
+  "images": [
+   "img-te-blanco.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 10,
+  "name": "Té Negro Berry Fields",
+  "price": 2000,
+  "discount": 10,
+  "weight": [
+   100,
+   250,
+   500,
+   1000
+  ],
+  "category": "te",
+  "description": "Mezcla de Té Negro con frutos silvestre, ideal para los desayunos y las meriendas. Su dulce y envolvente aroma ofrece versatilidad en su consumo en caliente o en frío.",
+  "images": [
+   "img-te-berry.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 11,
+  "name": "Té Rooibos African Sunset",
+  "price": 2000,
+  "discount": 10,
+  "weight": [
+   100,
+   250,
+   500,
+   1000
+  ],
+  "category": "te",
+  "description": "Exclusivo de la zona sudafricana de Cederberg, de limitada producción. El Rooibos es una planta sudafricana, libre de teína y sin calorías que ayuda a hidratar el cuerpo. Destaca también su poder antioxidante. De sabor dulce, aromático y sin notas de astringencia",
+  "images": [
+   "img-te-african.jpg"
+  ],
+  "featured": true,
+  "active": true
+ },
+ {
+  "id": 12,
+  "name": "Té English Breakfast",
+  "price": 1000,
+  "discount": 10,
+  "weight": [
+   100,
+   250,
+   500,
+   1000
+  ],
+  "category": "te",
+  "description": "Tradicional mezcla de Tés Negros de Sri Lanka para empezar el día con vitalidad. Una taza de Té Negro por la mañana activa el cuerpo y la mente, nos deleita con una ola de energía. Unas gotas de leche matizarán la astringencia y aportarán cremosidad.",
+  "images": [
+   "img-te-english.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 13,
+  "name": "Té Tilo y Melisa",
+  "price": 500,
+  "discount": 20,
+  "weight": [
+   100,
+   250,
+   500,
+   1000
+  ],
+  "category": "te",
+  "description": "Infusión con tilo y melisa, de relajante aroma y sabor dulce con propiedades relajantes, diuréticas y digestivas de sabor herbal y meloso.",
+  "images": [
+   "img-te-tilo.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 14,
+  "name": "Té Camomilla Golden",
+  "price": 500,
+  "discount": 20,
+  "weight": [
+   100,
+   250,
+   500,
+   1000
+  ],
+  "category": "te",
+  "description": "Una mezcla muy aromática con el aporte de las propiedades de la camomila y el delicioso sabor de la manzana. Destacan sus propiedades relajantes y digestivas.",
+  "images": [
+   "img-te-camomilla.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 15,
+  "name": "Té Blanco Strawberry Fresh",
+  "price": 1500,
+  "discount": 20,
+  "weight": [
+   100,
+   250,
+   500,
+   1000
+  ],
+  "category": "te",
+  "description": "Una mezcla ideal para los que buscan un buen sabor pero con poca teína. Su carácter joven y fresco, ideal para consumo en caliente o al estilo Ice Tea.",
+  "images": [
+   "img-te-strawberry.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 16,
+  "name": "Té Fruit explosion",
+  "price": 1500,
+  "discount": 5,
+  "weight": [
+   100,
+   250,
+   500,
+   1000
+  ],
+  "category": "te",
+  "description": "Colorida explosión de sabores y nutrientes con 15 virtuosas frutas: la unión perfecta para sentirse vital y en forma. Un concentrado vital de micronutrientes esenciales que reforzará nuestro sistema inmunitario.",
+  "images": [
+   "img-te-fruit.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 17,
+  "name": "Mate Y Bombilla Mathienzo de Silicona",
+  "price": 759,
+  "discount": 5,
+  "weight": null,
+  "category": "accesorios",
+  "description": "Mate Mathienzo de silicona 100% y polipropileno (PP). Sus materiales evitan la sobre oxigenación de la Yerba, haciendo que se lave mucho más lento. Es totalmente atóxico, aislante térmico e higiénico. Carga 70 gramos",
+  "images": [
+   "ac-mate-y-bombilla-.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 18,
+  "name": "Tea Box de Madera Paraiso x60 Saquitos",
+  "price": 8473,
+  "discount": 5,
+  "weight": null,
+  "category": "accesorios",
+  "description": "Caja con 60 saquitos surtidos de Té INTI - ZEN, ideal para que puedas hacer un viaje con tus papilas gustativas descubriendo sabores y aromas exquisitos de todo el mundo.",
+  "images": [
+   "te-inti-zen-tea-box-de-madera-paraiso-x60-saquitos-011-04990408eeef199b0816470107383842-640-0.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 19,
+  "name": "Mate Y Bombilla Mathienzo de Vidrio Forrado en Cuero",
+  "price": 1353,
+  "discount": 5,
+  "weight": null,
+  "category": "accesorios",
+  "description": "Mate Mathienzo con interior de vidrio, forrado con cuero vaqueta. Incluye bombilla de acero inoxidable, desmontable para su lavado.",
+  "images": [
+   "ac-mate-y-bombilla-mathienzo-de-vidrio-forardo-en-cuero-001-fe8c1e673287bed5cc16498753875575-640-0.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 20,
+  "name": "Bombilla Taumer con Anillo",
+  "price": 1194,
+  "discount": 0,
+  "weight": null,
+  "category": "accesorios",
+  "description": "Bombilla de alpaca para Mate o Chimarrao en Brasil, con un delicado anillo con detalle de piedra de color y puntera.",
+  "images": [
+   "ac-bomba-taumer-con-anel-linha-atlas-001-14b5bc5ce7540d33da16563549236508-640-0.jpg"
+  ],
+  "featured": true,
+  "active": true
+ },
+ {
+  "id": 21,
+  "name": "Infusor Circular Abierto para Té en Hebras - INOX",
+  "price": 530,
+  "discount": 0,
+  "weight": null,
+  "category": "accesorios",
+  "description": "Infusor abierto para preparar Té en hebras. Hecho de acero inoxidable para garantizar su limpieza y máxima duración.",
+  "images": [
+   "ac-infusor-circular-abierto-para-te-en-hebras-inox-001-26454f4635099b749416554033582686-640-0.jpg"
+  ],
+  "featured": true,
+  "active": true
+ },
+ {
+  "id": 22,
+  "name": "Kit Matero Origen: Mate Metalico, Bombilla y Yerba Mate 500gr",
+  "price": 4305,
+  "discount": 5,
+  "weight": null,
+  "category": "accesorios",
+  "description": "Kit compuesto por: Mate metálico Origen, Bombilla de acero inoxidable Origen y Yerba Mate Origen Barbacuá Selección Especial 500Gr",
+  "images": [
+   "kitorigennegro21-99449998acff48605816425380695425-640-0.png"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 23,
+  "name": "Mate As de Bastos - Calabaza sin Virola",
+  "price": 1355,
+  "discount": 5,
+  "weight": null,
+  "category": "accesorios",
+  "description": "El mate de Calabaza As De Bastos es un recipiente natural para disfrutar de nuestra amada infusión. Al ser un producto natural puede variar el tamaño y la forma de la misma.",
+  "images": [
+   "ac-mate-as-de-bastos-calabaza-sin-virola-001-8f1963bf1a1f92e99c16497761062817-640-0.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {},
+ {
+  "id": 24,
+  "name": "Medida de té de acero inoxidable",
+  "price": 872,
+  "discount": 5,
+  "weight": null,
+  "category": "accesorios",
+  "description": "La medida permite coger la cantidad de té necesaria para una taza en volumen y no en peso, lo que ayudará a que el té o infusión no quede con un sabor muy suave o, por el contrario, muy fuerte.",
+  "images": [
+   "61006_Cucharita_1000X1000_l-.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 25,
+  "name": "Taza de cristal termorresistente con infusor de acero inoxidable",
+  "price": 2616,
+  "discount": 5,
+  "weight": null,
+  "category": "accesorios",
+  "description": "Elegante y funcional taza de cristal termorresistente con infusor de acero inoxidable y recubrimiento de silicona. Está fabricada en cristal termo resistente para evitar quemaduras. Incluye filtro de acero inoxidable y recubrimiento de silicona de color turquesa a juego con el diseño de la taza.Infusor y tapa incluidos para hacer las infusiones más aromáticas.Calentar el agua en un hervidor, colocar el té(2g) en el filtro y verter el agua caliente sobre las hojas.Retirar el filtro tras el tiempo de infusión.",
+  "images": [
+   "65272_AllInOneJumboBerry_1000X1000_l-.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 26,
+  "name": "Tetera de cristal con infusor de acero inoxidable",
+  "price": 3215,
+  "discount": 5,
+  "weight": null,
+  "category": "accesorios",
+  "description": "Elegante y funcional tetera de cristal con infusor de acero inoxidable y silicona ideal para ver el color de tu té o infusión. Está fabricada en cristal termo resistente para evitar quemaduras. Incluye filtro de acero inoxidable y recubrimiento de silicona en color lila a juego con el diseño de la taza.Infusor y tapa incluidos para hacer las infusiones más aromáticas.Calentar el agua en un hervidor, colocar el té(5g) en el filtro y verter el agua caliente sobre las hojas.Retirar el filtro tras el tiempo de infusión.",
+  "images": [
+   "52154_AllInOneTeapotArabiaSky06L_21000X1000_l-.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 27,
+  "name": "Cha Jing - El primer libro sobre el té",
+  "price": 2010,
+  "discount": 5,
+  "weight": null,
+  "category": "accesorios",
+  "description": "Dividido en tres secciones, este antiguo libro nos enseña más sobre la bebida más consumida en el mundo. En la primera sección se habla del té y de su producción, en la segunda se enumeran los utensilios usados para su producción y, en la tercera, se tratan varios temas: desde la valoración del té hasta los antiguos archivos que sobre él existían en la Antigua China.",
+  "images": [
+   "35115_Cha-Jing.-El-primer-libro-sobre-el-te_1000X1000_l.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 28,
+  "name": "French Press 1L",
+  "price": 4696,
+  "discount": 5,
+  "weight": null,
+  "category": "accesorios",
+  "description": "Fabricada en doble cristal de borosilicato resistente a altas temperaturas y émbolo de acero inoxidable 18/8.  Perfecta para hacer tu té, infusiones o café en esta elegante French Press de 1 L de capacidad. Poner el té en el interior de la tetera y verter el agua caliente sobre las hojas. Colocar la tapa con el émbolo hacia arriba. Tras el tiempo de infusión, presionar el émbolo hacia abajo y servir el té. ",
+  "images": [
+   "52155_FrenchPress1L_1000X1000_l-.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 29,
+  "name": "Hervidor Commodore",
+  "price": 11942,
+  "discount": 10,
+  "weight": null,
+  "category": "accesorios",
+  "description": "Este hervidor inspirado en el diseño de teteras japonés te permite calentar y mantener el calor del agua a distintas temperaturas, controlando el progreso mediante su pantalla digital y recibiendo un aviso cuando alcanza la temperatura deseada. Un hervidor se caracteriza por tener buenos diseños que harán lucir mejor la decoración de tu cocina, además, no solo son elegantes sinó que también son equipos ideales para realizar tazas de té o café de manera instantánea.Incluye termostato y autoapagado para mayor seguridad.",
+  "images": [
+   "50017_Hervidor-commodore-blanco-2-1000x1000.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 30,
+  "name": "Yerba mate Obereña",
+  "price": 564,
+  "discount": 5,
+  "weight": 500,
+  "category": "yerba",
+  "description": "La Yerba Mate llega fresca desde nuestras chacras y sectores productivos, y es pre-seleccionada para ingresar al secado. Se realiza el proceso en un sistema rotatorio contínuo con calor controlado. Luego se clasifica con una zaranda que separa las hojas de los palos. El proceso culmina con un tratamiento selectivo de molienda para luego pasar al último paso: Estacionamiento natural por un mínimo de 12 meses.",
+  "images": [
+   "ym-la-oberena.jpg"
+  ],
+  "featured": true,
+  "active": true
+ },
+ {
+  "id": 31,
+  "name": "Yerba Mate Fidel Orgánica con Moringa Oleifera",
+  "price": 1079,
+  "discount": 5,
+  "weight": 500,
+  "category": "yerba",
+  "description": "Moringa Fidel presenta un producto renovado de producción limitada libre de agrotóxicos que combina la Moringa con la Yerba Mate Orgánica y sus distintas formas de consumirla. La Moringa Oleifera es un Árbol reconocido por sus cualidades. Sus hojas fueron incorporadas en este exquisito blend. Este producto está compuesto por un 96% de Yerba Mate Orgánica estacionada naturalmente por 12 meses, y un 4% de Hojas Secas de Moringa Oleifera.",
+  "images": [
+   "ym-fidel-organica-con-moringa-oleifera-500gr.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 32,
+  "name": "Yerba Mate Fidel Orgánica con Moringa Oleifera",
+  "price": 1079,
+  "discount": 5,
+  "weight": 500,
+  "category": "yerba",
+  "description": "Moringa Fidel presenta un producto renovado de producción limitada libre de agrotóxicos que combina la Moringa con la Yerba Mate Orgánica y sus distintas formas de consumirla. La Moringa Oleifera es un Árbol reconocido por sus cualidades. Sus hojas fueron incorporadas en este exquisito blend. Este producto está compuesto por un 96% de Yerba Mate Orgánica estacionada naturalmente por 12 meses, y un 4% de Hojas Secas de Moringa Oleifera.",
+  "images": [
+   "ym-fidel-organica-con-moringa-oleifera-500gr.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 33,
+  "name": "Yerba Mate Arapeguá Molida Orgánica",
+  "price": 820,
+  "discount": 5,
+  "weight": 500,
+  "category": "yerba",
+  "description": " La yerba mate es el principal producto de la Cooperativa Agropecuaria La Abundancia. Tiene un estacionamiento natural de 24 meses, lo que hace que tenga un sabor suave y añejado. No provoca acidez y su sabor recuerda a como se hacia la yerba antes. Su molienda gruesa la hace ideal para preparar un Mate suave, o un buen Tereré. Es un producto de la Agricultura ORGÁNICA libre de agroquímicos, la cual promueve la integración entre el ser humano, el reino animal, el vegetal y el suelo, con el objetivo de conformar una individualidad agrícola que logre su auto sustentabilidad, tanto en el aspecto productivo como en el económico, fortaleciendo las aptitudes del productor agropecuario y las relaciones con su entorno.",
+  "images": [
+   "ym-arapegua-molida-organica-500gr.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 34,
+  "name": "Yerba Mate Mate & Co.  Spicy Choco",
+  "price": 1062,
+  "discount": 5,
+  "weight": 250,
+  "category": "yerba",
+  "description": "Un blend delicioso que combina el dulzor de la cascarilla de cacao con el picante del jengibre y el sabor inconfundible de nuestra Yerba Mate Orgánica Especial. Las propiedades estimulantes y antioxidantes de sus ingredientes son la esencia de este blend.",
+  "images": [
+   "ym-mate-co-bolsita-repuesto-220gr-spicy-choco.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 35,
+  "name": "Yerba Mate Mate & Co. Tres Mentas",
+  "price": 1454,
+  "discount": 5,
+  "weight": 220,
+  "category": "yerba",
+  "description": " El más fresco de los blends, para disfrutar en todo momento y aprovechar las propiedades de sus ingredientes naturales. Con base de Yerba Mate Orgánica Despalada, se mezclan tres tipos de mentas; hierba buena, de sabor suave y dulce, peppermint, y menta egipcia, la más fresca de las mentas. Un blend para revitalizar tus sentidos.",
+  "images": [
+   "ym-mate-co-lata-220gr-tres-mentas.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 36,
+  "name": "Yerba Mate La Obereña Orgánica Bolsa Arpillera",
+  "price": 1251,
+  "discount": 5,
+  "weight": 1000,
+  "category": "yerba",
+  "description": "La Yerba Mate llega fresca desde nuestras chacras y sectores productivos, en bolsas de arpillera de 40Kg. y son pre-seleccionadas para ingresar al secado. Previa selección y análisis.Se realiza el secado en un sistema rotatorio continuo con calor controlado.Luego se clasifica con una zaranda que separa hojas de los palos.",
+  "images": [
+   "ym-la-oberena-organica-bolsa-arpillera.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 37,
+  "name": "Yerba Mate Grapia Milenaria Tradicional",
+  "price": 742,
+  "discount": 5,
+  "weight": 1000,
+  "category": "yerba",
+  "description": "Yerba Mate libre de agro-tóxicos secada y estacionada de forma natural, lo que le otorga una maduración y características únicas. De sabor intenso y duradero que se mantendrá intacto durante mas cebadas.",
+  "images": [
+   "ym-grapia-milenaria-tradicional.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 38,
+  "name": "Yerba Mate Verdeada Premium",
+  "price": 424,
+  "discount": 5,
+  "weight": 500,
+  "category": "yerba",
+  "description": "Verdeada Yerba Mate es de elaboración Artesanal, de cosecha limitada, estacionada durante 2 años y su equilibrio perfecto entre hoja - palo - polvo.  Desde el verde amanecer Misionero, Verdeada, se complace en compartir la sana costumbre y tradición de saborear una nueva Yerba Mate, la cual es estacionada naturalmente, permitiendo así, destacar sus virtudes y propiedades para que la infusión sea de su gusto.",
+  "images": [
+   "ym-verdeada-premium-500gr-.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 39,
+  "name": "Yerba Mate Apostoleñia",
+  "price": 712,
+  "discount": 5,
+  "weight": 1000,
+  "category": "yerba",
+  "description": "Yerba Mate tradicional elaborada con palo oriunda de una ciudad Yerbatera por excelencia. Apostoleñia nos trae una yerba de gran durabilidad y con personalidad robusta, estacionada naturalmente por 12 meses para resaltar y pulir las cualidades de la Yerba Mate. Un blend ideal para cualquier amante de un buen mate.",
+  "images": [
+   "ym-apostolenia-tradicional-.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 40,
+  "name": "Yerba Mate Chamamé",
+  "price": 370,
+  "discount": 0,
+  "weight": 500,
+  "category": "yerba",
+  "description": "Te ofrecemos un producto elaborado por la empresa Campos del Chamamé. Una de las pocas empresas Yerbateras que Cultiva, Produce, Elabora y Envasa por su cuenta. Es una Yerba Mate con sabor Tradicional. Cantidad de palo equilibrado. Sabor intenso.",
+  "images": [
+   "ym-chamame-tradicional-.jpg"
+  ],
+  "featured": true,
+  "active": true
+ },
+ {
+  "id": 41,
+  "name": "Yerba Mate Andresito",
+  "price": 438,
+  "discount": 10,
+  "weight": 500,
+  "category": "yerba",
+  "description": " La Yerba Mate cultivada por la Cooperativa Yerbatera Andresito en la provincia de Misiones, es producida, elaborada y procesada en forma natural por los productores rurales de la zona, a la que circundan áreas protegidas de la talla del célebre Parque Nacional Iguazú, lo que asegura una altísima sanidad ambiental y, lógicamente, la obtención de productos de máxima pureza.  Cada uno de los productores asociados recibe el permanente asesoramiento de la empresa, del mismo modo que acepta los estrictos controles de calidad que ésta ejerce a lo largo de toda la cadena productiva.Debido a esto y a los procedimientos artesanales y naturales empleados, Cooperativa Yerbatera Andresito puede ofrecer y asegurar a sus clientes productos idóneos en los que se conservan perfectamente las múltiples virtudes de la yerba mate.",
+  "images": [
+   "ym-andresito-.jpg"
+  ],
+  "featured": true,
+  "active": true
+ },
+ {
+  "id": 42,
+  "name": "Yerba Mate Kurupí Compuesta Menta y Boldo",
+  "price": 621,
+  "discount": 20,
+  "weight": 500,
+  "category": "yerba",
+  "description": "El proceso de elaboración de la Yerba Mate, después de la cosecha de las hojas, pasa por los siguientes procesos: Preparación, Maduración, Finalización. En la etapa de finalización, se selecciona la Yerba Mate, separando las hojas de los tallos para que el producto pueda ser debidamente empaquetado y distribuido en los mercados. La Yerba Mate Kurupí, Compuesta con hierbas Menta y Boldo, posee propiedades notoriamente saludables.Un producto 100% natural.",
+  "images": [
+   "ym-kurupi-menta-y-boldo-.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 43,
+  "name": "Yerba Mate Cachamate del Litoral",
+  "price": 194,
+  "discount": 5,
+  "weight": 500,
+  "category": "yerba",
+  "description": "Cachamate Hierbas Del Litoral es una combinación de lemon grass, una hierba autóctona de la region, Yerba Mate, Salvia y Marcela, que además de darle su particular sabor, es antioxidante y llena de vitalidad. Un sabor imperdible en un tereré fresco para compartir con amigos",
+  "images": [
+   "ym-cachamate-del-litoral-.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 44,
+  "name": "Yerba Mate Adelgamate con Limon",
+  "price": 234,
+  "discount": 5,
+  "weight": 500,
+  "category": "yerba",
+  "description": " ADELGAMATE COMPUESTA CON LIMÓN ofrece las virtudes de las Hierbas Naturales; Té Verde, Poleo, Cedrón y Peperina, y además un suave y delicioso aroma de Limón en su justa medida. ¡Para Matear En Forma! ",
+  "images": [
+   "ym-adelgamate-compuesta-.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 45,
+  "name": "Yerba Mate Fronteras con Manzanilla y Naranja",
+  "price": 829,
+  "discount": 5,
+  "weight": 500,
+  "category": "yerba",
+  "description": "Proba este blend ideal para arrancar un buen día, decorando el tan buscado sabor de la Yerba Mate con el toque dulzon y floral de la Manzanilla, acompañado del toque cítrico de la Naranja. COMPOSICIÓN: 88 % Yerba Mate, 9% Naranja, 3% Manzanilla.",
+  "images": [
+   "ym-fronteras.jpg"
+  ],
+  "featured": false,
+  "active": true
+ },
+ {
+  "id": 46,
+  "name": "Jano",
+  "price": 100,
+  "category": "yerba",
+  "description": "23456",
+  "images": [
+   "image-1659667306926.jpg",
+   "image-1659667306927.jpg",
+   "image-1659667306930.PNG"
+  ],
+  "active": true
+ }
 ]

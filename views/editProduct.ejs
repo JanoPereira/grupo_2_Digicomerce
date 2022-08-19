@@ -41,28 +41,28 @@
                     </section>
                 </div>
 
-                <form action="producto/crear" method="POST" class="formulario">
+                <form action="/product/editProduct/<%=product.id%>?_method=PUT" method="POST" class="formulario" enctype="multipart/form-data">
             
                     <div class="contenedor-input">
                         <label class="label" for="nombre">Nombre del Producto</label>
-                        <input class="campos" type="text" placeholder="..." id="nombre" value="Te verde"></input>
-                    
-                    
+                        <input class="campos" type="text" name="name" id="nombre" value="<%= product.name%>">
                     </div>
+
                     <div class="contenedor-input">
-                        <label class="label" for="descripcion">Descripción del producto</label>
-                        <textarea name="descripcion" class="campos textarea" id="" cols="30" rows="4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum voluptas odio veritatis blanditiis magnam molestias placeat fuga libero. Tenetur, voluptates?</textarea>
+                        <label class="label" for="description">Descripción del producto</label>
+                        <textarea name="description" class="campos textarea" id="description" cols="30" rows="4"><%=product.description%></textarea>
                     </div>
                     
                     <div class="contenedor-input">
                         <label class="label" for="imagenDelProducto">Foto del Producto</label>
-                        <input class="campos campo-select" type="file" accept=".jpg, .png" placeholder="..." id="telefono" multiple></input>
+                        <input class="campos campo-select" type="file" accept=".jpg, .png" placeholder="..." id="telefono" multiple name="image"></input>
                                       
                     </div>
                     
                     <div class="contenedor-input">
                         <label class="label" for="contraseña">Categoria del Producto</label>
-                        <select class="campos campo-select" name="categoria">
+                        <select class="campos campo-select" name="category">
+                        
                         <option value="yerba">Yerba</option>
                         <option selected value="te" >Té</option>
                         <option value="accesorios">Accesorios</option>
@@ -70,10 +70,15 @@
                                        
                     </div>
                     
-                    <div class="contenedor-input">
-                        <label class="label" for="precio">Precio del Producto</label>
-                        <input class="campos" type="number" placeholder="..." id="precio" value="100"></input>
-                                        
+                    <div class="contenedor-precios">
+                        <div class="contenedor-input">
+                            <label class="label" for="precio">Precio del Producto</label>
+                            <input class="campos" type="number" placeholder="..." id="precio" value=<%=product.price%> name="price"></input>
+                        </div>
+                        <div class="contenedor-input">
+                            <label class="label" for="precio">Descuento</label>
+                            <input class="campos" type="number" placeholder="..." id="precio" value=<%=product.discount%> name="discount"></input>
+                        </div>
                     </div>
                     
                     <div class="contenedor-input">

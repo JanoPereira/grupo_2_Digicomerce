@@ -9,8 +9,7 @@
     <title>Detalle de Producto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;1,100;1,400;1,600;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;1,100;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/header_footer.css">
     <link rel="stylesheet" href="/css/productDetail.css">
@@ -19,10 +18,10 @@
 <body>
     <%-include('./partials/header')%>
         <main>
-            <!-- <div class="product-container"> -->
+        <div class="product-container">
             <div class="image-container">
                 <section class="image">
-                    <img src="/img/pava.jpg" alt="producto">
+                    <img src="/img/products/<%=product.images[0]%>" alt="producto">
                 </section>
                 <section class="other-images">
                     <article>
@@ -41,8 +40,8 @@
             </div>
             <div class="description-container">
                 <section class="main-section">
-                    <h2>Nombre del Producto</h2>
-                    <h4>$$$$$$</h4>
+                    <h2><%= product.name %> </h2>
+                    <h4>$<%= product.price %></h4>
                     <h3>XX cuotas de $$$$</h3>
                     <a href="/metodosDePago">Ver más metodos de pago</a>
                 </section>
@@ -74,38 +73,37 @@
                 </section>
                 <section class="product-description">
                     <h3>Descripción</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, repellendus fugiat sunt
-                        praesentium
-                        eius sapiente voluptatem, soluta quo tempore rerum vitae veritatis nemo, molestias non
-                        voluptatibus
-                        facilis! Sapiente, reiciendis? Corrupti.</p>
+                    <p><%= product.description%></p>
                 </section>
             </div>
-            <!-- </div> -->
-
+            </div>
             <div class="related-products">
                 <h3>Productos relacionados</h3>
-                <section class="other-product">
-                    <img src="/img/pava.jpg">
-                    <p class="product-name">Nombre del Producto</p>
-                    <p class="price">$$$$$$</p>
-                </section>
-                <section class="other-product">
-                    <img src="/img/pava.jpg">
-                    <p class="product-name">Nombre del Producto</p>
-                    <p class="price">$$$$$$</p>
-                </section>
-                <section class="other-product">
-                    <img src="/img/pava.jpg">
-                    <p class="product-name">Nombre del Producto</p>
-                    <p class="price">$$$$$$</p>
-                </section>
+                <div class="products">
+                    <section class="other-product">
+                        <img src="/img/pava.jpg">
+                        <p class="product-name">Nombre del Producto</p>
+                        <p class="price">$$$$$$</p>
+                    </section>
+                    <section class="other-product">
+                        <img src="/img/pava.jpg">
+                        <p class="product-name">Nombre del Producto</p>
+                        <p class="price">$$$$$$</p>
+                    </section>
+                    <section class="other-product">
+                        <img src="/img/pava.jpg">
+                        <p class="product-name">Nombre del Producto</p>
+                        <p class="price">$$$$$$</p>
+                    </section>
+                </div>
+                
 
             </div>
-
         </main>
 
         <%-include('./partials/footer')%>
+
+<script src="/scripts/carrusel.js"></script>
 </body>
 
 </html>

@@ -1,18 +1,12 @@
-* {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
 
-main {
-    margin: 10%;
+.product-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    margin: 5% auto;
 }
 
-body > main, .image-container {
+
+.image-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -24,7 +18,7 @@ body > main, .image-container {
 }
 .image-container, .description-container {
     flex-direction: column;
-    width: 30%
+    width: 45%
 }
 .image-container .image, .image-container .image img {
     width: 100%;
@@ -54,7 +48,7 @@ h2 {
 }
 
 h3 {
-    margin: 5% auto;
+    margin: 2% auto;
 }
 
 h4 {
@@ -108,7 +102,8 @@ div.description-container .buttons {
  
 
 .related-products {
-    width: 20%;
+    margin: 15% auto;
+    width: 85%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -117,16 +112,21 @@ div.description-container .buttons {
     border: grey solid 0.2px;
 }
 .related-products .other-product img{
-    width: 85%;
+    width: 100%;
 }
 .related-products .other-product {
-    width: 50%;
+    width: 15%;
     text-align: center;
-    margin: 5% auto;
 }
 .related-products .other-product p.product-name {
     font-size: 0.8rem;
 }
 .related-products .other-product p.price {
     font-weight: bold;
+}
+
+body > main > div.related-products > div {
+    display: flex;
+    margin: 1% auto;
+    justify-content: space-around;
 }

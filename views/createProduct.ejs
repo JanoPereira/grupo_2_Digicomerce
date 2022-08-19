@@ -16,10 +16,10 @@
 <body>
     <%-include('./partials/header')%>
 
-    <main class="main">
-        
-        
-        
+        <main class="main">
+
+
+
             <div class="contenedor-titulo-h4">
                 <h4 class="titulo-h4">Creá tu Producto</h4>
             </div>
@@ -44,56 +44,57 @@
                     </section>
                 </div>
 
-                <form action="producto/crear" method="POST" class="formulario">
-            
+                <form action="" method="POST" class="formulario" enctype="multipart/form-data">
+
                     <div class="contenedor-input">
                         <label class="label" for="nombre">Nombre del Producto</label>
-                        <input class="campos" type="text" placeholder="..." id="nombre"></input>
-                    
-                    
+                        <input class="campos" name="name" type="text" placeholder="..." id="nombre"></input>
+
                     </div>
+
                     <div class="contenedor-input">
                         <label class="label" for="descripcion">Descripción del producto</label>
-                        <textarea name="descripcion" class="campos textarea" id="" cols="30" rows="4"></textarea>
+                        <textarea name="description" class="campos textarea" id="" cols="30" rows="4"></textarea>
                     </div>
-                    
+
                     <div class="contenedor-input">
                         <label class="label" for="imagenDelProducto">Foto(s) del Producto</label>
-                        <input class="campos campo-select" type="file" accept=".jpg, .png" placeholder="..." id="telefono" multiple></input>
-                                      
+                        <input class="campos campo-select" type="file" accept=".jpg, .png" placeholder="..."
+                            id="telefono" multiple name="image"></input>
+
                     </div>
-                    
+
                     <div class="contenedor-input">
-                        <label class="label" for="contraseña">Categoria del Producto</label>
-                        <select class="campos campo-select" name="categoria">
+                        <label class="label" for="category">Categoria del Producto</label>
+                        <select class="campos campo-select" name="category" id="category">
                             <option value="" disabled>Seleccione la Categoria</option>
                             <option value="yerba">Yerba</option>
                             <option value="te">Té</option>
                             <option value="accesorios">Accesorios</option>
                         </select>
-                                       
+
                     </div>
-                    
+
                     <div class="contenedor-input">
-                        <label class="label" for="precio">Precio del Producto</label>
-                        <input class="campos" type="number" placeholder="..." id="precio" value=""></input>
-                                        
+                        <label class="label" for="price">Precio del Producto</label>
+                        <input class="campos" type="number" placeholder="..." id="price" name="price" value=""></input>
+
                     </div>
-                    
-                    <div class="contenedor-input">
-                        <div class="button-container">
-                            <button type="submit" value="" class="button">Crear producto</button>
-                        </div>
+
+
+                    <div class="button-container">
+                        <button type="submit"  class="button">Crear producto</button>
                     </div>
-                        
+
+
                 </form>
             </section>
-            
 
-    </main>
 
-    <%-include('./partials/footer')%>
-    
+        </main>
+
+        <%-include('./partials/footer')%>
+
 
 </body>
 
