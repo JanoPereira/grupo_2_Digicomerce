@@ -20,12 +20,39 @@ const userController = {
     login: (req,res) =>{
         res.render('loginForm')
     },
-    processLogin:(req,res)=>{
+    processLogin: (req, res) => {
+        let errors = validationResult(req);
         let userData = req.body;
-        return res.send(userData)
-        res.redirect('/')
+        if (!errors.isEmpty()) {
+            let errorObject = errors.mapped()
+            let oldDataLogin = {
+                email: req.body.email,
+            };
+            res.render('loginForm', { errors: errorObject, oldDataLogin });
+        } 
+        
+        if (errors.isEmpty()) {
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].email == userData.email) {
+                    if (bcrypt.compareSync(userData.password, users[i].password)) {
+                        let usuarioALogearse = users[i];
+                        break;
+                    }
+                }
+            }
+            if (usuarioALogearse == undefined) {
+                return res.render("login", { errors: [{ msg: "Credenciales inválidas" }] });
+            }
+            req.session.usuarioLogueado = usuarioALogearse;
+           
+        }
+
+        res.redirect("/"); 
+
+        
+        
     },
-    uploadUser: (req,res) =>{
+    uploadUser: (req, res) => {
         let errors = validationResult(req);
         // return res.send (errors.mapped());
         let newUser = {
