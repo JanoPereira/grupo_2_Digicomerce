@@ -36,11 +36,12 @@
     border: 1px solid darkgrey;
     
 }
-body > main > div.description-container {
+.description-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: flex-start
+    align-items: flex-start;
+    margin-top: 5%;
 }
 
 h2 {

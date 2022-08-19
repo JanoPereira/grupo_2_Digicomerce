@@ -711,15 +711,13 @@
   "active": true
  },
  {
-  "id": 46,
-  "name": "Jano",
-  "price": 100,
+  "id": 47,
+  "name": "",
+  "price": 0,
   "category": "yerba",
-  "description": "23456",
+  "description": "",
   "images": [
-   "image-1659667306926.jpg",
-   "image-1659667306927.jpg",
-   "image-1659667306930.PNG"
+   "default.PNG"
   ],
   "active": true
  }

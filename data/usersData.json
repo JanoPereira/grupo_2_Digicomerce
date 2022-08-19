@@ -9,7 +9,7 @@
  },
  {
   "name": "Diego",
-  "email": "Diego@gmail.com",
+  "email": "diego@gmail.com",
   "number": 1122334455,
   "password": "diego123",
   "id": 2,
@@ -40,9 +40,19 @@
   "active": true
  },
  {
-  "name": "",
-  "password": "",
+  "name": "Juan Perez",
+  "email": "juanperez@gmail.com",
+  "number": "1133445566",
+  "password": "$2a$10$KGOHUrYb01scPONc3zC.guC6V620/zf1AY3Qm69pBMKdhdpDnws5.",
   "id": 6,
+  "active": true
+ },
+ {
+  "name": "Diego Ramos",
+  "email": "dieggo1@gmail.com",
+  "number": 11333565754,
+  "password": "$2a$10$KvOaRuCJklbOmRjVip9vMuly1owL65cxN3of4nPvZfrdTtOJ2dMbS",
+  "id": 7,
   "active": true
  }
 ]
