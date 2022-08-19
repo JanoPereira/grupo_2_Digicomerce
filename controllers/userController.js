@@ -23,15 +23,17 @@ const userController = {
     processLogin: (req, res) => {
         // let errors = validationResult(req);
         let userData = req.body;
-        if(users.find(us=>us.email==userData.email)){
-            let userToLog = {...users.find(us=>us.email==userData.email)};
+        let userToLog = {...users.find(us=>us.email==userData.email)};
+
+        if(userToLog){
+            
             if(bcrypt.compareSync(userData.password,userToLog.password)){
                 
                 delete userToLog.password; // Para no llevar la password session 
                 
                 req.session.userLogged = userToLog; //Defino en sessions al usuario loggeado
                 
-                res.locals.userLogged = userToLog;     
+                // res.locals.userLogged = userToLog;     
                 
                 return res.redirect('/');
             }

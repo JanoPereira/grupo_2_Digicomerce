@@ -14,7 +14,7 @@ const userController = require('../controllers/userController');
 
 const registValidations=require('../middlewares/registValidations');
 
-const guestMiddleware=require('../middlewares/guestMiddleware');
+const guestMiddleware= require('../middlewares/guestMiddleware');
 
 //USUARIOS
 const usersFilePath = path.join(__dirname, '../data/usersData.json');

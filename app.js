@@ -42,7 +42,7 @@ const userRouter = require('./routes/userRouter')
 
 app.use('/',mainRouter);
 
-app.use('/product', productRouter);
+app.use('/product', productRouter); //TODO: preguntar si van en plural o singular
 
 app.use('/user', userRouter);
 
