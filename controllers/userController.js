@@ -21,33 +21,53 @@ const userController = {
         res.render('loginForm')
     },
     processLogin: (req, res) => {
-        let errors = validationResult(req);
+        // let errors = validationResult(req);
         let userData = req.body;
-        if (!errors.isEmpty()) {
-            let errorObject = errors.mapped()
-            let oldDataLogin = {
-                email: req.body.email,
-            };
-            res.render('loginForm', { errors: errorObject, oldDataLogin });
-        } 
-        
-        if (errors.isEmpty()) {
-            for (let i = 0; i < users.length; i++) {
-                if (users[i].email == userData.email) {
-                    if (bcrypt.compareSync(userData.password, users[i].password)) {
-                        let usuarioALogearse = users[i];
-                        break;
-                    }
-                }
+        if(users.find(us=>us.email==userData.email)){
+            let userToLog = {...users.find(us=>us.email==userData.email)};
+            if(bcrypt.compareSync(userData.password,userToLog.password)){
+                
+                delete userToLog.password; // Para no llevar la password session 
+                
+                req.session.userLogged = userToLog; //Defino en sessions al usuario loggeado
+                
+                res.locals.userLogged = userToLog;     
+                
+                return res.redirect('/');
             }
-            if (usuarioALogearse == undefined) {
-                return res.render("login", { errors: [{ msg: "Credenciales inválidas" }] });
-            }
-            req.session.usuarioLogueado = usuarioALogearse;
-           
+            return res.render("loginForm", { errors:{password:{msg: "constraseña incorrecta" }},oldDataLogin:userToLog.email});
         }
+        return res.render("loginForm", { errors:{email:{msg: "Email incorrecto" }}});
+        
 
-        res.redirect("/"); 
+        // // return res.send(userData)
+
+
+        // if (!errors.isEmpty()) {
+        //     let errorObject = errors.mapped()
+        //     let oldDataLogin = {
+        //         email: req.body.email,
+        //     };
+        //     res.render('loginForm', { errors: errorObject, oldDataLogin });
+        // } 
+        
+        // if (errors.isEmpty()) {
+        //     for (let i = 0; i < users.length; i++) {
+        //         if (users[i].email == userData.email) {
+        //             if (bcrypt.compareSync(userData.password, users[i].password)) {
+        //                 let usuarioALogearse = users[i];
+        //                 break;
+        //             }
+        //         }
+        //     }
+        //     if (usuarioALogearse == undefined) {
+                
+        //     }
+        //     req.session.usuarioLogueado = usuarioALogearse;
+           
+        // }
+
+        // res.redirect("/"); 
 
         
         
@@ -61,11 +81,11 @@ const userController = {
             email: req.body.email.toLowerCase(),
             number: +req.body.number,
             password: bcrypt.hashSync(req.body.password, 10), //encripta la password ingresada
-            id: users[users.length - 1].id + 1,
+            id: users.length?users[users.length - 1].id + 1:1,
             active: true
         };
         if(!errors.isEmpty()) {
-            let errorObject = errors.mapped()
+            let errorObject = errors.mapped();
             // return res.send(errorObject);
             let oldData = {
                 name: req.body.name,
