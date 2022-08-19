@@ -709,16 +709,5 @@
   ],
   "featured": false,
   "active": true
- },
- {
-  "id": 47,
-  "name": "",
-  "price": 0,
-  "category": "yerba",
-  "description": "",
-  "images": [
-   "default.PNG"
-  ],
-  "active": true
  }
 ]
