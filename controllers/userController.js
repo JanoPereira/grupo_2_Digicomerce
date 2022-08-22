@@ -32,8 +32,10 @@ const userController = {
                 delete userToLog.password; // Para no llevar la password session 
                 
                 req.session.userLogged = userToLog; //Defino en sessions al usuario loggeado
-                
-                // res.locals.userLogged = userToLog;     
+
+                if(req.body.recordar){
+                    res.cookie('userEmail',req.body.email,{maxAge:(1000*60)})
+                }; //Creo cookie si ell usuario tilda en la casilla 'recordar'
                 
                 return res.redirect('/');
             }
@@ -75,11 +77,14 @@ const userController = {
         
     },
     uploadUser: (req, res) => {
+        // return res.send(req.file);
+        
         let errors = validationResult(req);
         // return res.send (errors.mapped());
         let newUser = {
             
             name: req.body.name,
+            avatar: req.file.filename,
             email: req.body.email.toLowerCase(),
             number: +req.body.number,
             password: bcrypt.hashSync(req.body.password, 10), //encripta la password ingresada
@@ -91,6 +96,7 @@ const userController = {
             // return res.send(errorObject);
             let oldData = {
                 name: req.body.name,
+                avatar: req.file.filename,
                 email: req.body.email,
                 number: req.body.number
             };
@@ -100,6 +106,11 @@ const userController = {
         let usersJSON = JSON.stringify(users, null, ' ');
         fs.writeFileSync(usersFilePath, usersJSON);
         res.redirect('/user/login-form');
+    },
+    logout:(req,res)=>{
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        res.redirect('/');
     }
    
 }

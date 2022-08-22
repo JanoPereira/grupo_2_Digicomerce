@@ -8,11 +8,24 @@ const app = express();
 
 const session = require("express-session");
 
+const cookieParser = require('cookie-parser');
+
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
+
+
+
 app.use(session({ 
     secret: "Conf middleware global session",
     resave: false,
     saveUninitialized: false 
 }));
+
+app.use(userLoggedMiddleware);
+
+app.use(cookieParser()); //TODO: PREGUNTAR PORQUE SE ROMPE
+
+
+
 
 
 //app.use(express.static(path.join(__dirname, './public')));//
@@ -45,6 +58,8 @@ app.use('/',mainRouter);
 app.use('/product', productRouter); //TODO: preguntar si van en plural o singular
 
 app.use('/user', userRouter);
+
+//COOKIE-PARSER
 
 
 

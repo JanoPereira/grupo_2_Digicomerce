@@ -28,6 +28,16 @@ const registValidations = [
             throw new Error("Numero de telefono invalido");
         }
         return true;
+    }),
+    body('avatar')
+    .custom((value,{req})=>{
+        // jpg,gif,png
+        let fileExtension = path.extname(req.file.originalname);
+        let acceptedExtensions = ['jpg','jpeg','gif','png']
+        if(!acceptedExtensions.includes(fileExtension)){
+            throw new Error ('Formato de imagen invalido')
+        }
+        return true;
     })
 ];
 
