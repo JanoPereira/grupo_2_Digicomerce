@@ -24,6 +24,9 @@ form{
     text-align: center;
     font-family: cursive;
 }
+.a-forget{
+    color: #222;
+}
 
 .box-datos {
     /* border: 3px solid blue; */
@@ -41,10 +44,11 @@ form{
 }
 
 .box-datos input{
-    width: 200px;
+    width: 280px;
     height: 2rem;
     border-radius: 5px;
     border: solid 1px gray;
+    margin-top: 5px;
 }
 
 div.botones{

@@ -6,6 +6,10 @@ const path = require('path');
 
 const app = express();
 
+const session = require("express-session");
+
+app.use(session({ secret: "Conf middleware global session" }));
+
 
 //app.use(express.static(path.join(__dirname, './public')));//
 app.use(express.static('./public'));

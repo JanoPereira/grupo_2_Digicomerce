@@ -709,6 +709,7 @@
   ],
   "featured": false,
   "active": true
+<<<<<<< HEAD
  },
  {
   "id": 47,
@@ -720,5 +721,7 @@
    "default.PNG"
   ],
   "active": true
+=======
+>>>>>>> 4e294a87470ef607207d9b54912cd8aa5d5dfbbb
  }
 ]
