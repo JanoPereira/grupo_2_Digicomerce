@@ -82,8 +82,14 @@
                     </div>
 
                     <div class="field">
-                        <label class="label" for="confirmar contraseña">Confirmar contraseña</label>
-                        <input class="campos" type="password" placeholder="..." id="Confirmar constraseña">
+                        <label class="label" for="confirmar-contraseña">Confirmar contraseña</label>
+                        <input class="campos <%=(locals.errors && errors.confirmPassword)?'invalid':''%>" type="password" placeholder="..." id="Confirmar-constraseña"
+                        name="confirmPassword">
+                        <% if(locals.errors && errors.confirmPassword){%>
+                            <p class="error">
+                                <%=errors.confirmPassword.msg%>
+                            </p>
+                            <%}%>
                     </div>
                     <div class="button-container">
                         <button type="submit" value="">CREAR CUENTA</button>

@@ -99,14 +99,15 @@ const productController = {
 
     update: (req, res) => {
         let editedProduct = products.find(elem => elem.id == req.params.id);
-        let productIndex = products.indexOf(editedProduct);
+        
         let images = req.files.length>0 ? req.files.map(obj=>obj.filename) : [];
-        images.forEach(elem=>products[productIndex].images.push(elem));
-        products[productIndex].name = req.body.name;
-        products[productIndex].price = +req.body.price;
-        products[productIndex].category = req.body.category;
-        products[productIndex].discount = +req.body.discount;
-        products[productIndex].description = req.body.description;
+        images.forEach(elem=>editedProduct.images.push(elem));
+        
+        editedProduct.name = req.body.name;
+        editedProduct.price = +req.body.price;
+        editedProduct.category = req.body.category;
+        editedProduct.discount = +req.body.discount;
+        editedProduct.description = req.body.description;
         
         let productsJSON = JSON.stringify(products, null, ' ')
         fs.writeFileSync(productsFilePath, productsJSON);

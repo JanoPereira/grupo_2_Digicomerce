@@ -12,7 +12,7 @@ const {validationResult} = require('express-validator');
 const userController = {
     userInfo: (req,res) =>{
         // TODO : crear pagina de usuario //
-        res.send('myAccount')
+        res.render('myAccount')
     },
     register: (req,res) =>{
         res.render('registrationForm')
@@ -23,6 +23,7 @@ const userController = {
     processLogin: (req, res) => {
         // let errors = validationResult(req);
         let userData = req.body;
+        
         let userToLog = {...users.find(us=>us.email==userData.email)};
 
         if(userToLog){
@@ -34,8 +35,8 @@ const userController = {
                 req.session.userLogged = userToLog; //Defino en sessions al usuario loggeado
 
                 if(req.body.recordar){
-                    res.cookie('userEmail',req.body.email,{maxAge:(1000*60)})
-                }; //Creo cookie si ell usuario tilda en la casilla 'recordar'
+                    res.cookie('userEmail',req.body.email,{maxAge:(1000*60)*5})
+                }; //Creo cookie si el usuario tilda en la casilla 'recordar'
                 
                 return res.redirect('/');
             }
@@ -77,14 +78,14 @@ const userController = {
         
     },
     uploadUser: (req, res) => {
-        // return res.send(req.file);
+        
         
         let errors = validationResult(req);
         // return res.send (errors.mapped());
         let newUser = {
             
             name: req.body.name,
-            avatar: req.file.filename,
+            avatar: req.file? req.file.filename:'default.jpg',
             email: req.body.email.toLowerCase(),
             number: +req.body.number,
             password: bcrypt.hashSync(req.body.password, 10), //encripta la password ingresada
@@ -92,11 +93,12 @@ const userController = {
             active: true
         };
         if(!errors.isEmpty()) {
+            
             let errorObject = errors.mapped();
-            // return res.send(errorObject);
+
             let oldData = {
                 name: req.body.name,
-                avatar: req.file.filename,
+                avatar: req.file? req.file.filename:'',
                 email: req.body.email,
                 number: req.body.number
             };

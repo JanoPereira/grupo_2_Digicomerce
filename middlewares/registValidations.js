@@ -20,6 +20,13 @@ const registValidations = [
     }),
     body('password')
     .isLength({min: 6}) .withMessage('La contraseña debe tener un mínimo de 6 caracteres'),
+    body('confirmPassword')
+    .custom((value,{req})=>{
+        if(req.body.password!=req.body.confirmPassword){
+            throw new Error('No coinciden las contraseñas')
+        }
+        return true;
+    }),
     body('number')
     .custom((value,{req})=>{ /*regEX de phone number. Acepta Todo tipo de numero de telefono */
         let regEx = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g;
@@ -32,8 +39,12 @@ const registValidations = [
     body('avatar')
     .custom((value,{req})=>{
         // jpg,gif,png
+        if(!req.file){
+            return true;
+        }
         let fileExtension = path.extname(req.file.originalname);
-        let acceptedExtensions = ['jpg','jpeg','gif','png']
+        console.log(fileExtension)
+        let acceptedExtensions = ['.jpg','.jpeg','.gif','.png']
         if(!acceptedExtensions.includes(fileExtension)){
             throw new Error ('Formato de imagen invalido')
         }
