@@ -7,7 +7,9 @@ cd grup.grilla-contenedora {
 html {
     overflow-x: hidden;
 }
-
+li{
+    list-style: none;
+}
 * {
     margin: 0;
     padding: 0;
@@ -77,6 +79,9 @@ nav {
     float: left;
     overflow: hidden;
 }
+/* .dropdown::marker{
+    display: none;
+} */
 
 .dropdown .dropbtn {
     font-size: 16px;
@@ -199,6 +204,26 @@ nav {
     color: #73932C;
 }
 
+
+.user-image{
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+
+
+#dropUser{
+    display: flex;
+    align-items: center;
+   
+}
+.btn-drop{
+    background: none;
+    border: none;
+    width: 15px;
+    margin-top: 3px;
+    margin-left: 5px;
+}
 /*.iniciar-sesion p:hover {
     background-color: #bbb;
 }

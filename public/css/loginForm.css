@@ -10,6 +10,15 @@ main{
     background-image: url("/img/fondo.jpg");
     min-height: 87vh;
 }
+.error{
+    color: rgb(153, 34, 34);
+}
+
+.invalid{
+    border: 2px solid rgb(153, 34, 34) !important;
+    margin-bottom: 5px;
+}
+
 
 form{
     /* border: 3px solid green; */

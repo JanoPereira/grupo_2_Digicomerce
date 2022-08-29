@@ -8,7 +8,11 @@ const app = express();
 
 const session = require("express-session");
 
-app.use(session({ secret: "Conf middleware global session" }));
+app.use(session({ 
+    secret: "Conf middleware global session",
+    resave: false,
+    saveUninitialized: false 
+}));
 
 
 //app.use(express.static(path.join(__dirname, './public')));//
@@ -38,7 +42,7 @@ const userRouter = require('./routes/userRouter')
 
 app.use('/',mainRouter);
 
-app.use('/product', productRouter);
+app.use('/product', productRouter); //TODO: preguntar si van en plural o singular
 
 app.use('/user', userRouter);
 
