@@ -20,9 +20,11 @@ app.use(session({
     saveUninitialized: false 
 }));
 
-app.use(userLoggedMiddleware);
 
-app.use(cookieParser()); //TODO: PREGUNTAR PORQUE SE ROMPE
+
+app.use(cookieParser()); 
+
+app.use(userLoggedMiddleware);
 
 
 

@@ -8,12 +8,13 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 const userLogged = (req,res,next) =>{
     
     res.locals.isLogged=false;
-    console.log(req.cookies)
+    
     let emailInCookie = req.cookies.userEmail;
     let userInCookie = users.find(user=>user.email==emailInCookie);
+    // console.log(userInCookie)
     
     if(userInCookie){
-        res.session.userLogged = userInCookie;
+        req.session.userLogged = userInCookie; //SESSION SIEMPRE EN REQ 
     }
     
     
