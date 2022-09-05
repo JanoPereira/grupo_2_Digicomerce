@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models')
 
 const productsFilePath = path.join(__dirname, '../data/productsData.json');
 const paymentFilePath = path.join(__dirname, '../data/paymentData.json');
@@ -12,28 +13,28 @@ const productController = {
         // TODO: falta crear lista de productos //
         res.send(products)
     },
-    showProducts: (req,res)=>{
+    showProducts: (req, res) => {
         let category = req.params.category;
-          
-        if (category=='tes'){
+
+        if (category == 'tes') {
             const selectedProducts = products.filter(product => product.category == 'te');
             const discountSelectedProducts = selectedProducts.filter(elem => elem.discount);
             const featuredSelectedProducts = selectedProducts.filter(elem => elem.featured);
             res.render('productList', { selectedProducts, discountSelectedProducts, featuredSelectedProducts });
 
-        } else if(category=='yerbas'){
+        } else if (category == 'yerbas') {
             const selectedProducts = products.filter(product => product.category == 'yerba');
             const discountSelectedProducts = selectedProducts.filter(elem => elem.discount);
             const featuredSelectedProducts = selectedProducts.filter(elem => elem.featured);
             res.render('productList', { selectedProducts, discountSelectedProducts, featuredSelectedProducts });
-            
-        }else if(category == "accesorios"){
+
+        } else if (category == "accesorios") {
             const selectedProducts = products.filter(product => product.category == 'accesorios');
             const discountSelectedProducts = selectedProducts.filter(elem => elem.discount);
             const featuredSelectedProducts = selectedProducts.filter(elem => elem.featured);
             res.render('productList', { selectedProducts, discountSelectedProducts, featuredSelectedProducts });
         }
-        
+
     },
 
     // productTea: (req, res) => {
@@ -61,34 +62,56 @@ const productController = {
 
     detail: (req, res) => {
         prodId = req.params.id;
-       let product = products.find(product => product.id == prodId)
-        res.render('productDetail',{product})
+        let product = products.find(product => product.id == prodId)
+        res.render('productDetail', { product })
     },
 
-    create: (req, res) => {
-        res.render('createProduct')
+    create: async(req, res) => {
+        
+        let categories = await db.ProductCategory.findAll()
+        res.render('createProduct',{categories})
     },
 
-    upload: (req, res) => {
-        // res.send(req.files);
-        
-        let images = req.files.length>0 ? req.files.map(obj=>obj.filename) : ["default.PNG"];
-        
-        let newProduct = {
-            id: products[products.length - 1].id + 1,
-            name: req.body.name,
-            price: +req.body.price,
-            discount: req.body.discount,
-            category: req.body.category,
-            description: req.body.description,
-            images,
-            featured: req.body.featured,
-            active: true
-        };
-        products.push(newProduct);
-        let productsJSON = JSON.stringify(products, null, ' ')
-        fs.writeFileSync(productsFilePath, productsJSON);
-        res.redirect('/product/product-detail/' + newProduct.id)
+    upload: async (req, res) => {
+        try {
+            // res.send(req.files);
+            // let images = 
+            
+
+            let newProduct = {
+                name: req.body.name,
+                price: +req.body.price,
+                discount: req.body.discount,
+                products_categories_id: req.body.category,
+                description: req.body.description,
+                featured: req.body.featured
+            };
+            await db.Product.create(newProduct);
+            
+            let productDb = await db.Product.findAll({
+                order:[['id','DESC']],
+                limit:1
+            })//TODO: pregutar como agarrarlo para usar el id nomas
+            
+            let product=productDb[0]; //TODO: como capurar id de aca
+
+            
+            let productImages = req.files.length > 0 ? req.files.map(obj => obj.filename) : ["default.PNG"];
+            productImages.forEach(async (file)=>{
+                await db.Image.create({
+                    file_name:file,
+                    products_id:1
+                });
+            });
+
+            return res.send('hola');
+
+            
+            res.redirect('/product/product-detail/' + newProduct.id)
+        } catch (error) {
+            console.log('falle en prodctcontroller.upload');
+            return res.send(error);
+        }
 
     },
 
@@ -99,16 +122,16 @@ const productController = {
 
     update: (req, res) => {
         let editedProduct = products.find(elem => elem.id == req.params.id);
-        
-        let images = req.files.length>0 ? req.files.map(obj=>obj.filename) : [];
-        images.forEach(elem=>editedProduct.images.push(elem));
-        
+
+        let images = req.files.length > 0 ? req.files.map(obj => obj.filename) : [];
+        images.forEach(elem => editedProduct.images.push(elem));
+
         editedProduct.name = req.body.name;
         editedProduct.price = +req.body.price;
         editedProduct.category = req.body.category;
         editedProduct.discount = +req.body.discount;
         editedProduct.description = req.body.description;
-        
+
         let productsJSON = JSON.stringify(products, null, ' ')
         fs.writeFileSync(productsFilePath, productsJSON);
         res.redirect('/product/product-detail/' + req.params.id)
@@ -159,7 +182,7 @@ const productController = {
     delete: (req, res) => {
         prodId = req.params.id;
         let product = products.find(product => product.id == prodId)
-        res.render('deleteProduct', {product});
+        res.render('deleteProduct', { product });
     },
     deleteProduct: (req, res) => {
         const prodId = req.params.id
@@ -167,7 +190,7 @@ const productController = {
 
         let productsJSON = JSON.stringify(newList, null, ' ')
         fs.writeFileSync(productsFilePath, productsJSON);
-        
+
         res.redirect('/product')
     }
 };

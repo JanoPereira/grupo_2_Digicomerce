@@ -28,8 +28,8 @@
 
                     <div class="field">
                         <label class="label" for="nombre">Nombre Completo</label>
-                        <input class="campos <%=(locals.errors && errors.name)?'invalid':''%>" type="text" name="name" placeholder="..." id="nombre"
-                            value="<%=(locals.oldData && oldData.name)?oldData.name:''%>">
+                        <input class="campos <%=(locals.errors && errors.name)?'invalid':''%>" type="text" name="name"
+                            placeholder="..." id="nombre" value="<%=(locals.oldData && oldData.name)?oldData.name:''%>">
                         <% if(locals.errors && errors.name){%>
                             <p class="error">
                                 <%=errors.name.msg%>
@@ -39,9 +39,10 @@
 
                     <div class="field">
                         <label class="label" for="avatar">Avatar</label>
-                        <input class="campos <%=(locals.errors && errors.avatar)?'invalid':''%>" type="file" placeholder="... " id="avatar" name="avatar"
+                        <input class="campos <%=(locals.errors && errors.avatar)?'invalid':''%>" type="file"
+                            placeholder="... " id="avatar" name="avatar"
                             value="<%=(locals.oldData && oldData.avatar)?oldData.avatar:''%>">
-                            <p class="allowed-formats">JPG,JPEG,PNG,GIF</p>
+                        <p class="allowed-formats">JPG,JPEG,PNG,GIF</p>
                         <% if(locals.errors && errors.avatar){%>
                             <p class="error">
                                 <%=errors.avatar.msg%>
@@ -51,7 +52,8 @@
 
                     <div class="field">
                         <label class="label" for="email">Email</label>
-                        <input class="campos <%=(locals.errors && errors.email)?'invalid':''%>" type="text" placeholder="... " id="email" name="email"
+                        <input class="campos <%=(locals.errors && errors.email)?'invalid':''%>" type="text"
+                            placeholder="... " id="email" name="email"
                             value="<%=(locals.oldData && oldData.email)?oldData.email:''%>">
                         <% if(locals.errors && errors.email){%>
                             <p class="error">
@@ -62,7 +64,8 @@
 
                     <div class="field">
                         <label class="label" for="telefono">Telefono</label>
-                        <input class="campos <%=(locals.errors && errors.number)?'invalid':''%>" type="text" placeholder="..." id="telefono" name="number"
+                        <input class="campos <%=(locals.errors && errors.number)?'invalid':''%>" type="text"
+                            placeholder="..." id="telefono" name="number"
                             value="<%=(locals.oldData && oldData.number)?oldData.number:''%>">
                         <% if(locals.errors && errors.number){%>
                             <p class="error">
@@ -71,9 +74,11 @@
                             <%}%>
                     </div>
 
+
                     <div class="field">
                         <label class="label" for="contraseña">Contraseña</label>
-                        <input class="campos <%=(locals.errors && errors.password)?'invalid':''%>" type="password" placeholder="..." id="password" name="password">
+                        <input class="campos <%=(locals.errors && errors.password)?'invalid':''%>" type="password"
+                            placeholder="..." id="password" name="password">
                         <% if(locals.errors && errors.password){%>
                             <p class="error">
                                 <%=errors.password.msg%>
@@ -83,14 +88,15 @@
 
                     <div class="field">
                         <label class="label" for="confirmar-contraseña">Confirmar contraseña</label>
-                        <input class="campos <%=(locals.errors && errors.confirmPassword)?'invalid':''%>" type="password" placeholder="..." id="Confirmar-constraseña"
-                        name="confirmPassword">
+                        <input class="campos <%=(locals.errors && errors.confirmPassword)?'invalid':''%>"
+                            type="password" placeholder="..." id="Confirmar-constraseña" name="confirmPassword">
                         <% if(locals.errors && errors.confirmPassword){%>
                             <p class="error">
                                 <%=errors.confirmPassword.msg%>
                             </p>
                             <%}%>
                     </div>
+                    
                     <div class="button-container">
                         <button type="submit" value="">CREAR CUENTA</button>
                     </div>
