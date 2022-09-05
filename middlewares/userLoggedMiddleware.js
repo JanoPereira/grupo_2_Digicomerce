@@ -23,7 +23,7 @@ const userLogged = (req,res,next) =>{
         res.locals.isLogged=true;
         res.locals.userLogged = req.session.userLogged;
     }
-    next()
+    next();
 
 }
 
