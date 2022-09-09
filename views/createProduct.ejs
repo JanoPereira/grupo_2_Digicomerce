@@ -67,10 +67,11 @@
                     <div class="contenedor-input">
                         <label class="label" for="category">Categoria del Producto</label>
                         <select class="campos campo-select" name="category" id="category">
-                            <option value="" disabled>Seleccione la Categoria</option>
-                            <option value="yerba">Yerba</option>
-                            <option value="te">Té</option>
-                            <option value="accesorios">Accesorios</option>
+                            <option value="" disabled selected>Seleccione la Categoria</option>
+                            <%categories.forEach(cat=>{%>
+                                <option value=<%=cat.id%>><%=cat.name%></option>
+                                
+                            <%})%>
                         </select>
 
                     </div>
@@ -79,6 +80,11 @@
                         <label class="label" for="price">Precio del Producto</label>
                         <input class="campos" type="number" placeholder="..." id="price" name="price" value=""></input>
 
+                    </div>
+                    <div class="checkbox">
+                        <div class="option-cb">
+                            <input type="checkbox" name="featured" value='checked' id="featured">Producto Destacado
+                        </div>
                     </div>
 
 

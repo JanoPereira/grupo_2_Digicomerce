@@ -16,14 +16,5 @@
   "password": "$2a$10$W4N6JepWpi2fgG94qCScX..OxuCgRRCXK2M1EBKX73EhdwXbxz4Yq",
   "id": 2,
   "active": true
- },
- {
-  "name": "Diego",
-  "avatar": "default.jpg",
-  "email": "diego@gmail.com",
-  "number": 1122334455,
-  "password": "$2a$10$FCwpB3RdkMxMECXdYW8./u9SyMbUv19g/lhEFWultsuJq51zMAa4.",
-  "id": 3,
-  "active": true
  }
 ]

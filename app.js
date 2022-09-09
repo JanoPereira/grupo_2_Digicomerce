@@ -6,13 +6,14 @@ const path = require('path');
 
 const app = express();
 
-const session = require("express-session");
+
 
 const cookieParser = require('cookie-parser');
 
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
 
 
+const session = require("express-session");
 
 app.use(session({ 
     secret: "Conf middleware global session",
@@ -38,7 +39,6 @@ app.set('view engine','ejs');
 //<-- Capturar todo lo que venga del form (body)-->//
 
 app.use(express.urlencoded({extended:false}));
-
 app.use(express.json());
 
 // <--Metodo Override (put y delete) --> // en el form --> action= "/../..(?_method=PUT || ?_method=DELETE)"

@@ -1,6 +1,7 @@
 const {body} = require('express-validator');
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models')
 
 const usersFilePath = path.join(__dirname, '../data/usersData.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
@@ -11,11 +12,12 @@ const registValidations = [
     body('email')
     .notEmpty().withMessage('Debes completar el Campo').bail()
     .isEmail().withMessage('Debe ingresar un email válido').bail()
-    .custom((value,{req})=>{
+    .custom(async(value,{req})=>{
         let userEmail = req.body.email.toLowerCase();
-        if(users.find(us=>us.email==userEmail)){
-            throw new Error("Email ya registrado, ingrese otro");
-        }
+        let emailInDataBase = await db.User.findOne({where:{email:userEmail}})
+        if(emailInDataBase){
+            throw new Error("Email ya registrado, ingrese otro")
+        };
         return true;
     }),
     body('password')
