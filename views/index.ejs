@@ -27,7 +27,7 @@
                 <%featuredProducts.forEach(elem=>{%>
                         <div class="articulo">
                             <a href="/product/product-detail/<%=elem.id%>" class="main-article">
-                                <img src="img/products/<%=elem.images[0]%>" alt="<%=elem.name%>" class="te">
+                                <img src="/img/products/<%=elem.images[0].file_name%>" alt="<%=elem.name%>" class="te">
                                 <p class="product"><%=elem.name%></p>
                                 <p class="price">
                                     <b>$<%=elem.price%></b>
@@ -52,7 +52,7 @@
                             <p>OFF</p>
                         </div>
                         <a href="/product/productDetail/<%=disProd.id%>" class="main-article">
-                            <img src="img/products/<%=disProd.images[0]%>" alt="<%=disProd.name%>" class="te">
+                            <img src="img/products/<%=disProd.images[0].file_name%>" alt="<%=disProd.name%>" class="te">
                             <p class="product"><%=disProd.name%></p>
                             <p class="price">
                                 <span>$<%=disProd.price%></span> / <b>$<%=disProd.price-disProd.price*(disProd.discount*0.01)%></b>

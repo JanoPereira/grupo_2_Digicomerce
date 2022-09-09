@@ -1,15 +1,8 @@
-const fs = require('fs');
-const path = require('path');
-const { resourceLimits } = require('worker_threads');
 const bcrypt = require('bcryptjs');
 
 const db = require('../database/models');
 
-// const usersFilePath = path.join(__dirname, '../data/usersData.json');
-// const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-
 const { validationResult } = require('express-validator');
-
 
 const userController = {
     userInfo: (req, res) => {
@@ -30,7 +23,6 @@ const userController = {
 
             let userToLog = await db.User.findOne({ where: { email: userData.email } });
 
-           
             if (userToLog) {
 
                 if (bcrypt.compareSync(userData.password, userToLog.password)) {
@@ -49,6 +41,7 @@ const userController = {
             }
             return res.render("loginForm", { errors: { email: { msg: "Email incorrecto" } } });
         } catch (error) {
+
             console.log('falle en usercontroller.proccesLogin');
             return res.send(error);
         }
@@ -60,7 +53,7 @@ const userController = {
             
             if (!errors.isEmpty()) {
 
-                let errorObject = errors.mapped();
+                let errors = errors.mapped();
 
                 let oldData = {
                     name: req.body.name,
@@ -68,7 +61,7 @@ const userController = {
                     email: req.body.email,
                     number: req.body.number
                 };
-                return res.render('registrationForm', { errors: errorObject, oldData });
+                return res.render('registrationForm', { errors, oldData });
             };
 
             let newUser = {
@@ -84,11 +77,13 @@ const userController = {
 
 
             res.redirect('/user/login-form');
+
         } catch (error) {
+            
             console.log('falle en usercontroller.upload');
             return res.send(error);
-        }
-
+        
+        };
 
     },
     logout: (req, res) => {

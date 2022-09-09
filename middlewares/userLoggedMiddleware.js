@@ -1,29 +1,37 @@
-const fs = require('fs');
-const path = require('path');
-
-const usersFilePath = path.join(__dirname, '../data/usersData.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+const db = require('../database/models');
 
 
-const userLogged = (req,res,next) =>{
-    
-    res.locals.isLogged=false;
+const userLogged = async (req, res, next) => {
 
-    let emailInCookie = req.cookies.userEmail;
+    try {
+        
+        res.locals.isLogged = false;
+        
+        let emailInCookie = req.cookies.userEmail;
+        console.log('hola')
 
-    let userInCookie = users.find(user=>user.email==emailInCookie);
-    // console.log(userInCookie)
-    
-    if(userInCookie){
-        req.session.userLogged = userInCookie; //SESSION SIEMPRE EN REQ 
-    } 
-    
-    if(req.session && req.session.userLogged){
-        res.locals.isLogged=true;
-        res.locals.userLogged = req.session.userLogged;
+        let userInCookie = await db.User.findOne({
+            where:{
+                email: emailInCookie ? emailInCookie:''
+            }
+        });
+        
+
+        if (userInCookie) {
+            req.session.userLogged = userInCookie; //SESSION SIEMPRE EN REQ 
+        };
+
+        if (req.session && req.session.userLogged) {
+            res.locals.isLogged = true;
+            res.locals.userLogged = req.session.userLogged;
+        };
+        return next();
+
+    } catch (error) {
+         
+        console.log('Falle en userLoggedMiddleware'+error);
+        return res.send(error)
     }
-    next();
-
 }
 
-module.exports=userLogged;
+module.exports = userLogged;

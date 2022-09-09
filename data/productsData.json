@@ -1,6 +1,5 @@
 [
  {
-  "id": 1,
   "name": "Té Negro",
   "price": 100,
   "discount": 10,
@@ -19,7 +18,6 @@
   "active": true
  },
  {
-  "id": 2,
   "name": "Té Verde Sencha",
   "price": 500,
   "discount": 20,
@@ -38,7 +36,6 @@
   "active": true
  },
  {
-  "id": 3,
   "name": "Té Rojo Pu Erh Royal",
   "price": 1000,
   "discount": 0,
@@ -57,7 +54,6 @@
   "active": true
  },
  {
-  "id": 4,
   "name": "Té Azul Oolong",
   "price": 1500,
   "discount": 5,
@@ -76,7 +72,6 @@
   "active": true
  },
  {
-  "id": 5,
   "name": "Té Sakura Beauty Blend",
   "price": 1500,
   "discount": 10,
@@ -95,7 +90,6 @@
   "active": true
  },
  {
-  "id": 6,
   "name": "Té Negro Earl Grey Santos Special",
   "price": 1500,
   "discount": 5,
@@ -114,7 +108,6 @@
   "active": true
  },
  {
-  "id": 7,
   "name": "Té Ceylon Decaf",
   "price": 1000,
   "discount": 5,
@@ -133,7 +126,6 @@
   "active": true
  },
  {
-  "id": 8,
   "name": "Té Negro Darjeeling",
   "price": 1000,
   "discount": 15,
@@ -152,7 +144,6 @@
   "active": true
  },
  {
-  "id": 9,
   "name": "Té Blanco Pai Mu Tan",
   "price": 1500,
   "discount": 0,
@@ -171,7 +162,6 @@
   "active": true
  },
  {
-  "id": 10,
   "name": "Té Negro Berry Fields",
   "price": 2000,
   "discount": 10,
@@ -190,7 +180,6 @@
   "active": true
  },
  {
-  "id": 11,
   "name": "Té Rooibos African Sunset",
   "price": 2000,
   "discount": 10,
@@ -209,7 +198,6 @@
   "active": true
  },
  {
-  "id": 12,
   "name": "Té English Breakfast",
   "price": 1000,
   "discount": 10,
@@ -228,7 +216,6 @@
   "active": true
  },
  {
-  "id": 13,
   "name": "Té Tilo y Melisa",
   "price": 500,
   "discount": 20,
@@ -247,7 +234,6 @@
   "active": true
  },
  {
-  "id": 14,
   "name": "Té Camomilla Golden",
   "price": 500,
   "discount": 20,
@@ -266,7 +252,6 @@
   "active": true
  },
  {
-  "id": 15,
   "name": "Té Blanco Strawberry Fresh",
   "price": 1500,
   "discount": 20,
@@ -285,7 +270,6 @@
   "active": true
  },
  {
-  "id": 16,
   "name": "Té Fruit explosion",
   "price": 1500,
   "discount": 5,
@@ -304,11 +288,9 @@
   "active": true
  },
  {
-  "id": 17,
   "name": "Mate Y Bombilla Mathienzo de Silicona",
   "price": 759,
   "discount": 5,
-  "weight": null,
   "category": "accesorios",
   "description": "Mate Mathienzo de silicona 100% y polipropileno (PP). Sus materiales evitan la sobre oxigenación de la Yerba, haciendo que se lave mucho más lento. Es totalmente atóxico, aislante térmico e higiénico. Carga 70 gramos",
   "images": [
@@ -318,11 +300,9 @@
   "active": true
  },
  {
-  "id": 18,
   "name": "Tea Box de Madera Paraiso x60 Saquitos",
   "price": 8473,
   "discount": 5,
-  "weight": null,
   "category": "accesorios",
   "description": "Caja con 60 saquitos surtidos de Té INTI - ZEN, ideal para que puedas hacer un viaje con tus papilas gustativas descubriendo sabores y aromas exquisitos de todo el mundo.",
   "images": [
@@ -332,11 +312,9 @@
   "active": true
  },
  {
-  "id": 19,
   "name": "Mate Y Bombilla Mathienzo de Vidrio Forrado en Cuero",
   "price": 1353,
   "discount": 5,
-  "weight": null,
   "category": "accesorios",
   "description": "Mate Mathienzo con interior de vidrio, forrado con cuero vaqueta. Incluye bombilla de acero inoxidable, desmontable para su lavado.",
   "images": [
@@ -346,11 +324,9 @@
   "active": true
  },
  {
-  "id": 20,
   "name": "Bombilla Taumer con Anillo",
   "price": 1194,
   "discount": 0,
-  "weight": null,
   "category": "accesorios",
   "description": "Bombilla de alpaca para Mate o Chimarrao en Brasil, con un delicado anillo con detalle de piedra de color y puntera.",
   "images": [
@@ -360,11 +336,9 @@
   "active": true
  },
  {
-  "id": 21,
   "name": "Infusor Circular Abierto para Té en Hebras - INOX",
   "price": 530,
   "discount": 0,
-  "weight": null,
   "category": "accesorios",
   "description": "Infusor abierto para preparar Té en hebras. Hecho de acero inoxidable para garantizar su limpieza y máxima duración.",
   "images": [
@@ -374,11 +348,9 @@
   "active": true
  },
  {
-  "id": 22,
   "name": "Kit Matero Origen: Mate Metalico, Bombilla y Yerba Mate 500gr",
   "price": 4305,
   "discount": 5,
-  "weight": null,
   "category": "accesorios",
   "description": "Kit compuesto por: Mate metálico Origen, Bombilla de acero inoxidable Origen y Yerba Mate Origen Barbacuá Selección Especial 500Gr",
   "images": [
@@ -388,11 +360,9 @@
   "active": true
  },
  {
-  "id": 23,
   "name": "Mate As de Bastos - Calabaza sin Virola",
   "price": 1355,
   "discount": 5,
-  "weight": null,
   "category": "accesorios",
   "description": "El mate de Calabaza As De Bastos es un recipiente natural para disfrutar de nuestra amada infusión. Al ser un producto natural puede variar el tamaño y la forma de la misma.",
   "images": [
@@ -403,11 +373,9 @@
  },
  {},
  {
-  "id": 24,
   "name": "Medida de té de acero inoxidable",
   "price": 872,
   "discount": 5,
-  "weight": null,
   "category": "accesorios",
   "description": "La medida permite coger la cantidad de té necesaria para una taza en volumen y no en peso, lo que ayudará a que el té o infusión no quede con un sabor muy suave o, por el contrario, muy fuerte.",
   "images": [
@@ -417,11 +385,9 @@
   "active": true
  },
  {
-  "id": 25,
   "name": "Taza de cristal termorresistente con infusor de acero inoxidable",
   "price": 2616,
   "discount": 5,
-  "weight": null,
   "category": "accesorios",
   "description": "Elegante y funcional taza de cristal termorresistente con infusor de acero inoxidable y recubrimiento de silicona. Está fabricada en cristal termo resistente para evitar quemaduras. Incluye filtro de acero inoxidable y recubrimiento de silicona de color turquesa a juego con el diseño de la taza.Infusor y tapa incluidos para hacer las infusiones más aromáticas.Calentar el agua en un hervidor, colocar el té(2g) en el filtro y verter el agua caliente sobre las hojas.Retirar el filtro tras el tiempo de infusión.",
   "images": [
@@ -431,11 +397,9 @@
   "active": true
  },
  {
-  "id": 26,
   "name": "Tetera de cristal con infusor de acero inoxidable",
   "price": 3215,
   "discount": 5,
-  "weight": null,
   "category": "accesorios",
   "description": "Elegante y funcional tetera de cristal con infusor de acero inoxidable y silicona ideal para ver el color de tu té o infusión. Está fabricada en cristal termo resistente para evitar quemaduras. Incluye filtro de acero inoxidable y recubrimiento de silicona en color lila a juego con el diseño de la taza.Infusor y tapa incluidos para hacer las infusiones más aromáticas.Calentar el agua en un hervidor, colocar el té(5g) en el filtro y verter el agua caliente sobre las hojas.Retirar el filtro tras el tiempo de infusión.",
   "images": [
@@ -445,11 +409,9 @@
   "active": true
  },
  {
-  "id": 27,
   "name": "Cha Jing - El primer libro sobre el té",
   "price": 2010,
   "discount": 5,
-  "weight": null,
   "category": "accesorios",
   "description": "Dividido en tres secciones, este antiguo libro nos enseña más sobre la bebida más consumida en el mundo. En la primera sección se habla del té y de su producción, en la segunda se enumeran los utensilios usados para su producción y, en la tercera, se tratan varios temas: desde la valoración del té hasta los antiguos archivos que sobre él existían en la Antigua China.",
   "images": [
@@ -459,11 +421,9 @@
   "active": true
  },
  {
-  "id": 28,
   "name": "French Press 1L",
   "price": 4696,
   "discount": 5,
-  "weight": null,
   "category": "accesorios",
   "description": "Fabricada en doble cristal de borosilicato resistente a altas temperaturas y émbolo de acero inoxidable 18/8.  Perfecta para hacer tu té, infusiones o café en esta elegante French Press de 1 L de capacidad. Poner el té en el interior de la tetera y verter el agua caliente sobre las hojas. Colocar la tapa con el émbolo hacia arriba. Tras el tiempo de infusión, presionar el émbolo hacia abajo y servir el té. ",
   "images": [
@@ -473,11 +433,9 @@
   "active": true
  },
  {
-  "id": 29,
   "name": "Hervidor Commodore",
   "price": 11942,
   "discount": 10,
-  "weight": null,
   "category": "accesorios",
   "description": "Este hervidor inspirado en el diseño de teteras japonés te permite calentar y mantener el calor del agua a distintas temperaturas, controlando el progreso mediante su pantalla digital y recibiendo un aviso cuando alcanza la temperatura deseada. Un hervidor se caracteriza por tener buenos diseños que harán lucir mejor la decoración de tu cocina, además, no solo son elegantes sinó que también son equipos ideales para realizar tazas de té o café de manera instantánea.Incluye termostato y autoapagado para mayor seguridad.",
   "images": [
@@ -487,7 +445,6 @@
   "active": true
  },
  {
-  "id": 30,
   "name": "Yerba mate Obereña",
   "price": 564,
   "discount": 5,
@@ -501,7 +458,6 @@
   "active": true
  },
  {
-  "id": 31,
   "name": "Yerba Mate Fidel Orgánica con Moringa Oleifera",
   "price": 1079,
   "discount": 5,
@@ -515,7 +471,6 @@
   "active": true
  },
  {
-  "id": 32,
   "name": "Yerba Mate Fidel Orgánica con Moringa Oleifera",
   "price": 1079,
   "discount": 5,
@@ -529,7 +484,6 @@
   "active": true
  },
  {
-  "id": 33,
   "name": "Yerba Mate Arapeguá Molida Orgánica",
   "price": 820,
   "discount": 5,
@@ -543,7 +497,6 @@
   "active": true
  },
  {
-  "id": 34,
   "name": "Yerba Mate Mate & Co.  Spicy Choco",
   "price": 1062,
   "discount": 5,
@@ -557,7 +510,6 @@
   "active": true
  },
  {
-  "id": 35,
   "name": "Yerba Mate Mate & Co. Tres Mentas",
   "price": 1454,
   "discount": 5,
@@ -571,7 +523,6 @@
   "active": true
  },
  {
-  "id": 36,
   "name": "Yerba Mate La Obereña Orgánica Bolsa Arpillera",
   "price": 1251,
   "discount": 5,
@@ -585,7 +536,6 @@
   "active": true
  },
  {
-  "id": 37,
   "name": "Yerba Mate Grapia Milenaria Tradicional",
   "price": 742,
   "discount": 5,
@@ -599,7 +549,6 @@
   "active": true
  },
  {
-  "id": 38,
   "name": "Yerba Mate Verdeada Premium",
   "price": 424,
   "discount": 5,
@@ -613,7 +562,6 @@
   "active": true
  },
  {
-  "id": 39,
   "name": "Yerba Mate Apostoleñia",
   "price": 712,
   "discount": 5,
@@ -627,7 +575,6 @@
   "active": true
  },
  {
-  "id": 40,
   "name": "Yerba Mate Chamamé",
   "price": 370,
   "discount": 0,
@@ -641,7 +588,6 @@
   "active": true
  },
  {
-  "id": 41,
   "name": "Yerba Mate Andresito",
   "price": 438,
   "discount": 10,
@@ -655,7 +601,6 @@
   "active": true
  },
  {
-  "id": 42,
   "name": "Yerba Mate Kurupí Compuesta Menta y Boldo",
   "price": 621,
   "discount": 20,
@@ -669,7 +614,6 @@
   "active": true
  },
  {
-  "id": 43,
   "name": "Yerba Mate Cachamate del Litoral",
   "price": 194,
   "discount": 5,
@@ -683,7 +627,6 @@
   "active": true
  },
  {
-  "id": 44,
   "name": "Yerba Mate Adelgamate con Limon",
   "price": 234,
   "discount": 5,
@@ -697,7 +640,6 @@
   "active": true
  },
  {
-  "id": 45,
   "name": "Yerba Mate Fronteras con Manzanilla y Naranja",
   "price": 829,
   "discount": 5,

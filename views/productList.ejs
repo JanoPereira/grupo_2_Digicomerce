@@ -27,7 +27,7 @@
                 <%featuredSelectedProducts.forEach(product => { %>
                         <div class="articulo">
                             <a href="/product/product-detail/<%=product.id%>" class="main-article">
-                                <img src="/img/products/<%=product.images[0]%>" alt="<%=product.name%>" class="product">
+                                <img src="/img/products/<%=product.images[0].file_name%>" alt="<%=product.name%>" class="product">
                                 <p class="product"><%=product.name%></p>
                                 <p class="price">
                                     <%if(!product.discount){%>
@@ -57,7 +57,7 @@
                                 <p>OFF</p>
                             </div>
                             <a href="/product/product-detail/<%=product.id%>" class="main-article">
-                                <img src="/img/products/<%=product.images[0]%>" alt="<%=product.name%>" class="product">
+                                <img src="/img/products/<%=product.images[0].file_name%>" alt="<%=product.name%>" class="product">
                                 <p class="product"><%=product.name%></p>
                                 <p class="price">
                                     <span>$<%=product.price%></span> / <b>$<%=product.price-product.price*(product.discount*0.01)%></b>
@@ -79,7 +79,7 @@
 
                     <div class="articulo">
                         <a href="/product/product-detail/<%=product.id%>" class="main-article">
-                            <img src="/img/products/<%=product.images[0]%>" alt="<%=product.name%>" class="product">
+                            <img src="/img/products/<%=product.images[0].file_name%>" alt="<%=product.name%>" class="product">
                             <p class="product"><%=product.name%></p>
                             <p class="price">
                                 <%if(!product.discount){%>
