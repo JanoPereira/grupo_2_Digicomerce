@@ -51,7 +51,7 @@ router.post('/product-cart/payment-detail',productController.savePaymentDetail);
 
 router.get('/product-cart/payment-method',productController.paymentMethod);
 
-router.get('/:category', productController.showProducts);
+router.get('/category/:category', productController.showProducts);
 
 
 

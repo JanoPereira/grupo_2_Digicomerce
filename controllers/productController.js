@@ -1,60 +1,34 @@
-const fs = require('fs');
-const path = require('path');
 const db = require('../database/models')
-
-const productsFilePath = path.join(__dirname, '../data/productsData.json');
-const paymentFilePath = path.join(__dirname, '../data/paymentData.json');
-const paymentData = JSON.parse(fs.readFileSync(paymentFilePath, 'utf-8'), { encoding: "utf-8" });
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'), { encoding: "utf-8" });
-
 
 const productController = {
     productsList: (req, res) => {
         // TODO: falta crear lista de productos //
         res.send(products)
     },
-    showProducts: (req, res) => {
-        let category = req.params.category;
+    showProducts: async (req, res) => {
+        try {
+            let selectedProducts = await db.Product.findAll({
+                include:[
+                    'images'
+                ],
+                where:{
+                    products_categories_id: req.params.category
+                }
+            });
+            // return res.send(selectedProducts);
+            
 
-        if (category == 'tes') {
-            const selectedProducts = products.filter(product => product.category == 'te');
-            const discountSelectedProducts = selectedProducts.filter(elem => elem.discount);
-            const featuredSelectedProducts = selectedProducts.filter(elem => elem.featured);
+            let discountSelectedProducts = selectedProducts.filter(elem => elem.discount);
+
+            let featuredSelectedProducts = selectedProducts.filter(elem => elem.featured);
             res.render('productList', { selectedProducts, discountSelectedProducts, featuredSelectedProducts });
 
-        } else if (category == 'yerbas') {
-            const selectedProducts = products.filter(product => product.category == 'yerba');
-            const discountSelectedProducts = selectedProducts.filter(elem => elem.discount);
-            const featuredSelectedProducts = selectedProducts.filter(elem => elem.featured);
-            res.render('productList', { selectedProducts, discountSelectedProducts, featuredSelectedProducts });
-
-        } else if (category == "accesorios") {
-            const selectedProducts = products.filter(product => product.category == 'accesorios');
-            const discountSelectedProducts = selectedProducts.filter(elem => elem.discount);
-            const featuredSelectedProducts = selectedProducts.filter(elem => elem.featured);
-            res.render('productList', { selectedProducts, discountSelectedProducts, featuredSelectedProducts });
+        } catch (error) {
+            console.log('falle en productController.showProducts' +error)
+            return res.send(error)
         }
 
     },
-
-    // productTea: (req, res) => {
-    //     const te = products.filter(product => product.category == 'te');
-    //     res.render('teaProduct', { te });
-    // },
-
-    // yerba: (req, res) => {
-    //     const yerbas = products.filter(product => product.category == 'yerba');
-    //     const discountYerbas = yerbas.filter(elem => elem.discount);
-    //     const featuredYerbas = yerbas.filter(elem => elem.featured);
-    //     res.render('yerbas', { yerbas, discountYerbas, featuredYerbas });
-    // },
-
-    // accessories: (req, res) => {
-    //     const accessories = products.filter(product => product.category == 'accesorios');
-    //     const discountAccessories = accessories.filter(elem => elem.discount);
-    //     const featuredAccessories = accessories.filter(elem => elem.featured);
-    //     res.render('accessories', { accessories, discountAccessories, featuredAccessories });
-    // },
 
     cart: (req, res) => {
         res.render('productCart')
@@ -66,17 +40,17 @@ const productController = {
         res.render('productDetail', { product })
     },
 
-    create: async(req, res) => {
-        
+    create: async (req, res) => {
+
         let categories = await db.ProductCategory.findAll()
-        res.render('createProduct',{categories})
+        res.render('createProduct', { categories })
     },
 
     upload: async (req, res) => {
         try {
-            // res.send(req.files);
+            // return res.send(req.files);
             // let images = 
-            
+
 
             let newProduct = {
                 name: req.body.name,
@@ -86,17 +60,14 @@ const productController = {
                 description: req.body.description,
                 featured: req.body.featured
             };
-            let productDb = await db.Product.create(newProduct); // Guardo el nuevo producto que cree
-            
-            //TODO: pregutar como agarrarlo para usar el id nomas
-            
-           
+            let productDb = await db.Product.create(newProduct); // Guardo el nuevo producto que cree  
 
-            
+
+
             let productImages = req.files.length > 0 ? req.files.map(obj => {
                 return {
-                    file_name:obj.filename,
-                    products_id : productDb.id
+                    file_name: obj.filename,
+                    products_id: productDb.id
                 }
             }) : ["default.PNG"];
             // productImages.forEach(async (file)=>{
@@ -108,9 +79,6 @@ const productController = {
             return res.send(productImages)
             //bulk create
 
-            return res.send('hola');
-
-            
             res.redirect('/product/product-detail/' + newProduct.id)
         } catch (error) {
             console.log('falle en prodctcontroller.upload');

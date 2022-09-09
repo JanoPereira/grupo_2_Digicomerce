@@ -1,57 +1,86 @@
-const fs = require('fs');
-const path = require('path');
+const db = require('../database/models')
+const Sequelize = require('sequelize')
+const Op = Sequelize.Op;
 
-const productsFilePath = path.join(__dirname, '../data/productsData.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const productsWithDiscount = async () =>{
+    try {
+        let discountedProducts = await db.Product.findAll({
+            include: [
+                'images'
+            ]
+        },{
+            where:{
+                discount: {[Op.gt]: 0}
+            }
+        });
+        
+        let count = 0;
+        let displayedProducts =[];
+        while (count < 4) {
+            let random = discountedProducts[Math.floor(Math.random() * discountedProducts.length)];
+            if(!displayedProducts.includes(random)){
+                displayedProducts.push(random)
+                count++;
+            }
+              
+        }
+       return displayedProducts;
 
-const productsWithDiscount = () =>{
-    let discountedProducts = products.filter(elem=>{
-        if (elem.discount >0){
-            return {elem}
-        }
-    })
-    let count = 0;
-    let displayedProducts =[];
-    while (count < 4) {
-        let random = discountedProducts[Math.floor(Math.random() * discountedProducts.length)];
-        if(!displayedProducts.includes(random)){
-            displayedProducts.push(random)
-            count++;
-        }
-          
+    } catch (error) {
+        console.log(error)
+        return res.send(error);
     }
-   
-    return displayedProducts;
 }
-const getFeaturedProducts = () =>{
-    let featuredProducts = products.filter(elem=>{
-        if (elem.featured){
-            return {elem}
+const getFeaturedProducts = async() =>{
+    try {
+        let featuredProducts = await db.Product.findAll({
+            include:[
+                'images'
+            ],
+            where:{
+                featured:1
+            }
+        });
+
+        // return (featuredProducts)
+  
+        let count = 0;
+        let displayedProducts =[];
+        while (count < 4) {
+            let random = featuredProducts[Math.floor(Math.random() * featuredProducts.length)];
+            if(!displayedProducts.includes(random)){
+                displayedProducts.push(random)
+                count++;
+            }
+              
         }
-    })
-    let count = 0;
-    let displayedProducts =[];
-    while (count < 4) {
-        let random = featuredProducts[Math.floor(Math.random() * featuredProducts.length)];
-        if(!displayedProducts.includes(random)){
-            displayedProducts.push(random)
-            count++;
-        }
-          
+        return displayedProducts;
+
+    } catch (error) {
+        console.log('getFeaturedProductsError'+error)
+        return res.send(error);
     }
-   
-    return displayedProducts;
     
     
 }
 
 
 const controller = {
-    index:(req,res)=>{
-        let discountedProducts = productsWithDiscount();
-        let featuredProducts = getFeaturedProducts();
+    index:async (req,res)=>{
+       try {
+    
+        let discountedProducts = await productsWithDiscount();
+        let featuredProducts = await getFeaturedProducts();
+
+        // return res.send(featuredProducts);
         // res.send(featuredProducts);
         res.render('index',{featuredProducts,discountedProducts});
+
+       } catch (error) {
+        
+        console.log("Falle en maincontroller.index" + error);
+        return res.send(error);
+       }
     },
    
     about: (req,res) =>{
