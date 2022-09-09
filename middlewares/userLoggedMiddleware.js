@@ -14,10 +14,9 @@ const userLogged = (req,res,next) =>{
     let userInCookie = users.find(user=>user.email==emailInCookie);
     // console.log(userInCookie)
     
-    // if(userInCookie){
-    //     req.session.userLogged = userInCookie; //SESSION SIEMPRE EN REQ 
-    // } TODO: PREGUNTAR SI ESTO ES REDUNDANTE
-    
+    if(userInCookie){
+        req.session.userLogged = userInCookie; //SESSION SIEMPRE EN REQ 
+    } 
     
     if(req.session && req.session.userLogged){
         res.locals.isLogged=true;

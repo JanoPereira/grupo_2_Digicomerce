@@ -86,23 +86,27 @@ const productController = {
                 description: req.body.description,
                 featured: req.body.featured
             };
-            await db.Product.create(newProduct);
+            let productDb = await db.Product.create(newProduct); // Guardo el nuevo producto que cree
             
-            let productDb = await db.Product.findAll({
-                order:[['id','DESC']],
-                limit:1
-            })//TODO: pregutar como agarrarlo para usar el id nomas
+            //TODO: pregutar como agarrarlo para usar el id nomas
             
-            let product=productDb[0]; //TODO: como capurar id de aca
+           
 
             
-            let productImages = req.files.length > 0 ? req.files.map(obj => obj.filename) : ["default.PNG"];
-            productImages.forEach(async (file)=>{
-                await db.Image.create({
-                    file_name:file,
-                    products_id:1
-                });
-            });
+            let productImages = req.files.length > 0 ? req.files.map(obj => {
+                return {
+                    file_name:obj.filename,
+                    products_id : productDb.id
+                }
+            }) : ["default.PNG"];
+            // productImages.forEach(async (file)=>{
+            //     await db.Image.create({
+            //         file_name:file,
+            //         products_id:1
+            //     });
+            // });
+            return res.send(productImages)
+            //bulk create
 
             return res.send('hola');
 

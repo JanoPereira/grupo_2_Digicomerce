@@ -26,7 +26,6 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 //MULTER
 const multer = require('multer'); /* Requerir multer. En el form como atributo va --> (enctype = "multipart/form-data") */
 
-
 const storage = multer.diskStorage({
     destination: (req,file,cb) => {
         cb(null,'./public/img/users')
