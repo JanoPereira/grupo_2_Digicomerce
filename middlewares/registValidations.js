@@ -31,7 +31,7 @@ const registValidations = [
     }),
     body('number')
     .custom((value,{req})=>{ /*regEX de phone number. Acepta Todo tipo de numero de telefono */
-        let regEx = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g;
+        let regEx = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/g
         let phone = req.body.number;
         if(!regEx.test(phone)){
             throw new Error("Numero de telefono invalido");

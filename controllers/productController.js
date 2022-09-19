@@ -1,22 +1,18 @@
 const db = require('../database/models')
 
 const productController = {
-    productsList: (req, res) => {
-        // TODO: falta crear lista de productos //
-        res.send(products)
-    },
     showProducts: async (req, res) => {
         try {
             let selectedProducts = await db.Product.findAll({
-                include:[
+                include: [
                     'images'
                 ],
-                where:{
+                where: {
                     products_categories_id: req.params.category
                 }
             });
             // return res.send(selectedProducts);
-            
+
 
             let discountSelectedProducts = selectedProducts.filter(elem => elem.discount);
 
@@ -24,7 +20,7 @@ const productController = {
             res.render('productList', { selectedProducts, discountSelectedProducts, featuredSelectedProducts });
 
         } catch (error) {
-            console.log('falle en productController.showProducts' +error)
+            console.log('falle en productController.showProducts' + error)
             return res.send(error)
         }
 
@@ -34,10 +30,26 @@ const productController = {
         res.render('productCart')
     },
 
-    detail: (req, res) => {
-        prodId = req.params.id;
-        let product = products.find(product => product.id == prodId)
-        res.render('productDetail', { product })
+    detail: async (req, res) => {
+        try {
+            prodId = req.params.id;
+
+            let product = await db.Product.findByPk(prodId,{
+                include: [
+                    'images',
+                    'productCategory'
+                ]
+            })
+
+            let categories = await db.ProductCategory.findAll();
+
+            // return res.send(product);
+            res.render('productDetail', { product, categories })
+
+        } catch (error) {
+            console.log("Falle en productController.detail: " + error);
+            return res.json(error)
+        }
     },
 
     create: async (req, res) => {
@@ -51,7 +63,6 @@ const productController = {
             // return res.send(req.files);
             // let images = 
 
-
             let newProduct = {
                 name: req.body.name,
                 price: +req.body.price,
@@ -60,29 +71,34 @@ const productController = {
                 description: req.body.description,
                 featured: req.body.featured
             };
+
+
+
             let productDb = await db.Product.create(newProduct); // Guardo el nuevo producto que cree  
 
-
+            // return res.send(req.files);
 
             let productImages = req.files.length > 0 ? req.files.map(obj => {
                 return {
                     file_name: obj.filename,
                     products_id: productDb.id
-                }
-            }) : ["default.PNG"];
-            // productImages.forEach(async (file)=>{
-            //     await db.Image.create({
-            //         file_name:file,
-            //         products_id:1
-            //     });
-            // });
-            return res.send(productImages)
+                };
+            }) : [{
+                file_name: "default.PNG",
+                products_id: productDb.id
+            }];
+
+            // return res.send(productImages);
+
+            await db.Image.bulkCreate(productImages);
+
+
             //bulk create
 
-            res.redirect('/product/product-detail/' + newProduct.id)
+            res.redirect('/product/product-detail/' + productDb.id)
         } catch (error) {
             console.log('falle en prodctcontroller.upload');
-            return res.send(error);
+            return res.json(error);
         }
 
     },
