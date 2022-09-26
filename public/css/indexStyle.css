@@ -113,8 +113,7 @@
 .price span{
     text-decoration: line-through;
     text-decoration-color:#C28E40 ;
-    text-decoration-thickness: 2px;
-    
+    text-decoration-thickness: 2px;  
 }
 .button-container{
     text-align: center;

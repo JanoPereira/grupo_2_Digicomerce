@@ -14,7 +14,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="/css/header_footer.css">
     <link rel="stylesheet" href="/css/productDetail.css">
-    <link rel="stylesheet" href="/css/productDetailCarrousel.scss">
+    <!-- <link rel="stylesheet" href="/css/productDetailCarrousel.scss"> -->
 </head>
 
 <body>
@@ -33,15 +33,15 @@
             </div> -->
             <div class="product-container">
                 <div class="image-container">
-                    <section class="image">
-                        <img src="/img/products/<%=product.images[0].file_name%>" alt="producto">
+                    <section class="image" id="principal-image-container">
+                        <img src="/img/products/<%=product.images[0].file_name%>" id='principal' alt="producto">
                     </section>
                     <section class="other-images">
                         <% let bandera = true %>
                         <% product.images.forEach(img=>{ %>
                             <% if(!bandera){ %>
-                                <article>
-                                    <img src="/img/products/<%=img.file_name%>" alt="producto">
+                                <article class="other-image-container">
+                                    <img src="/img/products/<%=img.file_name%>" class="other-images" alt="producto">
                                 </article>
                             <% } %>
                             <% if(bandera) { %>
@@ -117,7 +117,7 @@
 
         <%- include('./partials/footer') %>
 
-            <script src="/scripts/carrusel.js"></script>
+<script src="/scripts/carrusel.js"></script>
 </body>
 
 </html>

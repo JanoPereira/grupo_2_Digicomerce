@@ -44,7 +44,7 @@ const registValidations = [
         if(!req.file){
             return true;
         }
-        let fileExtension = path.extname(req.file.originalname);
+        let fileExtension = path.extname(req.file.originalname).toLowerCase();
         console.log(fileExtension)
         let acceptedExtensions = ['.jpg','.jpeg','.gif','.png']
         if(!acceptedExtensions.includes(fileExtension)){

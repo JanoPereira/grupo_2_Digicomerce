@@ -1,14 +1,14 @@
-var thumbnails = document.getElementById("thumbnails")
-var imgs = thumbnails.getElementsByTagName("img")
-var main = document.getElementById("main")
-var counter=0;
+let principalImage = document.getElementById('principal');
 
-for(let i=0;i<imgs.length;i++){
-  let img=imgs[i]
+let otherImages = document.querySelectorAll('.other-images');
+
+for(let i = 1;i<otherImages.length;i++){
+    let img= otherImages[i];
   
-  
-  img.addEventListener("click",function(){
-  main.src=this.src
-})
-  
-}
+    img.addEventListener('click',()=>{
+      let aux = principalImage.getAttribute('src');
+      principalImage.src = img.getAttribute('src');
+      img.src = aux;
+    })
+};
+

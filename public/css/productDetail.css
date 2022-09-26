@@ -131,3 +131,9 @@ body > main > div.related-products > div {
     margin: 1% auto;
     justify-content: space-around;
 }
+/* LOGICA PARA TACHAR PRECIO */
+.price span{
+    text-decoration: line-through;
+    text-decoration-color:#C28E40 ;
+    text-decoration-thickness: 2px;  
+}
