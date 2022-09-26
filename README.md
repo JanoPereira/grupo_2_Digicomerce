@@ -38,4 +38,4 @@ https://github.com/JanoPereira/grupo_2_Digicomerce.git
 
 **Tablero de Trello **:
 
-https://trello.com/digicommerce1
+https://trello.com/invite/digicommerce1/a9c7d9de5b1df4ff07a4aa984c2e2330

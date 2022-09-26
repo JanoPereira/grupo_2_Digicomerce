@@ -1,0 +1,34 @@
+module.exports=(sequelize,dataTypes)=>{
+    
+    let alias = "User";
+
+    let cols = {
+        id: {
+            type: dataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement:true
+        },
+        name: {type: dataTypes.STRING(128)},
+        email: {type: dataTypes.STRING(255)},
+        password: {type: dataTypes.TEXT},
+        phone_number: {type: dataTypes.STRING(45)},
+        users_categories_id: {type: dataTypes.INTEGER},
+        avatar: {type: dataTypes.TEXT}
+    }
+
+    let config = {
+        tableName:'users',
+        paranoid:true
+    }
+
+    const User = sequelize.define(alias,cols,config);
+
+    User.associate = (models)=>{
+        User.belongsTo(models.UserCategory,{
+            as:'usersCategories',
+            foreignKey: 'users_categories_id'
+        })
+    };
+
+    return User;
+}

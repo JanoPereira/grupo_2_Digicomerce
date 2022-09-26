@@ -8,8 +8,17 @@ main{
     width: 100%;
     align-content: flex-start;
     background-image: url("/img/fondo.jpg");
-    min-height: 74vh;
+    min-height: 87vh;
 }
+.error{
+    color: rgb(153, 34, 34);
+}
+
+.invalid{
+    border: 2px solid rgb(153, 34, 34) !important;
+    margin-bottom: 5px;
+}
+
 
 form{
     /* border: 3px solid green; */
@@ -23,6 +32,9 @@ form{
 .checkbox{
     text-align: center;
     font-family: cursive;
+}
+.a-forget{
+    color: #222;
 }
 
 .box-datos {
@@ -41,10 +53,11 @@ form{
 }
 
 .box-datos input{
-    width: 200px;
+    width: 280px;
     height: 2rem;
     border-radius: 5px;
     border: solid 1px gray;
+    margin-top: 5px;
 }
 
 div.botones{
@@ -80,4 +93,11 @@ div.botones button{
 
 div.botones:hover button{
     background-color: #0022AA;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }

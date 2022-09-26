@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/30a937ae38.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/header_footer.css"> 
+    <link rel="stylesheet" href="/css/teaProductStyle.css">
+    <link rel="stylesheet" href="/css/carruselStyle.css">
+    <title>Yerbas - DigiCommerce</title>
+</head>
+
+<body>
+    <%-include('./partials/header')%>
+    <main>
+        <%-include('./partials/carrusel')%>
+
+
+        <section class="contenedor-productos">
+
+            <h2 class="pDestacados">Destacados</h2>
+
+            <section class="contenedor contenedor-p1">
+                
+                <%featuredSelectedProducts.forEach(product => { %>
+                        <div class="articulo">
+                            <a href="/product/product-detail/<%=product.id%>" class="main-article">
+                                <img src="/img/products/<%=product.images[0].file_name%>" alt="<%=product.name%>" class="product">
+                                <p class="product"><%=product.name%></p>
+                                <p class="price">
+                                    <%if(!product.discount){%>
+                                        <b>$<%=product.price%></b>
+                                    <%}else{%>
+                                        <b>$<%=product.price-product.price*(product.discount*0.01)%></b>
+                                    <%}%>    
+                                </p>
+                             </a>
+                                <div class="button-container">
+                                    <button class="botonBuy">Agregar al carrito</button>
+                                </div>
+                        </div>
+                <% }) %>
+                
+
+            </section>
+
+            <h2 class="pOfertas">Ofertas</h2>
+
+            <section class="contenedor contenedor-p2">
+
+                <% discountSelectedProducts.forEach(product => { %>
+                        <div class="articulo">
+                            <div class="discount-container">
+                                <p class="discount">%<%=product.discount%></p>
+                                <p>OFF</p>
+                            </div>
+                            <a href="/product/product-detail/<%=product.id%>" class="main-article">
+                                <img src="/img/products/<%=product.images[0].file_name%>" alt="<%=product.name%>" class="product">
+                                <p class="product"><%=product.name%></p>
+                                <p class="price">
+                                    <span>$<%=product.price%></span> / <b>$<%=product.price-product.price*(product.discount*0.01)%></b>
+                                </p>
+                             </a>
+                                <div class="button-container">
+                                    <button class="botonBuy">Agregar al carrito</button>
+                                </div>
+                        </div>
+                <%})%>
+                    
+
+            </section>
+
+            <h2 class="pOfertas">Todos</h2>
+            <section class="contenedor contenedor-todos">
+
+                <% selectedProducts.forEach(product => { %>
+
+                    <div class="articulo">
+                        <a href="/product/product-detail/<%=product.id%>" class="main-article">
+                            <img src="/img/products/<%=product.images[0].file_name%>" alt="<%=product.name%>" class="product">
+                            <p class="product"><%=product.name%></p>
+                            <p class="price">
+                                <%if(!product.discount){%>
+                                    <b>$<%=product.price%></b>
+                                <%}else{%>
+                                    <b>$<%=product.price-product.price*(product.discount*0.01)%></b>
+                                <%}%>    
+                            </p>
+                         </a>
+                            <div class="button-container">
+                                <button class="botonBuy">Agregar al carrito</button>
+                            </div>
+                    </div>
+                <%})%>
+                    
+
+            </section>
+
+        </section>
+
+        
+
+    </main>
+
+
+    <%-include('./partials/footer')%>
+    
+
+</body>
+
+</html>

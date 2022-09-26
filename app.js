@@ -1,43 +1,83 @@
 const express = require('express');
-const { rmSync } = require('fs');
-const { dirname } = require('path');
+
+const fs = require('fs');
+
 const path = require('path');
+
 const app = express();
+
+
+
+const cookieParser = require('cookie-parser');
+
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
+
+
+const session = require("express-session");
+
+app.use(session({ 
+    secret: "Conf middleware global session",
+    resave: false,
+    saveUninitialized: false 
+}));
+
+
+
+app.use(cookieParser()); 
+
+app.use(userLoggedMiddleware);
+
+
+
+
+
+//app.use(express.static(path.join(__dirname, './public')));//
 app.use(express.static('./public'));
 
-// const pathPublic = path.resolve(__dirname, './public');
-// app.use(express.static(pathPublic));
+app.set('view engine','ejs');
+
+//<-- Capturar todo lo que venga del form (body)-->//
+
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
+
+// <--Metodo Override (put y delete) --> // en el form --> action= "/../..(?_method=PUT || ?_method=DELETE)"
+
+const methodOverride = require ("method-override");
+
+app.use (methodOverride('_method'))
+
+// <-- Declaracion Rutas --> //
+
+const mainRouter = require('./routes/mainRouter')
+const productRouter = require('./routes/productRouter')
+const userRouter = require('./routes/userRouter')
+
+// <-- Envio de Diferentes Rutas -->//
+
+app.use('/',mainRouter);
+
+app.use('/product', productRouter); //TODO: preguntar si van en plural o singular
+
+app.use('/user', userRouter);
+
+//COOKIE-PARSER
 
 
 
-app.get ('/', (req, res)=>{
-    res.sendFile(path.join(__dirname,'./views/index.html'));
+// <-- Iniciar Servidor --> //
+
+app.listen(7000,()=>{
+    console.log("Se ha inicializado un servidor en http://localhost:7000");
 });
+app.get('/borrar',(req,res)=>{
+    res.render('borrar')
+})
 
-app.get ('/carro-compras',(req, res)=>{
-    res.sendFile(path.join(__dirname,'./views/productCart.html'));
-});
+// <-- ERROR 404 --> //
 
-app.get ('/about',(req, res)=>{
-    res.sendFile(path.join(__dirname,'./views/about.html'));
-});
-
-app.get('/registrationForm', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/registrationForm.html'));
-});
-
-app.get('/faq', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/faq.html'))});
-app.get ('/loginForm',(req, res)=>{
-    res.sendFile(path.join(__dirname,'./views/LoginForm.html'));
-});
-app.get ('/productDetail',(req, res)=>{
-    res.sendFile(path.join(__dirname,'./views/productDetail.html'));
-});
-
-app.listen(5000,()=>{
-    console.log("Se ha inicializado un servidor en http://localhost:5000");
-});
-
+// app.use((req,res,next)=>{
+//     res.status(404).render('not-found'); /* TODO: Armar vista not-found */
+// })
 
 

@@ -1,0 +1,83 @@
+<header class="header">
+    <nav class="nav--bar">
+        <div class="contenedor--logo">
+            <a href="/">
+                <img src="/img/logo-digitalcommerce-naranja.png" alt="Logo" class="logo">
+            </a>
+        </div>
+        <div class="navbar">
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Productos
+                </button>
+                <div class="dropdown-content">
+                    <a href="/product/category/2">Té</a>
+                    <a href="/product/category/1">Yerbas</a>
+                    <a href="/product/category/3">Accesorios</a>
+
+                </div>
+            </div>
+            <a href="/about">Nosotros</a>
+            <a href="#contact">Contacto</a>
+
+        </div>
+        <!-- <ul>
+            <li><a href="/" class="link">Inicio</a></li>
+            <li><a href="/productDetail" class="link">Productos</a></li>
+            <li><a href="/about" class="link">Nosotros</a></li>
+            <li><a href="#" class="link">Contacto</a></li>
+        </ul>-->
+
+        <div class="contenedor--buscador">
+            <input type="text" class="input--buscador" placeholder="Buscar...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="navbar2">
+                
+            <%if(locals.isLogged){%>
+                <li class="">
+                    <a href="/user/my-account" id="dropUser" role="button" class="nav-link dropdown-toggle">
+                        <img src="/img/users/<%=userLogged.avatar%>" alt="user_image" width="40" class="user-image"><%=userLogged.name%>
+                    </a>
+                </li>
+                <div class="cerrar-sesion">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <a href="/user/logout">Cerrar sesion</a>
+                </div>
+            <%}else{%>
+
+                <div class="iniciar-sesion">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <a href="/user/login-form">Iniciar sesión</a>
+                </div>
+                <div class="registro">
+                    <i class="fas fa-user"></i>
+                    <a href="/user/registration-form">Registrate</a>
+                </div>
+            <%}%>
+          
+
+        </div>
+
+
+        <!--<div class="iniciar-sesion">
+            <i class="fas fa-sign-in-alt"></i>           
+            <a href="/loginForm">Iniciar sesión</a>
+             <p class="texto-inicio-sesion">Iniciar sesion</p>
+        </div>
+        <div class="registro">
+            <i class="fas fa-user"></i>
+            <a href="/registrationForm">Crear cuenta</a>
+        </div>-->
+        <div class="carro-compras">
+            <a href="/product/product-cart" class="link-carro">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p class="precio--total" id="precio-total-carro" onclick="pay()">$0</p>
+            </a>
+        </div>
+        <div class="menu--hamburguesa">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+</header>

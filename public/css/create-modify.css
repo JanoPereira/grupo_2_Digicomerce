@@ -1,0 +1,124 @@
+/* SACAR ARROWS INPUT NUMBER */
+
+#precio::-webkit-outer-spin-button,
+#precio::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    
+}
+#precio{
+    -moz-appearance: textfield;
+}
+
+/* ESTILOS MAIN  */
+
+
+.main{
+    min-height: 76vh;
+    padding-bottom: 5vh;
+}
+
+.contenedor-titulo-h4{
+    margin: 30px 0;
+    margin-left: 30px;
+    
+}
+.titulo-h4{
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+   
+}
+.seccion-carga-producto{
+    display: flex;
+    justify-content: center;
+
+}
+
+.contenedor-imagen-producto{
+    width: 35%;
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.image{
+    width: 100%;
+}
+
+.other-images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4%;
+}
+
+.other-images article{
+    width: 20%;
+    padding: 3%;
+    border: 1px solid darkgrey;
+}
+.other-images article img{
+    width: 100%;
+}
+.label {
+    margin-bottom: 15px;
+}
+.textarea{
+    resize: vertical;
+    min-height: 100px;
+}
+
+.campos{
+    width: 40%;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+.campo-select{
+    padding: 10px 5px;
+}
+
+
+.imagen-producto{
+    width: 70%;
+    margin: auto;
+    display: block;
+    max-width: 250px;
+
+}
+
+.formulario{
+    width: 55%;
+    flex-direction: column;
+    display: flex;
+    padding-left: 50px;
+   
+}   
+
+.contenedor-input{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    align-items: center;
+    
+}
+.contenedor-input label{
+    margin-bottom: 10px;
+}
+
+.contenedor-precios{
+    display: flex;
+    justify-content: center;
+}
+
+#precio{
+    width: 40%;
+    text-align: center;
+}
+
+.button-container .button{
+    padding: 5px 10px ;
+    border-radius: 5px;
+}

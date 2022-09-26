@@ -1,0 +1,20 @@
+[
+ {
+  "name": "Jano",
+  "email": "janoo.pereira@gmail.com",
+  "number": 1158817312,
+  "password": "$2a$10$wN1LGTO8oxhr1625O9L7Y.WltChGy9UAA3GgSVPrT8uVhKwtNcOiG",
+  "id": 1,
+  "avatar": "yoda.jpg",
+  "active": true
+ },
+ {
+  "name": "Emi Barrios",
+  "avatar": "avatar-1661813024791.jpg",
+  "email": "emi@gmail.com",
+  "number": 1122334455,
+  "password": "$2a$10$W4N6JepWpi2fgG94qCScX..OxuCgRRCXK2M1EBKX73EhdwXbxz4Yq",
+  "id": 2,
+  "active": true
+ }
+]

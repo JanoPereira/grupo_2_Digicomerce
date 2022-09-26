@@ -1,0 +1,151 @@
+/* SACAR FLECHAS INPUT TYPE NUMBER */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;               
+    margin: 0;                               
+
+}
+/* ESTILOS METODO DE PAGO */
+
+.opcion-pago{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10vh;
+    margin-bottom: 5vh;
+}
+.contenedor-metodo{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: rgba(99,99,99,.2);
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+.foto-metodo{
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+
+/* ESTILOS INFORMACION TARJETA */
+.informacion-metodo{
+    width: 100%;
+}
+
+.formulario{
+    position: relative;
+    height: 30vh;
+    column-gap: 5vw;
+    padding-left: 4%;
+}
+.formulario-informacion-tarjeta-active{/* CLASE ACTIVE*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenedor-input{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.input{
+    width: 60%;
+    margin-top: 5px;
+    padding: 2px 5px ;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid rgba(99,99,99,.7);
+}
+
+.parentesis{
+    display: inline-block;
+    font-size: 14px;
+}
+
+.contenedor-input .fa-solid{
+    position: absolute;
+    font-size: 14px;
+}
+.i-usuario,.i-numero-tarjeta{
+    right: 42%;
+    top: 60%;  
+}
+
+.i-valida-hasta{
+    left: 104px;
+    top: 28px;
+}
+.i-candado{
+    left: 46%;
+    top: 61%;
+}
+
+.input-nombre,.input-tarjeta{
+    width: 45%;
+    height: fit-content;
+}
+
+.input-fecha,.input-codigo{
+    width: 15%;
+    margin: auto 0;
+}
+.input-codigo{
+    position: relative;
+}
+
+#fecha-tarjeta{
+    width: 123px;
+}
+
+#cvv{
+    display: inline-block;
+}
+
+.foto-cvv{
+    width: 100%;
+    margin: auto;
+
+}
+
+.contenedor-imagen-cvv{
+    position: absolute;
+    width: 100%;
+    right: -80%;
+    top: -100%;
+    opacity: 0;
+    transition: all .5s;
+}
+.label-hover:hover~ .contenedor-imagen-cvv{
+    opacity: 1;
+    
+}
+
+/* FORMULARIO - PAYPAL */
+
+.formulario-informacion-paypal{
+    margin-top: 30px;
+    display: none;
+    flex-direction: column;
+    padding-left: 4%;
+
+}
+.formulario-informacion-paypal-active{/* CLASE ACTIVE*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.titulo-paypal{
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+.input-mail,.input-contraseña{
+    width: 30%;
+}
+.contenedor-input-mail .label,.contenedor-input-contraseña .label{
+    font-size: 17px;
+    margin-top: 16px;
+}
+

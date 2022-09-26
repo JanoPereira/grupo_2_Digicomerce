@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/30a937ae38.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/header_footer.css"> 
+    <link rel="stylesheet" href="/css/indexStyle.css">
+    <link rel="stylesheet" href="/css/carruselStyle.css">
+    <script src="scripts/indexScripts.js"></script>
+    <title>DigiCommerce</title>
+</head>
+
+<body>
+    <%-include('./partials/header')%>
+    <main>
+        <%-include('./partials/carrusel')%>
+
+
+        <section class="contenedor-productos">
+
+            <h2 class="pDestacados">Productos destacados</h2>
+
+            <section class="contenedor contenedor-p1">
+                <%featuredProducts.forEach(elem=>{%>
+                        <div class="articulo">
+                            <a href="/product/product-detail/<%=elem.id%>" class="main-article">
+                                <img src="/img/products/<%=elem.images[0].file_name%>" alt="<%=elem.name%>" class="te">
+                                <p class="product"><%=elem.name%></p>
+                                <p class="price">
+                                    <b>$<%=elem.price%></b>
+                                </p>
+                             </a>
+                                <div class="button-container">
+                                    <button class="botonBuy">Agregar al carrito</button>
+                                </div>
+                        </div>
+                    
+                <%})%>
+               
+            </section>
+
+            <h2 class="pOfertas">Ofertas</h2>
+
+            <section class="contenedor contenedor-p2">
+                <%discountedProducts.forEach(disProd=>{%>
+                    <div class="articulo">
+                        <div class="discount-container">
+                            <p class="discount">%<%=disProd.discount%></p>
+                            <p>OFF</p>
+                        </div>
+                        <a href="/product/productDetail/<%=disProd.id%>" class="main-article">
+                            <img src="img/products/<%=disProd.images[0].file_name%>" alt="<%=disProd.name%>" class="te">
+                            <p class="product"><%=disProd.name%></p>
+                            <p class="price">
+                                <span>$<%=disProd.price%></span> / <b>$<%=disProd.price-disProd.price*(disProd.discount*0.01)%></b>
+                            </p>
+                         </a>
+                            <div class="button-container">
+                                <button class="botonBuy">Agregar al carrito</button>
+                            </div>
+                    </div>
+                <%})%>
+            </section>
+        </section>
+
+        </div>
+
+    </main>
+
+
+    <%-include('./partials/footer')%>
+    
+
+</body>
+
+
+</html>

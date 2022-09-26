@@ -91,6 +91,14 @@ main{
 .boton-movile{
     display: none;
 }
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 /* MEDIAS */
 @media (max-width:1024px){
     .boton-movile{
@@ -148,6 +156,11 @@ main{
         font-size: 15px;
     }
  
+}
+@media(max-width:768px){
+    main,.fondo,.contenedor-imagenes{
+        min-height: 85vh;
+    }
 }
 @media (max-width:550px){
     .seccion-texto{

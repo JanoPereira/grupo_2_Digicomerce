@@ -19,37 +19,102 @@ body {
     margin-bottom: 100px;
     background-color: #459c4a;
     border-radius: 6px;
-   }
+}
 
-.camposObligatorios h4{
+.camposObligatorios h4 {
     font-size: 22px;
     margin: auto;
     margin-bottom: 22px;
-    color:white
-
+    color: white
 }
 
+.field{
+    margin-bottom: 20px;
+}
 .campos {
     width: 100%;
     margin: auto;
     background-color: wheat;
     padding: 10px;
     border-radius: 6px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     border: 1px solid white;
     font-size: 16px;
     color: black;
 }
 
+.error{
+    color: rgb(153, 34, 34);
+}
+
+.invalid{
+    border: 2px solid rgb(153, 34, 34);
+}
+
+.button-container{
+    text-align: center;
+}
 button {
-   
+
     background-color: wheat;
     padding: 10px;
     color: black;
-    margin: 16px;
+    margin-top: 16px;
     font-size: 20px;
-    position: relative;
-    left: 60px;
+    cursor: pointer;
+    border-radius: 6px;
+
+}
+
+button:hover {
+    transition: 0.8s all ease ;
+    background-color:#62b972;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    border-color: wheat;
+}
+
+
+
+.camposObligatorios .label {
+    color: #cccccc;
+    font-size: 20px;
+
+}
+
+@media (max-width:374px) {
+    .camposObligatorios {
+        width: 80%;
+        
+    }
+
+    .campos {
+        height: 35px;
+    }
+
+    button {
+        width: 80%;
+        margin: auto;
+        margin-left: 20px;
+        height: 50px;
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width:767px) {
+    .camposObligatorios {
+        width: 80%;
+    }
+
+    button {
+        width: 80%;
+        margin: auto;
+        margin-left: 20px;
+
+
+    }
 }
 
 

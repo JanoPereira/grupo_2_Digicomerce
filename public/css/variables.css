@@ -1,0 +1,22 @@
+:root {
+    --mainColor:white;
+}
+:root {
+    --lightGreen: #DADFAD;
+}
+:root {
+    --green:#73932C;
+}
+:root {
+    --darkGreen:#325714;
+}
+:root {
+    --brown:#C28E40;
+}
+:root {
+    --darkBrown: #824214;
+}
+
+
+
+/*var(--mainColor)*/
