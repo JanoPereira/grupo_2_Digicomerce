@@ -39,7 +39,9 @@ const upload = multer({storage})
 
 
 
-router.get('/my-account',guestMiddleware ,userController.userInfo);
+router.get('/profile/:id',guestMiddleware ,userController.userInfo);
+router.get('/edit/:id',userController.edit)
+router.post('/edit/:id', userController.update)
 
 router.get('/registration-form',loggedMiddleware,userController.register);
 
