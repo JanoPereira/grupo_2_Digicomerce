@@ -36,16 +36,18 @@ app.use(express.static('./public'));
 
 app.set('view engine','ejs');
 
+
+
+// <--Metodo Override (put y delete) --> // en el form --> action= "/../..(?_method=PUT || ?_method=DELETE)"
+
+const methodOverride = require("method-override");
+
+app.use(methodOverride('_method'))
+
 //<-- Capturar todo lo que venga del form (body)-->//
 
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
-
-// <--Metodo Override (put y delete) --> // en el form --> action= "/../..(?_method=PUT || ?_method=DELETE)"
-
-const methodOverride = require ("method-override");
-
-app.use (methodOverride('_method'))
 
 // <-- Declaracion Rutas --> //
 

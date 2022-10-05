@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="/css/registrationForm.css">
     <link rel="stylesheet" href="/css/header_footer.css">
 
-    <title>Formulario de registro</title>
+    <title>Edicion de usuario</title>
 
 
 </head>
@@ -17,12 +17,12 @@
                 <!-- TODO: complatr validation errors -->
 
 
-                <form action="/user/edit/<%=user.id%>" method="POST" enctype="multipart/form-data">
+                <form action="/user/edit/<%=user.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
 
                     <div class="field">
-                        <label class="label" for="nombre">Nombre Completo</label>
+                        <label class="label" for="name">Nombre Completo</label>
                         <input class="campos <%=(locals.errors && errors.name)?'invalid':''%>" type="text" name="name"
-                            placeholder="..." id="nombre" value="<%=(locals.oldData && oldData.name)?oldData.name:user.name%>">
+                            placeholder="..." id="name" value="<%=(locals.oldData && oldData.name)?oldData.name:''%>">
                         <% if(locals.errors && errors.name){%>
                             <p class="error">
                                 <%=errors.name.msg%>
@@ -59,7 +59,7 @@
                         <label class="label" for="telefono">Telefono</label>
                         <input class="campos <%=(locals.errors && errors.number)?'invalid':''%>" type="text"
                             placeholder="..." id="telefono" name="number"
-                            value="<%=(locals.oldData && oldData.number)?oldData.number:user.phone%>">
+                            value="<%=(locals.oldData && oldData.number)?oldData.number:''%>">
                         <% if(locals.errors && errors.number){%>
                             <p class="error">
                                 <%=errors.number.msg%>
@@ -91,7 +91,7 @@
                     </div>
                     
                     <div class="button-container">
-                        <button type="submit" value="">CREAR CUENTA</button>
+                        <button type="submit" value="">Modificar</button>
                     </div>
                 </form>
             </div>

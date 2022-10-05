@@ -33,7 +33,8 @@ const userController = {
         }
     },
     update: async(req,res)=>{
-        try {
+        try { //TODO: ARREGLAR
+            console.log('chau')
             return res.send(req.body)
             let user = await db.User.findByPk(req.params.id);
             let updatedData = {
