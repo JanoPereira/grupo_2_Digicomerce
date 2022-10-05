@@ -31,7 +31,11 @@
                                 </p>
                              </a>
                                 <div class="button-container">
-                                    <button class="botonBuy">Agregar al carrito</button>
+                                    <% if (locals.userLogged && userLogged.users_categories_id==2 || !locals.userLogged) { %>
+                                        <button class="botonBuy">Agregar al carrito</button>
+                                    <% }else{ %>
+                                        <a href="/product/edit-product/<%=product.id%>"><button class="botonBuy">Editar</button></a>
+                                    <% } %>
                                 </div>
                         </div>
                 <% }) %>
@@ -56,9 +60,13 @@
                                     <span>$<%=product.price%></span> / <b>$<%=product.price-product.price*(product.discount*0.01)%></b>
                                 </p>
                              </a>
-                                <div class="button-container">
+                             <div class="button-container">
+                                <% if (locals.userLogged && userLogged.users_categories_id==2 || !locals.userLogged) { %>
                                     <button class="botonBuy">Agregar al carrito</button>
-                                </div>
+                                <% }else{ %>
+                                    <a href="/product/edit-product/<%=product.id%>"><button class="botonBuy">Editar</button></a>
+                                <% } %>
+                            </div>
                         </div>
                 <%})%>
                     
@@ -82,9 +90,13 @@
                                 <%}%>    
                             </p>
                          </a>
-                            <div class="button-container">
+                         <div class="button-container">
+                            <% if (locals.userLogged && userLogged.users_categories_id==2 || !locals.userLogged) { %>
                                 <button class="botonBuy">Agregar al carrito</button>
-                            </div>
+                            <% }else{ %>
+                                <a href="/product/edit-product/<%=product.id%>"><button class="botonBuy">Editar</button></a>
+                            <% } %>
+                        </div>
                     </div>
                 <%})%>
                     

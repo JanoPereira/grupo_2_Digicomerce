@@ -23,6 +23,7 @@
                         <label class="label" for="nombre">Nombre Completo</label>
                         <input class="campos <%=(locals.errors && errors.name)?'invalid':''%>" type="text" name="name"
                             placeholder="..." id="nombre" value="<%=(locals.oldData && oldData.name)?oldData.name:''%>">
+                        
                         <% if(locals.errors && errors.name){%>
                             <p class="error">
                                 <%=errors.name.msg%>

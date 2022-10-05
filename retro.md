@@ -32,3 +32,37 @@ Keep Doing:
 La comunicación permanente a través de whatsapp es uno de los fuertes del equipo. Ayudó a encontrar soluciones a los inconvenientes que se plantean durante el desarrollo de las tareas individuales aprovechando los conocimientos y recursos de todos los integrantes. Debemos mantener la fluidez de estas comunicaciones.
 Less of / Stop Doing: hasta este punto de avance del proyecto no detectamos prácticas que debamos reducir o dejar de hacer. Dada la poca experiencia individual y grupal por el momento todo lo que se aporta suma y no resulta redundante ni contraproducente.
 
+
+
+Retrospectiva Sprint 5
+
+¿Que hicimos bien?
+1. Manejamos bien los tiempos para llegar en buena forma al sprint.
+2. Pudimos hacer una entrega de calidad, debido al tiempo que teniamos.
+3. Hasta Andrey quedo sorprendido.
+
+¿Que debemos mejorar?
+1.  Darle mayor importancia tanto al Trello como al retro, que son las herramientas donde nos podemos respaldar a la hora de ver nuestro progreso.
+
+Plan de accion
+1. Incrementar el uso del tablero de Trello.
+2. Continuar con una adecuada división de tareas.
+3. Continuar con las weekly meetings.
+4. Implementar el borrado fisico de archivos.
+
+
+Retrospectiva Sprint 6 (ACTUALIZAR)
+
+¿Que hicimos bien?
+1. Manejamos bien los tiempos para llegar en buena forma al sprint.
+2. Pudimos hacer una entrega de calidad, debido al tiempo que teniamos.
+3. Hasta Andrey quedo sorprendido.
+
+¿Que debemos mejorar?
+1.  Darle mayor importancia tanto al Trello como al retro, que son las herramientas donde nos podemos respaldar a la hora de ver nuestro progreso.
+
+Plan de accion
+1. Incrementar el uso del tablero de Trello.
+2. Continuar con una adecuada división de tareas.
+3. Continuar con las weekly meetings.
+4. Implementar el borrado fisico de archivos.

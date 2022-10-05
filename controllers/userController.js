@@ -2,12 +2,20 @@ const bcrypt = require('bcryptjs');
 
 const db = require('../database/models');
 
+const fs = require('fs');
+
+const path = require('path');
+
 const { validationResult } = require('express-validator');
 
 const userController = {
     userInfo: async (req, res) => {
         try {
-            let user = await db.User.findByPk(req.params.id,{
+            let user = await db.User.findOne({
+                where:{
+                    email: req.session.userLogged.email
+                },
+                
                 include: [
                     'userCategory'
                 ]
@@ -33,22 +41,31 @@ const userController = {
         }
     },
     update: async(req,res)=>{
-        try { //TODO: ARREGLAR
-            console.log('chau')
-            return res.send(req.body)
+        try { 
+            
+            // return res.send(req.body)
             let user = await db.User.findByPk(req.params.id);
+            let errors = validationResult(req)
+            if(!errors.isEmpty()){
+                errors = errors.mapped()
+                
+                return res.render('userEdit', {user, errors})
+            }
             let updatedData = {
                 name: req.body.name,
                 avatar: req.file ? req.file.filename : user.avatar,
                 email: req.body.email.toLowerCase(),
                 phone_number: +req.body.number,
             };
-            await db.User.Update(updatedData,{
+            req.body.password? updatedData.password = bcrypt.hashSync(req.body.password,10): null;
+
+            await db.User.update(updatedData,{
                 where: {
                     id: user.id
                 }
             });
-            return res.redirect('/user/profile/'+user.id)
+            return res.redirect('/user/profile');
+            
         } catch (error) {
             console.log("Falle en userController.update: " + error); 
             return res.json(error);  
@@ -106,6 +123,9 @@ const userController = {
                     email: req.body.email,
                     number: req.body.number
                 };
+
+                fs.unlinkSync(path.join(__dirname, '../public/img/users/' + req.file.filename));
+                
                 return res.render('registrationForm', { errors, oldData });
             };
 

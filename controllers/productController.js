@@ -34,7 +34,7 @@ const productController = {
         try {
             prodId = req.params.id;
 
-            let product = await db.Product.findByPk(prodId,{
+            let product = await db.Product.findByPk(prodId, {
                 include: [
                     'images',
                     'productCategory'
@@ -103,26 +103,51 @@ const productController = {
 
     },
 
-    edit: (req, res) => {
-        let product = products.find(elem => elem.id == req.params.id)
-        res.render('editProduct', { product })
+    edit: async (req, res) => {
+        try {
+            let product = await db.Product.findByPk(req.params.id, {
+                include: [
+                    'images',
+                    'productCategory'
+                ]
+            });
+            let categories = await db.ProductCategory.findAll();
+            res.render('editProduct', { product, categories });
+        } catch (error) {
+            console.log('falle en prodctcontroller.edit: ' + error);
+            return res.json(error);
+        }
     },
 
-    update: (req, res) => {
-        let editedProduct = products.find(elem => elem.id == req.params.id);
+    update: async (req, res) => {
+        try {
+            let editedProduct = await db.Product.findByPk(req.params.id);
 
-        let images = req.files.length > 0 ? req.files.map(obj => obj.filename) : [];
-        images.forEach(elem => editedProduct.images.push(elem));
+            let images = req.files.length > 0 ? req.files.map(obj => {
+                return {
+                    file_name: obj.filename,
+                    products_id: editedProduct.id
+                };
+            }) : null;
+            images ? await db.Image.bulkCreate(images) : null;
+            await db.Product.update({
+                name: req.body.name,
+                price: +req.body.price,
+                products_categories_id: +req.body.category,
+                discount: +req.body.discount,
+                description: req.body.description
+            }, {
+                where: {
+                    id: editedProduct.id
+                }
+            });
 
-        editedProduct.name = req.body.name;
-        editedProduct.price = +req.body.price;
-        editedProduct.category = req.body.category;
-        editedProduct.discount = +req.body.discount;
-        editedProduct.description = req.body.description;
+            return res.redirect(`/product/product-detail/${editedProduct.id}`)
 
-        let productsJSON = JSON.stringify(products, null, ' ')
-        fs.writeFileSync(productsFilePath, productsJSON);
-        res.redirect('/product/product-detail/' + req.params.id)
+        } catch (error) {
+            console.log('falle en prodctcontroller.update: ' + error);
+            return res.json(error);
+        }
 
     },
 
@@ -167,19 +192,30 @@ const productController = {
 
         res.redirect('payment-method')
     },
-    delete: (req, res) => {
-        prodId = req.params.id;
-        let product = products.find(product => product.id == prodId)
-        res.render('deleteProduct', { product });
+    delete: async (req, res) => {
+        try {
+            prodId = req.params.id;
+            let product = await db.Product.findByPk(prodId);
+            res.render('deleteProduct', { product });
+        } catch (error) {
+            console.log('falle en prodctcontroller.delete: ' + error);
+            return res.json(error);
+        }
     },
-    deleteProduct: (req, res) => {
-        const prodId = req.params.id
-        let newList = products.filter(product => product.id != prodId);
+    deleteProduct: async (req, res) => {
+        try {
+            const prodId = req.params.id
+            await db.Product.destroy({
+                where:{
+                    id:prodId
+                }
+            });
 
-        let productsJSON = JSON.stringify(newList, null, ' ')
-        fs.writeFileSync(productsFilePath, productsJSON);
-
-        res.redirect('/product')
+            res.redirect('/')
+        } catch (error) {
+            console.log('falle en prodctcontroller.deleteProduct: ' + error);
+            return res.json(error);
+        }
     }
 };
 

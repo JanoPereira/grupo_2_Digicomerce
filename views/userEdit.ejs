@@ -22,7 +22,7 @@
                     <div class="field">
                         <label class="label" for="name">Nombre Completo</label>
                         <input class="campos <%=(locals.errors && errors.name)?'invalid':''%>" type="text" name="name"
-                            placeholder="..." id="name" value="<%=(locals.oldData && oldData.name)?oldData.name:''%>">
+                            placeholder="..." id="name" value="<%=(locals.oldData && oldData.name)?oldData.name:user.name%>">
                         <% if(locals.errors && errors.name){%>
                             <p class="error">
                                 <%=errors.name.msg%>
@@ -59,7 +59,7 @@
                         <label class="label" for="telefono">Telefono</label>
                         <input class="campos <%=(locals.errors && errors.number)?'invalid':''%>" type="text"
                             placeholder="..." id="telefono" name="number"
-                            value="<%=(locals.oldData && oldData.number)?oldData.number:''%>">
+                            value="<%=(locals.oldData && oldData.number)?oldData.number:user.phone_number%>">
                         <% if(locals.errors && errors.number){%>
                             <p class="error">
                                 <%=errors.number.msg%>
