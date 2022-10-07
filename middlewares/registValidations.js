@@ -8,7 +8,16 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
 const registValidations = [
     body('name')
-    .notEmpty() .withMessage('El nombre es obligatorio'),//TODO: Que no se pueda poner numeros. al menos 2 car.
+    .notEmpty() .withMessage('El nombre es obligatorio')
+    .isLength({min: 3}) .withMessage('El nombre debe tener un mínimo de 3 caracteres')
+    .custom ((value,{req})=>{
+        let name = req.body.name 
+        let regEx = /^[a-z ,.'-]+$/i;
+        if (!regEx.test(name)){
+            throw new Error("No puede contener números")
+        }
+        return true;
+    }), 
     body('email')
     .notEmpty().withMessage('Debes completar el Campo').bail()
     .isEmail().withMessage('Debe ingresar un email válido').bail()

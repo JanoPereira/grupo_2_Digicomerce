@@ -1,3 +1,4 @@
+const { validationResult } = require('express-validator');
 const db = require('../database/models')
 
 const productController = {
@@ -62,7 +63,9 @@ const productController = {
         try {
             // return res.send(req.files);
             // let images = 
+            let errors = validationResult(req)
 
+            // return res.send(errors)
             let newProduct = {
                 name: req.body.name,
                 price: +req.body.price,
@@ -71,8 +74,6 @@ const productController = {
                 description: req.body.description,
                 featured: req.body.featured
             };
-
-
 
             let productDb = await db.Product.create(newProduct); // Guardo el nuevo producto que cree  
 

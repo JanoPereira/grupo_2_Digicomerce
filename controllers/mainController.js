@@ -41,9 +41,7 @@ const getFeaturedProducts = async() =>{
                 featured:1
             }
         });
-
         // return (featuredProducts)
-  
         let count = 0;
         let displayedProducts =[];
         while (count < 4) {
@@ -77,8 +75,7 @@ const controller = {
         res.render('index',{featuredProducts,discountedProducts});
 
        } catch (error) {
-        
-        console.log("Falle en maincontroller.index" + error);
+        // console.log("Falle en maincontroller.index" + error);
         return res.send(error);
        }
     },

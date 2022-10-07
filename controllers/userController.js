@@ -48,8 +48,15 @@ const userController = {
             let errors = validationResult(req)
             if(!errors.isEmpty()){
                 errors = errors.mapped()
+
+                let oldData = {
+                    name: req.body.name,
+                    avatar: req.file ? req.file.filename : '',
+                    email: req.body.email,
+                    number: req.body.number
+                };
                 
-                return res.render('userEdit', {user, errors})
+                return res.render('userEdit', {user, errors, oldData})
             }
             let updatedData = {
                 name: req.body.name,
@@ -112,10 +119,10 @@ const userController = {
     uploadUser: async (req, res) => {
         try {
             let errors = validationResult(req);
-
+            
             if (!errors.isEmpty()) {
 
-                let errors = errors.mapped();
+                errors = errors.mapped();
 
                 let oldData = {
                     name: req.body.name,
@@ -123,8 +130,8 @@ const userController = {
                     email: req.body.email,
                     number: req.body.number
                 };
-
-                fs.unlinkSync(path.join(__dirname, '../public/img/users/' + req.file.filename));
+            
+            req.file?fs.unlinkSync(path.join(__dirname, '../public/img/users/' + req.file.filename)):null;
                 
                 return res.render('registrationForm', { errors, oldData });
             };
@@ -145,7 +152,7 @@ const userController = {
 
         } catch (error) {
 
-            console.log('falle en usercontroller.upload');
+            console.log('falle en usercontroller.upload' + error);
             return res.send(error);
 
         };

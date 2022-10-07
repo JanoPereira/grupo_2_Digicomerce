@@ -24,15 +24,19 @@ const app = express();
 
 const productController = require('../controllers/productController');
 
+const createProductMiddleware = require('../middlewares/createProductMiddleware');
+
 // /products/....
+
+//TODO: acceder a editar producto solo para admin/vendedor
 
 router.get('/product-cart',productController.cart);
 
 router.get('/product-detail/:id',productController.detail);
 
-router.get('/create-product',productController.create);
+router.get('/create-product', productController.create);
 
-router.post('/create-Product',upload.array('image'),productController.upload);
+router.post('/create-Product',upload.array('image'), createProductMiddleware, productController.upload);
 
 router.get('/edit-product/:id' ,productController.edit); 
 
