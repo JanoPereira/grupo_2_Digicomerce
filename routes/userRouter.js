@@ -12,6 +12,8 @@ const userController = require('../controllers/userController');
 
 const registValidations=require('../middlewares/registValidations');
 
+const updateUserValidations=require('../middlewares/updateUserValidations');
+
 const loggedMiddleware= require('../middlewares/loggedMiddleware');
 
 const guestMiddleware= require('../middlewares/guestMiddleware');
@@ -39,7 +41,9 @@ const upload = multer({storage})
 
 
 
-router.get('/my-account',guestMiddleware ,userController.userInfo);
+router.get('/profile',guestMiddleware ,userController.userInfo);
+router.get('/edit/:id',guestMiddleware,userController.edit);
+router.put('/edit/:id',upload.single('avatar'),updateUserValidations, userController.update);
 
 router.get('/registration-form',loggedMiddleware,userController.register);
 

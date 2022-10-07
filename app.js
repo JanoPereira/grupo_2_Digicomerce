@@ -43,9 +43,11 @@ app.use(express.json());
 
 // <--Metodo Override (put y delete) --> // en el form --> action= "/../..(?_method=PUT || ?_method=DELETE)"
 
-const methodOverride = require ("method-override");
+const methodOverride = require("method-override");
 
-app.use (methodOverride('_method'))
+app.use(methodOverride('_method'))
+
+
 
 // <-- Declaracion Rutas --> //
 
@@ -70,6 +72,9 @@ app.use('/user', userRouter);
 app.listen(7000,()=>{
     console.log("Se ha inicializado un servidor en http://localhost:7000");
 });
+app.get('/borrar',(req,res)=>{
+    res.render('borrar')
+})
 
 // <-- ERROR 404 --> //
 

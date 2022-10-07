@@ -1,81 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/30a937ae38.js" crossorigin="anonymous"></script>
+    <%- include('./partials/head') %>
     <title>Detalle de Producto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;1,100;1,400;1,600;1,700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;1,100;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/header_footer.css">
     <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/30a937ae38.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="/css/productDetailCarrousel.scss"> -->
 </head>
 
 <body>
-    <%-include('./partials/header')%>
+    <%- include('./partials/header') %>
         <main>
-        <div class="product-container">
-            <div class="image-container">
-                <section class="image">
-                    <img src="/img/products/<%=product.images[0]%>" alt="producto">
-                </section>
-                <section class="other-images">
-                    <article>
-                        <img src="/img/pava.jpg" alt="producto">
-                    </article>
-                    <article>
-                        <img src="/img/pava.jpg" alt="producto">
-                    </article>
-                    <article>
-                        <img src="/img/pava.jpg" alt="producto">
-                    </article>
-                    <article>
-                        <img src="/img/pava.jpg" alt="producto">
-                    </article>
-                </section>
-            </div>
-            <div class="description-container">
-                <section class="main-section">
-                    <h2><%= product.name %> </h2>
-                    <h4>$<%= product.price %></h4>
-                    <h3>XX cuotas de $$$$</h3>
-                    <a href="#payment-methods">Ver más metodos de pago</a>
-                </section>
-                <section class="buttons">
-                    <article class="form1">
-                        <div class="type-quantity">
-                            <label for="product-type">Tipo</label>
-                            <br>
-                            <select class="options" name="type" id="product-type">
-                                <option value="a">Opción A</option>
-                                <option value="b">Opción B</option>
-                                <option value="c">Opción C</option>
-                            </select>
-                        </div>
-                        <div class="type-quantity">
-                            <label for="product-quantity">Cantidad</label>
-                            <br>
-                            <select class="options" name="type" id="product-type">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </div>
-                    </article>
-                    <article class="form2">
-                        <button class="add" type="submit">Agregar al carrito</button>
-                        <button class="buy" type="submit">Comprar ahora</button>
-                    </article>
-                </section>
-                <section class="product-description">
-                    <h3>Descripción</h3>
-                    <p><%= product.description%></p>
-                </section>
-            </div>
+            <!-- <div class="image-container">
+                <img src="https://source.unsplash.com/ufFIweqSPd4/800x800" id="main">
+                <div id="thumbnails">
+                    <img src="https://source.unsplash.com/ufFIweqSPd4/800x800">
+                    <img src="https://source.unsplash.com/O0uCm1WLnA0/800x800">
+                    <img src="https://source.unsplash.com/pV5ckb2HEVk/800x800">
+                    <img src="https://source.unsplash.com/j9QEFAQqaXc/800x800">
+                    <img src="https://source.unsplash.com/EXkbaeN05lY/800x800">
+                    <img src="https://source.unsplash.com/B2mq60Ksrsg/800x800">
+                </div>
+            </div> -->
+            
+            <div class="product-container">
+                <div class="image-container">
+                    <section class="image" id="principal-image-container">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <% for( let i = 0; i < product.images.length; i++ ) { %>
+                                    <% if (i==0) { %>
+                                        <div class="carousel-item active">
+                                            <img src="/img/products/<%= product.images[i].file_name %>" class="d-block w-100" alt="...">
+                                          </div>
+                                    <% }else{ %>
+                                        <div class="carousel-item">
+                                            <img src="/img/products/<%= product.images[i].file_name %>" class="d-block w-100" alt="...">
+                                          </div>
+                                        <% } %>
+                                <% } %>
+                              
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                    </section>
+                    <section class="other-images">
+                        <% product.images.forEach(img=>{ %>
+                                <article class="other-image-container">
+                                    <img src="/img/products/<%=img.file_name%>" class="other-images" alt="producto">
+                                </article>                            
+                        <% }) %>
+                        
+                    </section>
+                </div>
+              
+                <div class="description-container">
+                    <section class="main-section">
+                        <h2>
+                            <%= product.name %>
+                        </h2>
+                        <h3>$<%= product.price %>
+                        </h3>
+
+                        <h4><%= product.discount? product.price*(1-product.discount/100):null%></h4>
+                        <a href="#payment-methods">Ver más metodos de pago</a>
+                    </section>
+                    <section class="buttons">
+                        <article class="form1">
+                            <div class="type-quantity">
+                                <p>Categoria: <%= product.productCategory.name %></p>
+                            </div>
+                            <div class="type-quantity">
+                                <label for="product-quantity">Cantidad</label>
+                                <br>
+                                <select class="options" name="type" id="product-type">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </article>
+                        <article class="form2">
+                            <button class="add" type="submit">Agregar al carrito</button>
+                            <button class="buy" type="submit">Comprar ahora</button>
+                        </article>
+                    </section>
+                    <section class="product-description">
+                        <h3>Descripción</h3>
+                        <p>
+                            <%= product.description%>
+                        </p>
+                    </section>
+                </div>
             </div>
             <div class="related-products">
                 <h3>Productos relacionados</h3>
@@ -96,14 +127,15 @@
                         <p class="price">$$$$$$</p>
                     </section>
                 </div>
-                
+
 
             </div>
         </main>
 
-        <%-include('./partials/footer')%>
+        <%- include('./partials/footer') %>
 
 <script src="/scripts/carrusel.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

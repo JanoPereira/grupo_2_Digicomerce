@@ -2,12 +2,74 @@ const bcrypt = require('bcryptjs');
 
 const db = require('../database/models');
 
+const fs = require('fs');
+
+const path = require('path');
+
 const { validationResult } = require('express-validator');
 
 const userController = {
-    userInfo: (req, res) => {
-        // TODO : crear pagina de usuario //
-        res.render('myAccount')
+    userInfo: async (req, res) => {
+        try {
+            let user = await db.User.findOne({
+                where:{
+                    email: req.session.userLogged.email
+                },
+                
+                include: [
+                    'userCategory'
+                ]
+            });
+            // return res.send(user);
+            res.render('userProfile',{user});
+        } catch (error) {
+            console.log("Falle en userController.userInfo: " + error); 
+            return res.json(error);
+        }
+    },
+    edit: async (req,res) =>{
+        try {
+            let user = await db.User.findByPk(req.params.id,{
+                include:  [
+                    'userCategory'
+                ]
+            });
+            return res.render('userEdit', {user})
+        } catch (error) {
+            console.log("Falle en userController.edit: " + error); 
+            return res.json(error);   
+        }
+    },
+    update: async(req,res)=>{
+        try { 
+            
+            // return res.send(req.body)
+            let user = await db.User.findByPk(req.params.id);
+            let errors = validationResult(req)
+            if(!errors.isEmpty()){
+                errors = errors.mapped()
+                
+                return res.render('userEdit', {user, errors})
+            }
+            let updatedData = {
+                name: req.body.name,
+                avatar: req.file ? req.file.filename : user.avatar,
+                email: req.body.email.toLowerCase(),
+                phone_number: +req.body.number,
+            };
+            req.body.password? updatedData.password = bcrypt.hashSync(req.body.password,10): null;
+
+            await db.User.update(updatedData,{
+                where: {
+                    id: user.id
+                }
+            });
+            return res.redirect('/user/profile');
+            
+        } catch (error) {
+            console.log("Falle en userController.update: " + error); 
+            return res.json(error);  
+        }
     },
     register: (req, res) => {
         res.render('registrationForm')
@@ -32,7 +94,7 @@ const userController = {
                     req.session.userLogged = userToLog; //Defino en sessions al usuario loggeado
 
                     if (req.body.recordar) {
-                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 5 }) //5min
+                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 }) //1 hora
                     }; //Creo cookie si el usuario tilda en la casilla 'recordar'
 
                     return res.redirect('/');
@@ -50,7 +112,7 @@ const userController = {
     uploadUser: async (req, res) => {
         try {
             let errors = validationResult(req);
-            
+
             if (!errors.isEmpty()) {
 
                 let errors = errors.mapped();
@@ -61,6 +123,9 @@ const userController = {
                     email: req.body.email,
                     number: req.body.number
                 };
+
+                fs.unlinkSync(path.join(__dirname, '../public/img/users/' + req.file.filename));
+                
                 return res.render('registrationForm', { errors, oldData });
             };
 
@@ -79,10 +144,10 @@ const userController = {
             res.redirect('/user/login-form');
 
         } catch (error) {
-            
+
             console.log('falle en usercontroller.upload');
             return res.send(error);
-        
+
         };
 
     },

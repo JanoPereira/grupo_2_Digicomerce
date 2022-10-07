@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <%- include('./partials/head') %>
     <link rel="stylesheet" href="/css/registrationForm.css">
     <link rel="stylesheet" href="/css/header_footer.css">
 
@@ -30,6 +23,7 @@
                         <label class="label" for="nombre">Nombre Completo</label>
                         <input class="campos <%=(locals.errors && errors.name)?'invalid':''%>" type="text" name="name"
                             placeholder="..." id="nombre" value="<%=(locals.oldData && oldData.name)?oldData.name:''%>">
+                        
                         <% if(locals.errors && errors.name){%>
                             <p class="error">
                                 <%=errors.name.msg%>
@@ -107,6 +101,7 @@
 
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
