@@ -8,7 +8,7 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
 const registValidations = [
     body('name')
-    .notEmpty() .withMessage('El nombre es obligatorio'),
+    .notEmpty() .withMessage('El nombre es obligatorio'),//TODO: Que no se pueda poner numeros. al menos 2 car.
     body('email')
     .notEmpty().withMessage('Debes completar el Campo').bail()
     .isEmail().withMessage('Debe ingresar un email válido').bail()
@@ -21,7 +21,7 @@ const registValidations = [
         return true;
     }),
     body('password')
-    .isLength({min: 6}) .withMessage('La contraseña debe tener un mínimo de 6 caracteres'),
+    .isLength({min: 8}) .withMessage('La contraseña debe tener un mínimo de 6 caracteres'),
     body('confirmPassword')
     .custom((value,{req})=>{
         if(req.body.password!=req.body.confirmPassword){

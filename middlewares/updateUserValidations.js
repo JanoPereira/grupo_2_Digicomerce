@@ -21,7 +21,7 @@ const updateUserValidations = [
     }),
     body('password')
     .custom((value,{req})=>{
-        if(req.body.password.length>1 && req.body.password.length<6){
+        if(req.body.password.length>1 && req.body.password.length<8){
             throw new Error('La contraseña debe tener un mínimo de 6 caracteres')
         };
         return true

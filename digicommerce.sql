@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-09-2022 a las 05:05:12
+-- Tiempo de generación: 07-10-2022 a las 03:03:36
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -82,7 +82,12 @@ INSERT INTO `images` (`id`, `file_name`, `products_id`) VALUES
 (43, 'ym-kurupi-menta-y-boldo-.jpg', 43),
 (44, 'ym-cachamate-del-litoral-.jpg', 44),
 (45, 'ym-adelgamate-compuesta-.jpg', 45),
-(46, 'ym-fronteras.jpg', 46);
+(46, 'ym-fronteras.jpg', 46),
+(69, 'image-1664934735897.jpg', 58),
+(70, 'image-1664934735899.jpg', 58),
+(71, 'image-1664934735900.jpg', 58),
+(72, 'image-1664934735902.jpg', 58),
+(73, 'image-1664935500130.jpg', 58);
 
 -- --------------------------------------------------------
 
@@ -109,7 +114,7 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `name`, `price`, `discount`, `description`, `featured`, `createdAt`, `updatedAt`, `deletedAt`, `products_categories_id`) VALUES
 (1, 'Té Negro', '100.00', 10, 'Un clásico. El Té Negro nos aporta antioxidantes y la teína para mantenernos activos durante todo el día.', 0, '2022-09-09 02:30:17', '2022-09-09 02:30:17', NULL, 2),
-(2, 'Té Verde Sencha', '500.00', 20, 'Té Sencha de origen Japonés, elaborado con el tradicional proceso de vaporizado. Se caracteriza por contar con mucho cuerpo, sabor refrescante y su suave toque herbal.', 0, '2022-09-09 02:30:17', '2022-09-09 02:30:17', NULL, 2),
+(2, 'Té Verde Sencha', '1000.00', 30, 'Té Sencha de origen Japonés, elaborado con el tradicional proceso de vaporizado. Se caracteriza por contar con mucho cuerpo, sabor refrescante y su suave toque herbal.', 0, '2022-09-09 02:30:17', '2022-10-05 01:43:11', NULL, 2),
 (3, 'Té Rojo Pu Erh Royal', '1000.00', 0, 'Pu Erh Chino de la provincia de Yunnan, de hojas de grado superior y fermentación especial. De sabor liso sin astringencia. El Pu Erh es un té de comprobado efecto depurativo y digestivo, considerado como el Té de la salud para la maedicina traidicional China', 1, '2022-09-09 02:30:17', '2022-09-09 02:30:17', NULL, 2),
 (4, 'Té Azul Oolong', '1500.00', 5, 'Té Oolong semioxidado que ayuda a la digestión y a mantener la vitalidad  durante el día. La flor de azahar acompaña muy bien a este Té Oolong por sus notas aromáticas dulces y florales.', 0, '2022-09-09 02:30:17', '2022-09-09 02:30:17', NULL, 2),
 (5, 'Té Sakura Beauty Blend', '1500.00', 10, 'Perfumada mezcla de Té Blanco y Verde con la sabrosa cereza morello y una pincelada de almendra y rosa. Una mezcla diferente y original, que fideliza a los paladares más amantes de los sabores singulares. Una alquimia de sabores para purificarse.', 0, '2022-09-09 02:30:17', '2022-09-09 02:30:17', NULL, 2),
@@ -152,7 +157,8 @@ INSERT INTO `products` (`id`, `name`, `price`, `discount`, `description`, `featu
 (43, 'Yerba Mate Kurupí Compuesta Menta y Boldo', '621.00', 20, 'El proceso de elaboración de la Yerba Mate, después de la cosecha de las hojas, pasa por los siguientes procesos: Preparación, Maduración, Finalización. En la etapa de finalización, se selecciona la Yerba Mate, separando las hojas de los tallos para que el producto pueda ser debidamente empaquetado y distribuido en los mercados. La Yerba Mate Kurupí, Compuesta con hierbas Menta y Boldo, posee propiedades notoriamente saludables.Un producto 100% natural.', 0, '2022-09-09 02:30:17', '2022-09-09 02:30:17', NULL, 1),
 (44, 'Yerba Mate Cachamate del Litoral', '194.00', 5, 'Cachamate Hierbas Del Litoral es una combinación de lemon grass, una hierba autóctona de la region, Yerba Mate, Salvia y Marcela, que además de darle su particular sabor, es antioxidante y llena de vitalidad. Un sabor imperdible en un tereré fresco para compartir con amigos', 0, '2022-09-09 02:30:17', '2022-09-09 02:30:17', NULL, 1),
 (45, 'Yerba Mate Adelgamate con Limon', '234.00', 5, ' ADELGAMATE COMPUESTA CON LIMÓN ofrece las virtudes de las Hierbas Naturales; Té Verde, Poleo, Cedrón y Peperina, y además un suave y delicioso aroma de Limón en su justa medida. ¡Para Matear En Forma! ', 0, '2022-09-09 02:30:17', '2022-09-09 02:30:17', NULL, 1),
-(46, 'Yerba Mate Fronteras con Manzanilla y Naranja', '829.00', 5, 'Proba este blend ideal para arrancar un buen día, decorando el tan buscado sabor de la Yerba Mate con el toque dulzon y floral de la Manzanilla, acompañado del toque cítrico de la Naranja. COMPOSICIÓN: 88 % Yerba Mate, 9% Naranja, 3% Manzanilla.', 0, '2022-09-09 02:30:17', '2022-09-09 02:30:17', NULL, 1);
+(46, 'Yerba Mate Fronteras con Manzanilla y Naranja', '829.00', 5, 'Proba este blend ideal para arrancar un buen día, decorando el tan buscado sabor de la Yerba Mate con el toque dulzon y floral de la Manzanilla, acompañado del toque cítrico de la Naranja. COMPOSICIÓN: 88 % Yerba Mate, 9% Naranja, 3% Manzanilla.', 0, '2022-09-09 02:30:17', '2022-09-09 02:30:17', NULL, 1),
+(58, 'Borrar', '10000.00', 10, 'sadsasa', 0, '2022-10-05 01:52:15', '2022-10-05 02:05:00', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -198,8 +204,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone_number`, `createdAt`, `updatedAt`, `deletedAt`, `users_categories_id`, `avatar`) VALUES
-(1, 'Jano Pereira Kent', 'janoo.pereira@gmail.com', '$2a$10$77tvQwvRg4cTNGH0KnJZ0.AwD3W6hLIsVYiw6j/nggB/K7IqkaNzO', '1158817312', '2022-09-05 22:49:33', '2022-09-05 22:49:33', NULL, 2, 'default.jpg'),
-(2, 'Diego Barzizza', 'diego@gmail.com', '$2a$10$6XOGDNtnEDcDINr.tx593.mNuiUNfBtyg3a4rl7muhcstDPcmmqbG', '1122334455', '2022-09-05 22:50:48', '2022-09-05 22:50:48', NULL, 2, 'default.jpg');
+(1, 'Jano Pereira Kent', 'janoo.pereira@gmail.com', '$2a$10$77tvQwvRg4cTNGH0KnJZ0.AwD3W6hLIsVYiw6j/nggB/K7IqkaNzO', '1158817312', '2022-09-05 22:49:33', '2022-09-05 22:49:33', NULL, 1, 'default.jpg'),
+(2, 'Diego Barzizza', 'diego@gmail.com', '$2a$10$6XOGDNtnEDcDINr.tx593.mNuiUNfBtyg3a4rl7muhcstDPcmmqbG', '1122334455', '2022-09-05 22:50:48', '2022-09-05 22:50:48', NULL, 2, 'default.jpg'),
+(3, 'Juan Perez', 'usuario@prueba.com', '$2a$10$j1WMVBCPE8uZQLXLKfkBtuv3kIjNr7NU20TiWSlu/l1q.vmt/fTEq', '12345674212', '2022-10-04 21:59:55', '2022-10-05 02:20:46', NULL, 2, 'avatar-1664936446221.jpg');
 
 -- --------------------------------------------------------
 
@@ -229,13 +236,15 @@ INSERT INTO `users_categories` (`id`, `name`) VALUES
 -- Indices de la tabla `images`
 --
 ALTER TABLE `images`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `products_id` (`products_id`);
 
 --
 -- Indices de la tabla `products`
 --
 ALTER TABLE `products`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `products_categories_id` (`products_categories_id`);
 
 --
 -- Indices de la tabla `products_categories`
@@ -247,7 +256,8 @@ ALTER TABLE `products_categories`
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `users_categories_id` (`users_categories_id`);
 
 --
 -- Indices de la tabla `users_categories`
@@ -263,13 +273,13 @@ ALTER TABLE `users_categories`
 -- AUTO_INCREMENT de la tabla `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT de la tabla `products_categories`
@@ -281,13 +291,35 @@ ALTER TABLE `products_categories`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `users_categories`
 --
 ALTER TABLE `users_categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `images`
+--
+ALTER TABLE `images`
+  ADD CONSTRAINT `images_ibfk_1` FOREIGN KEY (`products_id`) REFERENCES `products` (`id`);
+
+--
+-- Filtros para la tabla `products`
+--
+ALTER TABLE `products`
+  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`products_categories_id`) REFERENCES `products_categories` (`id`);
+
+--
+-- Filtros para la tabla `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`users_categories_id`) REFERENCES `users_categories` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
