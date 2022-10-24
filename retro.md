@@ -51,15 +51,15 @@ Plan de accion
 4. Implementar el borrado fisico de archivos.
 
 
-Retrospectiva Sprint 6 (ACTUALIZAR)
+Retrospectiva Sprint 7
 
 ¿Que hicimos bien?
-1. Manejamos bien los tiempos para llegar en buena forma al sprint.
-2. Pudimos hacer una entrega de calidad, debido al tiempo que teniamos.
-3. Hasta Andrey quedo sorprendido.
+1. Aprovechamos bien el tiempo de trabajo juntos
+2. Pudimos hacer una entrega de calidad, cumpliendo con todo lo pedido, y hasta habiendo hecho cosas opcionales.
 
 ¿Que debemos mejorar?
-1.  Darle mayor importancia tanto al Trello como al retro, que son las herramientas donde nos podemos respaldar a la hora de ver nuestro progreso.
+1. Darnos mas tiempo para hacer el sprint.
+2. Armar con mas ganas el tablero de trabajo
 
 Plan de accion
 1. Incrementar el uso del tablero de Trello.
