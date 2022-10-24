@@ -122,3 +122,11 @@
     padding: 5px 10px ;
     border-radius: 5px;
 }
+
+.error{
+    color: rgb(153, 34, 34);
+}
+
+.invalid{
+    border: 2px solid rgb(153, 34, 34);
+}

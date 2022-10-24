@@ -63,8 +63,21 @@ const productController = {
         try {
             // return res.send(req.files);
             // let images = 
+            let categories = await db.ProductCategory.findAll()
             let errors = validationResult(req)
-
+            if (!errors.isEmpty()) {
+                let oldData = {
+                    name: req.body.name,
+                    price: +req.body.price,
+                    discount: req.body.discount,
+                    products_categories_id: req.body.category,
+                    description: req.body.description,
+                    featured: req.body.featured
+                }
+                // return res.send(errors);
+                errors = errors.mapped();
+                return res.render('createProduct', {categories, oldData, errors});
+            }
             // return res.send(errors)
             let newProduct = {
                 name: req.body.name,
@@ -207,8 +220,8 @@ const productController = {
         try {
             const prodId = req.params.id
             await db.Product.destroy({
-                where:{
-                    id:prodId
+                where: {
+                    id: prodId
                 }
             });
 

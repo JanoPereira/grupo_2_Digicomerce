@@ -2,6 +2,7 @@
     <link rel="stylesheet" href="/css/header_footer.css">
     <link rel="stylesheet" href="/css/loginForm.css">
     <link rel="stylesheet" href="/css/cartStyles.css">
+    <script src="/scripts/loginValidations.js"></script>
     <title>Login Page</title>
 </head>
 
@@ -9,27 +10,32 @@
     <div class="grilla-contenedora">
         <%-include('./partials/header')%>
         <main>
-            <form action="" method="POST">
+            <form action="" method="POST" id="login-form">
                 
                 <div class="box-datos">
                     <label for="email">Email:</label>
                     <input type="text" class="<%=(locals.errors)?'invalid':''%>" name="email" id="email" style="text-transform:uppercase"
                      value="<%=(locals.oldDataLogin)? oldDataLogin:''%>">
-                     <% if(locals.errors && errors.email){%>
-                        <p class="error">
-                            <%=errors.email.msg%>
-                        </p>
-                    <%}%>
+                     <div class="email-errors">
+                         <% if(locals.errors && errors.email){%>
+                            <p class="error">
+                                <%=errors.email.msg%>
+                            </p>
+                        <%}%>
+
+                     </div>
                         
                 </div>
                 <div class="box-datos">
                     <label for="password">Ingrese la contraseña:</label>
                     <input type="password" name="password" id="password" class="<%=(locals.errors)?'invalid':''%>">
-                    <% if(locals.errors && errors.password){%>
-                        <p class="error">
-                            <%=errors.password.msg%>
-                        </p>
-                    <%}%>
+                    <div class="password-errors">
+                        <% if(locals.errors && errors.password){%>
+                            <p class="error">
+                                <%=errors.password.msg%>
+                            </p>
+                        <%}%>
+                    </div>
                 </div>
                 <div class="botones">
                     <button type="submit">Ingresar</button>

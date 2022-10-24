@@ -9,7 +9,7 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 const registValidations = [
     body('name')
     .notEmpty() .withMessage('El nombre es obligatorio')
-    .isLength({min: 3}) .withMessage('El nombre debe tener un mínimo de 3 caracteres')
+    .isLength({min: 2}) .withMessage('El nombre debe tener un mínimo de 2 caracteres')
     .custom ((value,{req})=>{
         let name = req.body.name 
         let regEx = /^[a-z ,.'-]+$/i;

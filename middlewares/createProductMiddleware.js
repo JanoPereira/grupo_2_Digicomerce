@@ -5,7 +5,7 @@ const db = require('../database/models')
 
 const createProductMiddleware = [
     body('name')
-    .notEmpty() .withMessage('El nombre es obligatorio')
+    .notEmpty() .withMessage('El nombre es obligatorio').bail()
     .isLength({min: 5}) .withMessage('El nombre debe tener un mínimo de 5 caracteres')
     ,
     body('image')
@@ -30,8 +30,14 @@ const createProductMiddleware = [
         return true;
     }),
     body('description')
-    .notEmpty() .withMessage('')
-    .isLength({min: 4}) .withMessage('El nombre debe tener un mínimo de 4 caracteres')
+    .isLength({min: 20}).withMessage('La descripcion debe tener un mínimo de 20 caracteres'),
+    body('category')
+    .custom((value,{req})=>{
+        if(!req.body.category){
+            throw new Error('La categoria del producto es obligatoria');
+        }
+        return true
+    })
 ];
 
 module.exports = createProductMiddleware;

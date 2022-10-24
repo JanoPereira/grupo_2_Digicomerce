@@ -1,6 +1,7 @@
     <%- include('./partials/head') %>
     <link rel="stylesheet" href="/css/header_footer.css">
     <link rel="stylesheet" href="/css/create-modify.css">
+    <script src="/scripts/createProductValidations.js"></script>
     <title>Crea tu producto</title>
 </head>
 
@@ -41,20 +42,33 @@
 
                     <div class="contenedor-input">
                         <label class="label" for="nombre">Nombre del Producto</label>
-                        <input class="campos" name="name" type="text" placeholder="..." id="nombre">
-                        
+                        <input class="campos" name="name" type="text" placeholder="..." id="name" value="<%=locals.oldData && oldData.name ? oldData.name:''%>">
+                        <div class="name-errors">
+                            <% if (locals.errors && errors.name) { %>
+                                <p class="error"><%= errors.name.msg  %> </p>
+                            <% } %>
+                        </div>
                     </div>
 
                     <div class="contenedor-input">
                         <label class="label" for="descripcion">Descripción del producto</label>
-                        <textarea name="description" class="campos textarea" id="" cols="30" rows="4"></textarea>
+                        <textarea name="description" class="campos textarea" id="description" cols="30" rows="4"><%=locals.oldData && oldData.description ? oldData.description:''%></textarea>
+                    <div class="description-errors">
+                        <% if (locals.errors && errors.description) { %>
+                            <p class="error"><%= errors.description.msg  %> </p>
+                        <% } %>
+                    </div>
                     </div>
 
                     <div class="contenedor-input">
                         <label class="label" for="imagenDelProducto">Foto(s) del Producto</label>
                         <input class="campos campo-select" type="file" placeholder="..."
-                            id="telefono" multiple name="image">
-
+                            id="image" multiple name="image">
+                            <div class="image-errors">
+                                <% if (locals.errors && errors.image) { %>
+                                    <p class="error"><%= errors.image.msg  %> </p>
+                                <% } %>
+                            </div>
                     </div>
 
                     <div class="contenedor-input">
@@ -62,18 +76,23 @@
                         <select class="campos campo-select" name="category" id="category">
                             <option value="" disabled selected>Seleccione la Categoria</option>
                             <%categories.forEach(cat=>{%>
-                                <option value=<%=cat.id%>><%=cat.name%></option>
+                                <option value=<%=cat.id%> <%=locals.oldData && oldData.category ? 'selected':''%>><%=cat.name%></option>
                                 
                             <%})%>
                         </select>
+                        <div class="category-errors">
+                            <% if (locals.errors && errors.category) { %>
+                                <p class="error"><%= errors.category.msg  %> </p>
+                            <% } %>
+                        </div>
 
                     </div>
 
                     <div class="contenedor-input">
                         <label class="label" for="price">Precio del Producto</label>
-                        <input class="campos" type="number" placeholder="..." id="price" name="price" value="">
+                        <input class="campos" type="number" placeholder="..." id="price" name="price" value="<%=locals.oldData && oldData.price ?  oldData.price:''%>">
                         <label class="label" for="discount">Descuento:</label>
-                        <input class="campos" type="number" placeholder="..." id="discount" name="discount" value=0>
+                        <input class="campos" type="number" placeholder="..." id="discount" name="discount" value="<%=locals.oldData && oldData.discount ? oldData.discount:''%>">
                     </div>
                     <div class="checkbox">
                         <div class="option-cb">
