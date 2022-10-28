@@ -16,7 +16,6 @@ window.addEventListener('load', () => {
 
     validatePassword = (password) =>{
         let errorMsg = '';
-        let regEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
         if(password.length == 0){
             errorMsg = `<p class="error">La contraseña es obligatoria</p>`;
         };

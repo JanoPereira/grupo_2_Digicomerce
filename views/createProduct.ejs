@@ -73,7 +73,7 @@
 
                     <div class="contenedor-input">
                         <label class="label" for="category">Categoria del Producto</label>
-                        <select class="campos campo-select" name="category" id="category">
+                        <select class="campos campo-select <%= locals.errors && errors.category ? 'invalid' : '' %>" name="category" id="category">
                             <option value="" disabled selected>Seleccione la Categoria</option>
                             <%categories.forEach(cat=>{%>
                                 <option value=<%=cat.id%> <%=locals.oldData && oldData.category ? 'selected':''%>><%=cat.name%></option>
@@ -91,6 +91,9 @@
                     <div class="contenedor-input">
                         <label class="label" for="price">Precio del Producto</label>
                         <input class="campos" type="number" placeholder="..." id="price" name="price" value="<%=locals.oldData && oldData.price ?  oldData.price:''%>">
+                        <div class="price-errors">
+                            
+                        </div>
                         <label class="label" for="discount">Descuento:</label>
                         <input class="campos" type="number" placeholder="..." id="discount" name="discount" value="<%=locals.oldData && oldData.discount ? oldData.discount:''%>">
                     </div>

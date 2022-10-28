@@ -50,6 +50,21 @@ Plan de accion
 3. Continuar con las weekly meetings.
 4. Implementar el borrado fisico de archivos.
 
+Retrospectiva Sprint 6
+
+¿Que hicimos bien?
+1. Aprovechamos bien el tiempo de trabajo juntos
+2. Pudimos hacer una entrega de calidad, cumpliendo con todo lo pedido, y hasta habiendo hecho cosas opcionales.
+
+¿Que debemos mejorar?
+1. Darnos mas tiempo para hacer el sprint.
+2. Armar con mas ganas el tablero de trabajo
+
+Plan de accion
+1. Incrementar el uso del tablero de Trello.
+2. Continuar con una adecuada división de tareas.
+3. Continuar con las weekly meetings.
+4. Implementar el borrado fisico de archivos.
 
 Retrospectiva Sprint 7
 

@@ -32,6 +32,15 @@ window.addEventListener('load', () => {
         return errorMsg;
     };
 
+    validatePrice = (price) => {
+        let errorMsg = '';
+        if (price <= 0) {
+            errorMsg = `<p class="error">El precio tiene que ser mayor a 0 </p>`;
+        }
+        
+        return errorMsg;
+    };
+
     form.addEventListener('submit', (event) => {
         let errors = 0;
         
@@ -39,10 +48,12 @@ window.addEventListener('load', () => {
         const name = document.querySelector('#name');
         const image = document.querySelector('#image');
         const description = document.querySelector('#description');
+        const price = document.querySelector('#price');
         // DIVS
         const nameErrors = document.querySelector('.name-errors');
         const imageErrors = document.querySelector('.image-errors');
         const descriptionErrors = document.querySelector('.description-errors');
+        const priceErrors = document.querySelector('.price-errors');
 
         // NAME VALIDATION
         let nameValidation = validateName(name.value);
@@ -77,6 +88,17 @@ window.addEventListener('load', () => {
         } else {
             imageErrors.innerHTML = '';
             image.classList.remove('invalid')
+        }
+
+        // price VALIDATION
+        let priceValidation = validatePrice(price.value);
+        if (priceValidation) {
+            priceErrors.innerHTML = priceValidation
+            price.classList.add('invalid');
+            errors += 1;
+        } else {
+            priceErrors.innerHTML = '';
+            price.classList.remove('invalid')
         }
 
 

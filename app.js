@@ -51,17 +51,23 @@ app.use(methodOverride('_method'))
 
 // <-- Declaracion Rutas --> //
 
-const mainRouter = require('./routes/mainRouter')
-const productRouter = require('./routes/productRouter')
-const userRouter = require('./routes/userRouter')
+const mainRouter = require('./routes/mainRouter');
+const productRouter = require('./routes/productRouter');
+const userRouter = require('./routes/userRouter');
+const userApiRouter = require('./routes/api/userApiRouter');
+const productApiRouter = require('./routes/api/productApiRouter');
 
 // <-- Envio de Diferentes Rutas -->//
 
 app.use('/',mainRouter);
 
-app.use('/product', productRouter); //TODO: preguntar si van en plural o singular
+app.use('/product', productRouter);
 
 app.use('/user', userRouter);
+
+app.use('/api/user',userApiRouter);
+
+app.use('/api/product',productApiRouter)
 
 //COOKIE-PARSER
 
