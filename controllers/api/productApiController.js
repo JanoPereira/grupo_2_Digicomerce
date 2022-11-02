@@ -61,7 +61,6 @@ const productController = {
         } catch (error) {
             console.log('El error fue en productApiController.detail: ' + error);
             return res.json(error);
-
         }
     }
 };
