@@ -4,7 +4,10 @@ const fs = require('fs');
 
 const path = require('path');
 
+const cors = require('cors');
+
 const app = express();
+
 
 
 
@@ -14,6 +17,8 @@ const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
 
 
 const session = require("express-session");
+
+app.use(cors());
 
 app.use(session({ 
     secret: "Conf middleware global session",
