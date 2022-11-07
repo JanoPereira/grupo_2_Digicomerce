@@ -26,6 +26,8 @@
     margin: 20px 20px 20px 0;
     padding-bottom: 20px;
     position: relative;
+    border-radius: 6%;
+    border: 1px solid #73932C;
 }
 
 .discount-container{
@@ -136,7 +138,7 @@
 
 .botonBuy:hover {
     transform: scale(1.02);
-    background-color: rgb(39, 145, 221);
+    background-color: #325714;
     cursor: pointer;
 }
 
