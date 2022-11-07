@@ -39,14 +39,20 @@
         <div class="navbar2">
                 
             <%if(locals.isLogged){%>
-                <li class="">
+                <li class="iniciar-sesion">
                     <a href="/user/profile" id="dropUser" role="button" class="nav-link dropdown-toggle">
                         <img src="/img/users/<%=userLogged.avatar%>" alt="user_image" width="40" class="user-image"><%=userLogged.name%>
                     </a>
                 </li>
-                <div class="cerrar-sesion">
+                <div class="registro">
                     <i class="fa-solid fa-arrow-right-from-bracket"></i>
                     <a href="/user/logout">Cerrar sesion</a>
+                </div>
+                <div class="carro-compras">
+                    <a href="/product/product-cart" class="link-carro">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <p class="precio--total" id="precio-total-carro" onclick="pay()">$0</p>
+                    </a>
                 </div>
             <%}else{%>
 
@@ -73,14 +79,9 @@
             <i class="fas fa-user"></i>
             <a href="/registrationForm">Crear cuenta</a>
         </div>-->
-        <div class="carro-compras">
-            <a href="/product/product-cart" class="link-carro">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <p class="precio--total" id="precio-total-carro" onclick="pay()">$0</p>
-            </a>
-        </div>
-        <div class="menu--hamburguesa">
+       
+        <!-- <div class="menu--hamburguesa">
             <i class="fa-solid fa-bars"></i>
-        </div>
+        </div> -->
     </nav>
 </header>
