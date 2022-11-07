@@ -4,7 +4,9 @@ const db = require('../../database/models')
 const productController = {
     list: async (req, res) => {
         try {
-            let products = await db.Product.findAll(); //[{id,name,password,email,categories,avatar,}]
+            let products = await db.Product.findAll({
+                include: ['images']
+            }); //[{id,name,password,email,categories,avatar,}]
             let categories = await db.ProductCategory.findAll({
                 include: ['products']
             });
