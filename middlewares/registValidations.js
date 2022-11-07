@@ -30,7 +30,7 @@ const registValidations = [
         return true;
     }),
     body('password')
-    .isLength({min: 8}) .withMessage('La contraseña debe tener un mínimo de 6 caracteres'),
+    .isLength({min: 8}) .withMessage('La contraseña debe tener un mínimo de 8 caracteres'),
     body('confirmPassword')
     .custom((value,{req})=>{
         if(req.body.password!=req.body.confirmPassword){
@@ -49,9 +49,9 @@ const registValidations = [
     }),
     body('avatar')
     .custom((value,{req})=>{
-        // jpg,gif,png
+        jpg,gif,png
         if(!req.file){
-            return true;
+            
         }
         let fileExtension = path.extname(req.file.originalname).toLowerCase();
         console.log(fileExtension)

@@ -32,6 +32,8 @@ const createProductMiddleware = require('../middlewares/createProductMiddleware'
 
 router.get('/product-cart',productController.cart);
 
+router.get('/search',productController.search);
+
 router.get('/product-detail/:id',productController.detail);
 
 router.get('/create-product', productController.create);

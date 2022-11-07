@@ -7,8 +7,7 @@ const productsWithDiscount = async () =>{
         let discountedProducts = await db.Product.findAll({
             include: [
                 'images'
-            ]
-        },{
+            ],
             where:{
                 discount: {[Op.gt]: 0}
             }
@@ -71,7 +70,7 @@ const controller = {
         let featuredProducts = await getFeaturedProducts();
 
         // return res.send(featuredProducts);
-        // res.send(featuredProducts);
+        // res.send(discountedProducts);
         res.render('index',{featuredProducts,discountedProducts});
 
        } catch (error) {

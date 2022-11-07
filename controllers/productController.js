@@ -1,5 +1,7 @@
 const { validationResult } = require('express-validator');
-const db = require('../database/models')
+const db = require('../database/models');
+const Sequelize = require('sequelize')
+const Op = Sequelize.Op;
 
 const productController = {
     showProducts: async (req, res) => {
@@ -34,18 +36,37 @@ const productController = {
     detail: async (req, res) => {
         try {
             prodId = req.params.id;
-
+            let relatedProducts= [] ;
+            let count = 0;
             let product = await db.Product.findByPk(prodId, {
                 include: [
                     'images',
                     'productCategory'
                 ]
-            })
+            });
 
-            let categories = await db.ProductCategory.findAll();
+            let sameCategoryProducts = await db.Product.findAll({
+                where: {
+                    products_categories_id: product.products_categories_id,
+                    id: {[Op.ne]: product.id}
+                },
+                include: ['images']
+            });
+
+            while (count < 3) {
+                let random = sameCategoryProducts[Math.floor(Math.random() * sameCategoryProducts.length)];
+                if(!relatedProducts.includes(random)){
+                    relatedProducts.push(random)
+                    count++;
+                }
+                  
+            }
+            //  return res.send(relatedProducts)
+
+            
 
             // return res.send(product);
-            res.render('productDetail', { product, categories })
+            res.render('productDetail', { product, relatedProducts })
 
         } catch (error) {
             console.log("Falle en productController.detail: " + error);
@@ -55,15 +76,35 @@ const productController = {
 
     create: async (req, res) => {
 
-        let categories = await db.ProductCategory.findAll()
-        res.render('createProduct', { categories })
+    
+        res.render('createProduct')
+    },
+    search: async(req,res)=>{
+        try {
+            let search = req.query.search;
+            let searchedProducts = await db.Product.findAll({
+                where: {
+                    name: {[Op.like]: `%${search}%`}
+                },
+                include: ['images']
+            });
+            if(!searchedProducts.length){
+                return res.render('notFound'); //TODO: Armar vista
+            };
+
+            return res.render('searchList', {searchedProducts, string: search});
+
+        } catch (error) {
+            console.log("Falle en productController.detail: " + error);
+            return res.json(error)
+        }
     },
 
     upload: async (req, res) => {
         try {
             // return res.send(req.files);
             // let images = 
-            let categories = await db.ProductCategory.findAll()
+            
             let errors = validationResult(req)
             if (!errors.isEmpty()) {
                 let oldData = {
@@ -76,7 +117,7 @@ const productController = {
                 }
                 // return res.send(errors);
                 errors = errors.mapped();
-                return res.render('createProduct', {categories, oldData, errors});
+                return res.render('createProduct', {oldData, errors});
             }
             // return res.send(errors)
             let newProduct = {
@@ -125,8 +166,8 @@ const productController = {
                     'productCategory'
                 ]
             });
-            let categories = await db.ProductCategory.findAll();
-            res.render('editProduct', { product, categories });
+            
+            res.render('editProduct', { product });
         } catch (error) {
             console.log('falle en prodctcontroller.edit: ' + error);
             return res.json(error);

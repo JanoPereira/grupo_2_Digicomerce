@@ -1,6 +1,5 @@
 const db = require('../database/models');
 
-
 const userLogged = async (req, res, next) => {
 
     try {
@@ -8,7 +7,7 @@ const userLogged = async (req, res, next) => {
         res.locals.isLogged = false;
         
         let emailInCookie = req.cookies.userEmail;
-        console.log('hola')
+        
 
         let userInCookie = await db.User.findOne({
             where:{
@@ -29,7 +28,7 @@ const userLogged = async (req, res, next) => {
 
     } catch (error) {
          
-        console.log('Falle en userLoggedMiddleware'+error);
+        console.log('Falle en userLoggedMiddleware: '+error);
         return res.send(error)
     }
 }

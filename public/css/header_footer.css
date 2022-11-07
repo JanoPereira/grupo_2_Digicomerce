@@ -21,7 +21,7 @@ li{
 
 a {
     /*color: #222;*/
-    color: #DADFAD;
+    color: #DADFAD ;
     text-decoration: none;
 }
 
@@ -97,7 +97,7 @@ nav {
 .navbar a:hover,
 .dropdown:hover .dropbtn {
     /* background-color: #73932C; */
-    color: #73932C
+    color: #73932C !important;
 }
 
 .dropdown-content {
@@ -120,11 +120,11 @@ nav {
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #ddd !important;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: block !important;
 }
 
 .contenedor--buscador {
@@ -198,6 +198,7 @@ nav {
 .iniciar-sesion a {
     color: #DADFAD;
     font-size: 16px;
+    text-decoration: none;
 }
 
 .iniciar-sesion a:hover {
@@ -256,7 +257,10 @@ nav {
     color: #C28E40;
     margin-right: 8px;
 }
-
+.registro a{
+    text-decoration: none;
+    color: #DADFAD;
+}
 .registro a:hover {
     color: #73932C;
 }
@@ -272,6 +276,7 @@ nav {
 .carro-compras a {
     display: flex;
     color: #C28E40;
+    text-decoration: none;
 }
 
 .carro-compras a:hover {

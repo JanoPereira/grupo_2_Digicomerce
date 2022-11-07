@@ -13,7 +13,8 @@ const app = express();
 
 const cookieParser = require('cookie-parser');
 
-const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+const headerMiddleware = require('./middlewares/headerMiddleware');
 
 
 const session = require("express-session");
@@ -31,6 +32,8 @@ app.use(session({
 app.use(cookieParser()); 
 
 app.use(userLoggedMiddleware);
+
+app.use(headerMiddleware);
 
 
 

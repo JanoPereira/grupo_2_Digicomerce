@@ -1,0 +1,59 @@
+    <%- include('./partials/head') %>   
+    <link rel="stylesheet" href="/css/header_footer.css"> 
+    <link rel="stylesheet" href="/css/teaProductStyle.css">
+    <link rel="stylesheet" href="/css/carruselStyle.css">
+    <title>Yerbas - DigiCommerce</title>
+</head>
+
+<body>
+    <%-include('./partials/header')%>
+    <main>
+        <%-include('./partials/carrusel')%>
+
+
+        <section class="contenedor-productos">
+
+            <h2 class="pDestacados">Productos Relacionados con '<%= string %>'</h2>
+
+            <section class="contenedor contenedor-p1">
+                
+                <%searchedProducts.forEach(product => { %>
+                        <div class="articulo">
+                            <a href="/product/product-detail/<%=product.id%>" class="main-article">
+                                <img src="/img/products/<%=product.images[0].file_name%>" alt="<%=product.name%>" class="product">
+                                <p class="product"><%=product.name%></p>
+                                <p class="price">
+                                    <%if(!product.discount){%>
+                                        <b>$<%=product.price%></b>
+                                    <%}else{%>
+                                        <b>$<%=product.price-product.price*(product.discount*0.01)%></b>
+                                    <%}%>    
+                                </p>
+                             </a>
+                                <div class="button-container">
+                                    <% if (locals.userLogged && userLogged.users_categories_id==2 || !locals.userLogged) { %>
+                                        <button class="botonBuy">Agregar al carrito</button>
+                                    <% }else{ %>
+                                        <a href="/product/edit-product/<%=product.id%>"><button class="botonBuy">Editar</button></a>
+                                    <% } %>
+                                </div>
+                        </div>
+                <% }) %>
+                
+
+            </section>
+
+            
+        
+
+        
+
+    </main>
+
+
+    <%-include('./partials/footer')%>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

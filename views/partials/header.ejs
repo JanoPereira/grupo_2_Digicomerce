@@ -11,9 +11,10 @@
                 <button class="dropbtn">Productos
                 </button>
                 <div class="dropdown-content">
-                    <a href="/product/category/2">Té</a>
-                    <a href="/product/category/1">Yerbas</a>
-                    <a href="/product/category/3">Accesorios</a>
+                    <% categories.forEach(cat => { %>
+                        <a href="/product/category/<%= cat.id %>"><%= cat.name %></a>
+                    <% }) %>
+                    
 
                 </div>
             </div>
@@ -29,8 +30,10 @@
         </ul>-->
 
         <div class="contenedor--buscador">
-            <input type="text" class="input--buscador" placeholder="Buscar...">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <form action="/product/search" method="GET">
+                <input type="text" class="input--buscador" name='search' placeholder="Buscar...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
         </div>
 
         <div class="navbar2">
