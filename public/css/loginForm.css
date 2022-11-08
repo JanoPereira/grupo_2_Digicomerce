@@ -20,11 +20,11 @@ main{
 }
 
 
-form{
+#login-form{
     /* border: 3px solid green; */
     width: 100%;
     margin-top: 30px;
-    height: 50vh;
+    /* height: 50vh; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -87,7 +87,7 @@ div.botones button{
     margin: 10px 0;
     border: none;
     color: white;
-    background-color: #087da3;
+    background-color:#325714;
     border-radius: 5px;
 }
 
@@ -95,9 +95,9 @@ div.botones:hover button{
     background-color: #0022AA;
 }
 
-footer{
+/* footer{
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-}
+} */

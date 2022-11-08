@@ -24,7 +24,10 @@ a {
     color: #DADFAD ;
     text-decoration: none;
 }
-
+#searchBtn {
+    background: #325714;
+    border: none;
+}
 .menu--hamburguesa {
     display: none;
 }
@@ -166,6 +169,7 @@ nav {
 
 .navbar2{
     display: flex;
+    align-items: center;
 }
 
 /*.navbar2 .iniciar-sesion:hover i{
@@ -216,6 +220,7 @@ nav {
 #dropUser{
     display: flex;
     align-items: center;
+    text-align: left;
    
 }
 .btn-drop{
@@ -260,6 +265,7 @@ nav {
 .registro a{
     text-decoration: none;
     color: #DADFAD;
+    text-align: left;
 }
 .registro a:hover {
     color: #73932C;
@@ -298,8 +304,8 @@ footer {
     width: 100vw;
     padding: 5px;
     color: black;
-    background-color: #EBF0C2;
-    border-top: 5px double #C28E40; 
+    background-color: #325714;
+    border-top: 5px double #73932C; 
     width: 100vw;
     justify-content: space-evenly;
     height: 15vw;
@@ -320,11 +326,11 @@ footer {
 .footerContainer ul li {
     list-style-type: none;
     margin: 24px 0;
-    color: #C28E40;
+    color: #DADFAD;
     font-size: 0.9rem;
 }
 .footerContainer ul li a{
-    color: #C28E40;
+    color: #DADFAD;
     font-size: 0.9rem;
 }
 .footerContainer ul li i{
@@ -377,7 +383,7 @@ footer {
 
 footer>div span {
     font-size: 1.1rem;
-    color: #824214;
+    color: #C28E40;
 }
 
 /* /FOOTER */

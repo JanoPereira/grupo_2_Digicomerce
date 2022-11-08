@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 .main-section {
     min-height: 100%;
     height: fit-content;
@@ -18,6 +19,7 @@
     width: 100vw;
     padding-left: 10vw;
     padding-right: 10vw;
+    background-color: whitesmoke;
 }
 
 .articulo{
@@ -28,6 +30,7 @@
     position: relative;
     border-radius: 6%;
     border: 1px solid #73932C;
+    background: white;
 }
 
 .discount-container{
@@ -74,6 +77,8 @@
     margin-bottom: 10px;
     justify-content: space-between;
     align-items: center;
+    background: white;
+    border-radius: 6%
 }
 
 .articulo:hover {
@@ -102,6 +107,7 @@
     text-align: center;
     font-weight: bold;
     font-size: 1.2rem;
+    background-color: white;
 }
 
 .price {
@@ -140,6 +146,7 @@
     transform: scale(1.02);
     background-color: #325714;
     cursor: pointer;
+    color: #DADFAD;
 }
 
 
