@@ -127,3 +127,13 @@ body {
    
 }
 
+#modify-button{
+    padding: 10px 20px;
+    border-radius: 13px;
+    font-size: 17px;
+}
+#modify-button:hover{
+   cursor: pointer;
+   background-color: rgb(152, 255, 174);
+}
+
