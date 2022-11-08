@@ -130,3 +130,18 @@
 .invalid{
     border: 2px solid rgb(153, 34, 34);
 }
+.delete{
+    text-align: center;
+}
+.button-delete{
+    background: #b70606;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.button-delete:hover{
+    color: #ccc;
+}

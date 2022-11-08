@@ -86,8 +86,13 @@
                             </div>
                         </article>
                         <article class="form2">
-                            <button class="add" type="submit">Agregar al carrito</button>
-                            <button class="buy" type="submit">Comprar ahora</button>
+                            <% if (locals.isLogged && userLogged.users_categories_id==1) { %>
+                                <a class="add" href="/product/edit-product/<%= product.id %>">Editar Producto</a>
+                                <a class="buy" href="/product/delete-product/<%= product.id %>">Borrar Producto</a>
+                            <% }else{ %> 
+                                <button class="add" type="submit">Agregar al carrito</button>
+                                <button class="buy" type="submit">Comprar ahora</button>
+                            <% } %>
                         </article>
                     </section>
                     <section class="product-description">

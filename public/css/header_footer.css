@@ -7,9 +7,11 @@ cd grup.grilla-contenedora {
 html {
     overflow-x: hidden;
 }
-li{
+
+li {
     list-style: none;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -21,13 +23,19 @@ li{
 
 a {
     /*color: #222;*/
-    color: #DADFAD ;
+    color: #DADFAD;
     text-decoration: none;
 }
+
+.hidden {
+    display: none !important;
+}
+
 #searchBtn {
     background: #325714;
     border: none;
 }
+
 .menu--hamburguesa {
     display: none;
 }
@@ -35,7 +43,7 @@ a {
 header {
     width: 100vw;
     /*background-color: #ccc;*/
-    background-color:#325714;
+    background-color: #325714;
     border-bottom: 2px solid rgba(2, 2, 2, .1);
     height: fit-content;
     /* padding: 15px 5px;*/
@@ -67,8 +75,9 @@ nav {
 .navbar {
     /*border: 2px blue solid;*/
     overflow: hidden;
-    background-color:#325714;
+    background-color: #325714;
 }
+
 .navbar a {
     float: left;
     font-size: 16px;
@@ -82,6 +91,7 @@ nav {
     float: left;
     overflow: hidden;
 }
+
 /* .dropdown::marker{
     display: none;
 } */
@@ -106,7 +116,7 @@ nav {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(248, 245, 245,.8);
+    background-color: rgb(248, 245, 245, .8);
     /* background-color: #f9f9f9f7; */
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -131,7 +141,7 @@ nav {
 }
 
 .contenedor--buscador {
-   /* border: 2px red solid;*/
+    /* border: 2px red solid;*/
     flex-grow: 1;
     text-align: left;
     width: 1vw;
@@ -163,13 +173,16 @@ nav {
     position: absolute;
     right: 27%;
 }
+
 .contenedor--buscador i:hover {
     color: #999;
 }
 
-.navbar2{
+.navbar2 {
     display: flex;
     align-items: center;
+    width: 30%;
+    justify-content: space-between;
 }
 
 /*.navbar2 .iniciar-sesion:hover i{
@@ -186,7 +199,7 @@ nav {
     text-align: right;
     /*height: 52px;*/
     /*width: 2vw;*/
-    width:140px;
+    width: 250px;
     display: flex;
     justify-content: center;
     cursor: pointer;
@@ -210,26 +223,28 @@ nav {
 }
 
 
-.user-image{
+.user-image {
     border-radius: 50%;
     margin-right: 5px;
 }
 
 
 
-#dropUser{
+#dropUser {
     display: flex;
     align-items: center;
     text-align: left;
-   
+
 }
-.btn-drop{
+
+.btn-drop {
     background: none;
     border: none;
     width: 15px;
     margin-top: 3px;
     margin-left: 5px;
 }
+
 /*.iniciar-sesion p:hover {
     background-color: #bbb;
 }
@@ -250,7 +265,7 @@ nav {
     color: white;
     /*height: 52px;*/
     /*width: 2vw;*/
-    width:120px;
+    width: 180px;
     display: flex;
     justify-content: center;
     cursor: pointer;
@@ -258,22 +273,24 @@ nav {
     margin-left: 5px;
 }
 
-.registro i{
+.registro i {
     color: #C28E40;
     margin-right: 8px;
 }
-.registro a{
+
+.registro a {
     text-decoration: none;
     color: #DADFAD;
     text-align: left;
 }
+
 .registro a:hover {
     color: #73932C;
 }
 
 
 .carro-compras {
-   /* border: 2px gold solid;*/
+    /* border: 2px gold solid;*/
     /* flex-grow: 1; */
     display: flex;
     margin-left: 10px;
@@ -289,6 +306,62 @@ nav {
     color: goldenrod;
 }
 
+.responsive-menu {
+    display: none;
+    width: 100%;
+}
+
+.user-menu {
+    color: #C28E40;
+    width: 100%;
+    text-align: center;
+}
+
+.user-options-logged,
+.user-options-unlogged {
+    display: flex;
+    max-width: 350px;
+}
+
+.menu-list-unlogged,
+.menu-list-logged {
+    width: 200px;
+    position: absolute;
+    z-index: 100000000;
+    background: #c4ffc4;
+    color: #888;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+}
+
+.menu-list-unlogged>div,
+.menu-list-logged>div {
+    width: 100%;
+}
+
+.menu-list-unlogged a,
+.menu-list-logged a {
+    color: #444;
+}
+
+.menu-list-logged li {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.menu-list-logged .registro {
+    width: 100%;
+    margin: 0;
+}
+
+.menu-list-logged .carro-compras {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    margin-top: auto;
+    margin-top: 10px;
+}
 
 /* /HEADER */
 
@@ -305,7 +378,7 @@ footer {
     padding: 5px;
     color: black;
     background-color: #325714;
-    border-top: 5px double #73932C; 
+    border-top: 5px double #73932C;
     width: 100vw;
     justify-content: space-evenly;
     height: 15vw;
@@ -320,20 +393,23 @@ footer {
     text-align: left;
 }
 
-.footerContainer ul{
+.footerContainer ul {
     text-align: left;
 }
+
 .footerContainer ul li {
     list-style-type: none;
     margin: 24px 0;
     color: #DADFAD;
     font-size: 0.9rem;
 }
-.footerContainer ul li a{
+
+.footerContainer ul li a {
     color: #DADFAD;
     font-size: 0.9rem;
 }
-.footerContainer ul li i{
+
+.footerContainer ul li i {
     color: #73932C;
     font-weight: bold;
     padding-right: 10px;
@@ -352,6 +428,7 @@ footer {
     outline: none;
     margin-top: 24px
 }
+
 .newsletter .enviar {
     background-color: #DADFAD;
     border: none;
@@ -361,7 +438,7 @@ footer {
     border-radius: 6px;
 }
 
-.footerContainer .seguinos{
+.footerContainer .seguinos {
     display: flex;
     flex-direction: column;
 }
@@ -401,20 +478,24 @@ footer>div span {
     .nav--bar {
         padding: 0 15px;
 
-    
+
     }
-    .navbar{
+
+    .navbar {
         display: none;
     }
-    .navbar2>div{
+
+    .user-options-unlogged>div,
+    .user-options-unlogged>div {
         flex-direction: column;
         gap: 5px;
     }
-    .iniciar-sesion{
+
+    .iniciar-sesion {
         margin-left: 0;
     }
 
-    .header ul {
+    .header>ul {
         display: none;
     }
 
@@ -447,7 +528,8 @@ footer>div span {
         /* max-width: 150px; */
         width: 100%;
     }
-    .contenedor--buscador i{
+
+    .contenedor--buscador i {
         right: 8%;
     }
 
@@ -466,6 +548,7 @@ footer>div span {
 
         font-size: 24px;
     }
+
 
     /* /MEDIA-HEADER */
     /* MEDIA-FOOTER (resolucion tablet) */
@@ -531,17 +614,44 @@ footer>div span {
 
     /* /MEDIA-FOOTER */
 }
-@media (max-width:768px){
-    .navbar2{
+
+@media (max-width:768px) {
+    .navbar2 {
         display: flex;
     }
-    .navbar2>div{
+
+    .navbar2>div {
         width: 50%;
     }
-    .navbar2>div a{
+
+    .navbar2>div a {
         text-align: center;
     }
+
+    .newsletter {
+        display: none;
+    }
+
+    .contenedor-redes {
+        margin: 0;
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .contenedor-redes i {
+        font-size: 12px;
+    }
+
+    .user-options-logged,
+    .user-options-unlogged {
+        display: none;
+    }
+
+    .responsive-menu {
+        display: block;
+    }
 }
+
 @media (max-width:600px) {
 
     /* MEDIA HEADER (resolucion cel) */
@@ -549,9 +659,7 @@ footer>div span {
     .nav--bar {
         justify-content: space-between;
     }
-    .navbar2{
-        display: none;
-    }
+
 
     .contenedor--buscador {
         max-width: 180px;
@@ -569,9 +677,7 @@ footer>div span {
 
     /* .carro-compras .precio--total {
         /* display: none; */
-     */
-
-    .carro-compras i {
+    */ .carro-compras i {
         display: block;
         margin: auto;
     }

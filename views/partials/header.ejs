@@ -14,12 +14,16 @@
                     <% categories.forEach(cat => { %>
                         <a href="/product/category/<%= cat.id %>"><%= cat.name %></a>
                     <% }) %>
-                    
+                    <% if (locals.isLogged && userLogged.users_categories_id==1) { %>
+                        <a href="/product/create-product/">Crear Producto</a>
+                    <% } %>
 
                 </div>
             </div>
             <a href="/about">Nosotros</a>
-            <a href="#contact">Contacto</a>
+            <% if (locals.isLogged && userLogged.users_categories_id==1) { %>
+                <a href="http://localhost:3000" target="_blank">Dashboard</a>
+            <% } %>
 
         </div>
         <!-- <ul>
@@ -39,30 +43,73 @@
         <div class="navbar2">
                 
             <%if(locals.isLogged){%>
-                <li class="iniciar-sesion">
-                    <a href="/user/profile" id="dropUser" role="button" class="nav-link dropdown-toggle">
-                        <img src="/img/users/<%=userLogged.avatar%>" alt="user_image" width="40" class="user-image"><%=userLogged.name%>
-                    </a>
-                </li>
-                <div class="registro">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    <a href="/user/logout">Cerrar sesión</a>
+                <div class="user-options-logged">
+                    <li class="iniciar-sesion">
+                        <a href="/user/profile" id="dropUser" role="button" class="nav-link dropdown-toggle">
+                            <img src="/img/users/<%=userLogged.avatar%>" alt="user_image" width="40" class="user-image"><%=userLogged.name%>
+                        </a>
+                    </li>
+                    <div class="registro">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <a href="/user/logout">Cerrar sesión</a>
+                    </div>
+                    <div class="carro-compras">
+                        <a href="/product/product-cart" class="link-carro">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <p class="precio--total" id="precio-total-carro" onclick="pay()">$0</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="carro-compras">
-                    <a href="/product/product-cart" class="link-carro">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <p class="precio--total" id="precio-total-carro" onclick="pay()">$0</p>
-                    </a>
+                
+                <div class="responsive-menu">
+                    <div class="user-menu">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <ul class="menu-list-logged hidden">
+                        <li class="iniciar-sesion">
+                            <a href="/user/profile" id="dropUser" role="button" class="nav-link dropdown-toggle">
+                                <img src="/img/users/<%=userLogged.avatar%>" alt="user_image" width="40" class="user-image"><%=userLogged.name%>
+                            </a>
+                        </li>
+                        <div class="registro">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <a href="/user/logout">Cerrar sesión</a>
+                        </div>
+                        <div class="carro-compras">
+                            <a href="/product/product-cart" class="link-carro">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <p class="precio--total" id="precio-total-carro" onclick="pay()">$0</p>
+                            </a>
+                        </div>
+                    </ul>
                 </div>
             <%}else{%>
-
-                <div class="iniciar-sesion">
-                    <i class="fas fa-sign-in-alt"></i>
-                    <a href="/user/login-form">Iniciar sesión</a>
+                <div class="user-options-unlogged">
+                    <div class="iniciar-sesion">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <a href="/user/login-form">Iniciar sesión</a>
+                    </div>
+                    <div class="registro">
+                        <i class="fas fa-user"></i>
+                        <a href="/user/registration-form" >Registrate</a>
+                    </div>
                 </div>
-                <div class="registro">
-                    <i class="fas fa-user"></i>
-                    <a href="/user/registration-form" >Registrate</a>
+                
+                <div class="responsive-menu">
+                    <div class="user-menu">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="menu-list-unlogged hidden">
+                        <div class="iniciar-sesion">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <a href="/user/login-form">Iniciar sesión</a>
+                        </div>
+                        <div class="registro">
+                            <i class="fas fa-user"></i>
+                            <a href="/user/registration-form" >Registrate</a>
+                        </div>
+                    </div>
+                    
                 </div>
             <%}%>
           
