@@ -5,6 +5,7 @@
 }
 
 body {
+    background-image: url("/img/fondo.jpg");
     /* background-image: url("/img/fondo1.jpg"); */
     background-color: whitesmoke;
     width: 100%;
@@ -34,11 +35,11 @@ body {
 .campos {
     width: 100%;
     margin: auto;
-    background-color: wheat;
+    background-color: #DADFAD;
     padding: 10px;
     border-radius: 6px;
     margin-bottom: 5px;
-    border: 1px solid white;
+    border: 1px solid #DADFAD;
     font-size: 16px;
     color: black;
 }
@@ -54,19 +55,20 @@ body {
 .button-container{
     text-align: center;
 }
-button {
-
-    background-color: wheat;
+#createBtn {
+    background-color: #DADFAD;
     padding: 10px;
-    color: black;
+    color: #325714;
     margin-top: 16px;
     font-size: 20px;
     cursor: pointer;
     border-radius: 6px;
+    border: none;
+    font-weight: bold;
 
 }
 
-button:hover {
+#createBtn:hover {
     transition: 0.8s all ease ;
     background-color:#62b972;
     height: 48px;
