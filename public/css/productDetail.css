@@ -11,10 +11,21 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.active img{
+    max-height: 400px;
+    object-fit: contain;
+}
 .other-images {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+.related-products .products{
+    width: 90%;
+}
+.other-product img{
+    max-height: 200px;
+    object-fit: contain;
 }
 .image-container, .description-container {
     flex-direction: column;

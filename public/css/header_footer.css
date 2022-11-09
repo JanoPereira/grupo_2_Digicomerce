@@ -474,6 +474,9 @@ footer>div span {
         padding: 10px 0;
         border-bottom: 1px solid rgba(2, 2, 2, .4);
     }
+    .newsletter {
+        display: none;
+    }
 
     .nav--bar {
         padding: 0 15px;
@@ -593,9 +596,7 @@ footer>div span {
         margin-right: 2px;
     }
 
-    .contenedor--newsletter {
-        display: none;
-    }
+    
 
     .contenedor--seguinos {
         text-align: center;
@@ -621,7 +622,7 @@ footer>div span {
     }
 
     .navbar2>div {
-        width: 50%;
+        width: 100%;
     }
 
     .navbar2>div a {
