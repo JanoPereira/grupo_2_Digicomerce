@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("/img/fondo.jpg");
+}
+main{
+    min-height: 50vw;
+    
+}
+
+#notFound {
+    display: flex;
+    height: 5vw;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding-top: 100px;
+}
+h1 {
+    color: #325714;
+    font-size: 20px;
+    width: 40vw; 
+    text-align: center;
+}
+
+#ban {
+    font-size: 50px;
+    color: #73932C;
+    border-radius: 20px;
+}
