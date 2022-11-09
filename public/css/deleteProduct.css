@@ -1,0 +1,25 @@
+.button{
+    background-color: #b41e00;
+    color: #ccc;
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+.seccion-carga-producto{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+.contenedor-imagen-producto{
+    width: 35%;
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0 auto;
+}
+form{
+    margin: auto;
+}

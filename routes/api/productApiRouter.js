@@ -12,5 +12,7 @@ router.get('/',apiProductController.list);
 
 router.get('/:id',apiProductController.detail)
 
+//TODO: 
+
 
 module.exports = router;

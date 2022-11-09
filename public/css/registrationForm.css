@@ -45,7 +45,7 @@ body {
 }
 
 .error{
-    color: rgb(153, 34, 34);
+    color: rgb(255 75 75);
 }
 
 .invalid{
@@ -125,5 +125,15 @@ body {
     color:#DADFAD;
     font-size: 20px;
    
+}
+
+#modify-button{
+    padding: 10px 20px;
+    border-radius: 13px;
+    font-size: 17px;
+}
+#modify-button:hover{
+   cursor: pointer;
+   background-color: rgb(152, 255, 174);
 }
 

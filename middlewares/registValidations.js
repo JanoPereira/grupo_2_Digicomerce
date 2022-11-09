@@ -49,9 +49,9 @@ const registValidations = [
     }),
     body('avatar')
     .custom((value,{req})=>{
-        jpg,gif,png
+        
         if(!req.file){
-            
+            return true
         }
         let fileExtension = path.extname(req.file.originalname).toLowerCase();
         console.log(fileExtension)

@@ -250,7 +250,9 @@ const productController = {
     delete: async (req, res) => {
         try {
             prodId = req.params.id;
-            let product = await db.Product.findByPk(prodId);
+            let product = await db.Product.findByPk(prodId,{
+                include:['images']
+            });
             res.render('deleteProduct', { product });
         } catch (error) {
             console.log('falle en prodctcontroller.delete: ' + error);

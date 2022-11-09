@@ -89,10 +89,25 @@ div.description-container .buttons {
     padding: 2%;
     width: 100%;
  }
- .buttons .form2 button.add {
+ .buttons .form2 button.add{
     background-color: white;
     border: grey solid 0.5px;
  }
+a.add{
+    background-color: #084298;
+    color: #ccc;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 3px 5px;
+    border-radius: 6px;
+}
+a.buy{
+    background-color: #b41e00;
+    color: #ccc;
+    text-align: center;
+    padding: 3px 5px;
+    border-radius: 6px;
+}
 
  .buttons .form2 button.buy {
     color: white;

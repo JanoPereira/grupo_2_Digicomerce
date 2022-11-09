@@ -8,7 +8,7 @@ const userLogged = async (req, res, next) => {
         
         let emailInCookie = req.cookies.userEmail;
         
-
+    
         let userInCookie = await db.User.findOne({
             where:{
                 email: emailInCookie ? emailInCookie:''
@@ -21,8 +21,9 @@ const userLogged = async (req, res, next) => {
         };
 
         if (req.session && req.session.userLogged) {
+            let user = await db.User.findByPk(req.session.userLogged.id)
             res.locals.isLogged = true;
-            res.locals.userLogged = req.session.userLogged;
+            res.locals.userLogged = user;
         };
         return next();
 

@@ -1,6 +1,7 @@
     <%- include('./partials/head') %>
     <link rel="stylesheet" href="/css/header_footer.css">
     <link rel="stylesheet" href="/css/create-modify.css">
+    <link rel="stylesheet" href="/css/deleteProduct.css">
     <title>Borrar producto</title>
 </head>
 <body>
@@ -13,21 +14,7 @@
             <section class="seccion-carga-producto">
                 <div class="contenedor-imagen-producto">
                     <section class="image">
-                        <img src="/img/pava.jpg" alt="producto" class="imagen-producto">
-                    </section>
-                    <section class="other-images">
-                        <article>
-                            <img src="/img/pava.jpg" alt="producto">
-                        </article>
-                        <article>
-                            <img src="/img/pava.jpg" alt="producto">
-                        </article>
-                        <article>
-                            <img src="/img/pava.jpg" alt="producto">
-                        </article>
-                        <article>
-                            <img src="/img/pava.jpg" alt="producto">
-                        </article>
+                        <img src="/img/products/<%= product.images[0].file_name%>" alt="producto" class="imagen-producto">
                     </section>
                 </div>
 
