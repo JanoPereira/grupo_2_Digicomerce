@@ -66,6 +66,7 @@
                         </h2>
                         <h3 class=<%= product.discount > 0 ? 'with-discount' :'' %>>$<%= product.price %>
                         </h3>
+                        <span><%= product.discount>0?`${product.discount}% OFF`:''%></span>
 
                         <h4><%= product.discount? `$ ${product.price*(1-product.discount/100)}`:null%></h4>
                         <a href="#payment-methods">Ver más metodos de pago</a>

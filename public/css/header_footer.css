@@ -226,6 +226,9 @@ nav {
 .user-image {
     border-radius: 50%;
     margin-right: 5px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
 }
 
 
@@ -234,7 +237,6 @@ nav {
     display: flex;
     align-items: center;
     text-align: left;
-
 }
 
 .btn-drop {
@@ -296,10 +298,26 @@ nav {
     margin-left: 10px;
 }
 
+/* Contenedor del carro */
 .carro-compras a {
     display: flex;
     color: #C28E40;
     text-decoration: none;
+    margin: auto;
+}
+.cart-logo-container{
+    position: relative;
+}
+
+/* Cartelito donde dice cantidad de productos */
+.products-amount {
+    padding: 3px;
+    color: #fff;
+    position: absolute;
+    top: -16px;
+    right: 2px;
+    font-size: 11px;
+
 }
 
 .carro-compras a:hover {
@@ -320,7 +338,8 @@ nav {
 .user-options-logged,
 .user-options-unlogged {
     display: flex;
-    max-width: 350px;
+    max-width: 450px;
+    width: 90%;
 }
 
 .menu-list-unlogged,
@@ -361,6 +380,10 @@ nav {
     margin: auto;
     margin-top: auto;
     margin-top: 10px;
+}
+
+.precio--total {
+    display: flex;
 }
 
 /* /HEADER */
@@ -474,6 +497,7 @@ footer>div span {
         padding: 10px 0;
         border-bottom: 1px solid rgba(2, 2, 2, .4);
     }
+
     .newsletter {
         display: none;
     }
@@ -596,7 +620,7 @@ footer>div span {
         margin-right: 2px;
     }
 
-    
+
 
     .contenedor--seguinos {
         text-align: center;

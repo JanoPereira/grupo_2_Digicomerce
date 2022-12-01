@@ -23,12 +23,12 @@
                                 <img src="/img/products/<%=elem.images[0].file_name%>" alt="<%=elem.name%>" class="te">
                                 <p class="product"><%=elem.name%></p>
                                 <p class="price">
-                                    <b>$<%=elem.price%></b>
+                                    <b>$<%=elem.price - (elem.price*elem.discount/100)%></b>
                                 </p>
                              </a>
                                 <div class="button-container">
                                     <% if (locals.userLogged && userLogged.users_categories_id==2 || !locals.userLogged) { %>
-                                        <button class="botonBuy"><i class="fa-solid fa-cart-shopping"></i></button>
+                                        <button class="botonBuy adding-button" data-id="<%= elem.id %>"><i class="fa-solid fa-cart-shopping"></i></button>
                                     <% }else{ %>
                                         <a href="/product/edit-product/<%=elem.id%>"><button class="botonBuy">Editar</button></a>
                                     <% } %>
@@ -57,7 +57,7 @@
                          </a>
                             <div class="button-container">
                                 <% if (locals.userLogged && userLogged.users_categories_id==2 || !locals.userLogged) { %>
-                                    <button class="botonBuy"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <button class="botonBuy adding-button" data-id="<%= disProd.id %>"><i class="fa-solid fa-cart-shopping"></i></button>
                                 <% }else{ %>
                                     <a href="/product/edit-product/<%=disProd.id%>"><button class="botonBuy">Editar</button></a>
                                 <% } %>

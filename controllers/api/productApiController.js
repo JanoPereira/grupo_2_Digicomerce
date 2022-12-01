@@ -5,9 +5,14 @@ const productController = {
     list: async (req, res) => {
 
         try {
-            // return res.send(req.query)
+            const limit = parseInt(req.query.limit) || undefined;
+            const offset = parseInt(req.query.offset) || undefined;
+
+            // return res.send(limit)
             let products = await db.Product.findAll({
-                include:['images','productCategory']
+                include:['images','productCategory'],
+                limit,
+                offset
                 
             }); //[{id,name,password,email,categories,avatar,}]
             let categories = await db.ProductCategory.findAll({
@@ -52,7 +57,7 @@ const productController = {
                 description: product.description,
                 featured: product.featured,
                 price: product.price,
-                image: `${req.protocol}://${req.headers.host}/img/products/${product.avatar}`
+                image: images[0]
             }
             return res.status(200).json({
                 meta: {

@@ -66,6 +66,7 @@ h3 {
 h4 {
     margin: 10% auto;
     font-size: 2rem;
+    margin-top: 30px;
 }    
 
 div.description-container .main-section a {
@@ -168,5 +169,11 @@ body > main > div.related-products > div {
     text-decoration: line-through;
     text-decoration-color:#b41e00 ;
     text-decoration-thickness: 2px; 
+    
+}
+.main-section span{
+    text-decoration: none;
+    color: #b41e00;
+    margin-left: 5px;
     
 }

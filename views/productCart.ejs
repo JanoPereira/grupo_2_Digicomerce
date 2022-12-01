@@ -1,6 +1,7 @@
     <%- include('./partials/head') %>
     <link rel="stylesheet" href="/css/header_footer.css">
     <link rel="stylesheet" href="/css/cartStyles.css">
+    <script src="/scripts/shoppingCartPage.js"></script>
     <title>Carro de Compras</title>
 </head>
 <body>
@@ -9,153 +10,14 @@
         <main class="main">
             <div class="contenedor-carro-compras">
                 <section class="contenedor-titulo">
-                    <h3 class="titulo-carro">Carro de Compras (n)</h3>
+                    <h3 class="titulo-carro">Carro de Compras</h3>
                 </section>
-                <section class="contenedor-articles">
-                    <article class="producto">
-                        <div class="flex-item contenedor-imagen-producto">
-                            <img src="/img/te.jpg" alt="foto-producto" class="foto-producto">
-                        </div>
-                        <div class="flex-item informacion-producto">
-                            <div class="flex-item contenedor-descripcion-producto">
-                                <h4 class="nombre-producto">Te #</h4>
-                                <p class="descripcion-producto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, aperiam.</p>
-                            </div>          
-                            <div class="flex-item contenedor-precio-producto">
-                                <p class="precio-parcial-producto">$6000</p>
-                            </div>
-                            <div class="contenedor-input">
-                                <input type="number" class="flex-item cantidad-producto" value="1">
-                            </div>
-                            <div class="contenedor-subtotal flex-item">
-                                <p class="precio-subtotal">$6000</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contenedor-basura ">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </article>
-                    <article class="producto">
-                        <div class="flex-item contenedor-imagen-producto">
-                            <img src="/img/te.jpg" alt="foto-producto" class="foto-producto">
-                        </div>
-                        <div class="flex-item informacion-producto">
-                            <div class="flex-item contenedor-descripcion-producto">
-                                <h4 class="nombre-producto">Te #</h4>
-                                <p class="descripcion-producto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, aperiam.</p>
-                            </div>
-                            
-                            <div class="flex-item contenedor-precio-producto">
-                                <p class="precio-parcial-producto">$6000</p>
-                            </div>
-                            <div class="contenedor-input">
-                                <input type="number" class="flex-item cantidad-producto" value="2">
-                            </div>
-                            <div class="contenedor-subtotal flex-item">
-                            <p class="precio-subtotal">$12000</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contenedor-basura ">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </article>
-
-                    
-                    <article class="producto">
-                        
-                        <div class="flex-item contenedor-imagen-producto">
-                            <img src="/img/te.jpg" alt="foto-producto" class="foto-producto">
-                        </div>
-                        
-                        <div class="flex-item informacion-producto">
-                            
-                            <div class="flex-item contenedor-descripcion-producto">
-                                <h4 class="nombre-producto">Te #</h4>
-                                <p class="descripcion-producto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, aperiam.</p>
-                            </div>
-                            
-                            <div class="flex-item contenedor-precio-producto">
-                                <p class="precio-parcial-producto">$6000</p>
-                            </div>
-                            
-                            <div class="contenedor-input">
-                                <input type="number" class="flex-item cantidad-producto" value="4">
-                            </div>
-                            
-                            <div class="contenedor-subtotal flex-item">
-                            <p class="precio-subtotal">$24000</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contenedor-basura ">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-
-                    </article>
-
-
-                    <article class="producto">
-                        
-                        <div class="flex-item contenedor-imagen-producto">
-                            <img src="/img/te.jpg" alt="foto-producto" class="foto-producto">
-                        </div>
-
-                        <div class="flex-item informacion-producto">
-                            
-                            <div class="flex-item contenedor-descripcion-producto">
-                                <h4 class="nombre-producto">Te #</h4>
-                                <p class="descripcion-producto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, aperiam.</p>
-                            </div> 
-
-                            <div class="flex-item contenedor-precio-producto">
-                                <p class="precio-parcial-producto">$6000</p>
-                            </div>
-
-                            <div class="contenedor-input">
-                                <input type="number" class="flex-item cantidad-producto" value="1">
-                            </div>
-
-                            <div class="contenedor-subtotal flex-item">
-                                <p class="precio-subtotal">$6000</p>
-                            </div>
-
-                        </div>
-                        
-                        <div class="contenedor-basura ">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-
-                    </article> 
-                </section>
+                <section class="contenedor-articles"></section>
                 <div class="contenedor-botones-movile">
                     <a href="/product/product-cart/payment-detail"><button class="boton-metodos-movile">Métodos de Pago</button></a>
                 </div>
             </div>
-            <div class="contenedor-resumen-compra">
-                <div class="contenedor-resumen-fixed">
-                    <p class="confirmacion-compra">Confirmacion de la compra</p>
-                    <div class="contenedor-datos-finales">
-                        <p class="cantidad-productos">Productos (n):</p>
-                        <p class="precio">$25.000</p>
-                        <p class="Envio">Envio:</p>
-                        <p class="precio precio-envio">$400</p>
-                        <p class="subtotal">Subtotal:</p>
-                        <p class="precio ">$25.400</p>
-                        <p class="impuestos">IVA (21%):</p>
-                        <p class="precio">$5.334</p>
-                        <div class="contenedor-total-pedido">
-                            <p id="total-pedido">Total del pedido:</p>
-                            <p class="precio" id="precio-total">$30.734</p>
-                        </div>
-                        <div class="contenedor-botones-pago">
-                            <a href="#" class="continuar-compra">Continuar comprando <i class="fa-solid fa-store"></i></a>
-                            <a href="/product/product-cart/payment-detail" class="boton-pago">Proceder al pago <i class="fa-solid fa-credit-card"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="contenedor-resumen-compra"></div>
         </main>
         <%-include('./partials/footer')%>
         

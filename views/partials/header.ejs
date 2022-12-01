@@ -55,8 +55,11 @@
                     </div>
                     <div class="carro-compras">
                         <a href="/product/product-cart" class="link-carro">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <p class="precio--total" id="precio-total-carro" onclick="pay()">$0</p>
+                            <div class="cart-logo-container">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span class="products-amount">0</span>
+                            </div>
+                            <p class="precio--total">$ <span id="total-price-cart">0</span></p>
                         </a>
                     </div>
                 </div>
@@ -75,10 +78,11 @@
                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
                             <a href="/user/logout">Cerrar sesión</a>
                         </div>
-                        <div class="carro-compras">
+                        <div class="carro-compras shopping-cart-container">
                             <a href="/product/product-cart" class="link-carro">
                                 <i class="fa-solid fa-cart-shopping"></i>
-                                <p class="precio--total" id="precio-total-carro" onclick="pay()">$0</p>
+                                <p class="precio--total">$ <span id="total-price-cart">0</span></p>
+                                <span class="products-amount">0</span>
                             </a>
                         </div>
                     </ul>
