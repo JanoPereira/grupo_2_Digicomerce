@@ -308,15 +308,18 @@ nav {
 .cart-logo-container{
     position: relative;
 }
-
+/* Logo carrito */
+.fa-cart-shopping{
+    font-size: 23px;
+}
 /* Cartelito donde dice cantidad de productos */
 .products-amount {
     padding: 3px;
     color: #fff;
     position: absolute;
-    top: -16px;
-    right: 2px;
-    font-size: 11px;
+    top: -4px;
+    right: 10%;
+    font-size: 13px;
 
 }
 

@@ -34,7 +34,7 @@
                              </a>
                                 <div class="button-container">
                                     <% if (locals.userLogged && userLogged.users_categories_id==2 || !locals.userLogged) { %>
-                                        <button class="botonBuy">Agregar al carrito</button>
+                                        <button class="botonBuy adding-button" data-prodId="<%= product.id %>" data-userId="<%= locals.userLogged && userLogged.id %>"><i class="fa-solid fa-cart-shopping"></i></button>
                                     <% }else{ %>
                                         <a href="/product/edit-product/<%=product.id%>"><button class="botonBuy">Editar</button></a>
                                     <% } %>
@@ -64,7 +64,7 @@
                              </a>
                              <div class="button-container">
                                 <% if (locals.userLogged && userLogged.users_categories_id==2 || !locals.userLogged) { %>
-                                    <button class="botonBuy">Agregar al carrito</button>
+                                    <button class="botonBuy adding-button" data-prodId="<%= product.id %>" data-userId="<%= locals.userLogged && userLogged.id %>"><i class="fa-solid fa-cart-shopping"></i></button>
                                 <% }else{ %>
                                     <a href="/product/edit-product/<%=product.id%>"><button class="botonBuy">Editar</button></a>
                                 <% } %>
@@ -94,7 +94,7 @@
                          </a>
                          <div class="button-container">
                             <% if (locals.userLogged && userLogged.users_categories_id==2 || !locals.userLogged) { %>
-                                <button class="botonBuy">Agregar al carrito</button>
+                                <button class="botonBuy adding-button" data-prodId="<%= product.id %>" data-userId="<%= locals.userLogged && userLogged.id %>"><i class="fa-solid fa-cart-shopping"></i></button>
                             <% }else{ %>
                                 <a href="/product/edit-product/<%=product.id%>"><button class="botonBuy">Editar</button></a>
                             <% } %>

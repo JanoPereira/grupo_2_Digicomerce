@@ -1,0 +1,96 @@
+<%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/header_footer.css">
+    <link rel="stylesheet" href="/css/paymentDetail.css">
+    <script src="/scripts/checkout.js"></script>
+    <title>Informacion del Usuario</title>
+
+    </head>
+
+    <body>
+        <%- include('./partials/header') %>
+            <main class="main">
+
+                <section class="seccion-formulario">
+                    <h1 class="titulo">Armando tu pedido</h1>
+                    <form class="form-datos-usuario" action="/product/product-cart/payment-detail" method="POST">
+                        <div class="contenedor-pregunta">
+                            <label class="label" for="nombre">Nombre(s)</label>
+                            <input type="text" id="nombre" name="name">
+                        </div>
+
+                        <div class="contenedor-pregunta">
+                            <label for="apellido" class="label">Apellido</label>
+                            <input type="text" id="apellido" name="lastName">
+                        </div>
+
+                        <div class="contenedor-pregunta">
+                            <label for="apellido" class="label">Numero de telefono</label>
+                            <input type="phone" id="phone" name="phone">
+                        </div>
+
+                        <div class="contenedor-pregunta">
+                            <label for="direccion" class="label">Direccion</label>
+                            <input type="text" id="direccion" name="address">
+                            <div class="checkbox-container">
+                                <input type="radio" name="recordar-direccion" class="input-radio">
+                                <label for="recordar-direccion" class="label label-checkbox">Recordar direccion</label>
+                            </div>
+                        </div>
+
+                        <div class="contenedor-pregunta">
+                            <label for="ciudad" class="label">Ciudad</label>
+                            <input type="text" id="ciudad" name="city">
+                        </div>
+
+                        <div class="contenedor-pregunta">
+                            <label for="codigo-postal" class="label">Codigo Postal</label>
+                            <input type="number" id="codigo-postal" name="zipCode">
+                        </div>
+
+                        <div class="contenedor-pregunta">
+                            <label for="payment-method" class="label">Método de Pago</label>
+                            <select id="payment-method" name="paymentMethod">
+                                <% paymentMethods.forEach(method=> { %>
+                                    <option value="<%= method.id %>">
+                                        <%= method.name %>
+                                    </option>
+                                    <% }) %>
+                            </select>
+                        </div>
+
+                        <div class="contenedor-pregunta">
+                            <label for="email" class="label">Email</label>
+                            <input type="text" id="email" name="email">
+                            <div class="checkbox-container">
+                                <input type="radio" name="recibir-mail" class="input-radio checkbox">
+                                <label for="recibir-mail" class="label label-checkbox">Recibir informacion de la
+                                    orden</label>
+                            </div>
+                        </div>
+                        
+
+                        <div class="contenedor-botones-envio">
+                            <div class="contenedor-pregunta contenedor-boton">
+                                <a href="/product/product-cart" class="boton-volver links">Volver </a>
+                            </div>
+
+                            <div class="contenedor-pregunta contenedor-boton">
+                                <a href="/product/product-cart/payment-method"><button
+                                        class="boton-envio-formulario links">Realizar Pedido<i
+                                            class="fa-solid fa-credit-card"></i></button></a>
+                            </div>
+                        </div>
+                    </form>
+
+                </section>
+                <section class="seccion-info-carro">
+                    <div class="contenedor-resumen-fixed"></div>
+                </section>
+            </main>
+
+
+            <%- include('./partials/footer') %>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+    </html>

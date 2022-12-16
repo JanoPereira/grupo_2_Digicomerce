@@ -1,4 +1,7 @@
 <header class="header">
+    <% if (locals.isLogged) { %>
+        <p id="user-logged-id" class="hidden"><%= userLogged.id %> </p>
+    <% } %>
     <nav class="nav--bar">
         <div class="contenedor--logo">
             <a href="/">

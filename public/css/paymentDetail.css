@@ -104,6 +104,20 @@
 }
 
 /* ESTILOS PARA FORM-DATOS */
+/* Estilos para display de los campos input */
+
+.form-datos-usuario{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-height: 500px;
+    background: #cccccc9e;
+    padding: 20px;
+}
+
+
+/* /Estilos para display de los campos input */
 .titulo{
     font-size: 22px;
     height: fit-content;
@@ -143,6 +157,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-bottom: 15px;
+    width: 40%;
 }
 .label{
     width: 100%;
@@ -182,4 +197,10 @@
 .link-volver-carro{
     color: #339;
     width: 100%;
+}
+#phone{
+    height: fit-content;
+}
+select{
+    height: fit-content;
 }

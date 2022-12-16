@@ -206,8 +206,14 @@ const productController = {
 
     },
 
-    paymentDetail: (req, res) => {
-        res.render('paymentDetail')
+    checkout: async(req, res) => {
+        try {
+            let paymentMethods = await db.PaymentMethod.findAll();
+            res.render('checkout',{paymentMethods})
+        } catch (error) {
+            console.log('falle en prodctcontroller.checkout: ' + error);
+            return res.json(error);
+        }
     },
 
     paymentMethod: (req, res) => {

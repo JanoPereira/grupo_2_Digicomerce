@@ -27,7 +27,15 @@ module.exports=(sequelize,dataTypes)=>{
         User.belongsTo(models.UserCategory,{
             as:'userCategory',
             foreignKey: 'users_categories_id'
-        })
+        });
+        User.hasMany(models.Order,{
+            as:'orders',
+            foreignKey:'users_id'
+        });
+        User.hasOne(models.TemporalCart,{
+            as:'temporalCart',
+            foreignKey:'userId'
+        });
     };
 
     return User;

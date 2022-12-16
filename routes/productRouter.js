@@ -48,7 +48,7 @@ router.get('/delete-product/:id', productController.delete)
 
 router.delete('/delete-product/:id', productController.deleteProduct);
 
-router.get('/product-cart/payment-detail',productController.paymentDetail);
+router.get('/product-cart/payment-detail',productController.checkout);
 
 router.post('/product-cart/payment-detail',productController.savePaymentDetail);
 

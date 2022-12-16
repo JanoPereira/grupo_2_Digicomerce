@@ -10,7 +10,15 @@ const apiProductController = require('../../controllers/api/productApiController
 
 router.get('/',apiProductController.list);
 
-router.get('/:id',apiProductController.detail)
+router.post('/checkout',apiProductController.checkout);
+
+router.post('/addTempItem',apiProductController.addTempItem);
+
+router.put('/updateTempItems',apiProductController.updateTempItems);
+
+router.delete('/deleteTempItem',apiProductController.deleteTempItem);
+
+router.get('/:id',apiProductController.detail);
 
 //TODO: 
 

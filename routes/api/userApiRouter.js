@@ -12,5 +12,7 @@ router.get('/',userApiController.list);
 
 router.get('/:id',userApiController.detail);
 
+router.post('/:id/createTempCart',userApiController.createTempCart);
+
 
 module.exports = router;
